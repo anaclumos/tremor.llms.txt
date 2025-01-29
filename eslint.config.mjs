@@ -14,7 +14,8 @@ const compat = new FlatCompat({
 
 const tseslintConfig = tseslint.config(
     eslint.configs.recommended,
-    tseslint.configs.recommended,
+    tseslint.configs.strict,
+    tseslint.configs.stylistic,
 );
 
 const config = {
