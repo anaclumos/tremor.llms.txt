@@ -160,7 +160,7 @@ export default function Example() {
             />
           </svg>
           <div className="mr-auto flex w-full justify-between lg:w-fit lg:flex-col">
-            <Link href="/" className="flex select-none items-center">
+            <Link href="/" className="flex items-center select-none">
               <SolarLogo className="ml-2 w-20" />
               <span className="sr-only">Solar Logo (go home)</span>
             </Link>

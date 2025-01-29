@@ -62,7 +62,7 @@ export default function Example() {
       <div className="sm:px-3">
         <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-3xl bg-gray-950 pt-24 shadow-xl shadow-black/30">
           <div className="absolute top-[17rem] size-[40rem] rounded-full bg-blue-800 blur-3xl md:top-[20rem]" />
-          <div className="z-10 inline-block rounded-lg border border-blue-400/20 bg-blue-800/20 px-3 py-1.5 font-semibold uppercase leading-4 tracking-tight sm:text-sm">
+          <div className="z-10 inline-block rounded-lg border border-blue-400/20 bg-blue-800/20 px-3 py-1.5 leading-4 font-semibold tracking-tight uppercase sm:text-sm">
             <span className="bg-gradient-to-b from-blue-200 to-blue-400 bg-clip-text text-transparent">
               Made for the cloud
             </span>
@@ -84,7 +84,7 @@ export default function Example() {
               <div className="grid grid-cols-1 gap-x-10 gap-y-6 rounded-lg border border-white/[3%] bg-white/[1%] px-6 py-6 shadow-xl backdrop-blur md:grid-cols-3 md:p-8">
                 {features.map((item) => (
                   <div key={item.name} className="flex flex-col gap-2">
-                    <h3 className="whitespace-nowrap bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
+                    <h3 className="bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-lg font-semibold whitespace-nowrap text-transparent md:text-xl">
                       {item.name}
                     </h3>
                     <p className="text-sm leading-6 text-blue-200/40">

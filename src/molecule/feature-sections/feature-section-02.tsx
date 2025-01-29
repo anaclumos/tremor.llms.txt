@@ -42,7 +42,7 @@ export default function Example() {
               key={item.name}
               className="col-span-full sm:col-span-2 lg:col-span-1"
             >
-              <div className="w-fit rounded-lg p-2 shadow-md shadow-blue-400/30 ring-1 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
+              <div className="w-fit rounded-lg p-2 ring-1 shadow-md shadow-blue-400/30 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
                 <item.icon
                   aria-hidden="true"
                   className="size-6 text-blue-600 dark:text-blue-400"

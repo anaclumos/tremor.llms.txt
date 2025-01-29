@@ -8,7 +8,7 @@ export default function Example() {
   return (
     <div className="obfuscate">
       <div className="flex flex-wrap justify-center gap-4">
-        <span className="inline-flex items-center space-x-2.5 rounded-lg bg-white py-1 pl-2.5 pr-1 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:ring-gray-800">
+        <span className="inline-flex items-center space-x-2.5 rounded-lg bg-white py-1 pr-1 pl-2.5 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:ring-gray-800">
           <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-500">
             13.3%
           </span>
@@ -19,7 +19,7 @@ export default function Example() {
             />
           </span>
         </span>
-        <span className="inline-flex items-center space-x-2.5 rounded-lg bg-white py-1 pl-2.5 pr-1 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:ring-gray-800">
+        <span className="inline-flex items-center space-x-2.5 rounded-lg bg-white py-1 pr-1 pl-2.5 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:ring-gray-800">
           <span className="text-xs font-semibold text-red-700 dark:text-red-500">
             1.9%
           </span>
@@ -30,7 +30,7 @@ export default function Example() {
             />
           </span>
         </span>
-        <span className="inline-flex items-center space-x-2.5 rounded-lg bg-white py-1 pl-2.5 pr-1 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:ring-gray-800">
+        <span className="inline-flex items-center space-x-2.5 rounded-lg bg-white py-1 pr-1 pl-2.5 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:ring-gray-800">
           <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
             0.6%
           </span>

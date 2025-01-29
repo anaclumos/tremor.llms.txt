@@ -46,7 +46,7 @@ function GlobeCanvas() {
     <canvas
       ref={canvasRef}
       style={{ width: 800, height: 800 }}
-      className="absolute -right-72 top-40 z-10 aspect-square size-full max-w-fit transition-transform group-hover:scale-[1.01] sm:top-12 lg:-right-60 lg:top-0"
+      className="absolute top-40 -right-72 z-10 aspect-square size-full max-w-fit transition-transform group-hover:scale-[1.01] sm:top-12 lg:top-0 lg:-right-60"
     />
   )
 }
@@ -72,7 +72,7 @@ export default function Example() {
         <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
           <a
             href="#"
-            className="group relative col-span-1 overflow-hidden rounded-b rounded-t-2xl bg-gray-50 p-8 shadow-2xl shadow-black/10 ring-1 ring-black/5 lg:col-span-2 lg:rounded-l-2xl lg:rounded-r dark:bg-gray-900 dark:ring-white/5"
+            className="group relative col-span-1 overflow-hidden rounded-t-2xl rounded-b bg-gray-50 p-8 ring-1 shadow-2xl shadow-black/10 ring-black/5 lg:col-span-2 lg:rounded-l-2xl lg:rounded-r dark:bg-gray-900 dark:ring-white/5"
           >
             <div className="relative z-20">
               <h3 className="text-2xl font-semibold text-gray-950 dark:text-gray-50">
@@ -90,10 +90,10 @@ export default function Example() {
             </div>
             <GlobeCanvas />
           </a>
-          <div className="rounded-b-2xl rounded-t bg-gradient-to-br from-blue-400 to-blue-600 p-8 shadow-lg shadow-blue-500/20 lg:rounded-l lg:rounded-r-2xl">
+          <div className="rounded-t rounded-b-2xl bg-gradient-to-br from-blue-400 to-blue-600 p-8 shadow-lg shadow-blue-500/20 lg:rounded-l lg:rounded-r-2xl">
             <figure className="flex h-full flex-col justify-between">
               <blockquote className="text-base font-medium text-gray-50 sm:text-lg/8">
-                <p className="relative bg-gradient-to-br from-blue-100 to-white bg-clip-text font-medium leading-7 tracking-tighter text-transparent before:absolute before:right-full before:top-0">
+                <p className="relative bg-gradient-to-br from-blue-100 to-white bg-clip-text leading-7 font-medium tracking-tighter text-transparent before:absolute before:top-0 before:right-full">
                   The AI-powered customer support has completely transformed our
                   service capabilities. We've seen a 70% reduction in response
                   times and a significant increase in customer satisfaction

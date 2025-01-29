@@ -37,7 +37,7 @@ const DropdownMenuContent = React.forwardRef<
           // base
           "relative z-50 overflow-hidden rounded-md border p-1 shadow-xl shadow-black/[2.5%]",
           // widths
-          "min-w-48 max-w-72",
+          "max-w-72 min-w-48",
           // heights
           "max-h-[var(--radix-popper-available-height)]",
           // background color (custom color in dark mode used for better constrast)
@@ -109,7 +109,7 @@ const DropdownMenuItem = React.forwardRef<
     ref={forwardedRef}
     className={cx(
       // base
-      "group/DropdownMenuItem relative flex cursor-pointer select-none items-center gap-x-4 rounded py-1.5 pl-2 pr-1 text-sm outline-none data-[state=checked]:font-semibold",
+      "group/DropdownMenuItem relative flex cursor-pointer items-center gap-x-4 rounded py-1.5 pr-1 pl-2 text-sm outline-none select-none data-[state=checked]:font-semibold",
       // text color
       "text-gray-900 dark:text-gray-50",
       // disabled
@@ -156,7 +156,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
       ref={forwardedRef}
       className={cx(
         // base
-        "relative flex cursor-pointer select-none items-center gap-x-2 rounded-md border px-2 py-1.5 text-sm font-medium outline-none data-[state=checked]:font-semibold sm:text-xs",
+        "relative flex cursor-pointer items-center gap-x-2 rounded-md border px-2 py-1.5 text-sm font-medium outline-none select-none data-[state=checked]:font-semibold sm:text-xs",
         // text color
         "text-gray-400 data-[state=checked]:text-gray-900 dark:text-gray-600 data-[state=checked]:dark:text-gray-50",
         // disabled

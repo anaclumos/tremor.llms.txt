@@ -372,7 +372,7 @@ const CustomTooltip = ({ payload, active }: TooltipProps) => {
             aria-hidden="true"
           />
           <div className="space-y-0.5">
-            <p className="whitespace-nowrap text-xs text-gray-500 dark:text-gray-500">
+            <p className="text-xs whitespace-nowrap text-gray-500 dark:text-gray-500">
               {payload[0].category}
             </p>
             <p className="font-medium text-gray-900 dark:text-gray-50">
@@ -386,7 +386,7 @@ const CustomTooltip = ({ payload, active }: TooltipProps) => {
             aria-hidden="true"
           />
           <div className="space-y-0.5">
-            <p className="whitespace-nowrap text-xs text-gray-500 dark:text-gray-500">
+            <p className="text-xs whitespace-nowrap text-gray-500 dark:text-gray-500">
               Benchmark
             </p>
             <p className="font-medium text-gray-900 dark:text-gray-50">
@@ -487,7 +487,7 @@ const LegendItem = ({ name, color, onClick }: LegendItemProps) => {
     <div
       className={cx(
         // base
-        "group inline-flex flex-nowrap items-center gap-2 whitespace-nowrap rounded px-2 py-1 transition",
+        "group inline-flex flex-nowrap items-center gap-2 rounded px-2 py-1 whitespace-nowrap transition",
         hasOnValueChange
           ? "cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
           : "cursor-default",
@@ -661,7 +661,7 @@ const ChartTooltip = ({
                 <p
                   className={cx(
                     // base
-                    "whitespace-nowrap text-right",
+                    "text-right whitespace-nowrap",
                     // text color
                     "text-gray-700 dark:text-gray-300",
                   )}
@@ -672,7 +672,7 @@ const ChartTooltip = ({
               <p
                 className={cx(
                   // base
-                  "whitespace-nowrap text-right font-medium tabular-nums",
+                  "text-right font-medium whitespace-nowrap tabular-nums",
                   // text color
                   "text-gray-900 dark:text-gray-50",
                 )}

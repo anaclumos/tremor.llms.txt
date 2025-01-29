@@ -45,7 +45,7 @@ const NavigationButton = React.forwardRef<
         type="button"
         disabled={disabled}
         className={cx(
-          "flex size-8 shrink-0 select-none items-center justify-center rounded border p-1 outline-none transition sm:size-[30px]",
+          "flex size-8 shrink-0 items-center justify-center rounded border p-1 transition outline-none select-none sm:size-[30px]",
           // text color
           "text-gray-600 hover:text-gray-800",
           "dark:text-gray-400 hover:dark:text-gray-200",
@@ -223,7 +223,7 @@ const Calendar = ({
               <div
                 role="presentation"
                 aria-live="polite"
-                className="text-sm font-medium capitalize tabular-nums text-gray-900 dark:text-gray-50"
+                className="text-sm font-medium text-gray-900 capitalize tabular-nums dark:text-gray-50"
               >
                 {format(props.displayMonth, "LLLL yyy", { locale })}
               </div>

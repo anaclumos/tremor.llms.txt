@@ -104,7 +104,7 @@ function BarListInner<T>(
                     href={item.href}
                     className={cx(
                       // base
-                      "truncate whitespace-nowrap rounded text-sm",
+                      "truncate rounded text-sm whitespace-nowrap",
                       // text color
                       "text-gray-900 dark:text-gray-50",
                       // hover
@@ -122,7 +122,7 @@ function BarListInner<T>(
                   <p
                     className={cx(
                       // base
-                      "truncate whitespace-nowrap text-sm",
+                      "truncate text-sm whitespace-nowrap",
                       // text color
                       "text-gray-900 dark:text-gray-50",
                     )}
@@ -148,7 +148,7 @@ function BarListInner<T>(
             <p
               className={cx(
                 // base
-                "truncate whitespace-nowrap text-sm leading-none",
+                "truncate text-sm leading-none whitespace-nowrap",
                 // text color
                 "text-gray-900 dark:text-gray-50",
               )}

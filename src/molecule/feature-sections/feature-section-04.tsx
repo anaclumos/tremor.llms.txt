@@ -55,7 +55,7 @@ export default function Example() {
             <div key={index} className="col-span-4 sm:col-span-2 lg:col-span-1">
               <dt className="relative font-semibold text-gray-900 dark:text-gray-50">
                 {benefit.title}
-                <div className="absolute -left-2 top-1 h-4 w-0.5 rounded-full bg-blue-500" />
+                <div className="absolute top-1 -left-2 h-4 w-0.5 rounded-full bg-blue-500" />
               </dt>
               <dd className="mt-2 leading-7 text-gray-600 dark:text-gray-400">
                 {benefit.description}

@@ -4,7 +4,7 @@ export default function Example() {
   return (
     <div className="obfuscate">
       <div className="flex flex-wrap justify-center gap-4">
-        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-1 pl-2.5 pr-1 text-xs text-gray-500 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
+        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-1 pr-1 pl-2.5 text-xs text-gray-500 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
           Department
           <span className="h-4 w-px bg-gray-200 dark:bg-gray-800" />
           <span className="text-tremor-content-strong font-medium dark:text-gray-300">
@@ -18,7 +18,7 @@ export default function Example() {
             <RiCloseFill className="size-4 shrink-0" aria-hidden={true} />
           </button>
         </span>
-        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-1 pl-2.5 pr-1 text-xs text-gray-500 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
+        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-1 pr-1 pl-2.5 text-xs text-gray-500 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
           Location
           <span className="h-4 w-px bg-gray-200 dark:bg-gray-800" />
           <span className="text-tremor-content-strong font-medium dark:text-gray-300">
@@ -32,7 +32,7 @@ export default function Example() {
             <RiCloseFill className="size-4 shrink-0" aria-hidden={true} />
           </button>
         </span>
-        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-1 pl-2.5 pr-1 text-xs text-gray-500 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
+        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-1 pr-1 pl-2.5 text-xs text-gray-500 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
           Sales Volume
           <span className="h-4 w-px bg-gray-200 dark:bg-gray-800" />
           <span className="text-tremor-content-strong font-medium dark:text-gray-300">
@@ -46,7 +46,7 @@ export default function Example() {
             <RiCloseFill className="size-4 shrink-0" aria-hidden={true} />
           </button>
         </span>
-        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-0.5 pl-2.5 pr-1 text-xs text-gray-500 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
+        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-white py-0.5 pr-1 pl-2.5 text-xs text-gray-500 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:text-gray-500 dark:ring-gray-800">
           Status
           <span className="h-4 w-px bg-gray-200 dark:bg-gray-800" />
           <span className="text-tremor-content-strong font-medium dark:text-gray-300">

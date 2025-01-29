@@ -10,7 +10,7 @@ const switchVariants = tv({
   slots: {
     root: [
       // base
-      "group relative isolate inline-flex shrink-0 cursor-pointer items-center rounded-full p-0.5 shadow-inner outline-none ring-1 ring-inset transition-all",
+      "group relative isolate inline-flex shrink-0 cursor-pointer items-center rounded-full p-0.5 ring-1 shadow-inner transition-all outline-none ring-inset",
       "bg-gray-200 dark:bg-gray-950",
       // ring color
       "ring-black/5 dark:ring-gray-800",
@@ -34,7 +34,7 @@ const switchVariants = tv({
     ],
     thumb: [
       // base
-      "pointer-events-none relative inline-block transform appearance-none rounded-full border-none shadow-lg outline-none transition-all duration-150 ease-in-out focus:border-none focus:outline-none focus:outline-transparent",
+      "pointer-events-none relative inline-block transform appearance-none rounded-full border-none shadow-lg transition-all duration-150 ease-in-out outline-none focus:border-none focus:outline-transparent focus:outline-none",
       // background color
       "bg-white dark:bg-gray-50",
       // disabled

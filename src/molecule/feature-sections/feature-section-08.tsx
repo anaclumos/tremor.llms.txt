@@ -18,17 +18,17 @@ const StickerCard = ({
         className={cx(
           "relative z-10 mt-0 block size-full overflow-hidden",
           "rounded-lg rounded-tr-[26px]",
-          "px-4 pb-4 pt-5",
+          "px-4 pt-5 pb-4",
           // Card
-          "bg-white font-normal leading-8 text-gray-900 dark:bg-gray-900 dark:text-gray-50",
-          "ring-1 ring-inset ring-gray-200 dark:ring-gray-800",
+          "bg-white leading-8 font-normal text-gray-900 dark:bg-gray-900 dark:text-gray-50",
+          "ring-1 ring-gray-200 ring-inset dark:ring-gray-800",
 
           // Animation
           "transition-all duration-200 ease-in-out",
 
           // Before Element (Corner Fold)
           'before:content-[""]',
-          "before:absolute before:right-0 before:top-0",
+          "before:absolute before:top-0 before:right-0",
           "before:z-[3]",
           "before:h-[30px] before:w-[30px]",
           "before:-translate-y-1/2 before:translate-x-1/2",
@@ -39,7 +39,7 @@ const StickerCard = ({
 
           // After Element (Corner Shadow)
           'after:content-[""]',
-          "after:absolute after:right-0 after:top-0",
+          "after:absolute after:top-0 after:right-0",
           "after:z-[2]",
           "after:size-7",
           "after:-translate-y-2 after:translate-x-2",
