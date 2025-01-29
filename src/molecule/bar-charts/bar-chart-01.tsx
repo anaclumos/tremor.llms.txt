@@ -2,11 +2,11 @@
 
 import React from "react"
 
-import { BarChart } from "../../atom/BarChart"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { Label } from "../../atom/Label"
-import { Switch } from "../../atom/Switch"
+import { BarChart } from "@/atom/BarChart"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { Label } from "@/atom/Label"
+import { Switch } from "@/atom/Switch"
 
 const data = [
   //array-start

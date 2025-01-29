@@ -9,8 +9,8 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Checkbox } from "../../atom/Checkbox"
+import { Button } from "@/atom/Button"
+import { Checkbox } from "@/atom/Checkbox"
 import {
   Table,
   TableBody,
@@ -20,7 +20,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -218,7 +218,7 @@ export default function TableCheckbox() {
           return (
             <div className="relative">
               <span>{value}</span>
-              <div className="absolute right-0 top-1/2 hidden h-full -translate-y-1/2 items-center space-x-2 bg-gray-50 group-hover:flex dark:bg-gray-900">
+              <div className="absolute top-1/2 right-0 hidden h-full -translate-y-1/2 items-center space-x-2 bg-gray-50 group-hover:flex dark:bg-gray-900">
                 <Button
                   className="rounded px-2 py-1"
                   onClick={

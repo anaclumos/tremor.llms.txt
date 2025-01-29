@@ -2,7 +2,7 @@
 
 import { cx } from "@/lib/utils"
 
-import { AreaChart } from "../../atom/AreaChart"
+import { AreaChart } from "@/atom/AreaChart"
 
 const data = [
   //array-start

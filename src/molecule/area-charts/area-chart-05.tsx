@@ -2,8 +2,8 @@
 
 import { RiExternalLinkLine } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
 
 function valueFormatter(number: number) {
   const formatter = new Intl.NumberFormat("en-US", {
@@ -100,7 +100,7 @@ export default function Example() {
         </div>
         <div className="rounded-b-md border-t border-gray-200 bg-gray-50 px-6 py-4 dark:border-gray-900 dark:bg-[#090E1A]">
           <div className="flex justify-between">
-            <span className="inline-flex select-none items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:ring-gray-400/20">
+            <span className="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-200 ring-inset select-none dark:bg-gray-800 dark:text-gray-200 dark:ring-gray-400/20">
               Team access
             </span>
             <div className="flex items-center gap-2">

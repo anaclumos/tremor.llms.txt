@@ -9,9 +9,9 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const steps = [
   //array-start
@@ -84,7 +84,7 @@ export default function Example() {
                     <div
                       className={cx(
                         stepindex === steps.length - 1 ? "h-6" : "-bottom-6",
-                        "absolute left-0 top-0 flex w-6 justify-center",
+                        "absolute top-0 left-0 flex w-6 justify-center",
                       )}
                     >
                       <span
@@ -137,7 +137,7 @@ export default function Example() {
               </Button>
             </TabsContent>
             <TabsContent value="tab2">
-              <h4 className="mt-6 text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-600">
+              <h4 className="mt-6 text-xs font-medium tracking-widest text-gray-400 uppercase dark:text-gray-600">
                 General
               </h4>
               <ul
@@ -156,7 +156,7 @@ export default function Example() {
                   </li>
                 ))}
               </ul>
-              <h4 className="mt-6 text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-600">
+              <h4 className="mt-6 text-xs font-medium tracking-widest text-gray-400 uppercase dark:text-gray-600">
                 Privacy settings
               </h4>
               <ul
@@ -190,7 +190,7 @@ export default function Example() {
                   <span className="text-gray-500 dark:text-gray-400">
                     Access
                   </span>
-                  <span className="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2 py-1.5 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-200 dark:bg-gray-800 dark:text-gray-50 dark:ring-gray-700">
+                  <span className="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2 py-1.5 text-xs font-medium text-gray-900 ring-1 ring-gray-200 ring-inset dark:bg-gray-800 dark:text-gray-50 dark:ring-gray-700">
                     <RiLock2Fill
                       className="size-4 text-gray-400 dark:text-gray-600"
                       aria-hidden={true}

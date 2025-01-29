@@ -2,17 +2,17 @@
 
 import { RiDownload2Line } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { LineChart } from "../../atom/LineChart"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { LineChart } from "@/atom/LineChart"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const data = [
   //array-start

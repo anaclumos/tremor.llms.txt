@@ -10,7 +10,7 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const dataComponents = [
   //array-start
@@ -808,7 +808,7 @@ const Block = ({
           avoidCollisions
           className={cx(
             // base
-            "min-w-44 max-w-52 rounded-lg shadow-md",
+            "max-w-52 min-w-44 rounded-lg shadow-md",
             // text
             "text-gray-900 dark:text-gray-50",
             // background

@@ -2,8 +2,8 @@
 
 import { RiCheckboxCircleFill, RiExternalLinkLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
 import {
   Table,
   TableBody,
@@ -13,8 +13,8 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+} from "@/atom/Table"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -71,16 +71,16 @@ export default function Example() {
             <Table className="border-transparent dark:border-transparent">
               <TableHead>
                 <TableRow>
-                  <TableHeaderCell className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                  <TableHeaderCell className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                     Item
                   </TableHeaderCell>
-                  <TableHeaderCell className="text-right text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                  <TableHeaderCell className="text-right text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                     Quantity
                   </TableHeaderCell>
-                  <TableHeaderCell className="text-right text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                  <TableHeaderCell className="text-right text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                     Unit price
                   </TableHeaderCell>
-                  <TableHeaderCell className="text-right text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                  <TableHeaderCell className="text-right text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                     Price
                   </TableHeaderCell>
                 </TableRow>
@@ -133,22 +133,22 @@ export default function Example() {
           <Table className="mt-10">
             <TableHead>
               <TableRow className="border-b border-gray-200 dark:border-gray-800">
-                <TableHeaderCell className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <TableHeaderCell className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   Provider
                 </TableHeaderCell>
-                <TableHeaderCell className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <TableHeaderCell className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   Status
                 </TableHeaderCell>
-                <TableHeaderCell className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <TableHeaderCell className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   Type
                 </TableHeaderCell>
-                <TableHeaderCell className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <TableHeaderCell className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   Number (Last 4)
                 </TableHeaderCell>
-                <TableHeaderCell className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <TableHeaderCell className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   Exp. Date
                 </TableHeaderCell>
-                <TableHeaderCell className="text-right text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <TableHeaderCell className="text-right text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   <span className="sr-only">Edit</span>
                 </TableHeaderCell>
               </TableRow>

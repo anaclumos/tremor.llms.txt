@@ -5,9 +5,9 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Badge } from "../../atom/Badge"
-import { BarChart } from "../../atom/BarChart"
-import { Divider } from "../../atom/Divider"
+import { Badge } from "@/atom/Badge"
+import { BarChart } from "@/atom/BarChart"
+import { Divider } from "@/atom/Divider"
 
 interface DataPoint {
   date: string
@@ -207,7 +207,7 @@ const Button = ({
     <button
       type="button"
       className={cx(
-        "group p-1.5 text-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent dark:ring-gray-800 hover:dark:bg-gray-900 disabled:hover:dark:bg-transparent",
+        "group p-1.5 text-sm ring-1 ring-gray-300 ring-inset hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent dark:ring-gray-800 hover:dark:bg-gray-900 disabled:hover:dark:bg-transparent",
         position === "left"
           ? "rounded-l-md"
           : position === "right"
@@ -244,12 +244,12 @@ export default function Example() {
           {summary.map((item, index) => (
             <React.Fragment key={item.name}>
               <div>
-                <p className="whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                <p className="text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                   {item.name}
                 </p>
                 {item.name === "Last invoice" ? (
                   <a
-                    className="mt-1 inline-flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-blue-500 hover:underline hover:underline-offset-4 dark:text-blue-500"
+                    className="mt-1 inline-flex items-center gap-1 text-sm font-semibold whitespace-nowrap text-blue-500 hover:underline hover:underline-offset-4 dark:text-blue-500"
                     href="#"
                   >
                     {item.value}
@@ -287,7 +287,7 @@ export default function Example() {
           </span>
         </div>
         <div className="flex w-full items-center justify-between gap-3 sm:w-fit sm:justify-start">
-          <span className="block w-full text-sm font-medium tabular-nums text-gray-900 dark:text-gray-50">
+          <span className="block w-full text-sm font-medium text-gray-900 tabular-nums dark:text-gray-50">
             Aug 1 – 31, 2024
           </span>
           <span className="inline-flex items-center rounded-md shadow-sm">

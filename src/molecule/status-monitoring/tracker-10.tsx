@@ -4,7 +4,7 @@ import { RiArrowRightUpLine, RiCheckboxCircleFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start
@@ -454,7 +454,7 @@ const Block = ({
           align="center"
           avoidCollisions
           className={cx(
-            "group relative min-w-52 max-w-64 rounded-lg shadow-md",
+            "group relative max-w-64 min-w-52 rounded-lg shadow-md",
             "text-gray-900 dark:text-gray-50",
             "bg-white dark:bg-[#090E1A]",
             "border border-gray-200 dark:border-gray-800",
@@ -491,7 +491,7 @@ const Block = ({
           </div>
           {tooltip === "Downtime" ? (
             <span
-              className="pointer-events-none absolute right-2 top-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
+              className="pointer-events-none absolute top-2 right-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
               aria-hidden={true}
             >
               <RiArrowRightUpLine

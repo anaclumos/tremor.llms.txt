@@ -3,9 +3,9 @@
 import React from "react"
 import { RiArrowDownSLine } from "@remixicon/react"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
 
 interface DataItem {
   month: string

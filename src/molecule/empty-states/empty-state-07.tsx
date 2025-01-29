@@ -2,8 +2,8 @@
 
 import { RiAddFill, RiBarChartFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start

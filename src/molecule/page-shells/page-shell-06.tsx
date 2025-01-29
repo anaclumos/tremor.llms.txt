@@ -7,9 +7,9 @@ import {
   RiDatabase2Line,
 } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { SelectNative } from "../../atom/SelectNative"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { SelectNative } from "@/atom/SelectNative"
 
 const data = [
   //array-start

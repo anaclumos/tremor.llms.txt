@@ -1,6 +1,6 @@
 "use client"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const issues = [
   {
@@ -190,7 +190,7 @@ export default function Example() {
                     {issue.category}
                   </span>
                 </div>
-                <div className="text-sm tabular-nums text-gray-600 dark:text-gray-400">
+                <div className="text-sm text-gray-600 tabular-nums dark:text-gray-400">
                   {issue.percentage}% ({issue.totalCount.toLocaleString()})
                 </div>
               </li>

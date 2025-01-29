@@ -3,7 +3,7 @@
 import { chartColors } from "@/lib/chartUtils"
 import { cx } from "@/lib/utils"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
 
 // Add this custom colors to your chartColors definition (utils.ts)
 
@@ -92,9 +92,9 @@ export const CustomTooltip = ({ payload, active }: TooltipProps) => {
       </ul>
       <div className="border-t border-gray-200 p-2 dark:border-gray-800">
         <div className="relative mt-0.5 h-1.5 w-full rounded-full bg-gray-200 dark:bg-gray-800">
-          <span className="absolute left-1/2 top-1/2 z-30 h-2.5 w-0.5 -translate-y-1/2 rounded-full bg-gray-500 dark:bg-gray-500" />
+          <span className="absolute top-1/2 left-1/2 z-30 h-2.5 w-0.5 -translate-y-1/2 rounded-full bg-gray-500 dark:bg-gray-500" />
           {percentageDiff >= 0 ? (
-            <span className="absolute left-1/2 top-1/2 z-10 h-1.5 w-1/2 -translate-y-1/2">
+            <span className="absolute top-1/2 left-1/2 z-10 h-1.5 w-1/2 -translate-y-1/2">
               <span
                 style={{
                   width: `${cappedValue}%`,
@@ -104,7 +104,7 @@ export const CustomTooltip = ({ payload, active }: TooltipProps) => {
               />
             </span>
           ) : (
-            <span className="absolute right-1/2 top-1/2 z-10 h-1.5 w-1/2 -translate-y-1/2">
+            <span className="absolute top-1/2 right-1/2 z-10 h-1.5 w-1/2 -translate-y-1/2">
               <span
                 style={{
                   width: `${Math.abs(cappedValue)}%`,

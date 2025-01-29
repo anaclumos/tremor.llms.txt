@@ -1,8 +1,8 @@
 "use client"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { CategoryBar } from "../../atom/CategoryBar"
-import { ComboChart } from "../../atom/ComboChart"
+import { AreaChart } from "@/atom/AreaChart"
+import { CategoryBar } from "@/atom/CategoryBar"
+import { ComboChart } from "@/atom/ComboChart"
 
 const chartdata = [
   {
@@ -81,12 +81,12 @@ export default function Example() {
           Insights made for everyone
         </h2>
         <div className="group relative mt-12 h-[30rem] transition">
-          <div className="absolute top-12 h-80 w-full scale-90 transform-gpu rounded-lg bg-white shadow-md shadow-black/5 ring-1 ring-black/5 transition-all delay-75 duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:top-52 group-hover:rotate-6">
+          <div className="absolute top-12 h-80 w-full scale-90 transform-gpu rounded-lg bg-white ring-1 shadow-md shadow-black/5 ring-black/5 transition-all delay-75 duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:top-52 group-hover:rotate-6">
             <div className="relative flex size-full items-center">
-              <div className="absolute left-2.5 top-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
-              <div className="absolute right-2.5 top-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
               <div className="absolute bottom-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
-              <div className="absolute bottom-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute right-2.5 bottom-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
               <AreaChart
                 className="mx-auto !h-60 !px-3 sm:!px-10"
                 data={chartdata}
@@ -95,12 +95,12 @@ export default function Example() {
               />
             </div>
           </div>
-          <div className="delay-50 absolute top-6 h-80 w-full scale-95 transform-gpu rounded-lg bg-white shadow-md shadow-black/5 ring-1 ring-black/5 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:top-16 group-hover:-rotate-3">
+          <div className="absolute top-6 h-80 w-full scale-95 transform-gpu rounded-lg bg-white ring-1 shadow-md shadow-black/5 ring-black/5 transition-all delay-50 duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:top-16 group-hover:-rotate-3">
             <div className="relative flex size-full items-end">
-              <div className="absolute left-2.5 top-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
-              <div className="absolute right-2.5 top-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
               <div className="absolute bottom-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
-              <div className="absolute bottom-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute right-2.5 bottom-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
               <CategoryBar
                 values={[10, 10, 20]}
                 marker={{ value: 17, tooltip: "68", showAnimation: false }}
@@ -109,12 +109,12 @@ export default function Example() {
               />
             </div>
           </div>
-          <div className="absolute top-0 flex h-80 w-full transform-gpu items-center rounded-lg bg-white shadow-xl shadow-black/5 ring-1 ring-black/5 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-top-6 group-hover:rotate-3 group-hover:scale-95">
+          <div className="absolute top-0 flex h-80 w-full transform-gpu items-center rounded-lg bg-white ring-1 shadow-xl shadow-black/5 ring-black/5 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-top-6 group-hover:scale-95 group-hover:rotate-3">
             <div className="relative flex size-full items-center">
-              <div className="absolute left-2.5 top-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
-              <div className="absolute right-2.5 top-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
               <div className="absolute bottom-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
-              <div className="absolute bottom-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute right-2.5 bottom-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
               <ComboChart
                 className="mx-auto !h-60 !px-3 sm:!px-10"
                 data={chartdata}

@@ -18,7 +18,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -315,7 +315,7 @@ export default function Example() {
       </TableRoot>
       <div className="mt-10 flex items-center justify-between sm:justify-center">
         {/* long pagination button form only for desktop view */}
-        <div className="hidden items-center rounded-full px-0.5 shadow-sm ring-1 ring-inset ring-gray-300 sm:inline-flex dark:ring-gray-800">
+        <div className="hidden items-center rounded-full px-0.5 ring-1 shadow-sm ring-gray-300 ring-inset sm:inline-flex dark:ring-gray-800">
           <TextButton
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
@@ -456,7 +456,7 @@ export default function Example() {
             />
           </TextButton>
         </div>
-        <p className="text-sm tabular-nums text-gray-500 sm:hidden dark:text-gray-500">
+        <p className="text-sm text-gray-500 tabular-nums sm:hidden dark:text-gray-500">
           Page of{" "}
           <span className="font-medium text-gray-900 dark:text-gray-50">{`${
             table.getState().pagination.pageIndex + 1
@@ -468,7 +468,7 @@ export default function Example() {
           </span>
         </p>
         {/* --- Mobile view for pagination buttons --- */}
-        <div className="inline-flex items-center rounded-full shadow-sm ring-1 ring-inset ring-gray-300 sm:hidden dark:ring-gray-800">
+        <div className="inline-flex items-center rounded-full ring-1 shadow-sm ring-gray-300 ring-inset sm:hidden dark:ring-gray-800">
           <MobileButton
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}

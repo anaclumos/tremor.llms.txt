@@ -9,7 +9,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 import {
   Table,
   TableBody,
@@ -18,7 +18,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const data = [
   //array-start

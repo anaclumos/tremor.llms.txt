@@ -1,8 +1,8 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { SelectNative } from "../../atom/SelectNative"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { SelectNative } from "@/atom/SelectNative"
 
 function ContentPlaceholder() {
   return (

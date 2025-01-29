@@ -2,10 +2,10 @@
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { SparkAreaChart } from "../../atom/SparkChart"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { SparkAreaChart } from "@/atom/SparkChart"
 import {
   Table,
   TableBody,
@@ -14,7 +14,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const data = [
   //array-start
@@ -286,7 +286,7 @@ export default function Example() {
                   fill="solid"
                   className="mt-4 h-10 w-full"
                 />
-                <Divider className="!my-0 block pb-4 pt-6 sm:hidden" />
+                <Divider className="!my-0 block pt-6 pb-4 sm:hidden" />
                 <div className="flex w-full items-center justify-end gap-2 sm:hidden">
                   <a
                     href="#"
@@ -327,7 +327,7 @@ export default function Example() {
         </dl>
       </Card>
       <TableRoot className="mt-8 !overflow-visible">
-        <div className="overflow-hidden overflow-x-scroll rounded-lg shadow-sm ring-1 ring-gray-200 dark:ring-gray-800">
+        <div className="overflow-hidden overflow-x-scroll rounded-lg ring-1 shadow-sm ring-gray-200 dark:ring-gray-800">
           <Table className="!border-transparent">
             <TableHead className="!bg-gray-50 dark:!bg-gray-900">
               <TableRow>

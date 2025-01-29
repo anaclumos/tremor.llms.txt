@@ -2,23 +2,23 @@ import { RiFilter2Line } from "@remixicon/react"
 
 import { cx, focusInput } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { DateRangePicker } from "../../atom/DatePicker"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { DateRangePicker } from "@/atom/DatePicker"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   Popover,
   PopoverClose,
   PopoverContent,
   PopoverTrigger,
-} from "../../atom/Popover"
+} from "@/atom/Popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const categories = [
   // array-start
@@ -93,7 +93,7 @@ export default function Example() {
                     type="button"
                     className={cx(
                       focusInput,
-                      "mt-2 flex w-full items-center justify-between gap-x-2 rounded-md border border-gray-300 bg-white py-1.5 pl-3 pr-2 font-medium text-gray-900 shadow-sm hover:bg-gray-50 focus:z-10 focus:outline-none sm:text-sm lg:w-fit dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50 hover:dark:bg-gray-950/50",
+                      "mt-2 flex w-full items-center justify-between gap-x-2 rounded-md border border-gray-300 bg-white py-1.5 pr-2 pl-3 font-medium text-gray-900 shadow-sm hover:bg-gray-50 focus:z-10 focus:outline-none sm:text-sm lg:w-fit dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50 hover:dark:bg-gray-950/50",
                     )}
                   >
                     <span className="flex items-center gap-x-2">
@@ -117,7 +117,7 @@ export default function Example() {
                       <div className="flex items-center justify-between space-x-2">
                         <Label
                           htmlFor="filter_3"
-                          className="whitespace-nowrap font-medium"
+                          className="font-medium whitespace-nowrap"
                         >
                           Set Filter for
                         </Label>

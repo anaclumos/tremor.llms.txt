@@ -2,7 +2,7 @@
 
 import { RiStackLine, RiWifiLine } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start
@@ -79,7 +79,7 @@ export default function Example() {
             </dt>
             <div className="mt-4 flex flex-wrap gap-2">
               {item.status === "live" ? (
-                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/10 dark:bg-emerald-500/10 dark:text-emerald-500 dark:ring-emerald-500/20">
+                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-800 ring-1 ring-emerald-600/10 ring-inset dark:bg-emerald-500/10 dark:text-emerald-500 dark:ring-emerald-500/20">
                   <span
                     className="size-1.5 shrink-0 rounded-full bg-emerald-500 dark:bg-emerald-500"
                     aria-hidden={true}
@@ -87,12 +87,12 @@ export default function Example() {
                   {item.status}
                 </span>
               ) : (
-                <span className="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-600/10 dark:bg-gray-500/10 dark:text-gray-400 dark:ring-gray-500/20">
+                <span className="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-600/10 ring-inset dark:bg-gray-500/10 dark:text-gray-400 dark:ring-gray-500/20">
                   {item.status}
                 </span>
               )}
               {item.type === "API" ? (
-                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-pink-100 px-2 py-1 text-xs font-medium text-pink-800 ring-1 ring-inset ring-pink-600/10 dark:bg-pink-500/10 dark:text-pink-500 dark:ring-pink-500/20">
+                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-pink-100 px-2 py-1 text-xs font-medium text-pink-800 ring-1 ring-pink-600/10 ring-inset dark:bg-pink-500/10 dark:text-pink-500 dark:ring-pink-500/20">
                   <RiWifiLine
                     className="size-3.5 shrink-0"
                     aria-hidden={true}
@@ -100,7 +100,7 @@ export default function Example() {
                   {item.type}
                 </span>
               ) : (
-                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-sky-100 px-2 py-1 text-xs font-medium text-sky-800 ring-1 ring-inset ring-sky-600/10 dark:bg-sky-500/10 dark:text-sky-500 dark:ring-sky-500/20">
+                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-sky-100 px-2 py-1 text-xs font-medium text-sky-800 ring-1 ring-sky-600/10 ring-inset dark:bg-sky-500/10 dark:text-sky-500 dark:ring-sky-500/20">
                   <RiStackLine
                     className="size-3.5 shrink-0"
                     aria-hidden={true}

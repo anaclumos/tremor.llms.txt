@@ -2,9 +2,9 @@
 
 import { RiArrowDownSFill, RiArrowUpSFill } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start

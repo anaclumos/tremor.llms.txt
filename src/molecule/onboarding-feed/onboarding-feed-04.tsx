@@ -13,8 +13,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../atom/Accordion"
-import { Button } from "../../atom/Button"
+} from "@/atom/Accordion"
+import { Button } from "@/atom/Button"
 
 const steps = [
   //array-start
@@ -95,8 +95,8 @@ export default function Example() {
                     </p>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="!pb-4 !pt-2">
-                  <div className="flex items-center justify-center rounded-md bg-gray-50 px-4 py-5 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:ring-gray-800">
+                <AccordionContent className="!pt-2 !pb-4">
+                  <div className="flex items-center justify-center rounded-md bg-gray-50 px-4 py-5 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:ring-gray-800">
                     <div className="max-w-xs text-center">
                       {/* custom color used to optimize this edge case */}
                       <step.icon
@@ -133,8 +133,8 @@ export default function Example() {
                     </p>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="!pb-4 !pt-2">
-                  <div className="flex items-center justify-center rounded-md bg-gray-50 px-4 py-5 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:ring-gray-800">
+                <AccordionContent className="!pt-2 !pb-4">
+                  <div className="flex items-center justify-center rounded-md bg-gray-50 px-4 py-5 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:ring-gray-800">
                     <div className="max-w-xs text-center">
                       <step.icon
                         className="mx-auto size-7 shrink-0 text-gray-400 dark:text-gray-600"
@@ -168,8 +168,8 @@ export default function Example() {
                     </p>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pb-4 pt-2">
-                  <div className="flex items-center justify-center rounded-md bg-gray-50 px-4 py-5 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:ring-gray-800">
+                <AccordionContent className="pt-2 pb-4">
+                  <div className="flex items-center justify-center rounded-md bg-gray-50 px-4 py-5 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:ring-gray-800">
                     <div className="max-w-xs text-center">
                       {/* custom color used to optimize this edge case */}
                       <step.icon

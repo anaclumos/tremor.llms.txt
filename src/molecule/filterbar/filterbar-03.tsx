@@ -14,8 +14,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Tooltip } from "../../atom/Tooltip"
+} from "@/atom/Select"
+import { Tooltip } from "@/atom/Tooltip"
 
 const BarChartThumbnail = (props: SVGProps<SVGSVGElement>) => (
   // array-start

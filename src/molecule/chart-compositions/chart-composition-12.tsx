@@ -2,10 +2,10 @@
 
 import { RiInformationFill } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
-import { SelectNative } from "../../atom/SelectNative"
-import { Tooltip } from "../../atom/Tooltip"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
+import { SelectNative } from "@/atom/SelectNative"
+import { Tooltip } from "@/atom/Tooltip"
 
 const data = [
   //array-start
@@ -314,7 +314,7 @@ export default function Example() {
           <span key={id} className="inline-flex items-center shadow-sm">
             <label
               htmlFor={id}
-              className="flex h-[38px] select-none items-center whitespace-nowrap rounded-l-md border border-gray-300 bg-gray-50 px-2.5 text-base text-gray-900 sm:h-[34px] sm:text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-50"
+              className="flex h-[38px] items-center rounded-l-md border border-gray-300 bg-gray-50 px-2.5 text-base whitespace-nowrap text-gray-900 select-none sm:h-[34px] sm:text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-50"
             >
               {label}
             </label>

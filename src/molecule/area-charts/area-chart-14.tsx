@@ -3,9 +3,9 @@
 import { AvailableChartColorsKeys } from "@/lib/chartUtils"
 import { cx } from "@/lib/utils"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -332,7 +332,7 @@ export default function Example() {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-6 inline-flex items-center gap-x-2.5 whitespace-nowrap rounded-md bg-white px-3 py-1 text-sm text-gray-700 shadow-sm ring-1 ring-gray-200 md:mt-0 dark:bg-gray-950 dark:text-gray-300 dark:ring-gray-800">
+                <span className="mt-6 inline-flex items-center gap-x-2.5 rounded-md bg-white px-3 py-1 text-sm whitespace-nowrap text-gray-700 ring-1 shadow-sm ring-gray-200 md:mt-0 dark:bg-gray-950 dark:text-gray-300 dark:ring-gray-800">
                   Success rate
                   <span className="h-5 w-px bg-gray-200 dark:bg-gray-800" />
                   <span

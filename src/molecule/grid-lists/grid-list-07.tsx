@@ -3,7 +3,7 @@
 import type { SVGProps } from "react"
 import { RiArrowDownCircleLine } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const GoogleDriveIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg fill="none" viewBox="0 0 88 78" {...props}>

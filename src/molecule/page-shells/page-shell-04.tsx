@@ -7,10 +7,10 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../atom/Accordion"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Input } from "../../atom/Input"
+} from "@/atom/Accordion"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Input } from "@/atom/Input"
 
 const data = [
   //array-start

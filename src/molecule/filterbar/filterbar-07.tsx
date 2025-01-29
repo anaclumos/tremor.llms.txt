@@ -9,8 +9,8 @@ import {
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "../../atom/DropdownMenu"
-import { Tooltip } from "../../atom/Tooltip"
+} from "@/atom/DropdownMenu"
+import { Tooltip } from "@/atom/Tooltip"
 
 function formatDate(date: Date) {
   return date.toLocaleDateString("en-US", {

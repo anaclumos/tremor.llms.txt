@@ -4,11 +4,11 @@ import { useDropzone } from "react-dropzone"
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { SelectNative } from "../../atom/SelectNative"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { SelectNative } from "@/atom/SelectNative"
 
 // This example requires 'react-dropzone'
 
@@ -23,7 +23,7 @@ export default function FileUpload() {
       key={file.name}
       className="relative rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-950"
     >
-      <div className="absolute right-4 top-1/2 -translate-y-1/2">
+      <div className="absolute top-1/2 right-4 -translate-y-1/2">
         <button
           type="button"
           className="rounded-md p-2 text-gray-400 hover:text-gray-500 dark:text-gray-600 hover:dark:text-gray-500"

@@ -18,7 +18,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -250,7 +250,7 @@ export default function Example() {
         </Table>
       </TableRoot>
       <div className="mt-10 flex items-center justify-between">
-        <p className="text-sm tabular-nums text-gray-500 dark:text-gray-500">
+        <p className="text-sm text-gray-500 tabular-nums dark:text-gray-500">
           Page{" "}
           <span className="font-medium text-gray-900 dark:text-gray-50">{`${
             table.getState().pagination.pageIndex + 1
@@ -261,7 +261,7 @@ export default function Example() {
             {`${table.getPageCount()}`}
           </span>
         </p>
-        <div className="inline-flex items-center rounded-full shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-800">
+        <div className="inline-flex items-center rounded-full ring-1 shadow-sm ring-gray-300 ring-inset dark:ring-gray-800">
           <Button
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}

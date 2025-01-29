@@ -7,10 +7,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { RiGithubFill, RiGoogleFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 
 // Animation parameters
 const TOTAL_ROWS = 40
@@ -55,7 +55,7 @@ export default function Example() {
               return (
                 <div key={`inner-${rowIdx}-${colIdx}`}>
                   <div
-                    className={`size-9 rounded-lg shadow ring-1 ring-black/5 transition-all duration-[3000ms] dark:ring-white/5 ${
+                    className={`size-9 rounded-lg ring-1 shadow ring-black/5 transition-all duration-[3000ms] dark:ring-white/5 ${
                       isSelected
                         ? "shadow-blue-500/50 dark:shadow-blue-500/40"
                         : "shadow-blue-500/10 dark:shadow-blue-500/10"
@@ -192,7 +192,7 @@ export default function Example() {
           aria-hidden="true"
         >
           <div>
-            <div className="-ml-2 -mt-2 flex flex-col gap-2">{gridDivs}</div>
+            <div className="-mt-2 -ml-2 flex flex-col gap-2">{gridDivs}</div>
           </div>
         </div>
       </div>

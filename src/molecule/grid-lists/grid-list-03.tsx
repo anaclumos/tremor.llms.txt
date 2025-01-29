@@ -8,8 +8,8 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 import {
   Table,
   TableBody,
@@ -17,8 +17,8 @@ import {
   TableHead,
   TableHeaderCell,
   TableRow,
-} from "../../atom/Table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+} from "@/atom/Table"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -170,7 +170,7 @@ export default function Example() {
           >
             <TabsTrigger
               value="tab1"
-              className="rounded-md py-1.5 data-[state=active]:ring-1 data-[state=active]:ring-inset data-[state=active]:ring-gray-200 data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:ring-gray-800"
+              className="rounded-md py-1.5 data-[state=active]:ring-1 data-[state=active]:ring-gray-200 data-[state=active]:ring-inset data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:ring-gray-800"
             >
               <RiLayoutGridLine
                 className="size-5 shrink-0"
@@ -179,7 +179,7 @@ export default function Example() {
             </TabsTrigger>
             <TabsTrigger
               value="tab2"
-              className="rounded-md py-1.5 data-[state=active]:ring-1 data-[state=active]:ring-inset data-[state=active]:ring-gray-200 data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:ring-gray-800"
+              className="rounded-md py-1.5 data-[state=active]:ring-1 data-[state=active]:ring-gray-200 data-[state=active]:ring-inset data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:ring-gray-800"
             >
               <RiListCheck className="size-5 shrink-0" aria-hidden={true} />
             </TabsTrigger>
@@ -234,7 +234,7 @@ export default function Example() {
                     ))}
                   </div>
                   <span
-                    className="pointer-events-none absolute right-4 top-4 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
+                    className="pointer-events-none absolute top-4 right-4 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
                     aria-hidden={true}
                   >
                     <RiArrowRightUpLine className="size-4" aria-hidden={true} />

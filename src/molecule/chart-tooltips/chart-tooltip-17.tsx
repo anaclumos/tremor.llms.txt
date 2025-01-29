@@ -3,10 +3,10 @@
 import React from "react"
 import { RiArrowDownSLine } from "@remixicon/react"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { ProgressCircle } from "../../atom/ProgressCircle"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { ProgressCircle } from "@/atom/ProgressCircle"
 
 const data = [
   //array-start

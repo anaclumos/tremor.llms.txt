@@ -21,12 +21,12 @@
 import React from "react"
 import { RiRefreshLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
+import { Button } from "@/atom/Button"
 import {
   RadioCardGroup,
   RadioCardIndicator,
   RadioCardItem,
-} from "../../atom/RadioCardGroup"
+} from "@/atom/RadioCardGroup"
 
 const employeeCounts = [
   { value: "1", label: "1" },

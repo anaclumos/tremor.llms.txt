@@ -3,22 +3,22 @@
 import React from "react"
 import { RiCheckLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   RadioCardGroup,
   RadioCardIndicator,
   RadioCardItem,
-} from "../../atom/RadioCardGroup"
+} from "@/atom/RadioCardGroup"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const workspaces = [
   //array-start

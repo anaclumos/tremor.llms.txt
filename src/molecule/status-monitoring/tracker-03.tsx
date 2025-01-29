@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { Tracker } from "../../atom/Tracker"
+import { Card } from "@/atom/Card"
+import { Tracker } from "@/atom/Tracker"
 
 const data = [
   //array-start
@@ -417,16 +417,16 @@ export default function Example() {
             Scanned databases:
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-2 sm:mt-0">
-            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-inset ring-gray-200 dark:text-gray-300 dark:ring-gray-800">
+            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-gray-200 ring-inset dark:text-gray-300 dark:ring-gray-800">
               sales_data
             </span>
-            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-inset ring-gray-200 dark:text-gray-300 dark:ring-gray-800">
+            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-gray-200 ring-inset dark:text-gray-300 dark:ring-gray-800">
               customer_data
             </span>
-            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-inset ring-gray-200 dark:text-gray-300 dark:ring-gray-800">
+            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-gray-200 ring-inset dark:text-gray-300 dark:ring-gray-800">
               location_data
             </span>
-            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-inset ring-gray-200 dark:text-gray-300 dark:ring-gray-800">
+            <span className="rounded px-3 py-1 font-mono text-xs text-gray-700 ring-1 ring-gray-200 ring-inset dark:text-gray-300 dark:ring-gray-800">
               test_data
             </span>
           </div>

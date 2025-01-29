@@ -3,15 +3,15 @@ import { RiAddLine, RiArrowDownSLine } from "@remixicon/react"
 
 import { cx, focusRing } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Checkbox } from "../../atom/Checkbox"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Checkbox } from "@/atom/Checkbox"
+import { Label } from "@/atom/Label"
 import {
   Popover,
   PopoverClose,
   PopoverContent,
   PopoverTrigger,
-} from "../../atom/Popover"
+} from "@/atom/Popover"
 
 interface DataTableFilterProps {
   column: any
@@ -85,7 +85,7 @@ export function DataTableFilter({
         <button
           type="button"
           className={cx(
-            "flex w-full items-center gap-x-1.5 whitespace-nowrap rounded-md border border-gray-300 px-2 py-1.5 font-medium text-gray-600 hover:bg-gray-50 sm:w-fit sm:text-xs dark:border-gray-700 dark:text-gray-400 hover:dark:bg-gray-900",
+            "flex w-full items-center gap-x-1.5 rounded-md border border-gray-300 px-2 py-1.5 font-medium whitespace-nowrap text-gray-600 hover:bg-gray-50 sm:w-fit sm:text-xs dark:border-gray-700 dark:text-gray-400 hover:dark:bg-gray-900",
             selectedValues.length > 0 ? "" : "border-dashed",
             focusRing,
           )}
@@ -132,7 +132,7 @@ export function DataTableFilter({
       <PopoverContent
         align="start"
         sideOffset={7}
-        className="min-w-[calc(var(--radix-popover-trigger-width))] max-w-[calc(var(--radix-popover-trigger-width))] sm:min-w-56 sm:max-w-56"
+        className="max-w-[calc(var(--radix-popover-trigger-width))] min-w-[calc(var(--radix-popover-trigger-width))] sm:max-w-56 sm:min-w-56"
         onInteractOutside={() => {
           if (columnFilters?.length === 0) {
             column?.setFilterValue([])
@@ -152,7 +152,7 @@ export function DataTableFilter({
               <Label className="text-base font-medium sm:text-sm">
                 Filter by {title}
               </Label>
-              <div className="mt-2 space-y-2 overflow-y-auto overflow-x-visible py-0.5 pl-1 sm:max-h-36">
+              <div className="mt-2 space-y-2 overflow-x-visible overflow-y-auto py-0.5 pl-1 sm:max-h-36">
                 {options?.map((option) => (
                   <div key={option.value} className="flex items-center gap-2">
                     <Checkbox

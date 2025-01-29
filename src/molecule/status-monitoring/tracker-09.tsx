@@ -4,7 +4,7 @@ import { RiCheckboxCircleFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const dataComponents = [
   //array-start
@@ -802,7 +802,7 @@ const Block = ({
           avoidCollisions
           className={cx(
             // base
-            "flex min-w-44 max-w-52 space-x-2 rounded-lg p-2 shadow-md",
+            "flex max-w-52 min-w-44 space-x-2 rounded-lg p-2 shadow-md",
             // text
             "text-gray-900 dark:text-gray-50",
             // background

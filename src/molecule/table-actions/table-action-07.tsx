@@ -9,8 +9,8 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Checkbox } from "../../atom/Checkbox"
+import { Button } from "@/atom/Button"
+import { Checkbox } from "@/atom/Checkbox"
 import {
   Table,
   TableBody,
@@ -20,7 +20,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -167,7 +167,7 @@ export default function TableCheckbox() {
         enableSorting: true,
         header: ({ table }) =>
           table.getIsAllRowsSelected() || table.getIsSomeRowsSelected() ? (
-            <div className="absolute left-14 top-0 flex h-12 items-center space-x-2 bg-white lg:left-[70px] dark:bg-gray-950">
+            <div className="absolute top-0 left-14 flex h-12 items-center space-x-2 bg-white lg:left-[70px] dark:bg-gray-950">
               <Button className="rounded px-2 py-1">Bulk edit</Button>
               <Button variant="secondary" className="rounded px-2 py-1">
                 Delete all

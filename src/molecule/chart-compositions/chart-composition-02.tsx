@@ -9,17 +9,17 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { BarChart } from "../../atom/BarChart"
-import { Card } from "../../atom/Card"
-import { CategoryBar } from "../../atom/CategoryBar"
-import { Divider } from "../../atom/Divider"
+import { BarChart } from "@/atom/BarChart"
+import { Card } from "@/atom/Card"
+import { CategoryBar } from "@/atom/CategoryBar"
+import { Divider } from "@/atom/Divider"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const data = [
   //array-start

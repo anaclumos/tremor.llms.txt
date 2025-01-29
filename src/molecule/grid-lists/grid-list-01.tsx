@@ -4,8 +4,8 @@ import { RiArrowRightUpLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 
 const data = [
   //array-start
@@ -112,7 +112,7 @@ export default function Example() {
                 </div>
               </div>
               <span
-                className="pointer-events-none absolute right-4 top-4 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
+                className="pointer-events-none absolute top-4 right-4 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
                 aria-hidden={true}
               >
                 <RiArrowRightUpLine className="size-4" aria-hidden={true} />

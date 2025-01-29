@@ -1,6 +1,6 @@
 import { cx, focusInput } from "@/lib/utils"
 
-import { Tooltip } from "../../atom/Tooltip"
+import { Tooltip } from "@/atom/Tooltip"
 
 function formatDate(date: any) {
   return date.toLocaleDateString("en-US", {

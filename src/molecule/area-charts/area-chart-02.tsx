@@ -5,9 +5,9 @@ import { RiCloseLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { AreaChart } from "@/atom/AreaChart"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start
@@ -153,7 +153,7 @@ export default function Example() {
           ))}
         </ul>
         {isOpen ? (
-          <div className="mt-3 rounded-md bg-gray-50 py-3 pl-4 pr-2 ring-1 ring-inset ring-gray-200 dark:bg-gray-800 dark:ring-gray-400/20">
+          <div className="mt-3 rounded-md bg-gray-50 py-3 pr-2 pl-4 ring-1 ring-gray-200 ring-inset dark:bg-gray-800 dark:ring-gray-400/20">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-2">
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-50">

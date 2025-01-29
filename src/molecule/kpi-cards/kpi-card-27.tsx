@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { LineChart } from "../../atom/LineChart"
+import { Card } from "@/atom/Card"
+import { LineChart } from "@/atom/LineChart"
 
 //array-start
 const volume = [

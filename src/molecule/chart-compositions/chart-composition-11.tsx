@@ -12,12 +12,12 @@ import {
 
 import { cx, focusRing } from "@/lib/utils"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { Label } from "../../atom/Label"
-import { SelectNative } from "../../atom/SelectNative"
+import { AreaChart } from "@/atom/AreaChart"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { Label } from "@/atom/Label"
+import { SelectNative } from "@/atom/SelectNative"
 
 const data = [
   //array-start
@@ -457,7 +457,7 @@ export default function Example() {
           </h1>
         </div>
         <Divider className="!my-0 [&>div]:dark:!bg-gray-900" />
-        <div className="rounded-b-lg px-6 pb-6 pt-6">
+        <div className="rounded-b-lg px-6 pt-6 pb-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <Label htmlFor="region" className="sr-only">

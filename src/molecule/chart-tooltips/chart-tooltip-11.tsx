@@ -5,9 +5,9 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
 
 interface DataItem {
   date: string

@@ -6,10 +6,10 @@
 // <body className"h-full"/>
 import { RiGithubFill, RiGoogleFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 
 export default function Example() {
   return (
@@ -124,7 +124,7 @@ export default function Example() {
         >
           <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 p-16 xl:p-24 dark:from-blue-600 dark:to-blue-500">
             <div>
-              <h2 className="max-w-lg text-2xl font-semibold leading-9 text-white dark:text-white">
+              <h2 className="max-w-lg text-2xl leading-9 font-semibold text-white dark:text-white">
                 The simplest way to manage your data platform
               </h2>
               <p className="mt-4 text-white dark:text-white">
@@ -136,7 +136,7 @@ export default function Example() {
                   src="https://blocks.tremor.so/_next/image?url=%2Fhome%2Fdashboard.webp&w=3840&q=75"
                   width={2432}
                   height={1442}
-                  className="rounded-md shadow-2xl shadow-black/50 ring-1 ring-gray-900/5"
+                  className="rounded-md ring-1 shadow-2xl shadow-black/50 ring-gray-900/5"
                 />
               </div>
             </div>

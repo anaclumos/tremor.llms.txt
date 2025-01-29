@@ -7,8 +7,8 @@ import {
   RiTimeFill,
 } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
-import { Tracker } from "../../atom/Tracker"
+import { Card } from "@/atom/Card"
+import { Tracker } from "@/atom/Tracker"
 
 const data = [
   //array-start

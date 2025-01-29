@@ -7,22 +7,22 @@ import {
 
 import { cx, focusRing } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   Popover,
   PopoverClose,
   PopoverContent,
   PopoverTrigger,
-} from "../../atom/Popover"
+} from "@/atom/Popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 type ConditionFilter = {
   condition: string
@@ -116,7 +116,7 @@ export function DataTableFilter({
         <button
           type="button"
           className={cx(
-            "flex w-full items-center gap-x-1.5 whitespace-nowrap rounded-md border border-gray-300 px-2 py-1.5 font-medium text-gray-600 hover:bg-gray-50 sm:w-fit sm:text-xs dark:border-gray-700 dark:text-gray-400 hover:dark:bg-gray-900",
+            "flex w-full items-center gap-x-1.5 rounded-md border border-gray-300 px-2 py-1.5 font-medium whitespace-nowrap text-gray-600 hover:bg-gray-50 sm:w-fit sm:text-xs dark:border-gray-700 dark:text-gray-400 hover:dark:bg-gray-900",
             selectedValues?.condition ? "" : "border-dashed",
             focusRing,
           )}
@@ -163,7 +163,7 @@ export function DataTableFilter({
       <PopoverContent
         align="start"
         sideOffset={7}
-        className="min-w-[calc(var(--radix-popover-trigger-width))] max-w-[calc(var(--radix-popover-trigger-width))] sm:min-w-56 sm:max-w-56"
+        className="max-w-[calc(var(--radix-popover-trigger-width))] min-w-[calc(var(--radix-popover-trigger-width))] sm:max-w-56 sm:min-w-56"
         onInteractOutside={() => {
           if (!columnFilters || columnFilters.condition === "") {
             column?.setFilterValue(undefined)

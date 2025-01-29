@@ -3,10 +3,10 @@
 import { RiArrowDownSLine } from "@remixicon/react"
 import React from "react"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { ProgressCircle, ProgressCircleProps } from "../../atom/ProgressCircle"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { ProgressCircle, ProgressCircleProps } from "@/atom/ProgressCircle"
 
 interface Issue {
   status: "completed" | "in progress" | "on hold"

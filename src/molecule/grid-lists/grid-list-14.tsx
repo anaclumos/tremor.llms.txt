@@ -11,10 +11,10 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { ProgressCircle } from "../../atom/ProgressCircle"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { ProgressCircle } from "@/atom/ProgressCircle"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -171,7 +171,7 @@ export default function Example() {
                   <span className="group-data-[state=active]:text-gray-900 group-data-[state=active]:dark:text-gray-50">
                     {category.status}
                   </span>
-                  <span className="hidden rounded-md bg-white px-2 py-1 text-xs font-semibold tabular-nums ring-1 ring-inset ring-gray-200 group-data-[state=active]:text-gray-700 sm:block dark:bg-[#090E1A] dark:ring-gray-800 group-data-[state=active]:dark:text-gray-300">
+                  <span className="hidden rounded-md bg-white px-2 py-1 text-xs font-semibold tabular-nums ring-1 ring-gray-200 ring-inset group-data-[state=active]:text-gray-700 sm:block dark:bg-[#090E1A] dark:ring-gray-800 group-data-[state=active]:dark:text-gray-300">
                     {category.orders.length}
                   </span>
                 </div>
@@ -183,7 +183,7 @@ export default function Example() {
               <TabsContent
                 key={category.status}
                 value={category.status}
-                className="space-y-4 px-6 pb-6 pt-6"
+                className="space-y-4 px-6 pt-6 pb-6"
               >
                 {category.orders.map((order) => (
                   <Card
@@ -199,7 +199,7 @@ export default function Example() {
                         <span
                           className={cx(
                             statusColor[category.status as Status],
-                            "inline-flex items-center whitespace-nowrap rounded px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset",
+                            "inline-flex items-center rounded px-1.5 py-0.5 text-xs font-medium whitespace-nowrap ring-1 ring-inset",
                           )}
                           aria-hidden={true}
                         >

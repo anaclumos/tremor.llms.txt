@@ -22,9 +22,9 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Slider } from "../../atom/Slider"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Slider } from "@/atom/Slider"
 import {
   Table,
   TableBody,
@@ -32,7 +32,7 @@ import {
   TableHead,
   TableHeaderCell,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 export default function Example() {
   const EXTRA_STEP = 5000
@@ -59,11 +59,11 @@ export default function Example() {
           extraRequests === 0 ? "opacity-50" : "opacity-100",
         )}
       >
-        <div className="mb-4 mt-8 flex items-center justify-between">
+        <div className="mt-8 mb-4 flex items-center justify-between">
           <h2 className="font-semibold text-gray-900 dark:text-gray-50">
             Extra API Requests
           </h2>
-          <p className="text-sm tabular-nums text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-gray-600 tabular-nums dark:text-gray-400">
             +{(extraRequests / 1000).toLocaleString("en-US")}k
             <span className="text-gray-600 dark:text-gray-400">/month</span>
           </p>
@@ -106,7 +106,7 @@ export default function Example() {
             </Button>
           ) : (
             <p
-              className="animate-fade-up text-sm font-semibold tabular-nums text-gray-900 duration-300 dark:text-gray-50"
+              className="animate-fade-up text-sm font-semibold text-gray-900 tabular-nums duration-300 dark:text-gray-50"
               style={{
                 animationFillMode: "backwards",
               }}
@@ -151,7 +151,7 @@ export default function Example() {
             </TableRow>
           </TableBody>
         </Table>
-        <p className="mt-4 text-right text-sm font-semibold tabular-nums text-gray-900 dark:text-gray-50">
+        <p className="mt-4 text-right text-sm font-semibold text-gray-900 tabular-nums dark:text-gray-50">
           Total: $
           {Math.round(8.4 + ((extraRequests / 1000) * 920) / 50).toLocaleString(
             "en-US",

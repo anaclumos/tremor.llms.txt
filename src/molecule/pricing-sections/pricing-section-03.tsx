@@ -2,15 +2,15 @@
 
 import { RiCheckboxCircleFill } from "@remixicon/react"
 
-import { Badge } from "../../atom/Badge"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Label } from "../../atom/Label"
+import { Badge } from "@/atom/Badge"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Label } from "@/atom/Label"
 import {
   RadioCardGroup,
   RadioCardIndicator,
   RadioCardItem,
-} from "../../atom/RadioCardGroup"
+} from "@/atom/RadioCardGroup"
 
 const plans = [
   //array-start

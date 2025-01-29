@@ -4,8 +4,8 @@ import type { SVGProps } from "react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { SelectNative } from "../../atom/SelectNative"
+import { Card } from "@/atom/Card"
+import { SelectNative } from "@/atom/SelectNative"
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -72,7 +72,7 @@ export default function Example() {
                     item.current
                       ? "border-blue-500 text-blue-500 dark:text-blue-500"
                       : "border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-900 dark:text-gray-300 hover:dark:border-gray-600 hover:dark:text-gray-50",
-                    "inline-flex items-center whitespace-nowrap border-b-2 px-2 text-sm font-medium",
+                    "inline-flex items-center border-b-2 px-2 text-sm font-medium whitespace-nowrap",
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >

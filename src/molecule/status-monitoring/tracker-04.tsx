@@ -2,8 +2,8 @@
 
 import { RiCheckboxCircleFill } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
-import { Tracker } from "../../atom/Tracker"
+import { Card } from "@/atom/Card"
+import { Tracker } from "@/atom/Tracker"
 
 const data = [
   //array-start
@@ -417,7 +417,7 @@ export default function Example() {
           <h3 className="font-medium text-gray-900 dark:text-gray-50">
             Lena&#39;s Website
           </h3>
-          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm text-gray-700 ring-1 ring-inset ring-gray-200 dark:text-gray-300 dark:ring-gray-800">
+          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm text-gray-700 ring-1 ring-gray-200 ring-inset dark:text-gray-300 dark:ring-gray-800">
             <span
               className="-ml-0.5 size-2 rounded-full bg-emerald-500"
               aria-hidden={true}

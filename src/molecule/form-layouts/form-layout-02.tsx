@@ -1,18 +1,18 @@
 "use client"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { RadioGroup, RadioGroupItem } from "../../atom/RadioGroup"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { RadioGroup, RadioGroupItem } from "@/atom/RadioGroup"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Textarea } from "../../atom/Textarea"
+} from "@/atom/Select"
+import { Textarea } from "@/atom/Textarea"
 
 export default function Example() {
   return (

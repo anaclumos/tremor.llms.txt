@@ -4,24 +4,24 @@ import type { SVGProps } from "react"
 import { useEffect, useState } from "react"
 import Link from "next/link"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   RadioCardGroup,
   RadioCardIndicator,
   RadioCardItem,
-} from "../../atom/RadioCardGroup"
-import { RadioGroup, RadioGroupItem } from "../../atom/RadioGroup"
+} from "@/atom/RadioCardGroup"
+import { RadioGroup, RadioGroupItem } from "@/atom/RadioGroup"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Slider } from "../../atom/Slider"
+} from "@/atom/Select"
+import { Slider } from "@/atom/Slider"
 
 type Region = {
   value: string
@@ -332,7 +332,7 @@ export default function Example() {
                     <div>
                       <div className="flex items-center gap-2">
                         <Icon className="size-5 shrink-0" aria-hidden="true" />
-                        <span className="font-semibold capitalize leading-6 text-gray-900 dark:text-gray-50">
+                        <span className="leading-6 font-semibold text-gray-900 capitalize dark:text-gray-50">
                           {provider}
                         </span>
                       </div>
@@ -375,7 +375,7 @@ export default function Example() {
           <div className="flex flex-col items-start gap-8 sm:flex-row">
             <div className="space-y-2">
               <Label
-                className="whitespace-nowrap text-base font-medium text-gray-900 sm:text-sm/7 dark:text-gray-50"
+                className="text-base font-medium whitespace-nowrap text-gray-900 sm:text-sm/7 dark:text-gray-50"
                 htmlFor="storage"
               >
                 Storage (GB)
@@ -466,7 +466,7 @@ export default function Example() {
               Estimated monthly costs
             </p>
             <p
-              className="text-3xl font-medium tabular-nums text-gray-900 sm:text-2xl dark:text-gray-50"
+              className="text-3xl font-medium text-gray-900 tabular-nums sm:text-2xl dark:text-gray-50"
               aria-live="polite"
             >
               {calculatePrice()}

@@ -2,8 +2,8 @@
 
 import { RiAddFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Button } from "@/atom/Button"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 export default function Example() {
   return (

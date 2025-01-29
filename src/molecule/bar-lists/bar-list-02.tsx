@@ -2,9 +2,9 @@
 
 import React from "react"
 
-import { BarList } from "../../atom/BarList"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { BarList } from "@/atom/BarList"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 import {
   Dialog,
   DialogClose,
@@ -13,8 +13,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../atom/Dialog"
-import { Input } from "../../atom/Input"
+} from "@/atom/Dialog"
+import { Input } from "@/atom/Input"
 
 const pages = [
   //array-start
@@ -172,7 +172,7 @@ export default function Example() {
           <p className="font-medium text-gray-900 dark:text-gray-50">
             Top pages
           </p>
-          <p className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+          <p className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
             Visitors
           </p>
         </div>
@@ -187,12 +187,12 @@ export default function Example() {
               <Button variant="secondary">Show more</Button>
             </DialogTrigger>
             <DialogContent className="!p-0">
-              <DialogHeader className="border-b border-gray-200 px-6 pb-4 pt-6 dark:border-gray-900">
+              <DialogHeader className="border-b border-gray-200 px-6 pt-6 pb-4 dark:border-gray-900">
                 <DialogTitle className="flex items-center justify-between">
                   <p className="text-base font-medium text-gray-900 dark:text-gray-50">
                     Pages
                   </p>
-                  <p className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                  <p className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                     Visitors
                   </p>
                 </DialogTitle>

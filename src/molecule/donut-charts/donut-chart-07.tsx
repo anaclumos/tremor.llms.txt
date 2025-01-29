@@ -2,7 +2,7 @@
 
 import { cx } from "@/lib/utils"
 
-import { DonutChart } from "../../atom/DonutChart"
+import { DonutChart } from "@/atom/DonutChart"
 
 const data = [
   //array-start

@@ -2,8 +2,8 @@
 
 import { RiExternalLinkLine } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const usage = [
   //array-start

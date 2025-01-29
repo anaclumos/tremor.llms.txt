@@ -2,9 +2,9 @@
 
 import React from "react"
 
-import { Badge } from "../../atom/Badge"
-import { BarChart } from "../../atom/BarChart"
-import { Divider } from "../../atom/Divider"
+import { Badge } from "@/atom/Badge"
+import { BarChart } from "@/atom/BarChart"
+import { Divider } from "@/atom/Divider"
 
 const data = [
   //array-start
@@ -333,12 +333,12 @@ export default function Example() {
           {summary.map((item, index) => (
             <React.Fragment key={item.name}>
               <div>
-                <p className="whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                <p className="text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                   {item.name}
                 </p>
                 {item.name === "Last invoice" ? (
                   <a
-                    className="mt-1 inline-flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-blue-500 hover:underline hover:underline-offset-4 dark:text-blue-500"
+                    className="mt-1 inline-flex items-center gap-1 text-sm font-semibold whitespace-nowrap text-blue-500 hover:underline hover:underline-offset-4 dark:text-blue-500"
                     href="#"
                   >
                     {item.value}

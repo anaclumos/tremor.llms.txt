@@ -4,9 +4,9 @@ import React from "react"
 import Link from "next/link"
 import { RiCheckLine, RiCloudLine, RiUserLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Label } from "../../atom/Label"
-import { Switch } from "../../atom/Switch"
+import { Button } from "@/atom/Button"
+import { Label } from "@/atom/Label"
+import { Switch } from "@/atom/Switch"
 
 type FixedPrice = string
 
@@ -91,7 +91,7 @@ export default function Example() {
     <div className="obfuscate">
       <div className="py-20">
         <section aria-labelledby="pricing-title">
-          <div className="w-fit rounded-lg px-2 py-1 shadow-md shadow-blue-400/30 ring-1 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
+          <div className="w-fit rounded-lg px-2 py-1 ring-1 shadow-md shadow-blue-400/30 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
             <span className="text-sm font-medium tracking-tight text-gray-900 dark:text-gray-50">
               Pricing
             </span>
@@ -162,7 +162,7 @@ export default function Example() {
                     {plan.name}
                   </h2>
                   <div className="mt-3 flex items-center gap-x-3">
-                    <span className="text-5xl font-semibold tabular-nums text-gray-900 dark:text-gray-50">
+                    <span className="text-5xl font-semibold text-gray-900 tabular-nums dark:text-gray-50">
                       {isVariablePrice(plan.price)
                         ? billingFrequency === "monthly"
                           ? plan.price.monthly

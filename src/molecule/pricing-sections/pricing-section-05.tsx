@@ -5,8 +5,8 @@ import { RiCheckLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Badge } from "../../atom/Badge"
-import { Button } from "../../atom/Button"
+import { Badge } from "@/atom/Badge"
+import { Button } from "@/atom/Button"
 
 const frequencies = [
   { value: "monthly", label: "Monthly", priceSuffix: "/mo" },
@@ -112,7 +112,7 @@ export default function Example() {
                 <div className="w-full border-t border-gray-200 dark:border-gray-800" />
               </div>
               {plan.isRecommended && (
-                <div className="relative grid grid-cols-2 gap-x-1 rounded-full bg-white p-1 text-center text-xs/5 font-semibold ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:ring-gray-800">
+                <div className="relative grid grid-cols-2 gap-x-1 rounded-full bg-white p-1 text-center text-xs/5 font-semibold ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:ring-gray-800">
                   {frequencies.map((option) => (
                     <label
                       key={option.value}

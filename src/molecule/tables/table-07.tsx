@@ -2,8 +2,8 @@
 
 import React from "react"
 
-import { Button } from "../../atom/Button"
-import { SelectNative } from "../../atom/SelectNative"
+import { Button } from "@/atom/Button"
+import { SelectNative } from "@/atom/SelectNative"
 import {
   Table,
   TableBody,
@@ -12,7 +12,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const data = [
   //array-start
@@ -100,7 +100,7 @@ export default function Example() {
             <option value="Inactive">Inactive</option>
             <option value="Downtime">Downtime</option>
           </SelectNative>
-          <Button className="mt-2 w-full whitespace-nowrap py-2 sm:mt-0 md:w-fit">
+          <Button className="mt-2 w-full py-2 whitespace-nowrap sm:mt-0 md:w-fit">
             Add workspace
           </Button>
         </div>

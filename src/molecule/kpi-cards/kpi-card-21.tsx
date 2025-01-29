@@ -2,8 +2,8 @@
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { CategoryBar } from "../../atom/CategoryBar"
+import { Card } from "@/atom/Card"
+import { CategoryBar } from "@/atom/CategoryBar"
 
 const data = [
   //array-start

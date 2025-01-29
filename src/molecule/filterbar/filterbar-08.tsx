@@ -11,7 +11,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../../atom/DropdownMenu"
+} from "@/atom/DropdownMenu"
 
 export default function Example() {
   const [sorting, setSorting] = React.useState("alphabetical")
@@ -52,7 +52,7 @@ export default function Example() {
                 type="button"
                 className={cx(
                   focusInput,
-                  "flex items-center gap-x-2 rounded-md border border-gray-300 bg-white py-1.5 pl-3 pr-1.5 text-sm font-medium text-gray-900 shadow-sm transition hover:bg-gray-50 focus:z-10 focus:outline-none dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50 hover:dark:bg-gray-950/50",
+                  "flex items-center gap-x-2 rounded-md border border-gray-300 bg-white py-1.5 pr-1.5 pl-3 text-sm font-medium text-gray-900 shadow-sm transition hover:bg-gray-50 focus:z-10 focus:outline-none dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50 hover:dark:bg-gray-950/50",
                 )}
               >
                 <RiArrowUpDownLine
@@ -91,7 +91,7 @@ export default function Example() {
                 type="button"
                 className={cx(
                   focusInput,
-                  "flex items-center gap-x-2 rounded-md border border-gray-300 bg-white py-1.5 pl-3 pr-1.5 text-sm font-medium text-gray-900 shadow-sm transition hover:bg-gray-50 focus:z-10 focus:outline-none dark:border-gray-800 dark:bg-gray-950 dark:text-gray-950 hover:dark:bg-gray-950/50",
+                  "flex items-center gap-x-2 rounded-md border border-gray-300 bg-white py-1.5 pr-1.5 pl-3 text-sm font-medium text-gray-900 shadow-sm transition hover:bg-gray-50 focus:z-10 focus:outline-none dark:border-gray-800 dark:bg-gray-950 dark:text-gray-950 hover:dark:bg-gray-950/50",
                 )}
               >
                 <RiTimeLine

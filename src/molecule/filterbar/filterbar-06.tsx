@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "../../atom/DropdownMenu"
+} from "@/atom/DropdownMenu"
 
 const data = [
   // array-start

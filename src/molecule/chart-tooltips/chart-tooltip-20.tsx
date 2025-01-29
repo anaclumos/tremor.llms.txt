@@ -5,10 +5,10 @@ import { RiArrowDownSLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { DonutChart } from "../../atom/DonutChart"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { DonutChart } from "@/atom/DonutChart"
 
 interface LocationData {
   location: string

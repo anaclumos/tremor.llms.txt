@@ -2,8 +2,8 @@
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { DonutChart } from "../../atom/DonutChart"
+import { Card } from "@/atom/Card"
+import { DonutChart } from "@/atom/DonutChart"
 
 const data = [
   //array-start
@@ -68,7 +68,7 @@ export default function Example() {
                       {currencyFormatter(item.amount)}{" "}
                       <span className="font-normal">({item.share})</span>
                     </p>
-                    <p className="mt-0.5 whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                    <p className="mt-0.5 text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                       {item.name}
                     </p>
                   </div>

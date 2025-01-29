@@ -4,8 +4,8 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { AreaChart, TooltipProps } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
+import { AreaChart, TooltipProps } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
 
 interface DataItem {
   date: string
@@ -141,7 +141,7 @@ export default function Example() {
           startEndOnly={true}
           valueFormatter={currencyFormatter}
           fill="solid"
-          className="-mb-2 mt-8 !h-48"
+          className="mt-8 -mb-2 !h-48"
           tooltipCallback={(props) => {
             if (props.active) {
               setDatas((prev) => {

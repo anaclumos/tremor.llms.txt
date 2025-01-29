@@ -4,8 +4,8 @@ import { RiCheckboxCircleFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Badge } from "../../atom/Badge"
-import { Button } from "../../atom/Button"
+import { Badge } from "@/atom/Badge"
+import { Button } from "@/atom/Button"
 
 const plans = [
   //array-start

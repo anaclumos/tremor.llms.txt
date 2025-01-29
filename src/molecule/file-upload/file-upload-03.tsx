@@ -1,7 +1,7 @@
 import { RiCloseLine, RiFileExcelLine, RiFileLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { ProgressBar } from "../../atom/ProgressBar"
+import { Button } from "@/atom/Button"
+import { ProgressBar } from "@/atom/ProgressBar"
 
 export default function Example() {
   return (
@@ -41,7 +41,7 @@ export default function Example() {
             <span className="pl-1 sm:pl-0">Max. size: 10MB</span>
           </p>
           <div className="relative mt-8 rounded-lg bg-gray-50 p-4 dark:bg-gray-900">
-            <div className="absolute right-1 top-1">
+            <div className="absolute top-1 right-1">
               <button
                 type="button"
                 className="rounded-md p-2 text-gray-400 hover:text-gray-500 dark:text-gray-600 hover:dark:text-gray-500"
@@ -51,7 +51,7 @@ export default function Example() {
               </button>
             </div>
             <div className="flex items-center space-x-2.5">
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-white shadow-sm ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:ring-gray-800">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-white ring-1 shadow-sm ring-gray-200 ring-inset dark:bg-gray-950 dark:ring-gray-800">
                 <RiFileExcelLine
                   className="size-5 text-gray-700 dark:text-gray-300"
                   aria-hidden={true}

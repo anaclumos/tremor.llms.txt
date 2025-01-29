@@ -7,9 +7,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../atom/Accordion"
-import { Card } from "../../atom/Card"
-import { Tracker } from "../../atom/Tracker"
+} from "@/atom/Accordion"
+import { Card } from "@/atom/Card"
+import { Tracker } from "@/atom/Tracker"
 
 const data = [
   //array-start

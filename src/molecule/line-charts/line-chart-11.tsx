@@ -1,7 +1,7 @@
-import { Badge } from "../../atom/Badge"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { LineChart } from "../../atom/LineChart"
+import { Badge } from "@/atom/Badge"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { LineChart } from "@/atom/LineChart"
 
 const data = [
   //array-start

@@ -6,8 +6,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Tooltip } from "../../atom/Tooltip"
+} from "@/atom/Select"
+import { Tooltip } from "@/atom/Tooltip"
 
 function formatDate(date: Date) {
   return date.toLocaleDateString("en-US", {

@@ -6,7 +6,7 @@
 // <body className"h-full"/>
 import { RiContrast2Line, RiGoogleFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
+import { Button } from "@/atom/Button"
 
 export default function Example() {
   return (
@@ -14,7 +14,7 @@ export default function Example() {
       <div className="flex min-h-full flex-1 flex-col justify-center px-4 py-40 lg:px-6">
         <div className="relative sm:mx-auto sm:w-full sm:max-w-sm">
           <div
-            className="pointer-events-none absolute -top-[25%] left-1/2 -translate-x-1/2 select-none opacity-60 dark:opacity-90"
+            className="pointer-events-none absolute -top-[25%] left-1/2 -translate-x-1/2 opacity-60 select-none dark:opacity-90"
             aria-hidden="true"
             style={{
               maskImage:
@@ -29,7 +29,7 @@ export default function Example() {
                   <div className="flex gap-2">
                     {Array.from({ length: 10 }, (_, idx2) => (
                       <div key={`inner-${idx}-${idx2}`}>
-                        <div className="size-7 rounded-md shadow shadow-indigo-500/40 ring-1 ring-black/5 dark:shadow-indigo-400/20 dark:ring-white/10" />
+                        <div className="size-7 rounded-md ring-1 shadow shadow-indigo-500/40 ring-black/5 dark:shadow-indigo-400/20 dark:ring-white/10" />
                       </div>
                     ))}
                   </div>
@@ -37,12 +37,12 @@ export default function Example() {
               ))}
             </div>
           </div>
-          <div className="relative mx-auto w-fit rounded-xl bg-gray-50 p-4 shadow-md shadow-black/10 ring-1 ring-black/10 dark:bg-gray-900 dark:ring-gray-800">
-            <div className="absolute left-[9%] top-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
-            <div className="absolute right-[9%] top-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
+          <div className="relative mx-auto w-fit rounded-xl bg-gray-50 p-4 ring-1 shadow-md shadow-black/10 ring-black/10 dark:bg-gray-900 dark:ring-gray-800">
+            <div className="absolute top-[9%] left-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
+            <div className="absolute top-[9%] right-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
             <div className="absolute bottom-[9%] left-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
-            <div className="absolute bottom-[9%] right-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
-            <div className="w-fit rounded-lg bg-gradient-to-b from-blue-400 to-blue-600 p-3 shadow-sm shadow-blue-500/50 ring-1 ring-inset ring-white/25">
+            <div className="absolute right-[9%] bottom-[9%] size-1 rounded-full bg-gray-100 shadow-inner dark:bg-gray-800" />
+            <div className="w-fit rounded-lg bg-gradient-to-b from-blue-400 to-blue-600 p-3 ring-1 shadow-sm shadow-blue-500/50 ring-white/25 ring-inset">
               <RiContrast2Line
                 className="size-8 text-white"
                 aria-hidden="true"

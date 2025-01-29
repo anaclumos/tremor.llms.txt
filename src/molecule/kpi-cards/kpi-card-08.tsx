@@ -4,7 +4,7 @@ import { RiArrowDownSFill, RiArrowUpSFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start

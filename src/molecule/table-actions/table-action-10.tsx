@@ -9,7 +9,7 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Checkbox } from "../../atom/Checkbox"
+import { Checkbox } from "@/atom/Checkbox"
 import {
   Table,
   TableBody,
@@ -19,7 +19,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -309,11 +309,11 @@ export default function TableCheckbox() {
       </TableRoot>
       <div
         className={cx(
-          "absolute inset-x-0 -bottom-14 mx-auto flex w-fit items-center space-x-3 rounded-full border border-gray-800 bg-gray-900 px-4 py-2 text-sm font-medium shadow-md ring-1 ring-gray-800",
+          "absolute inset-x-0 -bottom-14 mx-auto flex w-fit items-center space-x-3 rounded-full border border-gray-800 bg-gray-900 px-4 py-2 text-sm font-medium ring-1 shadow-md ring-gray-800",
           Object.keys(rowSelection).length > 0 ? "" : "hidden",
         )}
       >
-        <p className="select-none tabular-nums text-gray-400">
+        <p className="text-gray-400 tabular-nums select-none">
           {Object.keys(rowSelection).length} selected
         </p>
         <span className="h-4 w-px bg-gray-600" aria-hidden={true} />
@@ -323,7 +323,7 @@ export default function TableCheckbox() {
             className="inline-flex items-center gap-2 text-sm text-gray-300 transition-all hover:text-gray-50"
           >
             Edit
-            <span className="flex size-6 select-none items-center justify-center rounded-md bg-gray-800 text-gray-400 ring-1 ring-inset ring-gray-700">
+            <span className="flex size-6 items-center justify-center rounded-md bg-gray-800 text-gray-400 ring-1 ring-gray-700 ring-inset select-none">
               E
             </span>
           </button>
@@ -336,10 +336,10 @@ export default function TableCheckbox() {
           >
             Delete
             <span className="flex items-center space-x-1">
-              <span className="flex size-6 select-none items-center justify-center rounded-md bg-gray-800 text-gray-400 ring-1 ring-inset ring-gray-700">
+              <span className="flex size-6 items-center justify-center rounded-md bg-gray-800 text-gray-400 ring-1 ring-gray-700 ring-inset select-none">
                 ⌘
               </span>
-              <span className="flex size-6 select-none items-center justify-center rounded-md bg-gray-800 text-gray-400 ring-1 ring-inset ring-gray-700">
+              <span className="flex size-6 items-center justify-center rounded-md bg-gray-800 text-gray-400 ring-1 ring-gray-700 ring-inset select-none">
                 D
               </span>
             </span>

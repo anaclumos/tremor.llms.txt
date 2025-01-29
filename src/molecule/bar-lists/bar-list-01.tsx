@@ -2,9 +2,9 @@
 
 import React from "react"
 
-import { BarList } from "../../atom/BarList"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { BarList } from "@/atom/BarList"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 
 const pages = [
   //array-start
@@ -67,7 +67,7 @@ export default function Example() {
           <p className="font-medium text-gray-900 dark:text-gray-50">
             Top pages
           </p>
-          <p className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+          <p className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
             Visitors
           </p>
         </div>

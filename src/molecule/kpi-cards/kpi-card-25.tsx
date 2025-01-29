@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { CategoryBar } from "../../atom/CategoryBar"
+import { Card } from "@/atom/Card"
+import { CategoryBar } from "@/atom/CategoryBar"
 
 export default function Example() {
   return (

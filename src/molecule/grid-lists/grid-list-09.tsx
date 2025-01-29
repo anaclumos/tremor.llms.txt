@@ -6,9 +6,9 @@ import {
   RiStackLine,
 } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 import {
   Table,
   TableBody,
@@ -16,8 +16,8 @@ import {
   TableHead,
   TableHeaderCell,
   TableRow,
-} from "../../atom/Table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+} from "@/atom/Table"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -159,7 +159,7 @@ export default function Example() {
             >
               <TabsTrigger
                 value="tab1"
-                className="rounded-md py-1.5 data-[state=active]:text-blue-500 data-[state=active]:ring-1 data-[state=active]:ring-inset data-[state=active]:ring-gray-200 data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:text-blue-500 data-[state=active]:dark:ring-gray-800"
+                className="rounded-md py-1.5 data-[state=active]:text-blue-500 data-[state=active]:ring-1 data-[state=active]:ring-gray-200 data-[state=active]:ring-inset data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:text-blue-500 data-[state=active]:dark:ring-gray-800"
               >
                 <RiLayoutGridLine
                   className="size-5 shrink-0"
@@ -168,7 +168,7 @@ export default function Example() {
               </TabsTrigger>
               <TabsTrigger
                 value="tab2"
-                className="rounded-md py-1.5 data-[state=active]:text-blue-500 data-[state=active]:ring-1 data-[state=active]:ring-inset data-[state=active]:ring-gray-200 data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:text-blue-500 data-[state=active]:dark:ring-gray-800"
+                className="rounded-md py-1.5 data-[state=active]:text-blue-500 data-[state=active]:ring-1 data-[state=active]:ring-gray-200 data-[state=active]:ring-inset data-[state=active]:dark:bg-[#090E1A] data-[state=active]:dark:text-blue-500 data-[state=active]:dark:ring-gray-800"
               >
                 <RiListUnordered
                   className="size-5 shrink-0"
@@ -225,11 +225,11 @@ export default function Example() {
                         >
                           <span>{item.type}</span>
                           {item.value === "Live" ? (
-                            <span className="inline-flex items-center rounded-md bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/10 dark:bg-emerald-400/10 dark:text-emerald-500 dark:ring-emerald-400/20">
+                            <span className="inline-flex items-center rounded-md bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 ring-1 ring-emerald-600/10 ring-inset dark:bg-emerald-400/10 dark:text-emerald-500 dark:ring-emerald-400/20">
                               {item.value}
                             </span>
                           ) : item.value === "Inactive" ? (
-                            <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-0.5 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:text-gray-400 dark:ring-gray-800">
+                            <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-0.5 text-xs font-medium text-gray-700 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:text-gray-400 dark:ring-gray-800">
                               {item.value}
                             </span>
                           ) : (
@@ -274,11 +274,11 @@ export default function Example() {
                   <TableCell>{workspace.details[2].value}</TableCell>
                   <TableCell>
                     {workspace.details[3].value === "Live" ? (
-                      <span className="inline-flex items-center rounded-md bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 ring-1 ring-inset ring-emerald-600/10 dark:bg-emerald-400/10 dark:text-emerald-500 dark:ring-emerald-400/20">
+                      <span className="inline-flex items-center rounded-md bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 ring-1 ring-emerald-600/10 ring-inset dark:bg-emerald-400/10 dark:text-emerald-500 dark:ring-emerald-400/20">
                         {workspace.details[3].value}
                       </span>
                     ) : workspace.details[3].value === "Inactive" ? (
-                      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-0.5 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:text-gray-400 dark:ring-gray-800">
+                      <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-0.5 text-xs font-medium text-gray-700 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:text-gray-400 dark:ring-gray-800">
                         {workspace.details[3].value}
                       </span>
                     ) : (

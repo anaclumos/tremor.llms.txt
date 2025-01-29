@@ -8,23 +8,23 @@ import {
 
 import { cx, focusInput } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { DateRangePicker } from "../../atom/DatePicker"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { DateRangePicker } from "@/atom/DatePicker"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   Popover,
   PopoverClose,
   PopoverContent,
   PopoverTrigger,
-} from "../../atom/Popover"
+} from "@/atom/Popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const categories = [
   // array-start

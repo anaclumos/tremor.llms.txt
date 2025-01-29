@@ -6,8 +6,8 @@ import {
   RiServerFill,
 } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 import {
   Table,
   TableBody,
@@ -16,7 +16,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const LineChartIllustration = (props: SVGProps<SVGSVGElement>) => (
   // array-start
@@ -248,9 +248,9 @@ function FieldPerformance() {
             Past 30 days
           </span>
         </p>
-        <LineChartIllustration className="min-w-200 mt-8 w-full shrink-0" />
+        <LineChartIllustration className="mt-8 w-full min-w-200 shrink-0" />
 
-        <TableRoot className="min-w-200 mt-6">
+        <TableRoot className="mt-6 min-w-200">
           <Table>
             <TableHead>
               <TableRow>
@@ -361,7 +361,7 @@ export default function Example() {
           >
             Database Analytics
           </h2>
-          <p className="mt-2 max-w-lg text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-4xl dark:text-gray-50">
+          <p className="mt-2 max-w-lg text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl dark:text-gray-50">
             Turn database metrics into optimized performance
           </p>
         </div>

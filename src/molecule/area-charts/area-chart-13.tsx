@@ -3,9 +3,9 @@
 import { AvailableChartColorsKeys } from "@/lib/chartUtils"
 import { cx } from "@/lib/utils"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start

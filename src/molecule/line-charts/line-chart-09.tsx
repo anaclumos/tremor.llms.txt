@@ -2,9 +2,9 @@
 
 import React from "react"
 
-import { Button } from "../../atom/Button"
-import { DateRange, DateRangePicker } from "../../atom/DatePicker"
-import { LineChart } from "../../atom/LineChart"
+import { Button } from "@/atom/Button"
+import { DateRange, DateRangePicker } from "@/atom/DatePicker"
+import { LineChart } from "@/atom/LineChart"
 
 DateRangePicker
 
@@ -391,7 +391,7 @@ export default function Example() {
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt.
       </p>
-      <div className="mt-4 rounded-lg bg-gray-50 p-4 ring-1 ring-inset ring-gray-200 sm:p-6 dark:bg-gray-900 dark:ring-gray-800">
+      <div className="mt-4 rounded-lg bg-gray-50 p-4 ring-1 ring-gray-200 ring-inset sm:p-6 dark:bg-gray-900 dark:ring-gray-800">
         <p className="text-sm font-medium text-gray-900 dark:text-gray-50">
           Filterbar
         </p>

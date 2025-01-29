@@ -4,8 +4,8 @@ import { RiAddFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { LineChart } from "../../atom/LineChart"
+import { Card } from "@/atom/Card"
+import { LineChart } from "@/atom/LineChart"
 
 const data = [
   //array-start
@@ -432,7 +432,7 @@ export default function Example() {
                     <p className="order-last font-semibold text-gray-900 dark:text-gray-50">
                       {item.value}
                     </p>
-                    <p className="order-first whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                    <p className="order-first text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                       {item.name}
                     </p>
                   </div>
@@ -441,7 +441,7 @@ export default function Example() {
             </ul>
             <button
               type="button"
-              className="mt-6 inline-flex items-center gap-1.5 whitespace-nowrap py-2 text-sm font-medium text-blue-500 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-600"
+              className="mt-6 inline-flex items-center gap-1.5 py-2 text-sm font-medium whitespace-nowrap text-blue-500 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-600"
             >
               <RiAddFill className="size-5 shrink-0" aria-hidden={true} />
               Compare asset

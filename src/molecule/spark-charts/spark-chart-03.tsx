@@ -2,9 +2,9 @@
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { SparkAreaChart } from "../../atom/SparkChart"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Card } from "@/atom/Card"
+import { SparkAreaChart } from "@/atom/SparkChart"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start

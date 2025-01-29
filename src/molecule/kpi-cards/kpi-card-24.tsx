@@ -4,7 +4,7 @@ import { RiCashLine, RiLinksLine, RiSafeLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 const data = [
   {
@@ -52,7 +52,7 @@ export default function Example() {
         {data.map((item) => (
           <Card key={item.name}>
             <dt className="flex flex-nowrap items-center gap-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
-              <div className="rounded-md p-1.5 shadow ring-1 ring-black/5 dark:ring-white/15">
+              <div className="rounded-md p-1.5 ring-1 shadow ring-black/5 dark:ring-white/15">
                 <item.icon className="size-5 shrink-0" aria-hidden="true" />
               </div>
               <span>{item.name}</span>

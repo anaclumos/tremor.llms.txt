@@ -9,10 +9,10 @@ import {
   RiYoutubeFill,
 } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { BarList } from "../../atom/BarList"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { AreaChart } from "@/atom/AreaChart"
+import { BarList } from "@/atom/BarList"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -379,7 +379,7 @@ export default function Example() {
               <React.Fragment key={tab.name}>
                 <TabsTrigger
                   value={tab.name}
-                  className="!py-4 !pl-5 !pr-12 text-left data-[state=active]:bg-white dark:data-[state=active]:bg-[#090E1A]"
+                  className="!py-4 !pr-12 !pl-5 text-left data-[state=active]:bg-white dark:data-[state=active]:bg-[#090E1A]"
                 >
                   <span className="block font-normal text-gray-500 dark:text-gray-500">
                     {tab.name}

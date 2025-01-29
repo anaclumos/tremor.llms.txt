@@ -3,8 +3,8 @@
 import React from "react"
 import { RiArrowDownSLine, RiCloseLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 import {
   Dialog,
   DialogClose,
@@ -13,9 +13,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../atom/Dialog"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
+} from "@/atom/Dialog"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
 
 const members = [
   {
@@ -44,7 +44,7 @@ export default function Example() {
     <div className="obfuscate">
       {/* first card only for demo purpose */}
       <Card className="sm:mx-auto sm:max-w-2xl">
-        <div className="absolute right-3 top-3">
+        <div className="absolute top-3 right-3">
           <Button
             variant="ghost"
             className="!p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
@@ -84,7 +84,7 @@ export default function Example() {
                   {member.name}
                 </span>
               </div>
-              <span className="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:text-gray-300 dark:ring-gray-800">
+              <span className="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:text-gray-300 dark:ring-gray-800">
                 {member.status}
               </span>
             </li>
@@ -116,7 +116,7 @@ export default function Example() {
               <DialogContent className="max-w-2xl">
                 <DialogClose asChild>
                   <Button
-                    className="!absolute !right-3 !top-3 !p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
+                    className="!absolute !top-3 !right-3 !p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
                     variant="ghost"
                   >
                     <RiCloseLine className="size-5 shrink-0" />
@@ -161,7 +161,7 @@ export default function Example() {
                           {member.name}
                         </span>
                       </div>
-                      <span className="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-200 dark:bg-gray-950 dark:text-gray-300 dark:ring-gray-800">
+                      <span className="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-200 ring-inset dark:bg-gray-950 dark:text-gray-300 dark:ring-gray-800">
                         {member.status}
                       </span>
                     </li>

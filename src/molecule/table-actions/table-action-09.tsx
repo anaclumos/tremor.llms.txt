@@ -14,7 +14,7 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Checkbox } from "../../atom/Checkbox"
+import { Checkbox } from "@/atom/Checkbox"
 import {
   Table,
   TableBody,
@@ -24,7 +24,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -222,11 +222,11 @@ export default function TableCheckbox() {
         cell: ({ getValue }) => (
           <div className="relative">
             <span>{getValue()}</span>
-            <div className="absolute right-0 top-1/2 hidden h-full -translate-y-1/2 items-center bg-gray-50 group-hover:flex dark:bg-gray-900">
+            <div className="absolute top-1/2 right-0 hidden h-full -translate-y-1/2 items-center bg-gray-50 group-hover:flex dark:bg-gray-900">
               <div className="inline-flex items-center rounded-md shadow-sm">
                 <button
                   type="button"
-                  className="relative inline-flex items-center rounded-l-md bg-white px-4 py-2 text-gray-700 ring-1 ring-inset ring-gray-300 hover:text-gray-900 focus:z-10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700 hover:dark:text-gray-50"
+                  className="relative inline-flex items-center rounded-l-md bg-white px-4 py-2 text-gray-700 ring-1 ring-gray-300 ring-inset hover:text-gray-900 focus:z-10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700 hover:dark:text-gray-50"
                   onClick={
                     // add stopPropagation to avoid row selection when clicking button
                     (e) => {
@@ -242,7 +242,7 @@ export default function TableCheckbox() {
                 </button>
                 <button
                   type="button"
-                  className="relative -ml-px inline-flex items-center bg-white px-4 py-2 text-gray-700 ring-1 ring-inset ring-gray-300 hover:text-gray-900 focus:z-10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700 hover:dark:text-gray-50"
+                  className="relative -ml-px inline-flex items-center bg-white px-4 py-2 text-gray-700 ring-1 ring-gray-300 ring-inset hover:text-gray-900 focus:z-10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700 hover:dark:text-gray-50"
                   onClick={
                     // add stopPropagation to avoid row selection when clicking button
                     (e) => {
@@ -258,7 +258,7 @@ export default function TableCheckbox() {
                 </button>
                 <button
                   type="button"
-                  className="relative -ml-px inline-flex items-center rounded-r-md bg-white px-4 py-2 text-gray-700 ring-1 ring-inset ring-gray-300 hover:text-gray-900 focus:z-10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700 hover:dark:text-gray-50"
+                  className="relative -ml-px inline-flex items-center rounded-r-md bg-white px-4 py-2 text-gray-700 ring-1 ring-gray-300 ring-inset hover:text-gray-900 focus:z-10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700 hover:dark:text-gray-50"
                   onClick={
                     // add stopPropagation to avoid row selection when clicking button
                     (e) => {

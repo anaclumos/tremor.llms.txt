@@ -2,8 +2,8 @@
 
 import { RiContrast2Line } from "@remixicon/react"
 
-import { Badge } from "../../atom/Badge"
-import { Button } from "../../atom/Button"
+import { Badge } from "@/atom/Badge"
+import { Button } from "@/atom/Button"
 
 type IntegrationStatus = "open" | "connecting" | "complete"
 
@@ -61,7 +61,7 @@ export default function Example() {
         )
       case "complete":
         return (
-          <div className="inline-flex w-full min-w-[126px] flex-nowrap items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gray-300 px-3 py-2 text-center text-sm font-medium text-white sm:w-fit dark:bg-gray-700 dark:text-white">
+          <div className="inline-flex w-full min-w-[126px] flex-nowrap items-center justify-center rounded-md border border-transparent bg-gray-300 px-3 py-2 text-center text-sm font-medium whitespace-nowrap text-white sm:w-fit dark:bg-gray-700 dark:text-white">
             Done
           </div>
         )
@@ -71,8 +71,8 @@ export default function Example() {
   return (
     <div className="obfuscate">
       <div className="py-16 sm:mx-auto sm:max-w-2xl">
-        <div className="relative mx-auto w-fit rounded-full bg-gray-50/50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10 dark:bg-gray-900 dark:ring-gray-800">
-          <div className="w-fit rounded-full bg-gradient-to-b from-blue-400 to-blue-600 p-3 shadow-sm shadow-blue-500/50 ring-1 ring-inset ring-white/25">
+        <div className="relative mx-auto w-fit rounded-full bg-gray-50/50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10 dark:bg-gray-900 dark:ring-gray-800">
+          <div className="w-fit rounded-full bg-gradient-to-b from-blue-400 to-blue-600 p-3 ring-1 shadow-sm shadow-blue-500/50 ring-white/25 ring-inset">
             <RiContrast2Line className="size-8 text-white" aria-hidden="true" />
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function Example() {
           {integrations.map((integration) => (
             <li
               key={integration.id}
-              className="relative rounded-lg bg-white p-4 shadow-lg shadow-black/5 ring-1 ring-black/5 dark:bg-gray-900/50 dark:ring-white/10"
+              className="relative rounded-lg bg-white p-4 ring-1 shadow-lg shadow-black/5 ring-black/5 dark:bg-gray-900/50 dark:ring-white/10"
             >
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div className="flex items-center gap-3">

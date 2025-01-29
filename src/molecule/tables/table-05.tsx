@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "../../atom/Button"
-import { ProgressCircle } from "../../atom/ProgressCircle"
+import { Button } from "@/atom/Button"
+import { ProgressCircle } from "@/atom/ProgressCircle"
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const data = [
   //array-start

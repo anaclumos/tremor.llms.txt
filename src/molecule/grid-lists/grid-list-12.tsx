@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 
 const data = [
   //array-start
@@ -184,7 +184,7 @@ export default function Example() {
               <div className="h-28">
                 <ContentPlaceholder />
               </div>
-              <div className="px-2 pb-2 pt-4">
+              <div className="px-2 pt-4 pb-2">
                 <dt className="truncate text-sm font-medium text-gray-900 dark:text-gray-50">
                   {item.name}
                 </dt>

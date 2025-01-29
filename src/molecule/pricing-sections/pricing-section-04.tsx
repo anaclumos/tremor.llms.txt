@@ -4,7 +4,7 @@ import { RiCheckboxCircleFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
+import { Button } from "@/atom/Button"
 
 const plans = [
   //array-start
@@ -62,7 +62,7 @@ export default function Example() {
             )}
           >
             <div className="flex items-center justify-between">
-              <h3 className="font-semibold leading-8 text-gray-900 dark:text-gray-50">
+              <h3 className="leading-8 font-semibold text-gray-900 dark:text-gray-50">
                 {plan.name}
               </h3>
               {plan.isRecommended ? (

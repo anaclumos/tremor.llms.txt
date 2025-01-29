@@ -2,7 +2,7 @@
 
 import { cx } from "@/lib/utils"
 
-import { Divider } from "../../atom/Divider"
+import { Divider } from "@/atom/Divider"
 import {
   Table,
   TableBody,
@@ -11,7 +11,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const valueFormatter = (number: number) =>
   `${Intl.NumberFormat("us").format(number).toString()}`
@@ -445,7 +445,7 @@ export default function CohortRetention() {
           <Table className="border-none">
             <TableHead>
               <TableRow>
-                <TableHeaderCell className="sticky left-0 top-0 z-10 min-w-40 border-transparent bg-white p-px dark:border-transparent dark:bg-gray-950">
+                <TableHeaderCell className="sticky top-0 left-0 z-10 min-w-40 border-transparent bg-white p-px dark:border-transparent dark:bg-gray-950">
                   <span className="block">Cohort</span>
                   <span className="block font-normal text-gray-500 dark:text-gray-500">
                     Initial customers

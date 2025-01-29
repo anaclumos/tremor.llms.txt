@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { ProgressCircle } from "../../atom/ProgressCircle"
+import { Card } from "@/atom/Card"
+import { ProgressCircle } from "@/atom/ProgressCircle"
 
 const data = [
   //array-start

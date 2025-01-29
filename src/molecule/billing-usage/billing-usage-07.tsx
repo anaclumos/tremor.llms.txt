@@ -5,13 +5,13 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { ProgressCircle } from "../../atom/ProgressCircle"
-import { Switch } from "../../atom/Switch"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { ProgressCircle } from "@/atom/ProgressCircle"
+import { Switch } from "@/atom/Switch"
 
 const data = [
   //array-start

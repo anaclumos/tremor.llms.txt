@@ -4,8 +4,8 @@ import { RiExternalLinkLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { BarChart } from "../../atom/BarChart"
-import { Card } from "../../atom/Card"
+import { BarChart } from "@/atom/BarChart"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start
@@ -218,7 +218,7 @@ export default function Example() {
                     {valueFormatter(item.total)}
                   </p>
                 </div>
-                <p className="whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                <p className="text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                   {item.name}
                 </p>
               </li>

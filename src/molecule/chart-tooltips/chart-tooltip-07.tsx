@@ -5,9 +5,9 @@ import { RiArrowDownSLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { BarChart, TooltipProps } from "../../atom/BarChart"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
+import { BarChart, TooltipProps } from "@/atom/BarChart"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
 
 interface DataItem {
   month: string
@@ -94,7 +94,7 @@ const CustomTooltip = ({ payload, active, label }: TooltipProps) => {
       <p className="font-semibold text-gray-900 dark:text-gray-50">
         {currencyFormatter(categoryPayload.value)}
       </p>
-      <div className="mt-2 flex items-center justify-center space-x-1 whitespace-nowrap text-sm">
+      <div className="mt-2 flex items-center justify-center space-x-1 text-sm whitespace-nowrap">
         {percentage ? (
           <span
             className={cx(

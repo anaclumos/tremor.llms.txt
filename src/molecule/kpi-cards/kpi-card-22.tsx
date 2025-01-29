@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { ProgressBar } from "../../atom/ProgressBar"
+import { Card } from "@/atom/Card"
+import { ProgressBar } from "@/atom/ProgressBar"
 
 const data = [
   //array-start
@@ -94,7 +94,7 @@ export default function Example() {
                     <span className="truncate text-gray-500 dark:text-gray-500">
                       {item.name}
                     </span>
-                    <span className="whitespace-nowrap font-semibold text-gray-900 dark:text-gray-50">
+                    <span className="font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                       {item.value}{" "}
                       <span className="font-normal">
                         ({item.percentageValue}&#37;)

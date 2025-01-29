@@ -13,8 +13,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../atom/Accordion"
-import { ProgressBar } from "../../atom/ProgressBar"
+} from "@/atom/Accordion"
+import { ProgressBar } from "@/atom/ProgressBar"
 
 const steps = [
   //array-start
@@ -98,7 +98,7 @@ export default function Example() {
                     <div
                       className={cx(
                         stepindex === steps.length - 1 ? "h-6" : "-bottom-6",
-                        "absolute left-0 top-0 flex w-6 justify-center",
+                        "absolute top-0 left-0 flex w-6 justify-center",
                       )}
                     >
                       <span

@@ -2,8 +2,8 @@
 
 import { RiCheckboxCircleFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
 
 const features = [
   //array-start

@@ -4,9 +4,9 @@ import { RiExternalLinkLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { CategoryBar } from "../../atom/CategoryBar"
-import { Divider } from "../../atom/Divider"
+import { Card } from "@/atom/Card"
+import { CategoryBar } from "@/atom/CategoryBar"
+import { Divider } from "@/atom/Divider"
 import {
   Table,
   TableBody,
@@ -15,8 +15,8 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+} from "@/atom/Table"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start

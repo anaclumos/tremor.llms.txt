@@ -2,7 +2,7 @@
 
 import { cx } from "@/lib/utils"
 
-import { LineChart } from "../../atom/LineChart"
+import { LineChart } from "@/atom/LineChart"
 import {
   Table,
   TableBody,
@@ -11,7 +11,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 const data = [
   //array-start

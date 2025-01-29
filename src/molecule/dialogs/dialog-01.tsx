@@ -3,8 +3,8 @@
 import React from "react"
 import { RiArrowDownSLine, RiCloseLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 import {
   Dialog,
   DialogClose,
@@ -14,10 +14,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../atom/Dialog"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+} from "@/atom/Dialog"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 
 export default function Example() {
   const [showDemo, setShowDemo] = React.useState(false)
@@ -25,7 +25,7 @@ export default function Example() {
     <div className="obfuscate">
       {/* first card only for demo purpose */}
       <Card className="sm:mx-auto sm:max-w-md">
-        <div className="absolute right-3 top-3">
+        <div className="absolute top-3 right-3">
           <Button
             variant="ghost"
             className="!p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
@@ -84,7 +84,7 @@ export default function Example() {
               <DialogContent className="max-w-md">
                 <DialogClose asChild>
                   <Button
-                    className="!absolute !right-3 !top-3 !p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
+                    className="!absolute !top-3 !right-3 !p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
                     variant="ghost"
                   >
                     <RiCloseLine className="size-5 shrink-0" />

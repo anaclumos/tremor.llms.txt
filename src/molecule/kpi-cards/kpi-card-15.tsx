@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { ProgressBar } from "../../atom/ProgressBar"
+import { Card } from "@/atom/Card"
+import { ProgressBar } from "@/atom/ProgressBar"
 
 const data = [
   //array-start

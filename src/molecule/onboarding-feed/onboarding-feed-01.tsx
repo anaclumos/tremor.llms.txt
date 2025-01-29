@@ -6,7 +6,7 @@ import {
   RiDatabase2Line,
 } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
+import { Button } from "@/atom/Button"
 
 const steps = [
   //array-start
@@ -57,7 +57,7 @@ export default function Example() {
                     aria-hidden={true}
                   />
                   <div className="ml-3 w-0 flex-1 pt-0.5">
-                    <p className="font-medium leading-5 text-gray-900 dark:text-gray-50">
+                    <p className="leading-5 font-medium text-gray-900 dark:text-gray-50">
                       <a href={step.href} className="focus:outline-none">
                         {/* extend link to entire list card */}
                         <span className="absolute inset-0" aria-hidden={true} />
@@ -81,7 +81,7 @@ export default function Example() {
                     aria-hidden={true}
                   />
                   <div className="ml-3 w-0 flex-1 pt-0.5">
-                    <p className="font-medium leading-5 text-gray-900 dark:text-gray-50">
+                    <p className="leading-5 font-medium text-gray-900 dark:text-gray-50">
                       {step.title}
                     </p>
                     <p className="mt-1 text-sm/6 text-gray-500 dark:text-gray-500">
@@ -105,7 +105,7 @@ export default function Example() {
                     aria-hidden={true}
                   />
                   <div className="ml-3 w-0 flex-1 pt-0.5">
-                    <p className="font-medium leading-5 text-gray-400 dark:text-gray-600">
+                    <p className="leading-5 font-medium text-gray-400 dark:text-gray-600">
                       <a href={step.href} className="focus:outline-none">
                         {/* extend link to entire list card */}
                         <span className="absolute inset-0" aria-hidden={true} />

@@ -9,9 +9,9 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Badge } from "../../atom/Badge"
-import { BarChart } from "../../atom/BarChart"
-import { Divider } from "../../atom/Divider"
+import { Badge } from "@/atom/Badge"
+import { BarChart } from "@/atom/BarChart"
+import { Divider } from "@/atom/Divider"
 
 interface DataPoint {
   date: string
@@ -239,11 +239,11 @@ export default function Example() {
           {summary.map((item, index) => (
             <React.Fragment key={item.name}>
               <div>
-                <p className="whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                <p className="text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                   {item.name}
                 </p>
 
-                <p className="mt-1 whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                <p className="mt-1 text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                   {item.value}
                 </p>
               </div>
@@ -303,7 +303,7 @@ export default function Example() {
                   aria-hidden={true}
                 />
               </Button>
-              <span className="block w-full whitespace-nowrap text-sm font-medium tabular-nums text-gray-900 dark:text-gray-50">
+              <span className="block w-full text-sm font-medium whitespace-nowrap text-gray-900 tabular-nums dark:text-gray-50">
                 Aug 1 – 31, 2024
               </span>
               <Button position="right">

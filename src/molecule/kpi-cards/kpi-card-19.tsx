@@ -4,8 +4,8 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { AreaChart, TooltipProps } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
+import { AreaChart, TooltipProps } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
 
 const currencyFormatter = (number: number) =>
   `$${Intl.NumberFormat("en-US").format(number)}`

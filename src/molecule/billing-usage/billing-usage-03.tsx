@@ -1,9 +1,9 @@
 "use client"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { ProgressBar } from "../../atom/ProgressBar"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { ProgressBar } from "@/atom/ProgressBar"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 export default function Example() {
   return (

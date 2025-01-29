@@ -1,7 +1,7 @@
 "use client"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start

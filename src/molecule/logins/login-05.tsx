@@ -7,11 +7,11 @@
 
 import { RiDonutChartFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Checkbox } from "../../atom/Checkbox"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Checkbox } from "@/atom/Checkbox"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 
 export default function Example() {
   return (
@@ -98,14 +98,14 @@ export default function Example() {
               By signing in, you agree to our{" "}
               <a
                 href="#"
-                className="capitalize text-blue-500 hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-600"
+                className="text-blue-500 capitalize hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-600"
               >
                 Terms of use
               </a>{" "}
               and{" "}
               <a
                 href="#"
-                className="capitalize text-blue-500 hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-600"
+                className="text-blue-500 capitalize hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-600"
               >
                 Privacy policy
               </a>

@@ -8,7 +8,7 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { RadioCardGroup, RadioCardItem } from "../../atom/RadioCardGroup"
+import { RadioCardGroup, RadioCardItem } from "@/atom/RadioCardGroup"
 import {
   Table,
   TableBody,
@@ -17,7 +17,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 type Payment = {
   amount: string

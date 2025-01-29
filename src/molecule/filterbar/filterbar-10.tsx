@@ -8,7 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "../../atom/DropdownMenu"
+} from "@/atom/DropdownMenu"
 
 const datepickerCategories = [
   // array-start

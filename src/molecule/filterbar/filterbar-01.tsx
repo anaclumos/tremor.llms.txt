@@ -8,8 +8,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Tooltip } from "../../atom/Tooltip"
+} from "@/atom/Select"
+import { Tooltip } from "@/atom/Tooltip"
 
 const data = [
   // array-start

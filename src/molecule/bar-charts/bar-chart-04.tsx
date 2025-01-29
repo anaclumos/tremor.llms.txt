@@ -4,9 +4,9 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { BarChart } from "../../atom/BarChart"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { BarChart } from "@/atom/BarChart"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const dataEurope = [
   //array-start

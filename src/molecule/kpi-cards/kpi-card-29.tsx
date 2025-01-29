@@ -1,6 +1,6 @@
 "use client"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 type Category = "red" | "orange" | "emerald" | "gray"
 

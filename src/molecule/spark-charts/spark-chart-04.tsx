@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { SparkAreaChart } from "../../atom/SparkChart"
+import { Card } from "@/atom/Card"
+import { SparkAreaChart } from "@/atom/SparkChart"
 
 const data = [
   //array-start

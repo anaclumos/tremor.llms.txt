@@ -1,7 +1,7 @@
 "use client"
 
-import { BarChart } from "../../atom/BarChart"
-import { Card } from "../../atom/Card"
+import { BarChart } from "@/atom/BarChart"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start

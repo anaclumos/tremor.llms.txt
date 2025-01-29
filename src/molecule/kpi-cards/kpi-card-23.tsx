@@ -4,8 +4,8 @@ import { RiArrowRightUpLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { CategoryBar } from "../../atom/CategoryBar"
+import { Card } from "@/atom/Card"
+import { CategoryBar } from "@/atom/CategoryBar"
 
 const data = [
   //array-start
@@ -80,7 +80,7 @@ export default function Example() {
                 {item.revenue}
               </dd>
               <span
-                className="pointer-events-none absolute right-2 top-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
+                className="pointer-events-none absolute top-2 right-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-600 group-hover:dark:text-gray-500"
                 aria-hidden={true}
               >
                 <RiArrowRightUpLine className="size-4" aria-hidden={true} />

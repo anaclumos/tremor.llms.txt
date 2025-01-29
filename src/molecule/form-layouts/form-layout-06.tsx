@@ -6,23 +6,23 @@ import {
   RiExternalLinkLine,
 } from "@remixicon/react"
 
-import { Badge } from "../../atom/Badge"
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Badge } from "@/atom/Badge"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   RadioCardGroup,
   RadioCardIndicator,
   RadioCardItem,
-} from "../../atom/RadioCardGroup"
+} from "@/atom/RadioCardGroup"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const highlights = [
   //array-start
@@ -220,7 +220,7 @@ export default function Example() {
             </RadioCardGroup>
           </div>
           <div className="lg:col-span-5">
-            <div className="rounded-md bg-gray-50 p-6 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:ring-gray-800">
+            <div className="rounded-md bg-gray-50 p-6 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:ring-gray-800">
               <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-50">
                 Which plan best fits your needs?
               </h4>

@@ -3,9 +3,9 @@
 import React from "react"
 import { RiArrowRightUpLine, RiCloseLine } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { AreaChart } from "@/atom/AreaChart"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 
 const data = [
   //array-start
@@ -107,7 +107,7 @@ export default function Example() {
           className="mt-6 !h-48 sm:hidden"
         />
         {isOpen ? (
-          <div className="relative mt-4 rounded-md bg-gray-50 p-4 ring-1 ring-inset ring-gray-200 dark:bg-gray-800 dark:ring-gray-400/20">
+          <div className="relative mt-4 rounded-md bg-gray-50 p-4 ring-1 ring-gray-200 ring-inset dark:bg-gray-800 dark:ring-gray-400/20">
             <div className="flex items-center space-x-2.5">
               <RiArrowRightUpLine
                 className="size-5 shrink-0 text-blue-500 dark:text-blue-500"
@@ -117,7 +117,7 @@ export default function Example() {
                 Significant increase since May
               </h2>
             </div>
-            <div className="absolute right-1.5 top-1.5">
+            <div className="absolute top-1.5 right-1.5">
               <Button
                 variant="ghost"
                 className="!p-1 !text-gray-500 hover:!text-gray-700 dark:!text-gray-500 hover:dark:!text-gray-300"

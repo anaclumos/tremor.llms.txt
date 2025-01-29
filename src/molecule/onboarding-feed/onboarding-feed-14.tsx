@@ -10,16 +10,16 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 import {
   RadioCardGroup,
   RadioCardIndicator,
   RadioCardItem,
-} from "../../atom/RadioCardGroup"
-import { Switch } from "../../atom/Switch"
+} from "@/atom/RadioCardGroup"
+import { Switch } from "@/atom/Switch"
 
 const contractOptions = [
   {
@@ -64,7 +64,7 @@ export default function Employees() {
         </p>
         <form onSubmit={handleSubmit} className="mt-12">
           <fieldset>
-            <legend className="text-sm font-medium leading-none text-gray-900 dark:text-gray-50">
+            <legend className="text-sm leading-none font-medium text-gray-900 dark:text-gray-50">
               Choose your contracting agreement
             </legend>
             <RadioCardGroup
@@ -204,7 +204,7 @@ export default function Employees() {
             <div className="gap-4 sm:flex sm:flex-nowrap sm:items-start">
               <div
                 className={cx(
-                  "flex size-9 shrink-0 items-center justify-center rounded-full shadow ring-1 ring-gray-300 transition dark:bg-gray-950 dark:ring-gray-800",
+                  "flex size-9 shrink-0 items-center justify-center rounded-full ring-1 shadow ring-gray-300 transition dark:bg-gray-950 dark:ring-gray-800",
                   coverage
                     ? "bg-blue-500 ring-blue-100 dark:bg-blue-400 dark:ring-blue-200"
                     : "",

@@ -9,7 +9,7 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Tooltip } from "../../atom/Tooltip"
+import { Tooltip } from "@/atom/Tooltip"
 
 interface Plan {
   name: string
@@ -210,7 +210,7 @@ export default function Example() {
                     scope="col"
                     className="border-b border-gray-100 bg-white pb-8 dark:border-gray-800 dark:bg-gray-950"
                   >
-                    <div className="font-semibold leading-7 text-gray-900 dark:text-gray-50">
+                    <div className="leading-7 font-semibold text-gray-900 dark:text-gray-50">
                       Compare prices
                     </div>
                     <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
@@ -228,7 +228,7 @@ export default function Example() {
                           !plan.isStarter
                             ? "text-blue-600 dark:text-blue-400"
                             : "text-gray-900 dark:text-gray-50",
-                          "font-semibold leading-7",
+                          "leading-7 font-semibold",
                         )}
                       >
                         {plan.name}
@@ -249,7 +249,7 @@ export default function Example() {
                         colSpan={4}
                         className={cx(
                           sectionIdx === 0 ? "pt-14" : "pt-10",
-                          "border-b border-gray-100 pb-4 text-base font-semibold leading-6 text-gray-900 dark:border-gray-800 dark:text-gray-50",
+                          "border-b border-gray-100 pb-4 text-base leading-6 font-semibold text-gray-900 dark:border-gray-800 dark:text-gray-50",
                         )}
                       >
                         {section.name}
@@ -262,7 +262,7 @@ export default function Example() {
                       >
                         <th
                           scope="row"
-                          className="flex items-center gap-2 border-b border-gray-100 py-4 text-sm font-normal leading-6 text-gray-900 dark:border-gray-800 dark:text-gray-50"
+                          className="flex items-center gap-2 border-b border-gray-100 py-4 text-sm leading-6 font-normal text-gray-900 dark:border-gray-800 dark:text-gray-50"
                         >
                           <span>{feature.name}</span>
                           {feature.tooltip ? (

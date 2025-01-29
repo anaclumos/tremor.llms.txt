@@ -2,8 +2,8 @@
 
 import React from "react"
 
-import { BarChart } from "../../atom/BarChart"
-import { RadioCardGroup, RadioCardItem } from "../../atom/RadioCardGroup"
+import { BarChart } from "@/atom/BarChart"
+import { RadioCardGroup, RadioCardItem } from "@/atom/RadioCardGroup"
 
 const tabs = [
   { name: "Europe", value: "$0.7M" },

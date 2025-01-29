@@ -2,18 +2,18 @@
 
 import { RiMoreLine } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { CategoryBar } from "../../atom/CategoryBar"
-import { Divider } from "../../atom/Divider"
+import { AreaChart } from "@/atom/AreaChart"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { CategoryBar } from "@/atom/CategoryBar"
+import { Divider } from "@/atom/Divider"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../../atom/DropdownMenu"
+} from "@/atom/DropdownMenu"
 
 // used custom gray in installChartUtils.ts for <CategoryBar />
 
@@ -379,11 +379,11 @@ export default function Example() {
                     className="size-2.5 shrink-0 rounded-sm bg-blue-500 dark:bg-blue-500"
                     aria-hidden="true"
                   />
-                  <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                  <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                     Days with 99% uptime
                   </span>
                 </div>
-                <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                   90.1% (225)
                 </span>
               </li>
@@ -393,11 +393,11 @@ export default function Example() {
                     className="size-2.5 shrink-0 rounded-sm bg-red-500 dark:bg-red-500"
                     aria-hidden="true"
                   />
-                  <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                  <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                     Days with 1% downtime
                   </span>
                 </div>
-                <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                   8% (20)
                 </span>
               </li>
@@ -407,11 +407,11 @@ export default function Example() {
                     className="size-2.5 shrink-0 rounded-sm bg-gray-400 dark:bg-gray-600"
                     aria-hidden="true"
                   />
-                  <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                  <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                     Days with 1% downtime
                   </span>
                 </div>
-                <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                   1.9% (5)
                 </span>
               </li>
@@ -465,11 +465,11 @@ export default function Example() {
                       className="size-2.5 shrink-0 rounded-sm bg-blue-500 dark:bg-blue-500"
                       aria-hidden="true"
                     />
-                    <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                    <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                       % of incidents solved
                     </span>
                   </div>
-                  <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                  <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                     95.9% (100)
                   </span>
                 </li>
@@ -479,11 +479,11 @@ export default function Example() {
                       className="size-2.5 shrink-0 rounded-sm bg-gray-400 dark:bg-gray-600"
                       aria-hidden="true"
                     />
-                    <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                    <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                       % of incidents unsolved
                     </span>
                   </div>
-                  <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                  <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                     4.1% (4)
                   </span>
                 </li>
@@ -506,11 +506,11 @@ export default function Example() {
                       className="size-2.5 shrink-0 rounded-sm bg-blue-500 dark:bg-blue-500"
                       aria-hidden="true"
                     />
-                    <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                    <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                       % of incidents solved
                     </span>
                   </div>
-                  <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                  <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                     91.2% (95)
                   </span>
                 </li>
@@ -520,11 +520,11 @@ export default function Example() {
                       className="size-2.5 shrink-0 rounded-sm bg-gray-400 dark:bg-gray-600"
                       aria-hidden="true"
                     />
-                    <span className="truncate whitespace-nowrap text-sm text-gray-500 dark:text-gray-500">
+                    <span className="truncate text-sm whitespace-nowrap text-gray-500 dark:text-gray-500">
                       % of incidents unsolved
                     </span>
                   </div>
-                  <span className="whitespace-nowrap text-sm font-semibold text-gray-900 dark:text-gray-50">
+                  <span className="text-sm font-semibold whitespace-nowrap text-gray-900 dark:text-gray-50">
                     8.8% (10)
                   </span>
                 </li>

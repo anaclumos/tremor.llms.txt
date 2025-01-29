@@ -2,8 +2,8 @@
 
 import { cx } from "@/lib/utils"
 
-import { BarChart } from "../../atom/BarChart"
-import { Card } from "../../atom/Card"
+import { BarChart } from "@/atom/BarChart"
+import { Card } from "@/atom/Card"
 
 const tabs = [
   //array-start

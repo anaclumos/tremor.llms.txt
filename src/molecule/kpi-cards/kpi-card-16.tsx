@@ -1,7 +1,7 @@
 "use client"
 
-import { Card } from "../../atom/Card"
-import { ProgressCircle } from "../../atom/ProgressCircle"
+import { Card } from "@/atom/Card"
+import { ProgressCircle } from "@/atom/ProgressCircle"
 
 const data = [
   //array-start
@@ -33,7 +33,7 @@ export default function Example() {
             nonumy eirmod tempor.
           </p>
         </div>
-        <span className="mt-6 inline-flex w-full justify-center space-x-4 whitespace-nowrap rounded-md border border-gray-200 px-2 py-1 text-xs text-gray-900 sm:mt-0 sm:w-fit sm:items-center dark:border-gray-900 dark:text-gray-50">
+        <span className="mt-6 inline-flex w-full justify-center space-x-4 rounded-md border border-gray-200 px-2 py-1 text-xs whitespace-nowrap text-gray-900 sm:mt-0 sm:w-fit sm:items-center dark:border-gray-900 dark:text-gray-50">
           <span tabIndex={1} className="flex items-center gap-1.5">
             <span
               aria-hidden={true}

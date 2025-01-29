@@ -7,15 +7,15 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { DateRangePicker } from "../../atom/DatePicker"
-import { Label } from "../../atom/Label"
+import { DateRangePicker } from "@/atom/DatePicker"
+import { Label } from "@/atom/Label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 const countries = [
   // array-start

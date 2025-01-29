@@ -4,10 +4,10 @@ import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import { RiSplitCellsHorizontal } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { Slider } from "../../atom/Slider"
+import { Button } from "@/atom/Button"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { Slider } from "@/atom/Slider"
 
 Slider.displayName = SliderPrimitive.Root.displayName
 
@@ -39,14 +39,14 @@ const DiskPartitioner: React.FC = () => {
   return (
     <div className="mx-auto max-w-lg">
       <div className="inline-flex rounded-2xl bg-gray-100 shadow-md dark:bg-gray-900">
-        <div className="z-10 rounded-2xl bg-gray-50/40 p-1 ring-1 ring-inset ring-gray-200/50 dark:bg-gray-900/40 dark:ring-gray-800/70">
-          <div className="overflow-hidden rounded-xl bg-white/95 p-3 shadow-black/5 ring-1 ring-gray-900/5 dark:bg-gray-950/95 dark:ring-gray-700/20">
+        <div className="z-10 rounded-2xl bg-gray-50/40 p-1 ring-1 ring-gray-200/50 ring-inset dark:bg-gray-900/40 dark:ring-gray-800/70">
+          <div className="overflow-hidden rounded-xl bg-white/95 p-3 ring-1 shadow-black/5 ring-gray-900/5 dark:bg-gray-950/95 dark:ring-gray-700/20">
             <RiSplitCellsHorizontal className="size-7 text-gray-900 dark:text-gray-50" />
           </div>
         </div>
       </div>
 
-      <h2 className="mb-2 mt-4 text-lg font-semibold text-gray-900 dark:text-gray-50">
+      <h2 className="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-gray-50">
         Create a partition
       </h2>
       <p className="text-sm leading-6 text-gray-700 dark:text-gray-400">

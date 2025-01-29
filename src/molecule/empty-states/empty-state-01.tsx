@@ -2,7 +2,7 @@
 
 import { RiBarChartFill } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 export default function Example() {
   return (

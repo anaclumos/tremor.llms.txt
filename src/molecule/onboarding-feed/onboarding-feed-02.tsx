@@ -2,7 +2,7 @@
 
 import { RiCheckboxCircleFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
+import { Button } from "@/atom/Button"
 
 const steps = [
   //array-start

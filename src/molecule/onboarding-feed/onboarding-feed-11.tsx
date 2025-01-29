@@ -23,11 +23,11 @@ import { RiRefreshLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { badgeVariants } from "../../atom/Badge"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Checkbox } from "../../atom/Checkbox"
-import { Label } from "../../atom/Label"
+import { badgeVariants } from "@/atom/Badge"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Checkbox } from "@/atom/Checkbox"
+import { Label } from "@/atom/Label"
 
 interface Category {
   id: string
@@ -112,7 +112,7 @@ const CategoryItem = ({
           </span>
         </div>
         {category.subcategories.length > 0 && (
-          <ul className="ml-6 mt-2 flex flex-wrap gap-1.5">
+          <ul className="mt-2 ml-6 flex flex-wrap gap-1.5">
             {category.subcategories.map((subcategory) => (
               <li
                 key={subcategory}

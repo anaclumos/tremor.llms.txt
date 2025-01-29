@@ -2,9 +2,9 @@
 
 import { RiAddFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { ProgressCircle } from "../../atom/ProgressCircle"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { ProgressCircle } from "@/atom/ProgressCircle"
 
 const data = [
   //array-start

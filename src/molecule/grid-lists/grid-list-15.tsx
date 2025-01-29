@@ -2,13 +2,13 @@
 
 import { RiDatabase2Line, RiGroupLine, RiTimeLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { Switch } from "../../atom/Switch"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { Switch } from "@/atom/Switch"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -311,7 +311,7 @@ export default function Example() {
                 <span className="group-data-[state=active]:text-gray-900 group-data-[state=active]:dark:text-gray-50">
                   {category.region}
                 </span>
-                <span className="ml-2 hidden rounded-md bg-white px-2 py-1 text-xs font-semibold tabular-nums ring-1 ring-inset ring-gray-200 group-data-[state=active]:text-gray-700 sm:inline-flex dark:bg-[#090E1A] dark:ring-gray-800 group-data-[state=active]:dark:text-gray-300">
+                <span className="ml-2 hidden rounded-md bg-white px-2 py-1 text-xs font-semibold tabular-nums ring-1 ring-gray-200 ring-inset group-data-[state=active]:text-gray-700 sm:inline-flex dark:bg-[#090E1A] dark:ring-gray-800 group-data-[state=active]:dark:text-gray-300">
                   {category.workspaces.length}
                 </span>
               </TabsTrigger>
@@ -322,7 +322,7 @@ export default function Example() {
               <TabsContent
                 key={category.region}
                 value={category.region}
-                className="space-y-4 px-6 pb-6 pt-6"
+                className="space-y-4 px-6 pt-6 pb-6"
               >
                 <div className="block md:flex md:items-center md:justify-between">
                   <Input
@@ -392,7 +392,7 @@ export default function Example() {
                           </li>
                           <li className="flex items-center space-x-2 py-1">
                             <span>Database:</span>
-                            <span className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-200 dark:text-gray-50 dark:ring-gray-800">
+                            <span className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-gray-900 ring-1 ring-gray-200 ring-inset dark:text-gray-50 dark:ring-gray-800">
                               {workspace.database === "test_data" ? (
                                 <span
                                   className="size-2 shrink-0 rounded-sm bg-gray-400 dark:bg-gray-600"

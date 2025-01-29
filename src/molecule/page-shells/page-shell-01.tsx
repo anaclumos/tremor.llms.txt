@@ -1,14 +1,14 @@
 "use client"
 
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+} from "@/atom/Select"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 function ContentPlaceholder() {
   return (

@@ -11,9 +11,9 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { ProgressCircle } from "../../atom/ProgressCircle"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Card } from "@/atom/Card"
+import { ProgressCircle } from "@/atom/ProgressCircle"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -162,7 +162,7 @@ export default function Example() {
                 <span className="group-data-[state=active]:text-gray-900 group-data-[state=active]:dark:text-gray-50">
                   {category.status}
                 </span>
-                <span className="ml-2 hidden rounded-md bg-white px-2 py-1 text-xs font-semibold tabular-nums ring-1 ring-inset ring-gray-200 group-data-[state=active]:text-gray-700 sm:inline-flex dark:bg-[#090E1A] dark:ring-gray-800 group-data-[state=active]:dark:text-gray-300">
+                <span className="ml-2 hidden rounded-md bg-white px-2 py-1 text-xs font-semibold tabular-nums ring-1 ring-gray-200 ring-inset group-data-[state=active]:text-gray-700 sm:inline-flex dark:bg-[#090E1A] dark:ring-gray-800 group-data-[state=active]:dark:text-gray-300">
                   {category.orders.length}
                 </span>
               </TabsTrigger>
@@ -173,7 +173,7 @@ export default function Example() {
               <TabsContent
                 key={category.status}
                 value={category.status}
-                className="space-y-4 px-6 pb-6 pt-6"
+                className="space-y-4 px-6 pt-6 pb-6"
               >
                 {category.orders.map((order) => (
                   <Card
@@ -187,7 +187,7 @@ export default function Example() {
                           <h4 className="truncate text-sm font-medium text-gray-900 dark:text-gray-50">
                             {order.item}
                           </h4>
-                          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:text-gray-50 dark:ring-gray-800">
+                          <span className="inline-flex items-center gap-1.5 rounded-md bg-white px-2 py-1 text-xs font-medium whitespace-nowrap text-gray-900 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:text-gray-50 dark:ring-gray-800">
                             <span
                               className={cx(
                                 getStatusColor(category.status as Status),
@@ -228,7 +228,7 @@ export default function Example() {
                           </div>
                         </div>
                       </div>
-                      <div className="px-2 pb-2 pt-4">
+                      <div className="px-2 pt-4 pb-2">
                         <div className="block sm:flex sm:items-end sm:justify-between">
                           <div className="flex items-center space-x-2">
                             <ProgressCircle

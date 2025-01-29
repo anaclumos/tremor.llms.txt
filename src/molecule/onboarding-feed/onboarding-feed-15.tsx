@@ -5,11 +5,11 @@ import React from "react"
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { RadioCardGroup, RadioCardItem } from "../../atom/RadioCardGroup"
+import { Button } from "@/atom/Button"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { RadioCardGroup, RadioCardItem } from "@/atom/RadioCardGroup"
 
 const roles = [
   {

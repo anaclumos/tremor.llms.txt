@@ -2,9 +2,9 @@
 
 import { RiArrowRightSLine } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const dataEurope = [
   //array-start
@@ -250,7 +250,7 @@ export default function Example() {
                 className="font-medium"
               >
                 {region.name}
-                <span className="ml-2 hidden rounded-md bg-white px-2 py-1 text-xs/4 font-semibold tabular-nums ring-1 ring-inset ring-gray-200 sm:inline-flex dark:bg-gray-950 dark:ring-gray-800">
+                <span className="ml-2 hidden rounded-md bg-white px-2 py-1 text-xs/4 font-semibold tabular-nums ring-1 ring-gray-200 ring-inset sm:inline-flex dark:bg-gray-950 dark:ring-gray-800">
                   {region.alerts}
                 </span>
               </TabsTrigger>

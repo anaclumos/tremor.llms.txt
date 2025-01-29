@@ -15,10 +15,10 @@ import {
   RiYoutubeFill,
 } from "@remixicon/react"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { BarList } from "../../atom/BarList"
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { AreaChart } from "@/atom/AreaChart"
+import { BarList } from "@/atom/BarList"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 import {
   Dialog,
   DialogClose,
@@ -26,9 +26,9 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "../../atom/Dialog"
-import { Input } from "../../atom/Input"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+} from "@/atom/Dialog"
+import { Input } from "@/atom/Input"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const data = [
   //array-start
@@ -697,7 +697,7 @@ export default function Example() {
               <React.Fragment key={tab.name}>
                 <TabsTrigger
                   value={tab.name}
-                  className="!py-4 !pl-5 !pr-12 text-left data-[state=active]:bg-white dark:data-[state=active]:bg-[#090E1A]"
+                  className="!py-4 !pr-12 !pl-5 text-left data-[state=active]:bg-white dark:data-[state=active]:bg-[#090E1A]"
                 >
                   <span className="block font-normal text-gray-500 dark:text-gray-500">
                     {tab.name}
@@ -754,7 +754,7 @@ export default function Example() {
                 <p className="text-lg font-medium text-gray-900 dark:text-gray-50">
                   {category.name}
                 </p>
-                <span className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+                <span className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                   {summary.find((tab) => tab.name === selectedIndex)?.type}
                 </span>
               </div>
@@ -790,12 +790,12 @@ export default function Example() {
         onOpenChange={(open) => setDialog({ ...dialog, open })}
       >
         <DialogContent className="!p-0">
-          <DialogHeader className="border-b border-gray-200 px-6 pb-4 pt-6 dark:border-gray-900">
+          <DialogHeader className="border-b border-gray-200 px-6 pt-6 pb-4 dark:border-gray-900">
             <DialogTitle className="flex items-center justify-between">
               <p className="text-base font-medium text-gray-900 dark:text-gray-50">
                 Pages
               </p>
-              <p className="text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+              <p className="text-xs font-medium text-gray-500 uppercase dark:text-gray-500">
                 {summary.find((tab) => tab.name === selectedIndex)?.type}
               </p>
             </DialogTitle>

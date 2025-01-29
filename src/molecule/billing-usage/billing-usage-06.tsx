@@ -1,14 +1,14 @@
 "use client"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { ProgressBar } from "../../atom/ProgressBar"
-import { ProgressCircle } from "../../atom/ProgressCircle"
-import { Switch } from "../../atom/Switch"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { ProgressBar } from "@/atom/ProgressBar"
+import { ProgressCircle } from "@/atom/ProgressCircle"
+import { Switch } from "@/atom/Switch"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 import { cx } from "@/lib/utils"
 import { RiArrowRightUpLine } from "@remixicon/react"
 import React from "react"
@@ -66,7 +66,7 @@ export default function Example() {
           <TabsTrigger value="tab3">Billing</TabsTrigger>
         </TabsList>
         {/* Content below only for demo purpose placed outside of <Tab> component. Add <TabsContent> to make it functional and to add content for other tabs */}
-        <div className="mt-6 rounded-lg bg-gray-50 p-6 ring-1 ring-inset ring-gray-200 dark:bg-gray-400/10 dark:ring-gray-800">
+        <div className="mt-6 rounded-lg bg-gray-50 p-6 ring-1 ring-gray-200 ring-inset dark:bg-gray-400/10 dark:ring-gray-800">
           <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-50">
             This workspace is currently on free plan
           </h4>
@@ -273,7 +273,7 @@ export default function Example() {
                 </div>
                 <div className="space-y-6 md:col-span-2">
                   <Card className="overflow-hidden p-0">
-                    <div className="px-4 pb-6 pt-4">
+                    <div className="px-4 pt-4 pb-6">
                       <span className="text-sm text-gray-500">$25/month</span>
                       <h4 className="mt-4 text-sm font-semibold text-gray-900 dark:text-gray-50">
                         Advanced bot protection
@@ -303,7 +303,7 @@ export default function Example() {
                     </div>
                   </Card>
                   <Card className="overflow-hidden p-0">
-                    <div className="px-4 pb-6 pt-4">
+                    <div className="px-4 pt-4 pb-6">
                       <span className="text-sm text-gray-500">$50/month</span>
                       <h4 className="mt-4 text-sm font-semibold text-gray-900 dark:text-gray-50">
                         Workspace insights

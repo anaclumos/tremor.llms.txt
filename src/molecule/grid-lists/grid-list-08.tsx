@@ -5,8 +5,8 @@ import { RiArrowDownCircleLine, RiStarSFill } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 
 const GoogleDriveIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg fill="none" viewBox="0 0 88 78" {...props}>
@@ -202,7 +202,7 @@ export default function Example() {
                   <span className="relative flex size-12 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-white dark:border-gray-800 dark:bg-[#090E1A]">
                     <item.icon className="size-5" aria-hidden={true} />
                     {item.isHomeBuilt ? (
-                      <span className="absolute -right-1 -top-1 flex size-4 shrink-0 items-center justify-center rounded-full bg-blue-500 ring-2 ring-white dark:bg-blue-500 dark:ring-[#090E1A]">
+                      <span className="absolute -top-1 -right-1 flex size-4 shrink-0 items-center justify-center rounded-full bg-blue-500 ring-2 ring-white dark:bg-blue-500 dark:ring-[#090E1A]">
                         <RiStarSFill
                           className="size-2.5 text-white dark:text-white"
                           aria-hidden={true}
@@ -226,7 +226,7 @@ export default function Example() {
                   </dt>
                 </div>
                 {item.status === "coming soon" ? (
-                  <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-0.5 text-xs font-medium text-gray-500 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:text-gray-500 dark:ring-gray-800">
+                  <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-0.5 text-xs font-medium text-gray-500 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:text-gray-500 dark:ring-gray-800">
                     {item.status}
                   </span>
                 ) : null}

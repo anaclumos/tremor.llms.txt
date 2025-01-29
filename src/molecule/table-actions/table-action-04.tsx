@@ -9,7 +9,7 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Checkbox } from "../../atom/Checkbox"
+import { Checkbox } from "@/atom/Checkbox"
 import {
   Table,
   TableBody,
@@ -18,7 +18,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 

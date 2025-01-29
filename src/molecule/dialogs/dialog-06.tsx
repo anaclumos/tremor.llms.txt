@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { RiAppsFill, RiArrowDownSLine, RiCloseLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 import {
   Dialog,
   DialogClose,
@@ -12,16 +12,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../atom/Dialog"
-import { Divider } from "../../atom/Divider"
-import { Label } from "../../atom/Label"
+} from "@/atom/Dialog"
+import { Divider } from "@/atom/Divider"
+import { Label } from "@/atom/Label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
+} from "@/atom/Select"
 
 export default function Example() {
   const [showDemo, setShowDemo] = useState(false)
@@ -29,7 +29,7 @@ export default function Example() {
     <div className="obfuscate">
       {/* first card only for demo purpose */}
       <Card className="!p-0 sm:mx-auto sm:max-w-5xl">
-        <div className="absolute right-3 top-3">
+        <div className="absolute top-3 right-3">
           <Button
             variant="ghost"
             className="!p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
@@ -85,7 +85,7 @@ export default function Example() {
                 <Button type="submit">Connect</Button>
               </div>
             </div>
-            <div className="flex-1 space-y-6 p-6 md:px-6 md:pb-20 md:pt-6">
+            <div className="flex-1 space-y-6 p-6 md:px-6 md:pt-6 md:pb-20">
               <div>
                 <div className="flex items-center space-x-3">
                   <div className="inline-flex size-6 items-center justify-center rounded-md bg-gray-100 text-sm text-gray-900 dark:bg-gray-800 dark:text-gray-50">
@@ -211,7 +211,7 @@ export default function Example() {
               <DialogContent className="!p-0 sm:max-w-5xl">
                 <DialogClose asChild>
                   <Button
-                    className="!absolute !right-3 !top-3 !p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
+                    className="!absolute !top-3 !right-3 !p-2 !text-gray-400 hover:!text-gray-500 dark:!text-gray-600 hover:dark:!text-gray-500"
                     variant="ghost"
                   >
                     <RiCloseLine className="size-5 shrink-0" />
@@ -264,7 +264,7 @@ export default function Example() {
                       <Button type="submit">Connect</Button>
                     </div>
                   </div>
-                  <div className="flex-1 space-y-6 p-6 md:px-6 md:pb-20 md:pt-6">
+                  <div className="flex-1 space-y-6 p-6 md:px-6 md:pt-6 md:pb-20">
                     <div>
                       <div className="flex items-center space-x-3">
                         <div className="inline-flex size-6 items-center justify-center rounded-md bg-gray-100 text-sm text-gray-900 dark:bg-gray-800 dark:text-gray-50">

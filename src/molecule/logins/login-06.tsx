@@ -6,9 +6,9 @@
 // <body className"h-full"/>
 import { RiArrowRightSLine, RiDonutChartFill } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
+import { Button } from "@/atom/Button"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
 
 export default function Example() {
   return (
@@ -113,7 +113,7 @@ export default function Example() {
                       <p className="text-lg text-white dark:text-white">2024</p>
                     </div>
                     <div
-                      className="pointer-events-none absolute left-1/2 top-0 -mt-2 -translate-x-1/2 select-none"
+                      className="pointer-events-none absolute top-0 left-1/2 -mt-2 -translate-x-1/2 select-none"
                       aria-hidden="true"
                       style={{
                         maskImage:
@@ -128,7 +128,7 @@ export default function Example() {
                             <div className="flex gap-2">
                               {Array.from({ length: 20 }, (_, idx2) => (
                                 <div key={`inner-${idx}-${idx2}`}>
-                                  <div className="size-7 rounded-md shadow shadow-blue-500/40 ring-1 ring-black/5 dark:shadow-blue-400/20 dark:ring-white/10" />
+                                  <div className="size-7 rounded-md ring-1 shadow shadow-blue-500/40 ring-black/5 dark:shadow-blue-400/20 dark:ring-white/10" />
                                 </div>
                               ))}
                             </div>

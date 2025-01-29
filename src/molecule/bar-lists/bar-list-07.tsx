@@ -4,8 +4,8 @@ import React from "react"
 import { RiCloseLine } from "@remixicon/react"
 import CountUp from "react-countup"
 
-import { BarList } from "../../atom/BarList"
-import { Card } from "../../atom/Card"
+import { BarList } from "@/atom/BarList"
+import { Card } from "@/atom/Card"
 
 // This example requires third-pary library 'react-countup' for counting animation
 // npm install react-countup
@@ -77,14 +77,14 @@ export default function Example() {
       </div>
       <Card className="mt-4 sm:mx-auto sm:max-w-lg">
         <div className="flex flex-wrap items-start justify-between gap-2">
-          <p className="font-medium leading-7 text-gray-900 dark:text-gray-50">
+          <p className="leading-7 font-medium text-gray-900 dark:text-gray-50">
             Locations
           </p>
           {selectedItem && (
             <button
               type="button"
               onClick={clearSelectedItem}
-              className="group inline-flex items-center gap-x-1.5 rounded-md bg-gray-50 px-2 py-1.5 text-xs text-gray-900 ring-1 ring-inset ring-gray-200 transition-all hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-50 dark:ring-gray-400/20 hover:dark:bg-gray-500/30"
+              className="group inline-flex items-center gap-x-1.5 rounded-md bg-gray-50 px-2 py-1.5 text-xs text-gray-900 ring-1 ring-gray-200 transition-all ring-inset hover:bg-gray-100 dark:bg-gray-500/20 dark:text-gray-50 dark:ring-gray-400/20 hover:dark:bg-gray-500/30"
               aria-label="Remove"
             >
               Country

@@ -2,8 +2,8 @@
 
 import { RiBarChartFill, RiExternalLinkLine } from "@remixicon/react"
 
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const tabs = [
   //array-start

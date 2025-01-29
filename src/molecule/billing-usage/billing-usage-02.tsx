@@ -2,8 +2,8 @@
 
 import { RiExternalLinkLine, RiFileLine } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Tabs, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Button } from "@/atom/Button"
+import { Tabs, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const bills = [
   //array-start
@@ -45,7 +45,7 @@ export default function Example() {
         </TabsList>
         {/* Content below only for demo purpose placed outside of <Tab> component. Add <TabsContent> to make it functional and to add content for other tabs */}
         <div className="mt-8 sm:max-w-3xl">
-          <div className="rounded-md bg-gray-50 p-6 ring-1 ring-inset ring-gray-200 dark:bg-gray-900 dark:ring-gray-800">
+          <div className="rounded-md bg-gray-50 p-6 ring-1 ring-gray-200 ring-inset dark:bg-gray-900 dark:ring-gray-800">
             <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-50">
               Want to upgrade?
             </h4>

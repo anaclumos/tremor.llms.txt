@@ -4,9 +4,9 @@ import { RiArrowRightSLine } from "@remixicon/react"
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { DonutChart } from "../../atom/DonutChart"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { Card } from "@/atom/Card"
+import { DonutChart } from "@/atom/DonutChart"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const dataByClass = [
   //array-start
@@ -167,7 +167,7 @@ export default function Example() {
                         </span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="font-medium tabular-nums text-gray-900 dark:text-gray-50">
+                        <span className="font-medium text-gray-900 tabular-nums dark:text-gray-50">
                           {currencyFormatter(item.amount)}{" "}
                           <span className="font-normal text-gray-500 dark:text-gray-500">
                             ({item.share})

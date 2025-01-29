@@ -2,7 +2,7 @@
 
 import { RiCheckboxCircleFill } from "@remixicon/react"
 
-import { ProgressBar } from "../../atom/ProgressBar"
+import { ProgressBar } from "@/atom/ProgressBar"
 
 const steps = [
   //array-start

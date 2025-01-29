@@ -9,8 +9,8 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Checkbox } from "../../atom/Checkbox"
+import { Button } from "@/atom/Button"
+import { Checkbox } from "@/atom/Checkbox"
 import {
   Table,
   TableBody,
@@ -20,7 +20,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -316,8 +316,8 @@ export default function TableCheckbox() {
           Object.keys(rowSelection).length > 0 ? "" : "hidden",
         )}
       >
-        <p className="select-none text-sm">
-          <span className="rounded bg-blue-100 px-2 py-1.5 font-medium tabular-nums text-blue-600 dark:bg-blue-900 dark:text-blue-600">
+        <p className="text-sm select-none">
+          <span className="rounded bg-blue-100 px-2 py-1.5 font-medium text-blue-600 tabular-nums dark:bg-blue-900 dark:text-blue-600">
             {Object.keys(rowSelection).length}
           </span>
           <span className="ml-2 font-medium text-gray-900 dark:text-gray-50">

@@ -12,10 +12,10 @@ import {
 
 import { cx } from "@/lib/utils"
 
-import { Button } from "../../atom/Button"
-import { Label } from "../../atom/Label"
-import { Switch } from "../../atom/Switch"
-import { Tooltip } from "../../atom/Tooltip"
+import { Button } from "@/atom/Button"
+import { Label } from "@/atom/Label"
+import { Switch } from "@/atom/Switch"
+import { Tooltip } from "@/atom/Tooltip"
 
 type FixedPrice = string
 
@@ -217,7 +217,7 @@ export default function Example() {
     <div className="obfuscate">
       <div className="py-20">
         <section aria-labelledby="pricing-title">
-          <div className="w-fit rounded-lg px-2 py-1 shadow-md shadow-blue-400/30 ring-1 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
+          <div className="w-fit rounded-lg px-2 py-1 ring-1 shadow-md shadow-blue-400/30 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
             <span className="text-sm font-medium tracking-tight text-gray-900 dark:text-gray-50">
               Pricing
             </span>
@@ -288,7 +288,7 @@ export default function Example() {
                     {plan.name}
                   </h2>
                   <div className="mt-3 flex items-center gap-x-3">
-                    <span className="text-5xl font-semibold tabular-nums text-gray-900 dark:text-gray-50">
+                    <span className="text-5xl font-semibold text-gray-900 tabular-nums dark:text-gray-50">
                       {isVariablePrice(plan.price)
                         ? billingFrequency === "monthly"
                           ? plan.price.monthly
@@ -372,10 +372,10 @@ export default function Example() {
           <div className="mx-auto space-y-8 sm:max-w-md lg:hidden">
             {plans.map((plan) => (
               <div key={plan.name}>
-                <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-inset ring-gray-200 dark:ring-gray-800">
+                <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-gray-200 ring-inset dark:ring-gray-800">
                   <h2
                     id={plan.name}
-                    className="text-base font-semibold leading-6 text-gray-900 dark:text-gray-50"
+                    className="text-base leading-6 font-semibold text-gray-900 dark:text-gray-50"
                   >
                     {plan.name}
                   </h2>
@@ -449,7 +449,7 @@ export default function Example() {
                       scope="col"
                       className="border-b border-gray-100 bg-white pb-8 dark:border-gray-800 dark:bg-gray-950"
                     >
-                      <div className="font-semibold leading-7 text-gray-900 dark:text-gray-50">
+                      <div className="leading-7 font-semibold text-gray-900 dark:text-gray-50">
                         Compare prices
                       </div>
                       <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
@@ -467,7 +467,7 @@ export default function Example() {
                             !plan.isStarter
                               ? "text-blue-600 dark:text-blue-400"
                               : "text-gray-900 dark:text-gray-50",
-                            "font-semibold leading-7",
+                            "leading-7 font-semibold",
                           )}
                         >
                           {plan.name}
@@ -494,7 +494,7 @@ export default function Example() {
                           colSpan={4}
                           className={cx(
                             sectionIdx === 0 ? "pt-14" : "pt-10",
-                            "border-b border-gray-100 pb-4 text-base font-semibold leading-6 text-gray-900 dark:border-gray-800 dark:text-gray-50",
+                            "border-b border-gray-100 pb-4 text-base leading-6 font-semibold text-gray-900 dark:border-gray-800 dark:text-gray-50",
                           )}
                         >
                           {section.name}
@@ -507,7 +507,7 @@ export default function Example() {
                         >
                           <th
                             scope="row"
-                            className="flex items-center gap-2 border-b border-gray-100 py-4 text-sm font-normal leading-6 text-gray-900 dark:border-gray-800 dark:text-gray-50"
+                            className="flex items-center gap-2 border-b border-gray-100 py-4 text-sm leading-6 font-normal text-gray-900 dark:border-gray-800 dark:text-gray-50"
                           >
                             <span>{feature.name}</span>
                             {feature.tooltip ? (
@@ -559,7 +559,7 @@ export default function Example() {
                   <tr>
                     <th
                       scope="row"
-                      className="pt-6 text-sm font-normal leading-6 text-gray-900 dark:text-gray-50"
+                      className="pt-6 text-sm leading-6 font-normal text-gray-900 dark:text-gray-50"
                     >
                       <span className="sr-only">Link to activate plan</span>
                     </th>

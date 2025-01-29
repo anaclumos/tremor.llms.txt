@@ -5,8 +5,8 @@ import {
   RiExternalLinkLine,
 } from "@remixicon/react"
 
-import { Button } from "../../atom/Button"
-import { Card } from "../../atom/Card"
+import { Button } from "@/atom/Button"
+import { Card } from "@/atom/Card"
 
 export default function Example() {
   const [isOpen, setIsOpen] = React.useState(true)
@@ -25,7 +25,7 @@ export default function Example() {
   return isOpen ? (
     <div className="obfuscate">
       <Card className="bg-gray-50 dark:bg-gray-900">
-        <div className="absolute right-0 top-0 pr-3 pt-3">
+        <div className="absolute top-0 right-0 pt-3 pr-3">
           <Button
             className="!p-1 !text-gray-500 hover:!text-gray-700 dark:!text-gray-500 hover:dark:!text-gray-300"
             variant="ghost"

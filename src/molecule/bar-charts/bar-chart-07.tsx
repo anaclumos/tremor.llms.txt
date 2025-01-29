@@ -5,7 +5,7 @@
 import React from "react"
 import CountUp from "react-countup"
 
-import { BarChart } from "../../atom/BarChart"
+import { BarChart } from "@/atom/BarChart"
 
 const valueFormatter = (number: number) => {
   return Intl.NumberFormat("us").format(number).toString() + "bpm"

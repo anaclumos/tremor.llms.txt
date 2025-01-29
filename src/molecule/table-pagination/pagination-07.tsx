@@ -18,7 +18,7 @@ import {
   TableHeaderCell,
   TableRoot,
   TableRow,
-} from "../../atom/Table"
+} from "@/atom/Table"
 
 // This example requires @tanstack/react-table
 
@@ -180,7 +180,7 @@ const TextButton = ({
   return (
     <button
       type="button"
-      className="group rounded-md bg-white p-2 text-sm shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:bg-gray-950 dark:ring-gray-800 hover:dark:bg-gray-900 disabled:hover:dark:bg-gray-950"
+      className="group rounded-md bg-white p-2 text-sm ring-1 shadow-sm ring-gray-300 ring-inset hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:bg-gray-950 dark:ring-gray-800 hover:dark:bg-gray-900 disabled:hover:dark:bg-gray-950"
       onClick={onClick}
       disabled={disabled}
     >
@@ -237,7 +237,7 @@ const MobileButton = ({
     <button
       type="button"
       className={cx(
-        "group p-2 text-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:ring-gray-800 hover:dark:bg-gray-900 disabled:hover:dark:bg-gray-950",
+        "group p-2 text-sm ring-1 ring-gray-300 ring-inset hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:ring-gray-800 hover:dark:bg-gray-900 disabled:hover:dark:bg-gray-950",
         position === "left"
           ? "rounded-l-md"
           : position === "right"
@@ -462,7 +462,7 @@ export default function Example() {
             />
           </TextButton>
         </div>
-        <p className="text-sm tabular-nums text-gray-500 sm:hidden dark:text-gray-500">
+        <p className="text-sm text-gray-500 tabular-nums sm:hidden dark:text-gray-500">
           Page of{" "}
           <span className="font-medium text-gray-900 dark:text-gray-50">{`${
             table.getState().pagination.pageIndex + 1

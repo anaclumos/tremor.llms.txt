@@ -2,9 +2,9 @@
 
 import { cx } from "@/lib/utils"
 
-import { AreaChart } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
-import { Divider } from "../../atom/Divider"
+import { AreaChart } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
 
 const data = [
   //array-start

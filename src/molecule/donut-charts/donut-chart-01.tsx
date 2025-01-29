@@ -2,8 +2,8 @@
 
 import { cx } from "@/lib/utils"
 
-import { Card } from "../../atom/Card"
-import { DonutChart } from "../../atom/DonutChart"
+import { Card } from "@/atom/Card"
+import { DonutChart } from "@/atom/DonutChart"
 
 const data = [
   //array-start
@@ -81,10 +81,10 @@ export default function Example() {
                 <span className="truncate dark:text-gray-300">{item.name}</span>
               </div>
               <p className="flex items-center space-x-2">
-                <span className="font-medium tabular-nums text-gray-900 dark:text-gray-50">
+                <span className="font-medium text-gray-900 tabular-nums dark:text-gray-50">
                   {currencyFormatter(item.amount)}
                 </span>
-                <span className="rounded-md bg-gray-100 px-1.5 py-0.5 text-xs font-medium tabular-nums text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                <span className="rounded-md bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-700 tabular-nums dark:bg-gray-800 dark:text-gray-300">
                   {item.share}
                 </span>
               </p>

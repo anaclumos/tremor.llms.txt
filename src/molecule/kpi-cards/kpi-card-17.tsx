@@ -2,8 +2,8 @@
 
 import React from "react"
 
-import { AreaChart, TooltipProps } from "../../atom/AreaChart"
-import { Card } from "../../atom/Card"
+import { AreaChart, TooltipProps } from "@/atom/AreaChart"
+import { Card } from "@/atom/Card"
 
 const numberFormatter = (number: number) =>
   Intl.NumberFormat("en-US").format(number).toString()
@@ -86,7 +86,7 @@ const KpiCard = ({ item }: { item: Category }) => {
         showGridLines={false}
         startEndOnly={true}
         fill="solid"
-        className="-mb-2 mt-3 h-24"
+        className="mt-3 -mb-2 h-24"
         tooltipCallback={(props) => {
           if (props.active) {
             setSelectedChartData((prev) =>

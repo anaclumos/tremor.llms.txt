@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Button } from "../../atom/Button"
+import { Button } from "@/atom/Button"
 import {
   Drawer,
   DrawerBody,
@@ -9,18 +9,18 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-} from "../../atom/Drawer"
-import { Input } from "../../atom/Input"
-import { Label } from "../../atom/Label"
-import { RadioCardGroup, RadioCardItem } from "../../atom/RadioCardGroup"
+} from "@/atom/Drawer"
+import { Input } from "@/atom/Input"
+import { Label } from "@/atom/Label"
+import { RadioCardGroup, RadioCardItem } from "@/atom/RadioCardGroup"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../atom/Select"
-import { Textarea } from "../../atom/Textarea"
+} from "@/atom/Select"
+import { Textarea } from "@/atom/Textarea"
 
 const ticketTypes: {
   name: string

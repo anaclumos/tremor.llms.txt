@@ -29,7 +29,7 @@ import { useOnWindowResize } from "@/lib/useOnWindowResize"
 import { cx } from "@/lib/utils"
 
 // Tremor LineChart [v0.3.1]
-import { Card } from "../../atom/Card"
+import { Card } from "@/atom/Card"
 
 //#region Legend
 
@@ -51,7 +51,7 @@ const LegendItem = ({
     <li
       className={cx(
         // base
-        "group inline-flex flex-nowrap items-center gap-1.5 whitespace-nowrap rounded px-2 py-1 transition",
+        "group inline-flex flex-nowrap items-center gap-1.5 rounded px-2 py-1 whitespace-nowrap transition",
         hasOnValueChange
           ? "cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
           : "cursor-default",
@@ -72,7 +72,7 @@ const LegendItem = ({
       <p
         className={cx(
           // base
-          "truncate whitespace-nowrap text-xs",
+          "truncate text-xs whitespace-nowrap",
           // text color
           "text-gray-700 dark:text-gray-300",
           hasOnValueChange &&
@@ -265,7 +265,7 @@ const Legend = React.forwardRef<HTMLOListElement, LegendProps>((props, ref) => {
           "flex h-full",
           enableLegendSlider
             ? hasScroll?.right || hasScroll?.left
-              ? "snap-mandatory items-center overflow-auto pl-4 pr-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              ? "snap-mandatory items-center overflow-auto pr-12 pl-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               : ""
             : "flex-wrap",
         )}
@@ -285,7 +285,7 @@ const Legend = React.forwardRef<HTMLOListElement, LegendProps>((props, ref) => {
           <div
             className={cx(
               // base
-              "absolute bottom-0 right-0 top-0 flex h-full items-center justify-center pr-1",
+              "absolute top-0 right-0 bottom-0 flex h-full items-center justify-center pr-1",
               // background color
               "bg-white dark:bg-gray-950",
             )}
@@ -432,7 +432,7 @@ const ChartTooltip = ({
                 <p
                   className={cx(
                     // base
-                    "whitespace-nowrap text-right",
+                    "text-right whitespace-nowrap",
                     // text color
                     "text-gray-400 dark:text-gray-400",
                   )}
@@ -443,7 +443,7 @@ const ChartTooltip = ({
               <p
                 className={cx(
                   // base
-                  "whitespace-nowrap text-right tabular-nums",
+                  "text-right whitespace-nowrap tabular-nums",
                   // text color
                   "text-gray-50 dark:text-gray-50",
                 )}

@@ -1,8 +1,8 @@
 "use client"
 
-import { BarList } from "../../atom/BarList"
-import { Card } from "../../atom/Card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../atom/Tabs"
+import { BarList } from "@/atom/BarList"
+import { Card } from "@/atom/Card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/atom/Tabs"
 
 const country = [
   //array-start
@@ -84,7 +84,7 @@ export default function Example() {
               {tabs.map((item) => (
                 <TabsTrigger
                   value={item.name}
-                  className="rounded-md data-[state=active]:ring-1 data-[state=active]:ring-inset data-[state=active]:ring-gray-200 data-[state=active]:dark:ring-gray-800"
+                  className="rounded-md data-[state=active]:ring-1 data-[state=active]:ring-gray-200 data-[state=active]:ring-inset data-[state=active]:dark:ring-gray-800"
                 >
                   {item.name}
                 </TabsTrigger>

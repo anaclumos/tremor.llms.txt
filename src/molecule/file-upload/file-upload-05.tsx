@@ -7,7 +7,7 @@ import {
   RiFileTextLine,
 } from "@remixicon/react"
 
-import { ProgressBar } from "../../atom/ProgressBar"
+import { ProgressBar } from "@/atom/ProgressBar"
 
 export default function Example() {
   return (
