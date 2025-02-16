@@ -1,0 +1,2266 @@
+```example/feature-sections-feature-section-08.tsx
+import React from "react"
+import { RiBarChartFill, RiPhoneFill, RiTimeFill } from "@remixicon/react"
+
+import { cx } from "@/lib/utils"
+
+const StickerCard = ({
+  icon: Icon,
+  title,
+  children,
+}: {
+  icon: React.ElementType
+  title: string
+  children: React.ReactNode
+}) => {
+  return (
+    <div>
+      <a
+        className={cx(
+          "relative z-10 mt-0 block size-full overflow-hidden",
+          "rounded-lg rounded-tr-[26px]",
+          "px-4 pt-5 pb-4",
+          // Card
+          "bg-white leading-8 font-normal text-gray-900 dark:bg-gray-900 dark:text-gray-50",
+          "ring-1 ring-gray-200 ring-inset dark:ring-gray-800",
+
+          // Animation
+          "transition-all duration-200 ease-in-out",
+
+          // Before Element (Corner Fold)
+          'before:content-[""]',
+          "before:absolute before:top-0 before:right-0",
+          "before:z-[3]",
+          "before:h-[30px] before:w-[30px]",
+          "before:-translate-y-1/2 before:translate-x-1/2",
+          "before:rotate-45",
+          "before:bg-white dark:before:bg-gray-950",
+          "before:ring-1 before:ring-gray-200 dark:before:ring-gray-800",
+          "before:transition-all before:duration-200 before:ease-in-out",
+
+          // After Element (Corner Shadow)
+          'after:content-[""]',
+          "after:absolute after:top-0 after:right-0",
+          "after:z-[2]",
+          "after:size-7",
+          "after:-translate-y-2 after:translate-x-2",
+          "after:rounded-bl-lg",
+          "after:border after:bg-gray-50 dark:after:border-gray-800 dark:after:bg-gray-900",
+          "after:shadow-sm",
+          "after:transition-all after:duration-200 after:ease-in-out",
+
+          // Hover States
+          "hover:cursor-pointer",
+          "hover:rounded-tr-[45px]",
+          "hover:before:h-[50px] hover:before:w-[50px]",
+          "hover:after:h-[42px] hover:after:w-[42px]",
+          "after:hover:shadow-lg after:hover:shadow-black/5",
+        )}
+      >
+        <div>
+          <div className="relative flex items-center gap-2">
+            <div className="absolute -left-4 h-5 w-1 rounded-r-sm bg-blue-500" />
+            <Icon className="h-5 w-5 shrink-0 text-blue-500" />
+            <h3 className="font-medium text-gray-900 dark:text-gray-50">
+              {title}
+            </h3>
+          </div>
+          <p className="mt-2 text-gray-600 sm:text-sm dark:text-gray-400">
+            {children}
+          </p>
+        </div>
+      </a>
+    </div>
+  )
+}
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <StickerCard icon={RiPhoneFill} title="Call Analytics">
+          Real-time voice analytics and sentiment tracking to improve customer
+          interactions.
+        </StickerCard>
+
+        <StickerCard icon={RiBarChartFill} title="Performance Metrics">
+          Comprehensive reporting on KPIs including call resolution rates and
+          response times.
+        </StickerCard>
+
+        <StickerCard icon={RiTimeFill} title="Queue Management">
+          Smart call routing and queue optimization to minimize wait times and
+          maximize agent efficiency.
+        </StickerCard>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-09.tsx
+import { RiArrowRightUpLine } from "@remixicon/react"
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="relative flex flex-col items-center justify-center py-16">
+        <div className="mx-auto">
+          <a
+            aria-label="View latest database benchmarks"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto w-full"
+          >
+            <div className="inline-flex max-w-full items-center gap-3 rounded-full px-2.5 py-0.5 pr-3 pl-0.5 font-medium text-gray-900 ring-1 shadow-lg shadow-blue-400/20 ring-black/5 filter backdrop-blur-[1px] transition-colors hover:bg-blue-500/[2.5%] focus:outline-hidden sm:text-sm dark:bg-white/5 dark:text-gray-50 dark:ring-white/10">
+              <span className="shrink-0 truncate rounded-full border bg-gray-50 px-2.5 py-1 text-sm text-gray-600 sm:text-xs">
+                New
+              </span>
+              <span className="flex items-center gap-1 truncate">
+                <span className="w-full truncate">
+                  10x Faster Query Performance
+                </span>
+                <RiArrowRightUpLine className="h-4 w-4 shrink-0 text-gray-700 dark:text-gray-400" />
+              </span>
+            </div>
+          </a>
+        </div>
+        <h1 className="mt-8 text-center text-5xl font-semibold tracking-tighter text-gray-900 sm:text-8xl sm:leading-[5.5rem] dark:text-gray-50">
+          Scale Beyond <br /> Your Limits
+        </h1>
+        <p className="mt-5 max-w-xl text-center text-base text-balance text-gray-700 sm:mt-8 sm:text-xl dark:text-gray-400">
+          Modern distributed database with automatic sharding, real-time
+          replication, and intelligent query optimization for unlimited
+          scalability.
+        </p>
+        <div>
+          <a
+            className="mt-6 inline-flex cursor-pointer flex-row items-center justify-center gap-1 rounded-md border-b-[1.5px] border-blue-700 bg-gradient-to-b from-blue-400 to-blue-500 px-5 py-3 leading-4 font-medium tracking-wide whitespace-nowrap text-white shadow-[0_0_0_2px_rgba(0,0,0,0.04),0_0_14px_0_rgba(255,255,255,0.19)] transition-all duration-200 ease-in-out hover:shadow-blue-300"
+            href="#"
+          >
+            Start scaling
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-01.tsx
+import React from "react"
+
+interface BadgeProps extends React.ComponentPropsWithoutRef<"span"> {}
+
+const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
+  ({ children, className, ...props }: BadgeProps, forwardedRef) => {
+    return (
+      <span
+        ref={forwardedRef}
+        className="z-10 block w-fit rounded-lg border border-blue-200/20 bg-blue-50/50 px-3 py-1.5 leading-4 font-semibold tracking-tighter uppercase sm:text-sm dark:border-blue-800/30 dark:bg-blue-900/20"
+        {...props}
+      >
+        <span className="bg-gradient-to-b from-blue-500 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400">
+          {children}
+        </span>
+      </span>
+    )
+  },
+)
+
+const stats = [
+  {
+    name: "Bandwith increase",
+    value: "+162%",
+  },
+  {
+    name: "Better storage efficiency",
+    value: "2-3x",
+  },
+  {
+    name: "Rows ingested / second",
+    value: "Up to 9M",
+  },
+]
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="mx-auto w-full max-w-6xl px-3 py-20">
+        <Badge>Security at Scale</Badge>
+        <h2
+          id="features-title"
+          className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl dark:from-gray-50 dark:to-gray-300"
+        >
+          Architected for speed and reliability
+        </h2>
+        <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-600 dark:text-gray-400">
+          Database&rsquo; innovative architecture avoids the central bottlenecks
+          of traditional systems, enhancing system reliability. This design
+          ensures high productivity and security, minimizing the risk of service
+          disruptions and outages.
+        </p>
+        <dl className="mt-12 grid grid-cols-1 gap-y-8 md:grid-cols-3 md:border-y md:border-gray-200 md:py-14 dark:border-gray-800">
+          {stats.map((stat, index) => (
+            <React.Fragment key={index}>
+              <div className="border-l-2 border-blue-100 pl-6 md:border-l md:text-center lg:border-gray-200 lg:first:border-none dark:border-blue-900 lg:dark:border-gray-800">
+                <dd className="inline-block bg-gradient-to-t from-blue-900 to-blue-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent lg:text-6xl dark:from-blue-700 dark:to-blue-400">
+                  {stat.value}
+                </dd>
+                <dt className="mt-1 text-gray-600 dark:text-gray-400">
+                  {stat.name}
+                </dt>
+              </div>
+            </React.Fragment>
+          ))}
+        </dl>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-02.tsx
+import {
+  RiLinksLine,
+  RiPlugLine,
+  RiShieldKeyholeLine,
+  RiStackLine,
+} from "@remixicon/react"
+
+const features = [
+  {
+    name: "Use Database with your stack",
+    description:
+      "We offer client and server libraries in everything from React and Ruby to iOS.",
+    icon: RiStackLine,
+  },
+  {
+    name: "Try plug & play options",
+    description:
+      "Customize and deploy data infrastructure directly from the Database Dashboard.",
+    icon: RiPlugLine,
+  },
+  {
+    name: "Explore pre-built integrations",
+    description:
+      "Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.",
+    icon: RiLinksLine,
+  },
+  {
+    name: "Security & privacy",
+    description:
+      "Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.",
+    icon: RiShieldKeyholeLine,
+  },
+]
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="mx-auto w-full max-w-6xl px-3 py-20">
+        <dl className="grid grid-cols-4 gap-10">
+          {features.map((item) => (
+            <div
+              key={item.name}
+              className="col-span-full sm:col-span-2 lg:col-span-1"
+            >
+              <div className="w-fit rounded-lg p-2 ring-1 shadow-md shadow-blue-400/30 ring-black/5 dark:shadow-blue-600/30 dark:ring-white/5">
+                <item.icon
+                  aria-hidden="true"
+                  className="size-6 text-blue-600 dark:text-blue-400"
+                />
+              </div>
+              <dt className="mt-6 font-semibold text-gray-900 dark:text-gray-50">
+                {item.name}
+              </dt>
+              <dd className="mt-2 leading-7 text-gray-600 dark:text-gray-400">
+                {item.description}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-03.tsx
+const features = [
+  {
+    title: "1. Prototype",
+    subtitle: "Build fast, test early",
+    description:
+      "Quickly spin up a working model with libraries for popular frameworks like React.",
+  },
+  {
+    title: "2. Present",
+    subtitle: "Showcase your vision",
+    description:
+      "Use intuitive plug & play features to prepare a live demo and deploy from our platform.",
+  },
+  {
+    title: "3. Iterate",
+    subtitle: "Refine and improve",
+    description:
+      "Continuously enhance your product by integrating with over a hundred tools.",
+  },
+  {
+    title: "4. Deploy",
+    subtitle: "Launch with confidence",
+    description:
+      "Deploy securely with encryption, ensuring data compliance and user consent.",
+  },
+]
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="mx-auto w-full max-w-6xl px-3 py-20">
+        <dl className="grid grid-cols-4 gap-10">
+          {features.map((item) => (
+            <div
+              key={item.title}
+              className="col-span-full sm:col-span-2 lg:col-span-1"
+            >
+              <span className="rounded-lg bg-blue-50/50 px-3 py-1.5 leading-4 font-semibold tracking-tighter ring-1 shadow-sm shadow-blue-500/20 ring-blue-200/20 sm:text-sm dark:bg-blue-900/20 dark:ring-blue-800/30">
+                <span className="bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400">
+                  {item.title}
+                </span>
+              </span>
+              <dt className="mt-6 font-semibold text-gray-900 dark:text-gray-50">
+                {item.subtitle}
+              </dt>
+              <dd className="mt-2 leading-7 text-gray-600 dark:text-gray-400">
+                {item.description}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-07.tsx
+"use client"
+
+//To get started, run "npm i cobe"
+import { useEffect, useRef } from "react"
+import createGlobe from "cobe"
+
+export default function Example() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    let phi = 4.7
+
+    const globe = createGlobe(canvasRef.current!, {
+      devicePixelRatio: 2,
+      width: 1200 * 2,
+      height: 1200 * 2,
+      phi: 0,
+      theta: -0.3,
+      dark: 1,
+      diffuse: 1.2,
+      mapSamples: 25000,
+      mapBrightness: 13,
+      mapBaseBrightness: 0.05,
+      baseColor: [0.3, 0.3, 0.3],
+      glowColor: [0.15, 0.15, 0.15],
+      markerColor: [100, 100, 100],
+      markers: [
+        // { location: [37.7595, -122.4367], size: 0.03 }, // San Francisco
+        // { location: [40.7128, -74.006], size: 0.03 }, // New York City
+        // { location: [35.6895, 139.6917], size: 0.03 }, // Tokyo
+        // { location: [28.7041, 77.1025], size: 0.03 }, // Delhi
+      ],
+      onRender: (state: { phi?: number }) => {
+        state.phi = phi
+        phi += 0.0002
+      },
+    })
+
+    return () => {
+      globe.destroy()
+    }
+  }, [])
+
+  const features = [
+    {
+      name: "Global Clusters",
+      description: "Enable low-latency global access, enhancing performance.",
+    },
+    {
+      name: "Serverless Triggers",
+      description: "Trigger functions automatically for dynamic app behavior.",
+    },
+    {
+      name: "Monitoring & Alerts",
+      description:
+        "Monitor health with key metrics or integrate third-party tools.",
+    },
+  ]
+
+  return (
+    <>
+      <div className="sm:px-3">
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-3xl bg-gray-950 pt-24 shadow-xl shadow-black/30">
+          <div className="absolute top-[17rem] size-[40rem] rounded-full bg-blue-800 blur-3xl md:top-[20rem]" />
+          <div className="z-10 inline-block rounded-lg border border-blue-400/20 bg-blue-800/20 px-3 py-1.5 leading-4 font-semibold tracking-tight uppercase sm:text-sm">
+            <span className="bg-gradient-to-b from-blue-200 to-blue-400 bg-clip-text text-transparent">
+              Made for the cloud
+            </span>
+          </div>
+          <h2
+            id="global-database-title"
+            className="z-10 mt-6 inline-block bg-gradient-to-b from-white to-blue-100 bg-clip-text px-2 text-center text-5xl font-bold tracking-tighter text-transparent md:text-8xl"
+          >
+            The global <br className="md:bock hidden" /> cloud database
+          </h2>
+          <canvas
+            className="absolute top-[10rem] z-20 aspect-square size-full max-w-fit sm:top-[7.1rem] md:top-[12rem]"
+            ref={canvasRef}
+            style={{ width: 1200, height: 1200 }}
+          />
+          <div className="z-20 -mt-32 h-[36rem] w-full overflow-hidden md:-mt-36">
+            <div className="absolute bottom-0 h-3/5 w-full bg-gradient-to-b from-transparent via-gray-950/95 to-gray-950" />
+            <div className="absolute inset-x-6 bottom-12 m-auto max-w-4xl md:top-2/3">
+              <div className="grid grid-cols-1 gap-x-10 gap-y-6 rounded-lg border border-white/[3%] bg-white/[1%] px-6 py-6 shadow-xl backdrop-blur md:grid-cols-3 md:p-8">
+                {features.map((item) => (
+                  <div key={item.name} className="flex flex-col gap-2">
+                    <h3 className="bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-lg font-semibold whitespace-nowrap text-transparent md:text-xl">
+                      {item.name}
+                    </h3>
+                    <p className="text-sm leading-6 text-blue-200/40">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-06.tsx
+"use client"
+
+//To get started, run "npm i cobe"
+import { RiArrowRightSLine } from "@remixicon/react"
+import createGlobe from "cobe"
+import { useEffect, useRef } from "react"
+
+function GlobeCanvas() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(function () {
+    let phi = 4
+    let globe: ReturnType<typeof createGlobe> | undefined
+
+    if (canvasRef.current) {
+      globe = createGlobe(canvasRef.current, {
+        devicePixelRatio: 2,
+        width: 800 * 2,
+        height: 800 * 2,
+        phi: 0,
+        theta: -0.3,
+        dark: 0,
+        diffuse: 1.2,
+        mapSamples: 30000,
+        mapBrightness: 13,
+        mapBaseBrightness: 0.01,
+        baseColor: [1, 1, 1],
+        glowColor: [1, 1, 1],
+        markerColor: [100, 100, 100],
+        markers: [],
+        onRender: function (state) {
+          state.phi = phi
+          phi += 0.0005
+        },
+      })
+    }
+
+    return function () {
+      if (globe) {
+        globe.destroy()
+      }
+    }
+  }, [])
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ width: 800, height: 800 }}
+      className="absolute top-40 -right-72 z-10 aspect-square size-full max-w-fit transition-transform group-hover:scale-[1.01] sm:top-12 lg:top-0 lg:-right-60"
+    />
+  )
+}
+
+export default function Example() {
+  return (
+    <>
+      <div className="mx-auto w-full max-w-6xl px-3 py-8 sm:py-20">
+        <span className="block text-lg font-semibold tracking-tighter text-blue-500">
+          AI-Powered
+        </span>
+        <h2
+          id="features-title"
+          className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-3xl font-bold tracking-tighter text-transparent sm:text-5xl dark:from-gray-50 dark:to-gray-300"
+        >
+          Revolutionize your customer service
+        </h2>
+        <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-600 dark:text-gray-400">
+          Harness the power of AI to provide 24/7 support, reduce response
+          times, and increase customer satisfaction with our cutting-edge
+          solutions.
+        </p>
+        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <a
+            href="#"
+            className="group relative col-span-1 overflow-hidden rounded-t-2xl rounded-b bg-gray-50 p-8 ring-1 shadow-2xl shadow-black/10 ring-black/5 lg:col-span-2 lg:rounded-l-2xl lg:rounded-r dark:bg-gray-900 dark:ring-white/5"
+          >
+            <div className="relative z-20">
+              <h3 className="text-2xl font-semibold text-gray-950 dark:text-gray-50">
+                AI Chatbot Integration
+              </h3>
+              <p className="mt-4 max-w-sm text-gray-700 dark:text-gray-400">
+                Seamlessly integrate our advanced AI chatbots to handle customer
+                queries instantly, freeing up your human agents for complex
+                issues.
+              </p>
+              <div className="mt-12 flex w-fit items-center gap-0.5 rounded bg-white/10 px-2 py-1 text-blue-500 backdrop-blur-[3px]">
+                <span>Explore features</span>
+                <RiArrowRightSLine className="mt-0.5 size-5 transition-all group-hover:translate-x-1 group-hover:opacity-100 sm:opacity-20" />
+              </div>
+            </div>
+            <GlobeCanvas />
+          </a>
+          <div className="rounded-t rounded-b-2xl bg-gradient-to-br from-blue-400 to-blue-600 p-8 shadow-lg shadow-blue-500/20 lg:rounded-l lg:rounded-r-2xl">
+            <figure className="flex h-full flex-col justify-between">
+              <blockquote className="text-base font-medium text-gray-50 sm:text-lg/8">
+                <p className="relative bg-gradient-to-br from-blue-100 to-white bg-clip-text leading-7 font-medium tracking-tighter text-transparent before:absolute before:top-0 before:right-full">
+                  The AI-powered customer support has completely transformed our
+                  service capabilities. We've seen a 70% reduction in response
+                  times and a significant increase in customer satisfaction
+                  scores.
+                </p>
+              </blockquote>
+              <figcaption className="mt-8 flex items-center space-x-4 sm:mt-0">
+                <div className="flex-auto">
+                  <div className="mt-7 text-sm font-semibold text-gray-50">
+                    <div>
+                      <span className="absolute inset-0" />
+                      Sarah Johnson
+                    </div>
+                  </div>
+                  <span className="text-sm text-blue-200">
+                    CX Director, TechInnovate
+                  </span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-12.tsx
+import type { SVGProps } from "react"
+import Link from "next/link"
+import {
+  RiGithubFill,
+  RiSlackFill,
+  RiTwitterXFill,
+  RiYoutubeFill,
+} from "@remixicon/react"
+
+const SolarLogo = (props: SVGProps<SVGSVGElement>) => (
+  //array-start
+  <svg
+    viewBox="0 0 123 42"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M65.888 16.936C65.824 16.616 65.7067 16.2747 65.536 15.912C65.3867 15.528 65.152 15.176 64.832 14.856C64.512 14.536 64.096 14.2693 63.584 14.056C63.0933 13.8427 62.4853 13.736 61.76 13.736C61.2267 13.736 60.736 13.8213 60.288 13.992C59.8613 14.1413 59.488 14.3547 59.168 14.632C58.8693 14.888 58.6347 15.1867 58.464 15.528C58.2933 15.8693 58.208 16.232 58.208 16.616C58.208 17.2347 58.4107 17.7787 58.816 18.248C59.2213 18.696 59.84 19.0053 60.672 19.176L63.84 19.784C64.864 19.976 65.7707 20.2853 66.56 20.712C67.3493 21.1387 68.0107 21.6507 68.544 22.248C69.0773 22.824 69.4827 23.4747 69.76 24.2C70.0373 24.9253 70.176 25.6827 70.176 26.472C70.176 27.3467 69.9947 28.2107 69.632 29.064C69.2693 29.896 68.736 30.6427 68.032 31.304C67.3493 31.944 66.496 32.4667 65.472 32.872C64.4693 33.2773 63.3067 33.48 61.984 33.48C60.4693 33.48 59.168 33.2667 58.08 32.84C56.992 32.392 56.0747 31.8267 55.328 31.144C54.6027 30.4613 54.048 29.704 53.664 28.872C53.28 28.0187 53.0453 27.1867 52.96 26.376L57.056 25.288C57.0987 25.8427 57.2267 26.376 57.44 26.888C57.6747 27.4 57.9947 27.8587 58.4 28.264C58.8053 28.648 59.3067 28.9573 59.904 29.192C60.5013 29.4267 61.2053 29.544 62.016 29.544C63.2107 29.544 64.1173 29.288 64.736 28.776C65.376 28.2427 65.696 27.5707 65.696 26.76C65.696 26.0987 65.4613 25.5333 64.992 25.064C64.5227 24.5733 63.84 24.2427 62.944 24.072L59.776 23.432C57.9627 23.0693 56.512 22.3333 55.424 21.224C54.3573 20.0933 53.824 18.664 53.824 16.936C53.824 15.9333 54.0267 15.0053 54.432 14.152C54.8587 13.2773 55.4347 12.52 56.16 11.88C56.8853 11.24 57.728 10.7387 58.688 10.376C59.648 10.0133 60.6613 9.832 61.728 9.832C63.0933 9.832 64.256 10.024 65.216 10.408C66.1973 10.7707 67.008 11.24 67.648 11.816C68.288 12.392 68.7787 13.032 69.12 13.736C69.4827 14.4187 69.728 15.08 69.856 15.72L65.888 16.936ZM79.2515 29.608C79.7635 29.608 80.2648 29.512 80.7555 29.32C81.2462 29.128 81.6728 28.8507 82.0355 28.488C82.3982 28.104 82.6862 27.6347 82.8995 27.08C83.1342 26.5253 83.2515 25.8747 83.2515 25.128C83.2515 24.3813 83.1342 23.7307 82.8995 23.176C82.6862 22.6213 82.3982 22.1627 82.0355 21.8C81.6728 21.416 81.2462 21.128 80.7555 20.936C80.2648 20.744 79.7635 20.648 79.2515 20.648C78.7395 20.648 78.2382 20.744 77.7475 20.936C77.2568 21.128 76.8302 21.416 76.4675 21.8C76.1048 22.1627 75.8062 22.6213 75.5715 23.176C75.3582 23.7307 75.2515 24.3813 75.2515 25.128C75.2515 25.8747 75.3582 26.5253 75.5715 27.08C75.8062 27.6347 76.1048 28.104 76.4675 28.488C76.8302 28.8507 77.2568 29.128 77.7475 29.32C78.2382 29.512 78.7395 29.608 79.2515 29.608ZM79.2515 16.776C80.4248 16.776 81.5128 16.9893 82.5155 17.416C83.5395 17.8213 84.4142 18.3973 85.1395 19.144C85.8862 19.8693 86.4622 20.744 86.8675 21.768C87.2942 22.792 87.5075 23.912 87.5075 25.128C87.5075 26.344 87.2942 27.464 86.8675 28.488C86.4622 29.4907 85.8862 30.3653 85.1395 31.112C84.4142 31.8587 83.5395 32.4453 82.5155 32.872C81.5128 33.2773 80.4248 33.48 79.2515 33.48C78.0782 33.48 76.9795 33.2773 75.9555 32.872C74.9528 32.4453 74.0782 31.8587 73.3315 31.112C72.6062 30.3653 72.0302 29.4907 71.6035 28.488C71.1982 27.464 70.9955 26.344 70.9955 25.128C70.9955 23.912 71.1982 22.792 71.6035 21.768C72.0302 20.744 72.6062 19.8693 73.3315 19.144C74.0782 18.3973 74.9528 17.8213 75.9555 17.416C76.9795 16.9893 78.0782 16.776 79.2515 16.776ZM89.587 33V9.832H93.843V33H89.587ZM96.0657 28.712C96.0657 28.008 96.1831 27.3893 96.4177 26.856C96.6737 26.3013 97.0151 25.8213 97.4418 25.416C97.8684 25.0107 98.3591 24.6907 98.9138 24.456C99.4898 24.2213 100.108 24.0507 100.77 23.944L104.642 23.368C105.09 23.304 105.399 23.176 105.57 22.984C105.74 22.7707 105.826 22.5253 105.826 22.248C105.826 21.6933 105.602 21.2133 105.154 20.808C104.727 20.4027 104.066 20.2 103.17 20.2C102.231 20.2 101.506 20.456 100.994 20.968C100.503 21.48 100.226 22.0773 100.162 22.76L96.3857 21.96C96.4497 21.3413 96.6417 20.7227 96.9618 20.104C97.2818 19.4853 97.7191 18.9307 98.2738 18.44C98.8284 17.9493 99.5111 17.5547 100.322 17.256C101.132 16.936 102.071 16.776 103.138 16.776C104.375 16.776 105.431 16.9467 106.306 17.288C107.18 17.608 107.884 18.0453 108.418 18.6C108.972 19.1333 109.367 19.7627 109.602 20.488C109.858 21.2133 109.986 21.9707 109.986 22.76V30.504C109.986 30.9307 110.007 31.3893 110.05 31.88C110.092 32.3493 110.135 32.7227 110.178 33H106.274C106.231 32.7867 106.188 32.4987 106.146 32.136C106.124 31.752 106.114 31.4107 106.114 31.112C105.708 31.7307 105.122 32.2747 104.354 32.744C103.607 33.2133 102.647 33.448 101.474 33.448C100.642 33.448 99.8844 33.3093 99.2018 33.032C98.5404 32.776 97.9751 32.4347 97.5057 32.008C97.0364 31.56 96.6737 31.0587 96.4177 30.504C96.1831 29.928 96.0657 29.3307 96.0657 28.712ZM102.37 30.28C102.818 30.28 103.244 30.2267 103.65 30.12C104.076 29.992 104.45 29.7893 104.77 29.512C105.09 29.2133 105.346 28.84 105.538 28.392C105.73 27.9227 105.826 27.336 105.826 26.632V25.928L102.274 26.472C101.719 26.5573 101.25 26.76 100.866 27.08C100.503 27.3787 100.322 27.8373 100.322 28.456C100.322 28.9253 100.492 29.352 100.834 29.736C101.175 30.0987 101.687 30.28 102.37 30.28ZM122.596 21.48C122.169 21.3947 121.742 21.352 121.316 21.352C120.761 21.352 120.238 21.4267 119.748 21.576C119.257 21.7253 118.83 21.9707 118.468 22.312C118.105 22.6533 117.806 23.112 117.572 23.688C117.358 24.2427 117.252 24.9467 117.252 25.8V33H112.996V17.256H117.124V19.592C117.358 19.08 117.657 18.664 118.02 18.344C118.404 18.0027 118.798 17.7467 119.204 17.576C119.63 17.4053 120.046 17.288 120.452 17.224C120.878 17.16 121.262 17.128 121.604 17.128C121.774 17.128 121.934 17.1387 122.084 17.16C122.254 17.16 122.425 17.1707 122.596 17.192V21.48Z"
+      className="fill-gray-950 dark:fill-gray-50"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M22.0997 17.8596L31.9992 7.9602L29.8779 5.83883L22.539 13.1777V0H19.539V13.1777L12.2002 5.83883L10.0789 7.9602L19.9784 17.8596L21.039 18.9203L22.0997 17.8596ZM24.2204 19.981L34.1199 10.0815L36.2412 12.2028L28.9024 19.5416H41.998V22.5416H28.9024L36.2412 29.8805L34.1199 32.0018L24.2204 22.1023L23.1597 21.0416L24.2204 19.981ZM7.95821 32.0018L17.8576 22.1023L18.9183 21.0416L17.8576 19.981L7.95821 10.0815L5.83688 12.2028L13.1757 19.5416H0V22.5416H13.1757L5.83688 29.8805L7.95821 32.0018ZM19.9784 24.2236L10.0789 34.1231L12.2002 36.2444L19.539 28.9056V42H22.539V28.9056L29.8779 36.2444L31.9992 34.1231L22.0997 24.2236L21.039 23.1629L19.9784 24.2236Z"
+      fill="#3b82f6"
+    />
+  </svg>
+  //array-end
+)
+
+const CURRENT_YEAR = new Date().getFullYear()
+
+export default function Example() {
+  const sections = {
+    solutions: {
+      title: "Solutions",
+      items: [
+        { label: "Performance Monitoring", href: "#" },
+        { label: "Resource Management", href: "#" },
+        { label: "Data Analytics", href: "#" },
+        { label: "System Integration", href: "#" },
+        { label: "Documentation", href: "#" },
+        { label: "Database Guide", href: "#" },
+        { label: "Infrastructure", href: "#" },
+      ],
+    },
+    company: {
+      title: "Company",
+      items: [
+        { label: "About us", href: "#" },
+        { label: "Blog", href: "#" },
+        { label: "Careers", href: "#" },
+        { label: "Success Stories", href: "#" },
+        { label: "Security", href: "#" },
+      ],
+    },
+    resources: {
+      title: "Resources",
+      items: [
+        { label: "Developer Network", href: "#" },
+        {
+          label: "Community",
+          href: "#",
+          external: true,
+        },
+        { label: "Contact", href: "#" },
+        { label: "Support", href: "#" },
+        { label: "Privacy Policy", href: "#" },
+        { label: "Terms of Service", href: "#" },
+        { label: "Report an Issue", href: "#" },
+      ],
+    },
+    partners: {
+      title: "Partners",
+      items: [
+        { label: "Cloud Partners", href: "#", external: true },
+        { label: "System Status", href: "#", external: true },
+        { label: "Technology Partners", href: "#", external: true },
+        { label: "Integration Guide", href: "#" },
+      ],
+    },
+  }
+
+  return (
+    <div className="obfuscate">
+      <div className="px-4 py-20 xl:px-0">
+        <footer
+          id="footer"
+          className="relative mx-auto flex max-w-6xl flex-wrap pt-4"
+        >
+          {/* Vertical Lines */}
+          <div className="pointer-events-none inset-0">
+            {/* Left */}
+            <div
+              className="absolute inset-y-0 my-[-5rem] w-px"
+              style={{
+                maskImage: "linear-gradient(transparent, white 5rem)",
+              }}
+            >
+              <svg className="h-full w-full" preserveAspectRatio="none">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="100%"
+                  className="stroke-gray-300 dark:stroke-gray-800"
+                  strokeWidth="2"
+                  strokeDasharray="3 3"
+                />
+              </svg>
+            </div>
+
+            {/* Right */}
+            <div
+              className="absolute inset-y-0 right-0 my-[-5rem] w-px"
+              style={{
+                maskImage: "linear-gradient(transparent, white 5rem)",
+              }}
+            >
+              <svg className="h-full w-full" preserveAspectRatio="none">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="100%"
+                  className="stroke-gray-300 dark:stroke-gray-800"
+                  strokeWidth="2"
+                  strokeDasharray="3 3"
+                />
+              </svg>
+            </div>
+          </div>
+          <svg className="mb-10 h-20 w-full border-y border-dashed border-gray-300 stroke-gray-300 dark:border-gray-800 dark:stroke-gray-800">
+            <defs>
+              <pattern
+                id="diagonal-footer-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
+              >
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      stroke=""
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect
+              stroke="none"
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-footer-pattern)"
+            />
+          </svg>
+          <div className="mr-auto flex w-full justify-between lg:w-fit lg:flex-col">
+            <Link href="/" className="flex items-center select-none">
+              <SolarLogo className="ml-2 w-20" />
+              <span className="sr-only">Solar Logo (go home)</span>
+            </Link>
+
+            <div>
+              <div className="mt-4 flex items-center">
+                {/* Social Icons */}
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-900"
+                >
+                  <RiTwitterXFill className="size-5" />
+                </Link>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-900"
+                >
+                  <RiYoutubeFill className="size-5" />
+                </Link>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-900"
+                >
+                  <RiGithubFill className="size-5" />
+                </Link>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-900"
+                >
+                  <RiSlackFill className="size-5" />
+                </Link>
+              </div>
+              <div className="ml-2 hidden text-sm text-gray-700 lg:inline dark:text-gray-400">
+                &copy; {CURRENT_YEAR} Solar Technologies, Inc.
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Sections */}
+          {Object.entries(sections).map(([key, section]) => (
+            <div key={key} className="mt-10 min-w-44 pl-2 lg:mt-0 lg:pl-0">
+              <h3 className="mb-4 font-medium text-gray-900 sm:text-sm dark:text-gray-50">
+                {section.title}
+              </h3>
+              <ul className="space-y-4">
+                {section.items.map((item) => (
+                  <li key={item.label} className="text-sm">
+                    <Link
+                      href={item.href}
+                      className="text-gray-600 transition-colors duration-200 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </footer>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-04.tsx
+const benefits = [
+  {
+    title: "Work in Zurich",
+    description:
+      "We are in-person first and have a fantastic office in Zurich.",
+  },
+  {
+    title: "Competitive salary & equity",
+    description:
+      "We pay competitive salary and option packages to attract the very best talent.",
+  },
+  {
+    title: "Health, dental, vision",
+    description:
+      "Database pays all of your health, dental, and vision insurance.",
+  },
+  {
+    title: "Yearly off-sites",
+    description:
+      "We bring everyone together at an interesting location to discuss the big picture.",
+  },
+  {
+    title: "Book budget",
+    description:
+      "We provide every employee with a 350 dollar budget for books.",
+  },
+  {
+    title: "Tasty snacks",
+    description:
+      "The fridge and pantry are stocked + free dinner catered every night (incl. weekends).",
+  },
+  {
+    title: "20 PTO days per year",
+    description: "Take time off to recharge and come back refreshed.",
+  },
+  {
+    title: "Spotify Premium",
+    description:
+      "We really have the best fringe benefits, even a Spotify subscription is included.",
+  },
+]
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="mx-auto px-4 py-20">
+        <h2
+          id="benefits-title"
+          className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-3xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
+        >
+          What&rsquo;s in for you
+        </h2>
+        <dl className="mt-8 grid grid-cols-4 gap-x-10 gap-y-8 sm:mt-12 sm:gap-y-10">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="col-span-4 sm:col-span-2 lg:col-span-1">
+              <dt className="relative font-semibold text-gray-900 dark:text-gray-50">
+                {benefit.title}
+                <div className="absolute top-1 -left-2 h-4 w-0.5 rounded-full bg-blue-500" />
+              </dt>
+              <dd className="mt-2 leading-7 text-gray-600 dark:text-gray-400">
+                {benefit.description}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-10.tsx
+import type { SVGProps } from "react"
+import {
+  RiDatabaseFill,
+  RiHardDriveFill,
+  RiLineChartFill,
+  RiServerFill,
+} from "@remixicon/react"
+
+import { Card } from "@/atom/Card"
+import { Divider } from "@/atom/Divider"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeaderCell,
+  TableRoot,
+  TableRow,
+} from "@/atom/Table"
+
+const LineChartIllustration = (props: SVGProps<SVGSVGElement>) => (
+  // array-start
+  <svg
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 980 328"
+    {...props}
+  >
+    <path
+      d="M62.2705 302.492H980.001"
+      className="stroke-gray-200 dark:stroke-gray-700"
+      strokeWidth="0.854497"
+    />
+    <path
+      d="M62.2705 236.269H980.001"
+      className="stroke-gray-200 dark:stroke-gray-700"
+      strokeWidth="0.854497"
+    />
+    <path
+      d="M62.2705 170.045H980.001"
+      className="stroke-gray-200 dark:stroke-gray-700"
+      strokeWidth="0.854497"
+    />
+    <path
+      d="M62.2705 103.821H980.001"
+      className="stroke-gray-200 dark:stroke-gray-700"
+      strokeWidth="0.854497"
+    />
+    <path
+      d="M62.2705 37.5979H980.001"
+      className="stroke-gray-200 dark:stroke-gray-700"
+      strokeWidth="0.854497"
+    />
+    <path
+      d="M64.3086 321.481H63.3618L66.1001 314.024H67.0323L69.7706 321.481H68.8238L66.5953 315.204H66.5371L64.3086 321.481ZM64.6581 318.568H68.4742V319.369H64.6581V318.568ZM74.3404 319.195V315.888H75.1998V321.481H74.3404V320.535H74.2822C74.1511 320.819 73.9472 321.06 73.6704 321.259C73.3937 321.456 73.0441 321.554 72.6217 321.554C72.2722 321.554 71.9614 321.478 71.6895 321.325C71.4177 321.169 71.204 320.936 71.0487 320.626C70.8933 320.312 70.8156 319.918 70.8156 319.442V315.888H71.675V319.384C71.675 319.792 71.7891 320.117 72.0173 320.36C72.2479 320.603 72.5416 320.724 72.8985 320.724C73.1121 320.724 73.3293 320.669 73.5503 320.56C73.7736 320.451 73.9605 320.283 74.111 320.058C74.264 319.832 74.3404 319.544 74.3404 319.195ZM79.0314 323.695C78.6162 323.695 78.2594 323.642 77.9608 323.535C77.6622 323.431 77.4134 323.292 77.2143 323.12C77.0177 322.95 76.8611 322.768 76.7446 322.574L77.4292 322.093C77.5069 322.195 77.6052 322.312 77.7241 322.443C77.8431 322.576 78.0057 322.691 78.2121 322.789C78.4208 322.888 78.6939 322.938 79.0314 322.938C79.4829 322.938 79.8555 322.829 80.1492 322.61C80.443 322.392 80.5898 322.049 80.5898 321.583V320.447H80.517C80.4539 320.549 80.3641 320.675 80.2476 320.826C80.1335 320.974 79.9684 321.106 79.7523 321.223C79.5387 321.337 79.2498 321.394 78.8857 321.394C78.4342 321.394 78.0288 321.287 77.6695 321.074C77.3127 320.86 77.0298 320.549 76.8211 320.141C76.6147 319.734 76.5116 319.238 76.5116 318.656C76.5116 318.083 76.6123 317.584 76.8138 317.159C77.0153 316.732 77.2957 316.402 77.6549 316.169C78.0142 315.933 78.4293 315.815 78.9003 315.815C79.2644 315.815 79.5533 315.876 79.7669 315.998C79.983 316.116 80.148 316.252 80.2621 316.405C80.3786 316.556 80.4685 316.68 80.5316 316.777H80.619V315.888H81.4492V321.642C81.4492 322.122 81.34 322.513 81.1215 322.814C80.9054 323.118 80.6141 323.34 80.2476 323.48C79.8834 323.624 79.478 323.695 79.0314 323.695ZM79.0022 320.622C79.3469 320.622 79.6382 320.543 79.8761 320.385C80.114 320.228 80.2949 320.001 80.4187 319.704C80.5425 319.408 80.6044 319.054 80.6044 318.641C80.6044 318.238 80.5437 317.883 80.4223 317.574C80.301 317.266 80.1213 317.024 79.8834 316.85C79.6455 316.675 79.3518 316.587 79.0022 316.587C78.6381 316.587 78.3347 316.68 78.0919 316.864C77.8516 317.049 77.6707 317.296 77.5493 317.607C77.4304 317.918 77.3709 318.262 77.3709 318.641C77.3709 319.03 77.4316 319.373 77.553 319.672C77.6768 319.968 77.8589 320.201 78.0992 320.371C78.3419 320.538 78.643 320.622 79.0022 320.622ZM88.324 321.583C87.7754 321.583 87.3081 321.434 86.9221 321.135C86.5361 320.834 86.2412 320.399 86.0373 319.828C85.8334 319.255 85.7314 318.563 85.7314 317.753C85.7314 316.947 85.8334 316.258 86.0373 315.688C86.2436 315.115 86.5398 314.678 86.9257 314.377C87.3142 314.074 87.7802 313.922 88.324 313.922C88.8678 313.922 89.3327 314.074 89.7186 314.377C90.1071 314.678 90.4032 315.115 90.6071 315.688C90.8135 316.258 90.9166 316.947 90.9166 317.753C90.9166 318.563 90.8147 319.255 90.6108 319.828C90.4069 320.399 90.1119 320.834 89.7259 321.135C89.3399 321.434 88.8726 321.583 88.324 321.583ZM88.324 320.782C88.8678 320.782 89.2902 320.52 89.5912 319.996C89.8922 319.471 90.0427 318.724 90.0427 317.753C90.0427 317.107 89.9735 316.557 89.8352 316.103C89.6992 315.649 89.5026 315.303 89.2453 315.065C88.9904 314.827 88.6833 314.708 88.324 314.708C87.7851 314.708 87.3639 314.974 87.0605 315.506C86.757 316.035 86.6053 316.784 86.6053 317.753C86.6053 318.398 86.6733 318.947 86.8092 319.399C86.9452 319.85 87.1406 320.194 87.3955 320.429C87.6528 320.664 87.9623 320.782 88.324 320.782ZM94.9221 314.024V321.481H94.019V314.971H93.9754L92.1547 316.18V315.262L94.019 314.024H94.9221Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M110.88 321.481H109.933L112.671 314.024H113.604L116.342 321.481H115.395L113.167 315.204H113.108L110.88 321.481ZM111.229 318.568H115.046V319.369H111.229V318.568ZM120.912 319.195V315.888H121.771V321.481H120.912V320.535H120.853C120.722 320.819 120.518 321.06 120.242 321.259C119.965 321.456 119.615 321.554 119.193 321.554C118.843 321.554 118.533 321.478 118.261 321.325C117.989 321.169 117.775 320.936 117.62 320.626C117.465 320.312 117.387 319.918 117.387 319.442V315.888H118.246V319.384C118.246 319.792 118.36 320.117 118.589 320.36C118.819 320.603 119.113 320.724 119.47 320.724C119.683 320.724 119.901 320.669 120.122 320.56C120.345 320.451 120.532 320.283 120.682 320.058C120.835 319.832 120.912 319.544 120.912 319.195ZM125.603 323.695C125.188 323.695 124.831 323.642 124.532 323.535C124.234 323.431 123.985 323.292 123.786 323.12C123.589 322.95 123.432 322.768 123.316 322.574L124 322.093C124.078 322.195 124.176 322.312 124.295 322.443C124.414 322.576 124.577 322.691 124.783 322.789C124.992 322.888 125.265 322.938 125.603 322.938C126.054 322.938 126.427 322.829 126.721 322.61C127.014 322.392 127.161 322.049 127.161 321.583V320.447H127.088C127.025 320.549 126.935 320.675 126.819 320.826C126.705 320.974 126.54 321.106 126.324 321.223C126.11 321.337 125.821 321.394 125.457 321.394C125.005 321.394 124.6 321.287 124.241 321.074C123.884 320.86 123.601 320.549 123.392 320.141C123.186 319.734 123.083 319.238 123.083 318.656C123.083 318.083 123.184 317.584 123.385 317.159C123.587 316.732 123.867 316.402 124.226 316.169C124.586 315.933 125.001 315.815 125.472 315.815C125.836 315.815 126.125 315.876 126.338 315.998C126.554 316.116 126.719 316.252 126.833 316.405C126.95 316.556 127.04 316.68 127.103 316.777H127.19V315.888H128.021V321.642C128.021 322.122 127.911 322.513 127.693 322.814C127.477 323.118 127.185 323.34 126.819 323.48C126.455 323.624 126.049 323.695 125.603 323.695ZM125.574 320.622C125.918 320.622 126.21 320.543 126.447 320.385C126.685 320.228 126.866 320.001 126.99 319.704C127.114 319.408 127.176 319.054 127.176 318.641C127.176 318.238 127.115 317.883 126.994 317.574C126.872 317.266 126.693 317.024 126.455 316.85C126.217 316.675 125.923 316.587 125.574 316.587C125.209 316.587 124.906 316.68 124.663 316.864C124.423 317.049 124.242 317.296 124.121 317.607C124.002 317.918 123.942 318.262 123.942 318.641C123.942 319.03 124.003 319.373 124.124 319.672C124.248 319.968 124.43 320.201 124.67 320.371C124.913 320.538 125.214 320.622 125.574 320.622ZM134.895 321.583C134.347 321.583 133.879 321.434 133.493 321.135C133.107 320.834 132.812 320.399 132.609 319.828C132.405 319.255 132.303 318.563 132.303 317.753C132.303 316.947 132.405 316.258 132.609 315.688C132.815 315.115 133.111 314.678 133.497 314.377C133.885 314.074 134.352 313.922 134.895 313.922C135.439 313.922 135.904 314.074 136.29 314.377C136.678 314.678 136.975 315.115 137.178 315.688C137.385 316.258 137.488 316.947 137.488 317.753C137.488 318.563 137.386 319.255 137.182 319.828C136.978 320.399 136.683 320.834 136.297 321.135C135.911 321.434 135.444 321.583 134.895 321.583ZM134.895 320.782C135.439 320.782 135.861 320.52 136.163 319.996C136.464 319.471 136.614 318.724 136.614 317.753C136.614 317.107 136.545 316.557 136.406 316.103C136.271 315.649 136.074 315.303 135.817 315.065C135.562 314.827 135.255 314.708 134.895 314.708C134.356 314.708 133.935 314.974 133.632 315.506C133.328 316.035 133.177 316.784 133.177 317.753C133.177 318.398 133.245 318.947 133.381 319.399C133.516 319.85 133.712 320.194 133.967 320.429C134.224 320.664 134.534 320.782 134.895 320.782ZM138.697 319.952V319.209L141.974 314.024H142.513V315.175H142.149L139.673 319.093V319.151H144.086V319.952H138.697ZM142.207 321.481V319.726V319.38V314.024H143.066V321.481H142.207Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M158.602 321.481H157.655L160.394 314.024H161.326L164.064 321.481H163.117L160.889 315.204H160.831L158.602 321.481ZM158.952 318.568H162.768V319.369H158.952V318.568ZM168.634 319.195V315.888H169.493V321.481H168.634V320.535H168.576C168.445 320.819 168.241 321.06 167.964 321.259C167.687 321.456 167.338 321.554 166.915 321.554C166.566 321.554 166.255 321.478 165.983 321.325C165.711 321.169 165.498 320.936 165.342 320.626C165.187 320.313 165.109 319.918 165.109 319.442V315.888H165.969V319.384C165.969 319.792 166.083 320.117 166.311 320.36C166.542 320.603 166.835 320.724 167.192 320.724C167.406 320.724 167.623 320.669 167.844 320.56C168.067 320.451 168.254 320.283 168.405 320.058C168.558 319.832 168.634 319.544 168.634 319.195ZM173.325 323.695C172.91 323.695 172.553 323.642 172.254 323.535C171.956 323.431 171.707 323.292 171.508 323.12C171.311 322.95 171.155 322.768 171.038 322.574L171.723 322.093C171.801 322.195 171.899 322.312 172.018 322.443C172.137 322.576 172.299 322.692 172.506 322.789C172.714 322.888 172.988 322.938 173.325 322.938C173.777 322.938 174.149 322.829 174.443 322.61C174.737 322.392 174.883 322.049 174.883 321.583V320.447H174.811C174.748 320.549 174.658 320.675 174.541 320.826C174.427 320.974 174.262 321.106 174.046 321.223C173.832 321.337 173.543 321.394 173.179 321.394C172.728 321.394 172.322 321.287 171.963 321.074C171.606 320.86 171.323 320.549 171.115 320.141C170.908 319.734 170.805 319.238 170.805 318.656C170.805 318.083 170.906 317.584 171.107 317.159C171.309 316.732 171.589 316.402 171.949 316.169C172.308 315.933 172.723 315.815 173.194 315.815C173.558 315.815 173.847 315.876 174.061 315.998C174.277 316.116 174.442 316.252 174.556 316.405C174.672 316.556 174.762 316.68 174.825 316.777H174.913V315.888H175.743V321.642C175.743 322.122 175.634 322.513 175.415 322.814C175.199 323.118 174.908 323.34 174.541 323.48C174.177 323.624 173.772 323.695 173.325 323.695ZM173.296 320.622C173.641 320.622 173.932 320.543 174.17 320.385C174.408 320.228 174.589 320.001 174.712 319.704C174.836 319.408 174.898 319.054 174.898 318.641C174.898 318.238 174.837 317.883 174.716 317.574C174.595 317.266 174.415 317.024 174.177 316.85C173.939 316.675 173.645 316.587 173.296 316.587C172.932 316.587 172.628 316.68 172.386 316.864C172.145 317.049 171.964 317.296 171.843 317.607C171.724 317.918 171.665 318.262 171.665 318.641C171.665 319.03 171.725 319.373 171.847 319.672C171.97 319.968 172.153 320.201 172.393 320.371C172.636 320.538 172.937 320.622 173.296 320.622ZM182.618 321.583C182.069 321.583 181.602 321.434 181.216 321.135C180.83 320.834 180.535 320.399 180.331 319.828C180.127 319.255 180.025 318.563 180.025 317.753C180.025 316.947 180.127 316.258 180.331 315.688C180.537 315.115 180.833 314.678 181.219 314.377C181.608 314.074 182.074 313.922 182.618 313.922C183.161 313.922 183.626 314.074 184.012 314.377C184.401 314.678 184.697 315.115 184.901 315.688C185.107 316.258 185.21 316.947 185.21 317.753C185.21 318.563 185.108 319.255 184.904 319.828C184.701 320.399 184.406 320.834 184.02 321.135C183.634 321.434 183.166 321.583 182.618 321.583ZM182.618 320.782C183.161 320.782 183.584 320.52 183.885 319.996C184.186 319.471 184.336 318.724 184.336 317.753C184.336 317.107 184.267 316.557 184.129 316.103C183.993 315.649 183.796 315.303 183.539 315.065C183.284 314.827 182.977 314.709 182.618 314.709C182.079 314.709 181.658 314.974 181.354 315.506C181.051 316.035 180.899 316.784 180.899 317.753C180.899 318.398 180.967 318.947 181.103 319.399C181.239 319.85 181.434 320.194 181.689 320.429C181.946 320.664 182.256 320.782 182.618 320.782ZM186.627 321.481L189.962 314.883V314.825H186.117V314.024H190.894V314.869L187.574 321.481H186.627Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M206.308 321.481H205.361L208.099 314.024H209.031L211.77 321.481H210.823L208.594 315.204H208.536L206.308 321.481ZM206.657 318.568H210.473V319.369H206.657V318.568ZM216.339 319.195V315.888H217.199V321.481H216.339V320.535H216.281C216.15 320.819 215.946 321.06 215.669 321.259C215.393 321.456 215.043 321.554 214.621 321.554C214.271 321.554 213.96 321.478 213.689 321.325C213.417 321.169 213.203 320.936 213.048 320.626C212.892 320.313 212.815 319.918 212.815 319.442V315.888H213.674V319.384C213.674 319.792 213.788 320.117 214.016 320.36C214.247 320.603 214.541 320.724 214.897 320.724C215.111 320.724 215.328 320.669 215.549 320.56C215.773 320.451 215.96 320.283 216.11 320.058C216.263 319.832 216.339 319.544 216.339 319.195ZM221.03 323.695C220.615 323.695 220.258 323.642 219.96 323.535C219.661 323.431 219.412 323.292 219.213 323.12C219.017 322.95 218.86 322.768 218.744 322.574L219.428 322.093C219.506 322.195 219.604 322.312 219.723 322.443C219.842 322.576 220.005 322.692 220.211 322.789C220.42 322.888 220.693 322.938 221.03 322.938C221.482 322.938 221.855 322.829 222.148 322.61C222.442 322.392 222.589 322.049 222.589 321.583V320.447H222.516C222.453 320.549 222.363 320.675 222.247 320.826C222.132 320.974 221.967 321.106 221.751 321.223C221.538 321.337 221.249 321.394 220.885 321.394C220.433 321.394 220.028 321.287 219.669 321.074C219.312 320.86 219.029 320.549 218.82 320.141C218.614 319.734 218.511 319.238 218.511 318.656C218.511 318.083 218.611 317.584 218.813 317.159C219.014 316.732 219.295 316.402 219.654 316.169C220.013 315.933 220.428 315.815 220.899 315.815C221.263 315.815 221.552 315.876 221.766 315.998C221.982 316.116 222.147 316.252 222.261 316.405C222.378 316.556 222.467 316.68 222.531 316.777H222.618V315.888H223.448V321.642C223.448 322.122 223.339 322.513 223.121 322.814C222.904 323.118 222.613 323.34 222.247 323.48C221.882 323.624 221.477 323.695 221.03 323.695ZM221.001 320.622C221.346 320.622 221.637 320.543 221.875 320.385C222.113 320.228 222.294 320.001 222.418 319.704C222.542 319.408 222.603 319.054 222.603 318.641C222.603 318.238 222.543 317.883 222.421 317.574C222.3 317.266 222.12 317.024 221.882 316.85C221.645 316.675 221.351 316.587 221.001 316.587C220.637 316.587 220.334 316.68 220.091 316.864C219.851 317.049 219.67 317.296 219.548 317.607C219.429 317.918 219.37 318.262 219.37 318.641C219.37 319.03 219.431 319.373 219.552 319.672C219.676 319.968 219.858 320.201 220.098 320.371C220.341 320.538 220.642 320.622 221.001 320.622ZM230.512 314.024V321.481H229.609V314.971H229.566L227.745 316.18V315.262L229.609 314.024H230.512ZM235.09 321.583C234.541 321.583 234.074 321.434 233.688 321.135C233.302 320.834 233.007 320.399 232.803 319.828C232.599 319.255 232.497 318.563 232.497 317.753C232.497 316.947 232.599 316.258 232.803 315.688C233.009 315.115 233.305 314.678 233.691 314.377C234.08 314.074 234.546 313.922 235.09 313.922C235.633 313.922 236.098 314.074 236.484 314.377C236.873 314.678 237.169 315.115 237.373 315.688C237.579 316.258 237.682 316.947 237.682 317.753C237.682 318.563 237.58 319.255 237.376 319.828C237.172 320.399 236.877 320.834 236.491 321.135C236.105 321.434 235.638 321.583 235.09 321.583ZM235.09 320.782C235.633 320.782 236.056 320.52 236.357 319.996C236.658 319.471 236.808 318.724 236.808 317.753C236.808 317.107 236.739 316.557 236.601 316.103C236.465 315.649 236.268 315.303 236.011 315.065C235.756 314.827 235.449 314.709 235.09 314.709C234.551 314.709 234.129 314.974 233.826 315.506C233.523 316.035 233.371 316.784 233.371 317.753C233.371 318.398 233.439 318.947 233.575 319.399C233.711 319.85 233.906 320.194 234.161 320.429C234.418 320.664 234.728 320.782 235.09 320.782Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M253.581 321.481H252.634L255.372 314.024H256.304L259.043 321.481H258.096L255.867 315.204H255.809L253.581 321.481ZM253.93 318.568H257.746V319.369H253.93V318.568ZM263.612 319.195V315.888H264.472V321.481H263.612V320.535H263.554C263.423 320.819 263.219 321.06 262.942 321.259C262.666 321.456 262.316 321.554 261.894 321.554C261.544 321.554 261.233 321.478 260.961 321.325C260.69 321.169 260.476 320.936 260.321 320.626C260.165 320.313 260.088 319.918 260.088 319.442V315.888H260.947V319.384C260.947 319.792 261.061 320.117 261.289 320.36C261.52 320.603 261.814 320.724 262.17 320.724C262.384 320.724 262.601 320.669 262.822 320.56C263.046 320.451 263.232 320.283 263.383 320.058C263.536 319.832 263.612 319.544 263.612 319.195ZM268.303 323.695C267.888 323.695 267.531 323.642 267.233 323.535C266.934 323.431 266.685 323.292 266.486 323.12C266.29 322.95 266.133 322.768 266.017 322.574L266.701 322.093C266.779 322.195 266.877 322.312 266.996 322.443C267.115 322.576 267.278 322.692 267.484 322.789C267.693 322.888 267.966 322.938 268.303 322.938C268.755 322.938 269.127 322.829 269.421 322.61C269.715 322.392 269.862 322.049 269.862 321.583V320.447H269.789C269.726 320.549 269.636 320.675 269.52 320.826C269.405 320.974 269.24 321.106 269.024 321.223C268.811 321.337 268.522 321.394 268.158 321.394C267.706 321.394 267.301 321.287 266.941 321.074C266.585 320.86 266.302 320.549 266.093 320.141C265.887 319.734 265.784 319.238 265.784 318.656C265.784 318.083 265.884 317.584 266.086 317.159C266.287 316.732 266.568 316.402 266.927 316.169C267.286 315.933 267.701 315.815 268.172 315.815C268.536 315.815 268.825 315.876 269.039 315.998C269.255 316.116 269.42 316.252 269.534 316.405C269.651 316.556 269.74 316.68 269.804 316.777H269.891V315.888H270.721V321.642C270.721 322.122 270.612 322.513 270.393 322.814C270.177 323.118 269.886 323.34 269.52 323.48C269.155 323.624 268.75 323.695 268.303 323.695ZM268.274 320.622C268.619 320.622 268.91 320.543 269.148 320.385C269.386 320.228 269.567 320.001 269.691 319.704C269.814 319.408 269.876 319.054 269.876 318.641C269.876 318.238 269.816 317.883 269.694 317.574C269.573 317.266 269.393 317.024 269.155 316.85C268.917 316.675 268.624 316.587 268.274 316.587C267.91 316.587 267.607 316.68 267.364 316.864C267.124 317.049 266.943 317.296 266.821 317.607C266.702 317.918 266.643 318.262 266.643 318.641C266.643 319.03 266.704 319.373 266.825 319.672C266.949 319.968 267.131 320.201 267.371 320.371C267.614 320.538 267.915 320.622 268.274 320.622ZM277.785 314.024V321.481H276.882V314.971H276.839L275.018 316.18V315.262L276.882 314.024H277.785ZM282.45 321.583C281.969 321.583 281.541 321.501 281.164 321.336C280.791 321.171 280.493 320.941 280.272 320.648C280.054 320.351 279.935 320.008 279.915 319.617H280.833C280.853 319.857 280.935 320.065 281.081 320.24C281.226 320.412 281.417 320.546 281.652 320.64C281.888 320.735 282.149 320.782 282.435 320.782C282.756 320.782 283.04 320.726 283.287 320.615C283.535 320.503 283.729 320.348 283.87 320.149C284.011 319.95 284.081 319.719 284.081 319.457C284.081 319.182 284.013 318.941 283.877 318.732C283.741 318.521 283.542 318.356 283.28 318.237C283.018 318.118 282.697 318.059 282.319 318.059H281.722V317.257H282.319C282.615 317.257 282.875 317.204 283.098 317.097C283.324 316.99 283.5 316.84 283.626 316.646C283.755 316.451 283.819 316.223 283.819 315.961C283.819 315.709 283.763 315.489 283.651 315.302C283.54 315.115 283.382 314.969 283.178 314.865C282.977 314.761 282.739 314.709 282.464 314.709C282.207 314.709 281.964 314.756 281.736 314.851C281.51 314.943 281.326 315.077 281.183 315.255C281.039 315.429 280.962 315.641 280.95 315.888H280.076C280.09 315.497 280.208 315.155 280.429 314.861C280.65 314.565 280.939 314.335 281.296 314.17C281.655 314.005 282.049 313.922 282.479 313.922C282.94 313.922 283.336 314.015 283.666 314.202C283.996 314.387 284.25 314.631 284.427 314.934C284.604 315.238 284.693 315.565 284.693 315.917C284.693 316.337 284.582 316.695 284.362 316.992C284.143 317.288 283.846 317.493 283.469 317.607V317.665C283.94 317.743 284.308 317.943 284.573 318.266C284.837 318.587 284.97 318.983 284.97 319.457C284.97 319.862 284.859 320.226 284.638 320.549C284.42 320.87 284.121 321.122 283.743 321.307C283.364 321.491 282.933 321.583 282.45 321.583Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M300.978 321.481H300.031L302.769 314.024H303.701L306.44 321.481H305.493L303.264 315.204H303.206L300.978 321.481ZM301.327 318.568H305.143V319.369H301.327V318.568ZM311.009 319.195V315.888H311.869V321.481H311.009V320.535H310.951C310.82 320.819 310.616 321.06 310.339 321.259C310.063 321.456 309.713 321.554 309.291 321.554C308.941 321.554 308.63 321.478 308.359 321.325C308.087 321.169 307.873 320.936 307.718 320.626C307.562 320.312 307.485 319.918 307.485 319.442V315.888H308.344V319.384C308.344 319.792 308.458 320.117 308.686 320.36C308.917 320.603 309.211 320.724 309.568 320.724C309.781 320.724 309.998 320.669 310.219 320.56C310.443 320.451 310.63 320.283 310.78 320.058C310.933 319.832 311.009 319.544 311.009 319.195ZM315.7 323.695C315.285 323.695 314.928 323.642 314.63 323.535C314.331 323.431 314.082 323.292 313.883 323.12C313.687 322.95 313.53 322.768 313.414 322.574L314.098 322.093C314.176 322.195 314.274 322.312 314.393 322.443C314.512 322.576 314.675 322.691 314.881 322.789C315.09 322.888 315.363 322.938 315.7 322.938C316.152 322.938 316.525 322.829 316.818 322.61C317.112 322.392 317.259 322.049 317.259 321.583V320.447H317.186C317.123 320.549 317.033 320.675 316.917 320.826C316.803 320.974 316.637 321.106 316.421 321.223C316.208 321.337 315.919 321.394 315.555 321.394C315.103 321.394 314.698 321.287 314.339 321.074C313.982 320.86 313.699 320.549 313.49 320.141C313.284 319.734 313.181 319.238 313.181 318.656C313.181 318.083 313.281 317.584 313.483 317.159C313.684 316.732 313.965 316.402 314.324 316.169C314.683 315.933 315.098 315.815 315.569 315.815C315.933 315.815 316.222 315.876 316.436 315.998C316.652 316.116 316.817 316.252 316.931 316.405C317.048 316.556 317.138 316.68 317.201 316.777H317.288V315.888H318.118V321.642C318.118 322.122 318.009 322.513 317.791 322.814C317.574 323.118 317.283 323.34 316.917 323.48C316.552 323.624 316.147 323.695 315.7 323.695ZM315.671 320.622C316.016 320.622 316.307 320.543 316.545 320.385C316.783 320.228 316.964 320.001 317.088 319.704C317.212 319.408 317.273 319.054 317.273 318.641C317.273 318.238 317.213 317.883 317.091 317.574C316.97 317.266 316.79 317.024 316.552 316.85C316.315 316.675 316.021 316.587 315.671 316.587C315.307 316.587 315.004 316.68 314.761 316.864C314.521 317.049 314.34 317.296 314.218 317.607C314.099 317.918 314.04 318.262 314.04 318.641C314.04 319.03 314.101 319.373 314.222 319.672C314.346 319.968 314.528 320.201 314.768 320.371C315.011 320.538 315.312 320.622 315.671 320.622ZM325.182 314.024V321.481H324.279V314.971H324.236L322.415 316.18V315.262L324.279 314.024H325.182ZM329.803 321.583C329.497 321.578 329.192 321.52 328.886 321.409C328.58 321.297 328.301 321.109 328.048 320.844C327.796 320.577 327.593 320.217 327.44 319.763C327.287 319.306 327.211 318.733 327.211 318.044C327.211 317.384 327.273 316.799 327.396 316.289C327.52 315.777 327.7 315.346 327.935 314.996C328.171 314.644 328.455 314.377 328.787 314.195C329.122 314.013 329.5 313.922 329.92 313.922C330.337 313.922 330.709 314.006 331.034 314.173C331.362 314.338 331.629 314.569 331.835 314.865C332.041 315.161 332.175 315.502 332.236 315.888H331.347C331.265 315.553 331.104 315.275 330.867 315.054C330.629 314.834 330.313 314.723 329.92 314.723C329.342 314.723 328.887 314.974 328.554 315.477C328.224 315.979 328.058 316.685 328.055 317.592H328.114C328.25 317.386 328.411 317.21 328.598 317.064C328.787 316.916 328.996 316.802 329.224 316.722C329.452 316.642 329.694 316.602 329.949 316.602C330.376 316.602 330.767 316.709 331.121 316.922C331.476 317.134 331.76 317.426 331.974 317.8C332.187 318.171 332.294 318.597 332.294 319.078C332.294 319.539 332.191 319.962 331.984 320.345C331.778 320.726 331.488 321.03 331.114 321.256C330.743 321.479 330.306 321.588 329.803 321.583ZM329.803 320.782C330.109 320.782 330.383 320.706 330.626 320.553C330.871 320.4 331.064 320.195 331.205 319.937C331.348 319.68 331.42 319.394 331.42 319.078C331.42 318.77 331.351 318.489 331.212 318.237C331.077 317.982 330.888 317.779 330.648 317.629C330.41 317.478 330.138 317.403 329.832 317.403C329.602 317.403 329.387 317.449 329.188 317.541C328.989 317.631 328.814 317.755 328.664 317.913C328.515 318.071 328.399 318.252 328.314 318.455C328.229 318.657 328.187 318.869 328.187 319.093C328.187 319.389 328.256 319.666 328.394 319.923C328.535 320.18 328.727 320.388 328.969 320.546C329.215 320.703 329.493 320.782 329.803 320.782Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M348.313 321.481H347.366L350.104 314.024H351.036L353.775 321.481H352.828L350.599 315.204H350.541L348.313 321.481ZM348.662 318.568H352.478V319.369H348.662V318.568ZM358.344 319.195V315.888H359.204V321.481H358.344V320.535H358.286C358.155 320.819 357.951 321.06 357.674 321.259C357.398 321.456 357.048 321.554 356.626 321.554C356.276 321.554 355.965 321.478 355.694 321.325C355.422 321.169 355.208 320.936 355.053 320.626C354.897 320.312 354.82 319.918 354.82 319.442V315.888H355.679V319.384C355.679 319.792 355.793 320.117 356.021 320.36C356.252 320.603 356.546 320.724 356.902 320.724C357.116 320.724 357.333 320.669 357.554 320.56C357.778 320.451 357.965 320.283 358.115 320.058C358.268 319.832 358.344 319.544 358.344 319.195ZM363.035 323.695C362.62 323.695 362.263 323.642 361.965 323.535C361.666 323.431 361.417 323.292 361.218 323.12C361.022 322.95 360.865 322.768 360.749 322.574L361.433 322.093C361.511 322.195 361.609 322.312 361.728 322.443C361.847 322.576 362.01 322.691 362.216 322.789C362.425 322.888 362.698 322.938 363.035 322.938C363.487 322.938 363.86 322.829 364.153 322.61C364.447 322.392 364.594 322.049 364.594 321.583V320.447H364.521C364.458 320.549 364.368 320.675 364.252 320.826C364.137 320.974 363.972 321.106 363.756 321.223C363.543 321.337 363.254 321.394 362.89 321.394C362.438 321.394 362.033 321.287 361.674 321.074C361.317 320.86 361.034 320.549 360.825 320.141C360.619 319.734 360.516 319.238 360.516 318.656C360.516 318.083 360.616 317.584 360.818 317.159C361.019 316.732 361.3 316.402 361.659 316.169C362.018 315.933 362.433 315.815 362.904 315.815C363.268 315.815 363.557 315.876 363.771 315.998C363.987 316.116 364.152 316.252 364.266 316.405C364.383 316.556 364.472 316.68 364.536 316.777H364.623V315.888H365.453V321.642C365.453 322.122 365.344 322.513 365.126 322.814C364.909 323.118 364.618 323.34 364.252 323.48C363.887 323.624 363.482 323.695 363.035 323.695ZM363.006 320.622C363.351 320.622 363.642 320.543 363.88 320.385C364.118 320.228 364.299 320.001 364.423 319.704C364.547 319.408 364.608 319.054 364.608 318.641C364.608 318.238 364.548 317.883 364.426 317.574C364.305 317.266 364.125 317.024 363.887 316.85C363.65 316.675 363.356 316.587 363.006 316.587C362.642 316.587 362.339 316.68 362.096 316.864C361.856 317.049 361.675 317.296 361.553 317.607C361.434 317.918 361.375 318.262 361.375 318.641C361.375 319.03 361.436 319.373 361.557 319.672C361.681 319.968 361.863 320.201 362.103 320.371C362.346 320.538 362.647 320.622 363.006 320.622ZM372.517 314.024V321.481H371.614V314.971H371.571L369.75 316.18V315.262L371.614 314.024H372.517ZM377.036 313.922C377.342 313.924 377.648 313.983 377.954 314.097C378.26 314.211 378.539 314.4 378.791 314.665C379.044 314.927 379.247 315.285 379.399 315.739C379.552 316.193 379.629 316.762 379.629 317.447C379.629 318.109 379.566 318.698 379.44 319.213C379.316 319.725 379.136 320.157 378.901 320.509C378.668 320.861 378.384 321.128 378.049 321.31C377.716 321.492 377.34 321.583 376.92 321.583C376.502 321.583 376.13 321.501 375.802 321.336C375.477 321.168 375.21 320.936 375.001 320.64C374.794 320.342 374.662 319.996 374.604 319.602H375.492C375.572 319.945 375.731 320.228 375.969 320.451C376.21 320.672 376.526 320.782 376.92 320.782C377.495 320.782 377.949 320.531 378.282 320.028C378.617 319.526 378.784 318.816 378.784 317.898H378.726C378.59 318.102 378.428 318.278 378.242 318.426C378.055 318.574 377.847 318.688 377.619 318.769C377.391 318.849 377.148 318.889 376.891 318.889C376.463 318.889 376.071 318.783 375.714 318.572C375.36 318.358 375.076 318.066 374.862 317.694C374.651 317.321 374.546 316.893 374.546 316.413C374.546 315.956 374.648 315.539 374.851 315.16C375.058 314.779 375.347 314.475 375.718 314.25C376.092 314.024 376.531 313.915 377.036 313.922ZM377.036 314.723C376.73 314.723 376.455 314.8 376.21 314.952C375.967 315.103 375.774 315.307 375.631 315.564C375.49 315.819 375.42 316.102 375.42 316.413C375.42 316.723 375.488 317.006 375.623 317.261C375.762 317.514 375.95 317.715 376.188 317.866C376.428 318.014 376.701 318.088 377.007 318.088C377.238 318.088 377.453 318.043 377.652 317.953C377.851 317.861 378.024 317.736 378.172 317.578C378.323 317.418 378.441 317.237 378.526 317.035C378.611 316.831 378.653 316.619 378.653 316.398C378.653 316.107 378.583 315.834 378.442 315.579C378.303 315.324 378.112 315.118 377.867 314.96C377.624 314.802 377.347 314.723 377.036 314.723Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M394.664 321.481H393.718L396.456 314.024H397.388L400.126 321.481H399.18L396.951 315.204H396.893L394.664 321.481ZM395.014 318.568H398.83V319.369H395.014V318.568ZM404.696 319.195V315.888H405.555V321.481H404.696V320.535H404.638C404.507 320.819 404.303 321.06 404.026 321.259C403.749 321.456 403.4 321.554 402.977 321.554C402.628 321.554 402.317 321.478 402.045 321.325C401.773 321.169 401.56 320.936 401.404 320.626C401.249 320.313 401.171 319.918 401.171 319.442V315.888H402.031V319.384C402.031 319.792 402.145 320.117 402.373 320.36C402.604 320.603 402.897 320.724 403.254 320.724C403.468 320.724 403.685 320.669 403.906 320.56C404.129 320.451 404.316 320.283 404.467 320.058C404.62 319.832 404.696 319.544 404.696 319.195ZM409.387 323.695C408.972 323.695 408.615 323.642 408.317 323.535C408.018 323.431 407.769 323.292 407.57 323.12C407.373 322.95 407.217 322.768 407.1 322.574L407.785 322.093C407.863 322.195 407.961 322.312 408.08 322.443C408.199 322.576 408.361 322.692 408.568 322.789C408.777 322.888 409.05 322.938 409.387 322.938C409.839 322.938 410.211 322.829 410.505 322.61C410.799 322.392 410.946 322.049 410.946 321.583V320.447H410.873C410.81 320.549 410.72 320.675 410.603 320.826C410.489 320.974 410.324 321.106 410.108 321.223C409.894 321.337 409.606 321.394 409.241 321.394C408.79 321.394 408.384 321.287 408.025 321.074C407.668 320.86 407.386 320.549 407.177 320.141C406.97 319.734 406.867 319.238 406.867 318.656C406.867 318.083 406.968 317.584 407.17 317.159C407.371 316.732 407.651 316.402 408.011 316.169C408.37 315.933 408.785 315.815 409.256 315.815C409.62 315.815 409.909 315.876 410.123 315.998C410.339 316.116 410.504 316.252 410.618 316.405C410.734 316.556 410.824 316.68 410.887 316.777H410.975V315.888H411.805V321.642C411.805 322.122 411.696 322.513 411.477 322.814C411.261 323.118 410.97 323.34 410.603 323.48C410.239 323.624 409.834 323.695 409.387 323.695ZM409.358 320.622C409.703 320.622 409.994 320.543 410.232 320.385C410.47 320.228 410.651 320.001 410.774 319.704C410.898 319.408 410.96 319.054 410.96 318.641C410.96 318.238 410.899 317.883 410.778 317.574C410.657 317.266 410.477 317.024 410.239 316.85C410.001 316.675 409.708 316.587 409.358 316.587C408.994 316.587 408.69 316.68 408.448 316.864C408.207 317.049 408.026 317.296 407.905 317.607C407.786 317.918 407.727 318.262 407.727 318.641C407.727 319.03 407.787 319.373 407.909 319.672C408.033 319.968 408.215 320.201 408.455 320.371C408.698 320.538 408.999 320.622 409.358 320.622ZM416.247 321.481V320.826L418.709 318.131C418.998 317.816 419.236 317.541 419.423 317.308C419.609 317.073 419.748 316.852 419.838 316.646C419.93 316.437 419.976 316.218 419.976 315.99C419.976 315.728 419.913 315.501 419.787 315.309C419.663 315.118 419.493 314.969 419.277 314.865C419.061 314.761 418.818 314.709 418.549 314.709C418.262 314.709 418.012 314.768 417.799 314.887C417.587 315.003 417.423 315.167 417.307 315.379C417.193 315.59 417.136 315.837 417.136 316.121H416.276C416.276 315.684 416.377 315.301 416.579 314.971C416.78 314.641 417.054 314.383 417.402 314.199C417.751 314.014 418.143 313.922 418.578 313.922C419.015 313.922 419.402 314.014 419.739 314.199C420.077 314.383 420.341 314.632 420.533 314.945C420.725 315.258 420.821 315.607 420.821 315.99C420.821 316.265 420.771 316.533 420.672 316.795C420.574 317.055 420.405 317.345 420.162 317.665C419.921 317.983 419.588 318.372 419.16 318.83L417.485 320.622V320.68H420.952V321.481H416.247ZM422.456 321.481V320.826L424.917 318.131C425.206 317.816 425.444 317.541 425.631 317.308C425.818 317.073 425.956 316.852 426.046 316.646C426.138 316.437 426.185 316.218 426.185 315.99C426.185 315.728 426.121 315.501 425.995 315.309C425.871 315.118 425.701 314.969 425.485 314.865C425.269 314.761 425.027 314.709 424.757 314.709C424.471 314.709 424.221 314.768 424.007 314.887C423.796 315.003 423.632 315.167 423.515 315.379C423.401 315.59 423.344 315.837 423.344 316.121H422.485C422.485 315.684 422.586 315.301 422.787 314.971C422.989 314.641 423.263 314.383 423.61 314.199C423.96 314.014 424.352 313.922 424.786 313.922C425.223 313.922 425.61 314.014 425.948 314.199C426.285 314.383 426.55 314.632 426.742 314.945C426.933 315.258 427.029 315.607 427.029 315.99C427.029 316.265 426.98 316.533 426.88 316.795C426.783 317.055 426.613 317.345 426.37 317.665C426.13 317.983 425.796 318.372 425.369 318.83L423.694 320.622V320.68H427.16V321.481H422.456Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M441.982 321.481H441.036L443.774 314.024H444.706L447.444 321.481H446.498L444.269 315.204H444.211L441.982 321.481ZM442.332 318.568H446.148V319.369H442.332V318.568ZM452.014 319.195V315.888H452.873V321.481H452.014V320.535H451.956C451.825 320.819 451.621 321.06 451.344 321.259C451.067 321.456 450.718 321.554 450.295 321.554C449.946 321.554 449.635 321.478 449.363 321.325C449.091 321.169 448.878 320.936 448.722 320.626C448.567 320.313 448.489 319.918 448.489 319.442V315.888H449.349V319.384C449.349 319.792 449.463 320.117 449.691 320.36C449.922 320.603 450.215 320.724 450.572 320.724C450.786 320.724 451.003 320.669 451.224 320.56C451.447 320.451 451.634 320.283 451.785 320.058C451.938 319.832 452.014 319.544 452.014 319.195ZM456.705 323.695C456.29 323.695 455.933 323.642 455.635 323.535C455.336 323.431 455.087 323.292 454.888 323.12C454.691 322.95 454.535 322.768 454.418 322.574L455.103 322.093C455.181 322.195 455.279 322.312 455.398 322.443C455.517 322.576 455.679 322.692 455.886 322.789C456.095 322.888 456.368 322.938 456.705 322.938C457.157 322.938 457.529 322.829 457.823 322.61C458.117 322.392 458.264 322.049 458.264 321.583V320.447H458.191C458.128 320.549 458.038 320.675 457.921 320.826C457.807 320.974 457.642 321.106 457.426 321.223C457.212 321.337 456.924 321.394 456.559 321.394C456.108 321.394 455.702 321.287 455.343 321.074C454.986 320.86 454.704 320.549 454.495 320.141C454.288 319.734 454.185 319.238 454.185 318.656C454.185 318.083 454.286 317.584 454.487 317.159C454.689 316.732 454.969 316.402 455.329 316.169C455.688 315.933 456.103 315.815 456.574 315.815C456.938 315.815 457.227 315.876 457.441 315.998C457.657 316.116 457.822 316.252 457.936 316.405C458.052 316.556 458.142 316.68 458.205 316.777H458.293V315.888H459.123V321.642C459.123 322.122 459.014 322.513 458.795 322.814C458.579 323.118 458.288 323.34 457.921 323.48C457.557 323.624 457.152 323.695 456.705 323.695ZM456.676 320.622C457.021 320.622 457.312 320.543 457.55 320.385C457.788 320.228 457.969 320.001 458.092 319.704C458.216 319.408 458.278 319.054 458.278 318.641C458.278 318.238 458.217 317.883 458.096 317.574C457.975 317.266 457.795 317.024 457.557 316.85C457.319 316.675 457.025 316.587 456.676 316.587C456.312 316.587 456.008 316.68 455.766 316.864C455.525 317.049 455.344 317.296 455.223 317.607C455.104 317.918 455.045 318.262 455.045 318.641C455.045 319.03 455.105 319.373 455.227 319.672C455.35 319.968 455.533 320.201 455.773 320.371C456.016 320.538 456.317 320.622 456.676 320.622ZM463.565 321.481V320.826L466.027 318.131C466.316 317.816 466.554 317.541 466.741 317.308C466.927 317.073 467.066 316.852 467.156 316.646C467.248 316.437 467.294 316.218 467.294 315.99C467.294 315.728 467.231 315.501 467.105 315.309C466.981 315.118 466.811 314.969 466.595 314.865C466.379 314.761 466.136 314.709 465.867 314.709C465.58 314.709 465.33 314.768 465.117 314.887C464.905 315.003 464.741 315.167 464.625 315.379C464.511 315.59 464.454 315.837 464.454 316.121H463.594C463.594 315.684 463.695 315.301 463.897 314.971C464.098 314.641 464.372 314.383 464.72 314.199C465.069 314.014 465.461 313.922 465.896 313.922C466.333 313.922 466.72 314.014 467.057 314.199C467.395 314.383 467.659 314.632 467.851 314.945C468.043 315.258 468.139 315.607 468.139 315.99C468.139 316.265 468.089 316.533 467.99 316.795C467.892 317.055 467.722 317.345 467.48 317.665C467.239 317.983 466.906 318.372 466.478 318.83L464.803 320.622V320.68H468.27V321.481H463.565ZM472.104 321.583C471.677 321.583 471.292 321.498 470.95 321.328C470.608 321.159 470.333 320.925 470.127 320.629C469.921 320.333 469.808 319.996 469.788 319.617H470.662C470.696 319.954 470.849 320.234 471.121 320.455C471.395 320.673 471.723 320.782 472.104 320.782C472.41 320.782 472.682 320.711 472.92 320.567C473.16 320.424 473.348 320.228 473.484 319.978C473.623 319.725 473.692 319.44 473.692 319.122C473.692 318.796 473.62 318.506 473.477 318.252C473.336 317.994 473.142 317.791 472.894 317.643C472.647 317.495 472.364 317.42 472.046 317.418C471.818 317.415 471.584 317.45 471.343 317.523C471.103 317.594 470.905 317.685 470.75 317.796L469.905 317.694L470.356 314.024H474.231V314.825H471.114L470.852 317.024H470.895C471.048 316.903 471.24 316.802 471.471 316.722C471.701 316.642 471.942 316.602 472.192 316.602C472.648 316.602 473.055 316.711 473.411 316.93C473.771 317.146 474.052 317.442 474.256 317.818C474.463 318.194 474.566 318.624 474.566 319.107C474.566 319.583 474.459 320.008 474.245 320.382C474.034 320.753 473.743 321.047 473.371 321.263C473 321.477 472.578 321.583 472.104 321.583Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M489.275 321.481H488.328L491.067 314.024H491.999L494.737 321.481H493.79L491.562 315.204H491.504L489.275 321.481ZM489.625 318.568H493.441V319.369H489.625V318.568ZM499.307 319.195V315.888H500.166V321.481H499.307V320.535H499.249C499.118 320.819 498.914 321.06 498.637 321.259C498.36 321.456 498.011 321.554 497.588 321.554C497.239 321.554 496.928 321.478 496.656 321.325C496.384 321.169 496.171 320.936 496.015 320.626C495.86 320.312 495.782 319.918 495.782 319.442V315.888H496.642V319.384C496.642 319.792 496.756 320.117 496.984 320.36C497.215 320.603 497.508 320.724 497.865 320.724C498.079 320.724 498.296 320.669 498.517 320.56C498.74 320.451 498.927 320.283 499.078 320.058C499.231 319.832 499.307 319.544 499.307 319.195ZM503.998 323.695C503.583 323.695 503.226 323.642 502.927 323.535C502.629 323.431 502.38 323.292 502.181 323.12C501.984 322.95 501.828 322.768 501.711 322.574L502.396 322.093C502.474 322.195 502.572 322.312 502.691 322.443C502.81 322.576 502.972 322.691 503.179 322.789C503.387 322.888 503.661 322.938 503.998 322.938C504.45 322.938 504.822 322.829 505.116 322.61C505.41 322.392 505.557 322.049 505.557 321.583V320.447H505.484C505.421 320.549 505.331 320.675 505.214 320.826C505.1 320.974 504.935 321.106 504.719 321.223C504.505 321.337 504.216 321.394 503.852 321.394C503.401 321.394 502.995 321.287 502.636 321.074C502.279 320.86 501.997 320.549 501.788 320.141C501.581 319.734 501.478 319.238 501.478 318.656C501.478 318.083 501.579 317.584 501.78 317.159C501.982 316.732 502.262 316.402 502.622 316.169C502.981 315.933 503.396 315.815 503.867 315.815C504.231 315.815 504.52 315.876 504.734 315.998C504.95 316.116 505.115 316.252 505.229 316.405C505.345 316.556 505.435 316.68 505.498 316.777H505.586V315.888H506.416V321.642C506.416 322.122 506.307 322.513 506.088 322.814C505.872 323.118 505.581 323.34 505.214 323.48C504.85 323.624 504.445 323.695 503.998 323.695ZM503.969 320.622C504.314 320.622 504.605 320.543 504.843 320.385C505.081 320.228 505.262 320.001 505.385 319.704C505.509 319.408 505.571 319.054 505.571 318.641C505.571 318.238 505.51 317.883 505.389 317.574C505.268 317.266 505.088 317.024 504.85 316.85C504.612 316.675 504.318 316.587 503.969 316.587C503.605 316.587 503.301 316.68 503.059 316.864C502.818 317.049 502.637 317.296 502.516 317.607C502.397 317.918 502.338 318.262 502.338 318.641C502.338 319.03 502.398 319.373 502.52 319.672C502.643 319.968 502.826 320.201 503.066 320.371C503.309 320.538 503.61 320.622 503.969 320.622ZM510.858 321.481V320.826L513.32 318.131C513.609 317.816 513.847 317.541 514.034 317.308C514.22 317.073 514.359 316.852 514.449 316.646C514.541 316.437 514.587 316.218 514.587 315.99C514.587 315.728 514.524 315.501 514.398 315.309C514.274 315.118 514.104 314.969 513.888 314.865C513.672 314.761 513.429 314.708 513.16 314.708C512.873 314.708 512.623 314.768 512.409 314.887C512.198 315.003 512.034 315.167 511.918 315.379C511.804 315.59 511.747 315.837 511.747 316.121H510.887C510.887 315.684 510.988 315.301 511.19 314.971C511.391 314.641 511.665 314.383 512.013 314.199C512.362 314.014 512.754 313.922 513.189 313.922C513.626 313.922 514.013 314.014 514.35 314.199C514.688 314.383 514.952 314.632 515.144 314.945C515.336 315.258 515.432 315.607 515.432 315.99C515.432 316.265 515.382 316.533 515.282 316.795C515.185 317.055 515.015 317.345 514.773 317.665C514.532 317.983 514.199 318.372 513.771 318.83L512.096 320.622V320.68H515.563V321.481H510.858ZM519.455 321.583C518.955 321.583 518.514 321.495 518.13 321.318C517.749 321.138 517.451 320.891 517.238 320.578C517.024 320.263 516.919 319.903 516.921 319.5C516.919 319.185 516.981 318.894 517.107 318.627C517.233 318.357 517.405 318.133 517.624 317.953C517.845 317.771 518.091 317.656 518.363 317.607V317.563C518.006 317.471 517.722 317.271 517.511 316.962C517.3 316.652 517.195 316.299 517.198 315.903C517.195 315.524 517.291 315.186 517.485 314.887C517.68 314.588 517.947 314.353 518.287 314.181C518.629 314.008 519.018 313.922 519.455 313.922C519.888 313.922 520.274 314.008 520.613 314.181C520.953 314.353 521.22 314.588 521.414 314.887C521.611 315.186 521.711 315.524 521.713 315.903C521.711 316.299 521.603 316.652 521.389 316.962C521.178 317.271 520.897 317.471 520.548 317.563V317.607C520.817 317.656 521.06 317.771 521.276 317.953C521.492 318.133 521.665 318.357 521.793 318.627C521.922 318.894 521.987 319.185 521.99 319.5C521.987 319.903 521.878 320.263 521.662 320.578C521.448 320.891 521.151 321.138 520.77 321.318C520.391 321.495 519.953 321.583 519.455 321.583ZM519.455 320.782C519.793 320.782 520.084 320.728 520.329 320.618C520.575 320.509 520.764 320.355 520.897 320.156C521.031 319.957 521.099 319.724 521.101 319.457C521.099 319.175 521.026 318.926 520.883 318.71C520.74 318.494 520.544 318.324 520.297 318.201C520.051 318.077 519.771 318.015 519.455 318.015C519.137 318.015 518.853 318.077 518.603 318.201C518.356 318.324 518.16 318.494 518.017 318.71C517.876 318.926 517.807 319.175 517.81 319.457C517.807 319.724 517.871 319.957 518.003 320.156C518.136 320.355 518.327 320.509 518.574 320.618C518.822 320.728 519.116 320.782 519.455 320.782ZM519.455 317.243C519.722 317.243 519.959 317.189 520.165 317.083C520.374 316.976 520.538 316.827 520.657 316.635C520.776 316.443 520.837 316.218 520.839 315.961C520.837 315.709 520.777 315.489 520.661 315.302C520.544 315.113 520.383 314.967 520.176 314.865C519.97 314.761 519.73 314.708 519.455 314.708C519.176 314.708 518.932 314.761 518.724 314.865C518.515 314.967 518.353 315.113 518.239 315.302C518.125 315.489 518.069 315.709 518.072 315.961C518.069 316.218 518.126 316.443 518.243 316.635C518.362 316.827 518.526 316.976 518.734 317.083C518.943 317.189 519.184 317.243 519.455 317.243Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M537.58 321.481H536.633L539.371 314.024H540.303L543.042 321.481H542.095L539.866 315.204H539.808L537.58 321.481ZM537.929 318.568H541.745V319.369H537.929V318.568ZM547.611 319.195V315.888H548.471V321.481H547.611V320.535H547.553C547.422 320.819 547.218 321.06 546.941 321.259C546.665 321.456 546.315 321.554 545.893 321.554C545.543 321.554 545.232 321.478 544.961 321.325C544.689 321.169 544.475 320.936 544.32 320.626C544.164 320.312 544.087 319.918 544.087 319.442V315.888H544.946V319.384C544.946 319.792 545.06 320.117 545.288 320.36C545.519 320.603 545.813 320.724 546.169 320.724C546.383 320.724 546.6 320.669 546.821 320.56C547.045 320.451 547.231 320.283 547.382 320.058C547.535 319.832 547.611 319.544 547.611 319.195ZM552.302 323.695C551.887 323.695 551.53 323.642 551.232 323.535C550.933 323.431 550.684 323.292 550.485 323.12C550.289 322.95 550.132 322.768 550.016 322.574L550.7 322.093C550.778 322.195 550.876 322.312 550.995 322.443C551.114 322.576 551.277 322.691 551.483 322.789C551.692 322.888 551.965 322.938 552.302 322.938C552.754 322.938 553.126 322.829 553.42 322.61C553.714 322.392 553.861 322.049 553.861 321.583V320.447H553.788C553.725 320.549 553.635 320.675 553.519 320.826C553.404 320.974 553.239 321.106 553.023 321.223C552.81 321.337 552.521 321.394 552.157 321.394C551.705 321.394 551.3 321.287 550.94 321.074C550.584 320.86 550.301 320.549 550.092 320.141C549.886 319.734 549.783 319.238 549.783 318.656C549.783 318.083 549.883 317.584 550.085 317.159C550.286 316.732 550.567 316.402 550.926 316.169C551.285 315.933 551.7 315.815 552.171 315.815C552.535 315.815 552.824 315.876 553.038 315.998C553.254 316.116 553.419 316.252 553.533 316.405C553.65 316.556 553.739 316.68 553.803 316.777H553.89V315.888H554.72V321.642C554.72 322.122 554.611 322.513 554.392 322.814C554.176 323.118 553.885 323.34 553.519 323.48C553.154 323.624 552.749 323.695 552.302 323.695ZM552.273 320.622C552.618 320.622 552.909 320.543 553.147 320.385C553.385 320.228 553.566 320.001 553.69 319.704C553.813 319.408 553.875 319.054 553.875 318.641C553.875 318.238 553.815 317.883 553.693 317.574C553.572 317.266 553.392 317.024 553.154 316.85C552.917 316.675 552.623 316.587 552.273 316.587C551.909 316.587 551.606 316.68 551.363 316.864C551.123 317.049 550.942 317.296 550.82 317.607C550.701 317.918 550.642 318.262 550.642 318.641C550.642 319.03 550.703 319.373 550.824 319.672C550.948 319.968 551.13 320.201 551.37 320.371C551.613 320.538 551.914 320.622 552.273 320.622ZM561.682 321.583C561.202 321.583 560.773 321.501 560.397 321.336C560.023 321.171 559.726 320.941 559.505 320.647C559.286 320.351 559.167 320.008 559.148 319.617H560.066C560.085 319.857 560.168 320.065 560.313 320.24C560.459 320.412 560.649 320.546 560.885 320.64C561.12 320.735 561.381 320.782 561.668 320.782C561.988 320.782 562.272 320.726 562.52 320.615C562.767 320.503 562.962 320.348 563.102 320.149C563.243 319.95 563.314 319.719 563.314 319.457C563.314 319.182 563.246 318.941 563.11 318.732C562.974 318.521 562.775 318.356 562.513 318.237C562.25 318.118 561.93 318.059 561.551 318.059H560.954V317.257H561.551C561.847 317.257 562.107 317.204 562.331 317.097C562.556 316.99 562.732 316.84 562.859 316.646C562.987 316.451 563.052 316.223 563.052 315.961C563.052 315.709 562.996 315.489 562.884 315.302C562.772 315.115 562.615 314.969 562.411 314.865C562.209 314.761 561.971 314.708 561.697 314.708C561.44 314.708 561.197 314.756 560.969 314.851C560.743 314.943 560.558 315.077 560.415 315.255C560.272 315.429 560.194 315.641 560.182 315.888H559.308C559.323 315.497 559.441 315.155 559.661 314.861C559.882 314.565 560.171 314.335 560.528 314.17C560.887 314.005 561.282 313.922 561.712 313.922C562.173 313.922 562.568 314.015 562.899 314.202C563.229 314.387 563.482 314.631 563.66 314.934C563.837 315.238 563.925 315.565 563.925 315.917C563.925 316.337 563.815 316.695 563.594 316.992C563.376 317.288 563.078 317.493 562.702 317.607V317.665C563.173 317.743 563.541 317.943 563.805 318.266C564.07 318.587 564.202 318.983 564.202 319.457C564.202 319.862 564.092 320.226 563.871 320.549C563.652 320.87 563.354 321.122 562.975 321.307C562.596 321.491 562.165 321.583 561.682 321.583ZM568.313 314.024V321.481H567.41V314.971H567.366L565.546 316.18V315.262L567.41 314.024H568.313Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M587.699 315.888C587.655 315.519 587.478 315.233 587.167 315.029C586.856 314.825 586.475 314.723 586.024 314.723C585.693 314.723 585.405 314.776 585.157 314.883C584.912 314.99 584.72 315.137 584.582 315.324C584.446 315.511 584.378 315.723 584.378 315.961C584.378 316.16 584.425 316.331 584.52 316.475C584.617 316.615 584.741 316.733 584.891 316.828C585.042 316.92 585.199 316.996 585.365 317.057C585.53 317.115 585.681 317.163 585.82 317.199L586.577 317.403C586.771 317.454 586.987 317.524 587.225 317.614C587.466 317.704 587.695 317.827 587.913 317.982C588.134 318.135 588.316 318.332 588.46 318.572C588.603 318.812 588.675 319.107 588.675 319.457C588.675 319.86 588.569 320.224 588.358 320.549C588.149 320.874 587.843 321.133 587.44 321.325C587.04 321.517 586.553 321.612 585.98 321.612C585.446 321.612 584.983 321.526 584.593 321.354C584.204 321.182 583.898 320.941 583.675 320.633C583.454 320.325 583.329 319.967 583.3 319.559H584.232C584.256 319.84 584.351 320.073 584.516 320.258C584.684 320.44 584.895 320.576 585.15 320.666C585.407 320.753 585.684 320.797 585.98 320.797C586.325 320.797 586.634 320.741 586.908 320.629C587.183 320.515 587.4 320.357 587.56 320.156C587.72 319.952 587.801 319.714 587.801 319.442C587.801 319.195 587.731 318.993 587.593 318.838C587.455 318.682 587.273 318.556 587.047 318.459C586.821 318.362 586.577 318.277 586.315 318.204L585.397 317.942C584.815 317.775 584.353 317.535 584.014 317.225C583.674 316.914 583.504 316.507 583.504 316.005C583.504 315.587 583.617 315.223 583.842 314.912C584.071 314.599 584.377 314.357 584.76 314.184C585.146 314.009 585.577 313.922 586.053 313.922C586.533 313.922 586.961 314.008 587.335 314.181C587.708 314.35 588.005 314.583 588.223 314.88C588.444 315.176 588.56 315.512 588.573 315.888H587.699ZM592.388 321.598C591.849 321.598 591.384 321.479 590.993 321.241C590.605 321.001 590.305 320.666 590.094 320.236C589.885 319.804 589.781 319.301 589.781 318.729C589.781 318.156 589.885 317.651 590.094 317.214C590.305 316.774 590.599 316.432 590.975 316.187C591.354 315.939 591.795 315.815 592.3 315.815C592.592 315.815 592.879 315.864 593.163 315.961C593.447 316.058 593.706 316.216 593.939 316.434C594.172 316.651 594.358 316.937 594.496 317.294C594.634 317.651 594.704 318.09 594.704 318.612V318.976H590.392V318.233H593.83C593.83 317.918 593.767 317.636 593.64 317.389C593.517 317.141 593.339 316.945 593.109 316.802C592.881 316.659 592.611 316.587 592.3 316.587C591.958 316.587 591.662 316.672 591.412 316.842C591.164 317.01 590.974 317.228 590.84 317.498C590.707 317.767 590.64 318.056 590.64 318.364V318.86C590.64 319.282 590.713 319.64 590.858 319.934C591.006 320.225 591.212 320.447 591.474 320.6C591.736 320.751 592.041 320.826 592.388 320.826C592.614 320.826 592.817 320.794 592.999 320.731C593.184 320.666 593.343 320.569 593.477 320.44C593.61 320.309 593.713 320.146 593.786 319.952L594.616 320.185C594.529 320.467 594.382 320.714 594.176 320.928C593.969 321.139 593.714 321.304 593.411 321.423C593.108 321.54 592.766 321.598 592.388 321.598ZM596.011 323.579V315.888H596.841V316.777H596.943C597.006 316.68 597.094 316.556 597.205 316.405C597.319 316.252 597.482 316.116 597.693 315.998C597.907 315.876 598.196 315.815 598.56 315.815C599.031 315.815 599.446 315.933 599.805 316.169C600.164 316.404 600.445 316.738 600.646 317.17C600.848 317.602 600.949 318.112 600.949 318.699C600.949 319.292 600.848 319.805 600.646 320.24C600.445 320.672 600.166 321.007 599.809 321.245C599.452 321.48 599.04 321.598 598.574 321.598C598.215 321.598 597.927 321.538 597.711 321.419C597.495 321.298 597.329 321.161 597.213 321.008C597.096 320.853 597.006 320.724 596.943 320.622H596.87V323.579H596.011ZM596.856 318.685C596.856 319.107 596.918 319.48 597.041 319.803C597.165 320.123 597.346 320.374 597.584 320.556C597.822 320.736 598.113 320.826 598.458 320.826C598.817 320.826 599.117 320.731 599.357 320.542C599.6 320.35 599.782 320.093 599.903 319.77C600.027 319.445 600.089 319.083 600.089 318.685C600.089 318.292 600.028 317.937 599.907 317.622C599.788 317.304 599.607 317.052 599.365 316.868C599.124 316.681 598.822 316.587 598.458 316.587C598.108 316.587 597.815 316.676 597.577 316.853C597.339 317.028 597.159 317.273 597.038 317.589C596.916 317.902 596.856 318.267 596.856 318.685ZM607.561 321.583C607.013 321.583 606.545 321.434 606.159 321.135C605.773 320.834 605.478 320.399 605.274 319.828C605.07 319.255 604.969 318.563 604.969 317.753C604.969 316.947 605.07 316.258 605.274 315.688C605.481 315.115 605.777 314.678 606.163 314.377C606.551 314.074 607.017 313.922 607.561 313.922C608.105 313.922 608.57 314.074 608.956 314.377C609.344 314.678 609.64 315.115 609.844 315.688C610.051 316.258 610.154 316.947 610.154 317.753C610.154 318.563 610.052 319.255 609.848 319.828C609.644 320.399 609.349 320.834 608.963 321.135C608.577 321.434 608.11 321.583 607.561 321.583ZM607.561 320.782C608.105 320.782 608.527 320.52 608.828 319.996C609.129 319.471 609.28 318.724 609.28 317.753C609.28 317.107 609.211 316.557 609.072 316.103C608.936 315.649 608.74 315.303 608.482 315.065C608.228 314.827 607.92 314.709 607.561 314.709C607.022 314.709 606.601 314.974 606.298 315.506C605.994 316.035 605.842 316.784 605.842 317.753C605.842 318.398 605.91 318.947 606.046 319.399C606.182 319.85 606.378 320.194 606.633 320.429C606.89 320.664 607.199 320.782 607.561 320.782ZM614.057 321.583C613.577 321.583 613.148 321.501 612.772 321.336C612.398 321.171 612.101 320.941 611.88 320.648C611.661 320.351 611.542 320.008 611.523 319.617H612.441C612.46 319.857 612.542 320.065 612.688 320.24C612.834 320.412 613.024 320.546 613.26 320.64C613.495 320.735 613.756 320.782 614.043 320.782C614.363 320.782 614.647 320.726 614.895 320.615C615.142 320.503 615.337 320.348 615.477 320.149C615.618 319.95 615.689 319.719 615.689 319.457C615.689 319.182 615.621 318.941 615.485 318.732C615.349 318.521 615.15 318.356 614.887 318.237C614.625 318.118 614.305 318.059 613.926 318.059H613.329V317.257H613.926C614.222 317.257 614.482 317.204 614.705 317.097C614.931 316.99 615.107 316.84 615.233 316.646C615.362 316.451 615.426 316.223 615.426 315.961C615.426 315.709 615.371 315.489 615.259 315.302C615.147 315.115 614.989 314.969 614.786 314.865C614.584 314.761 614.346 314.709 614.072 314.709C613.815 314.709 613.572 314.756 613.344 314.851C613.118 314.943 612.933 315.077 612.79 315.255C612.647 315.429 612.569 315.641 612.557 315.888H611.683C611.698 315.497 611.815 315.155 612.036 314.861C612.257 314.565 612.546 314.335 612.903 314.17C613.262 314.005 613.657 313.922 614.086 313.922C614.548 313.922 614.943 314.015 615.273 314.202C615.604 314.387 615.857 314.631 616.035 314.934C616.212 315.238 616.3 315.565 616.3 315.917C616.3 316.337 616.19 316.695 615.969 316.992C615.75 317.288 615.453 317.493 615.077 317.607V317.665C615.548 317.743 615.916 317.943 616.18 318.266C616.445 318.587 616.577 318.983 616.577 319.457C616.577 319.862 616.467 320.226 616.246 320.549C616.027 320.87 615.729 321.122 615.35 321.307C614.971 321.491 614.54 321.583 614.057 321.583Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M635.097 315.888C635.053 315.519 634.876 315.233 634.565 315.029C634.254 314.825 633.873 314.723 633.422 314.723C633.092 314.723 632.803 314.776 632.555 314.883C632.31 314.99 632.118 315.137 631.98 315.324C631.844 315.511 631.776 315.723 631.776 315.961C631.776 316.16 631.823 316.331 631.918 316.475C632.015 316.615 632.139 316.733 632.289 316.828C632.44 316.92 632.598 316.996 632.763 317.057C632.928 317.115 633.079 317.163 633.218 317.199L633.975 317.403C634.169 317.454 634.385 317.524 634.623 317.614C634.864 317.704 635.093 317.827 635.312 317.982C635.532 318.135 635.715 318.332 635.858 318.572C636.001 318.812 636.073 319.107 636.073 319.457C636.073 319.86 635.967 320.224 635.756 320.549C635.547 320.874 635.241 321.133 634.838 321.325C634.438 321.517 633.951 321.612 633.378 321.612C632.844 321.612 632.382 321.526 631.991 321.354C631.602 321.182 631.296 320.941 631.073 320.633C630.852 320.325 630.727 319.967 630.698 319.559H631.63C631.654 319.84 631.749 320.073 631.914 320.258C632.082 320.44 632.293 320.576 632.548 320.666C632.805 320.753 633.082 320.797 633.378 320.797C633.723 320.797 634.032 320.741 634.307 320.629C634.581 320.515 634.798 320.357 634.958 320.156C635.119 319.952 635.199 319.714 635.199 319.442C635.199 319.195 635.13 318.993 634.991 318.838C634.853 318.682 634.671 318.556 634.445 318.459C634.219 318.362 633.975 318.277 633.713 318.204L632.795 317.942C632.213 317.775 631.752 317.535 631.412 317.225C631.072 316.914 630.902 316.507 630.902 316.005C630.902 315.587 631.015 315.223 631.241 314.912C631.469 314.599 631.775 314.357 632.158 314.184C632.544 314.009 632.975 313.922 633.451 313.922C633.932 313.922 634.359 314.008 634.733 314.181C635.106 314.35 635.403 314.583 635.621 314.88C635.842 315.176 635.959 315.512 635.971 315.888H635.097ZM639.786 321.598C639.247 321.598 638.782 321.479 638.391 321.241C638.003 321.001 637.703 320.666 637.492 320.236C637.283 319.804 637.179 319.301 637.179 318.729C637.179 318.156 637.283 317.651 637.492 317.214C637.703 316.774 637.997 316.432 638.373 316.187C638.752 315.939 639.194 315.815 639.698 315.815C639.99 315.815 640.277 315.864 640.561 315.961C640.845 316.058 641.104 316.216 641.337 316.434C641.57 316.651 641.756 316.937 641.894 317.294C642.033 317.651 642.102 318.09 642.102 318.612V318.976H637.79V318.233H641.228C641.228 317.918 641.165 317.636 641.038 317.389C640.915 317.141 640.737 316.945 640.507 316.802C640.279 316.659 640.009 316.587 639.698 316.587C639.356 316.587 639.06 316.672 638.81 316.842C638.562 317.01 638.372 317.228 638.238 317.498C638.105 317.767 638.038 318.056 638.038 318.364V318.86C638.038 319.282 638.111 319.64 638.256 319.934C638.405 320.225 638.61 320.447 638.872 320.6C639.134 320.751 639.439 320.826 639.786 320.826C640.012 320.826 640.216 320.794 640.398 320.731C640.582 320.666 640.741 320.569 640.875 320.44C641.008 320.309 641.111 320.146 641.184 319.952L642.014 320.185C641.927 320.467 641.78 320.714 641.574 320.928C641.367 321.139 641.113 321.304 640.809 321.423C640.506 321.54 640.165 321.598 639.786 321.598ZM643.409 323.579V315.888H644.239V316.777H644.341C644.404 316.68 644.492 316.556 644.603 316.405C644.717 316.252 644.88 316.116 645.091 315.998C645.305 315.876 645.594 315.815 645.958 315.815C646.429 315.815 646.844 315.933 647.203 316.169C647.563 316.404 647.843 316.738 648.044 317.17C648.246 317.602 648.347 318.112 648.347 318.699C648.347 319.292 648.246 319.805 648.044 320.24C647.843 320.672 647.564 321.007 647.207 321.245C646.85 321.48 646.439 321.598 645.972 321.598C645.613 321.598 645.326 321.538 645.109 321.419C644.893 321.298 644.727 321.161 644.611 321.008C644.494 320.853 644.404 320.724 644.341 320.622H644.268V323.579H643.409ZM644.254 318.685C644.254 319.107 644.316 319.48 644.439 319.803C644.563 320.123 644.744 320.374 644.982 320.556C645.22 320.736 645.511 320.826 645.856 320.826C646.215 320.826 646.515 320.731 646.755 320.542C646.998 320.35 647.18 320.093 647.302 319.77C647.425 319.445 647.487 319.083 647.487 318.685C647.487 318.292 647.427 317.937 647.305 317.622C647.186 317.304 647.005 317.052 646.763 316.868C646.522 316.681 646.22 316.587 645.856 316.587C645.506 316.587 645.213 316.676 644.975 316.853C644.737 317.028 644.557 317.273 644.436 317.589C644.314 317.902 644.254 318.267 644.254 318.685ZM654.959 321.583C654.411 321.583 653.943 321.434 653.557 321.135C653.171 320.834 652.876 320.399 652.672 319.828C652.469 319.255 652.367 318.563 652.367 317.753C652.367 316.947 652.469 316.258 652.672 315.688C652.879 315.115 653.175 314.678 653.561 314.377C653.949 314.074 654.415 313.922 654.959 313.922C655.503 313.922 655.968 314.074 656.354 314.377C656.742 314.678 657.038 315.115 657.242 315.688C657.449 316.258 657.552 316.947 657.552 317.753C657.552 318.563 657.45 319.255 657.246 319.828C657.042 320.399 656.747 320.834 656.361 321.135C655.975 321.434 655.508 321.583 654.959 321.583ZM654.959 320.782C655.503 320.782 655.925 320.52 656.226 319.996C656.527 319.471 656.678 318.724 656.678 317.753C656.678 317.107 656.609 316.557 656.47 316.103C656.334 315.649 656.138 315.303 655.881 315.065C655.626 314.827 655.319 314.709 654.959 314.709C654.42 314.709 653.999 314.974 653.696 315.506C653.392 316.035 653.241 316.784 653.241 317.753C653.241 318.398 653.309 318.947 653.444 319.399C653.58 319.85 653.776 320.194 654.031 320.429C654.288 320.664 654.598 320.782 654.959 320.782ZM661.412 321.583C661.106 321.578 660.8 321.52 660.494 321.409C660.188 321.297 659.909 321.109 659.657 320.844C659.404 320.577 659.201 320.217 659.048 319.763C658.896 319.306 658.819 318.733 658.819 318.044C658.819 317.384 658.881 316.799 659.005 316.289C659.129 315.777 659.308 315.346 659.544 314.996C659.779 314.644 660.063 314.377 660.396 314.195C660.731 314.013 661.108 313.922 661.528 313.922C661.946 313.922 662.317 314.006 662.642 314.173C662.97 314.338 663.237 314.569 663.444 314.865C663.65 315.161 663.783 315.502 663.844 315.888H662.956C662.873 315.553 662.713 315.275 662.475 315.054C662.237 314.834 661.921 314.723 661.528 314.723C660.95 314.723 660.495 314.974 660.163 315.477C659.833 315.979 659.666 316.685 659.664 317.592H659.722C659.858 317.386 660.019 317.21 660.206 317.064C660.396 316.916 660.605 316.802 660.833 316.722C661.061 316.642 661.302 316.602 661.557 316.602C661.985 316.602 662.375 316.709 662.73 316.922C663.084 317.134 663.368 317.426 663.582 317.8C663.796 318.171 663.902 318.597 663.902 319.078C663.902 319.539 663.799 319.962 663.593 320.345C663.386 320.726 663.096 321.03 662.723 321.256C662.351 321.479 661.914 321.588 661.412 321.583ZM661.412 320.782C661.718 320.782 661.992 320.706 662.235 320.553C662.48 320.4 662.673 320.195 662.814 319.937C662.957 319.68 663.028 319.394 663.028 319.078C663.028 318.77 662.959 318.489 662.821 318.237C662.685 317.982 662.497 317.779 662.256 317.629C662.019 317.478 661.747 317.403 661.441 317.403C661.21 317.403 660.995 317.449 660.796 317.541C660.597 317.631 660.422 317.755 660.272 317.913C660.124 318.071 660.007 318.252 659.922 318.455C659.837 318.657 659.795 318.869 659.795 319.093C659.795 319.389 659.864 319.666 660.002 319.923C660.143 320.18 660.335 320.388 660.578 320.546C660.823 320.703 661.101 320.782 661.412 320.782Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M682.43 315.888C682.386 315.519 682.209 315.233 681.898 315.029C681.587 314.825 681.206 314.723 680.755 314.723C680.425 314.723 680.136 314.776 679.888 314.883C679.643 314.99 679.451 315.137 679.313 315.324C679.177 315.511 679.109 315.723 679.109 315.961C679.109 316.16 679.156 316.331 679.251 316.475C679.348 316.615 679.472 316.733 679.622 316.828C679.773 316.92 679.931 316.996 680.096 317.057C680.261 317.115 680.412 317.163 680.551 317.199L681.308 317.403C681.502 317.454 681.718 317.524 681.956 317.614C682.197 317.704 682.426 317.827 682.645 317.982C682.865 318.135 683.048 318.332 683.191 318.572C683.334 318.812 683.406 319.107 683.406 319.457C683.406 319.86 683.3 320.224 683.089 320.549C682.88 320.874 682.574 321.133 682.171 321.325C681.771 321.517 681.284 321.612 680.711 321.612C680.177 321.612 679.715 321.526 679.324 321.354C678.935 321.182 678.629 320.941 678.406 320.633C678.185 320.325 678.06 319.967 678.031 319.559H678.963C678.987 319.84 679.082 320.073 679.247 320.258C679.415 320.44 679.626 320.576 679.881 320.666C680.138 320.753 680.415 320.797 680.711 320.797C681.056 320.797 681.365 320.741 681.64 320.629C681.914 320.515 682.131 320.357 682.291 320.156C682.452 319.952 682.532 319.714 682.532 319.442C682.532 319.195 682.463 318.993 682.324 318.838C682.186 318.682 682.004 318.556 681.778 318.459C681.552 318.362 681.308 318.277 681.046 318.204L680.128 317.942C679.546 317.774 679.085 317.535 678.745 317.225C678.405 316.914 678.235 316.507 678.235 316.005C678.235 315.587 678.348 315.223 678.574 314.912C678.802 314.599 679.108 314.357 679.491 314.184C679.877 314.009 680.308 313.922 680.784 313.922C681.265 313.922 681.692 314.008 682.066 314.181C682.439 314.35 682.736 314.583 682.954 314.88C683.175 315.176 683.292 315.512 683.304 315.888H682.43ZM687.119 321.598C686.58 321.598 686.115 321.479 685.724 321.241C685.336 321.001 685.036 320.666 684.825 320.236C684.616 319.804 684.512 319.301 684.512 318.729C684.512 318.156 684.616 317.651 684.825 317.214C685.036 316.774 685.33 316.432 685.706 316.187C686.085 315.939 686.527 315.815 687.031 315.815C687.323 315.815 687.61 315.864 687.894 315.961C688.178 316.058 688.437 316.216 688.67 316.434C688.903 316.651 689.089 316.937 689.227 317.294C689.366 317.651 689.435 318.09 689.435 318.612V318.976H685.123V318.233H688.561C688.561 317.918 688.498 317.636 688.371 317.389C688.248 317.141 688.07 316.945 687.84 316.802C687.612 316.659 687.342 316.587 687.031 316.587C686.689 316.587 686.393 316.672 686.143 316.842C685.895 317.01 685.705 317.228 685.571 317.498C685.438 317.767 685.371 318.056 685.371 318.364V318.86C685.371 319.282 685.444 319.64 685.59 319.934C685.738 320.225 685.943 320.447 686.205 320.6C686.467 320.751 686.772 320.826 687.119 320.826C687.345 320.826 687.549 320.794 687.731 320.731C687.915 320.666 688.074 320.569 688.208 320.44C688.341 320.309 688.444 320.146 688.517 319.952L689.347 320.185C689.26 320.467 689.113 320.714 688.907 320.928C688.7 321.139 688.446 321.304 688.142 321.423C687.839 321.54 687.498 321.598 687.119 321.598ZM690.742 323.579V315.888H691.572V316.777H691.674C691.737 316.68 691.825 316.556 691.936 316.405C692.05 316.252 692.213 316.116 692.424 315.998C692.638 315.876 692.927 315.815 693.291 315.815C693.762 315.815 694.177 315.933 694.536 316.169C694.896 316.404 695.176 316.738 695.377 317.17C695.579 317.602 695.68 318.112 695.68 318.699C695.68 319.292 695.579 319.805 695.377 320.24C695.176 320.672 694.897 321.007 694.54 321.245C694.183 321.48 693.772 321.598 693.305 321.598C692.946 321.598 692.659 321.538 692.442 321.419C692.226 321.298 692.06 321.161 691.944 321.008C691.827 320.853 691.737 320.724 691.674 320.622H691.601V323.579H690.742ZM691.587 318.685C691.587 319.107 691.649 319.48 691.772 319.803C691.896 320.123 692.077 320.374 692.315 320.556C692.553 320.736 692.844 320.826 693.189 320.826C693.548 320.826 693.848 320.731 694.088 320.542C694.331 320.35 694.513 320.093 694.635 319.77C694.758 319.445 694.82 319.083 694.82 318.685C694.82 318.292 694.76 317.937 694.638 317.622C694.519 317.304 694.338 317.052 694.096 316.868C693.855 316.681 693.553 316.587 693.189 316.587C692.839 316.587 692.546 316.676 692.308 316.853C692.07 317.028 691.89 317.273 691.769 317.589C691.647 317.902 691.587 318.267 691.587 318.685ZM702.292 321.583C701.744 321.583 701.276 321.434 700.89 321.135C700.504 320.834 700.209 320.399 700.006 319.828C699.802 319.255 699.7 318.563 699.7 317.753C699.7 316.947 699.802 316.258 700.006 315.688C700.212 315.115 700.508 314.678 700.894 314.377C701.282 314.074 701.748 313.922 702.292 313.922C702.836 313.922 703.301 314.074 703.687 314.377C704.075 314.678 704.371 315.115 704.575 315.688C704.782 316.258 704.885 316.947 704.885 317.753C704.885 318.563 704.783 319.255 704.579 319.828C704.375 320.399 704.08 320.834 703.694 321.135C703.308 321.434 702.841 321.583 702.292 321.583ZM702.292 320.782C702.836 320.782 703.258 320.52 703.559 319.996C703.86 319.471 704.011 318.724 704.011 317.753C704.011 317.107 703.942 316.557 703.803 316.103C703.667 315.649 703.471 315.303 703.214 315.065C702.959 314.827 702.652 314.708 702.292 314.708C701.753 314.708 701.332 314.974 701.029 315.506C700.725 316.035 700.574 316.784 700.574 317.753C700.574 318.398 700.642 318.947 700.777 319.399C700.913 319.85 701.109 320.194 701.364 320.429C701.621 320.664 701.931 320.782 702.292 320.782ZM708.643 313.922C708.949 313.924 709.254 313.983 709.56 314.097C709.866 314.211 710.145 314.4 710.398 314.665C710.65 314.927 710.853 315.285 711.006 315.739C711.159 316.193 711.235 316.762 711.235 317.447C711.235 318.109 711.172 318.698 711.046 319.213C710.922 319.725 710.743 320.157 710.507 320.509C710.274 320.861 709.99 321.128 709.655 321.31C709.322 321.492 708.946 321.583 708.526 321.583C708.109 321.583 707.736 321.501 707.408 321.336C707.083 321.168 706.816 320.936 706.607 320.64C706.401 320.342 706.269 319.996 706.21 319.602H707.099C707.179 319.945 707.338 320.228 707.576 320.451C707.816 320.672 708.133 320.782 708.526 320.782C709.102 320.782 709.555 320.531 709.888 320.028C710.223 319.526 710.391 318.816 710.391 317.898H710.332C710.196 318.102 710.035 318.278 709.848 318.426C709.661 318.574 709.454 318.688 709.225 318.769C708.997 318.849 708.754 318.889 708.497 318.889C708.07 318.889 707.678 318.783 707.321 318.572C706.967 318.358 706.682 318.066 706.469 317.694C706.258 317.321 706.152 316.893 706.152 316.413C706.152 315.956 706.254 315.539 706.458 315.16C706.664 314.779 706.953 314.475 707.325 314.25C707.698 314.024 708.138 313.915 708.643 313.922ZM708.643 314.723C708.337 314.723 708.061 314.8 707.816 314.952C707.573 315.103 707.38 315.307 707.237 315.564C707.096 315.819 707.026 316.102 707.026 316.413C707.026 316.723 707.094 317.006 707.23 317.261C707.368 317.514 707.556 317.715 707.794 317.866C708.035 318.014 708.308 318.088 708.614 318.088C708.844 318.088 709.059 318.043 709.258 317.953C709.457 317.861 709.631 317.736 709.779 317.578C709.929 317.418 710.047 317.237 710.132 317.035C710.217 316.831 710.259 316.619 710.259 316.398C710.259 316.107 710.189 315.834 710.048 315.579C709.91 315.324 709.718 315.118 709.473 314.96C709.23 314.802 708.953 314.723 708.643 314.723Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M730.534 315.888C730.491 315.519 730.314 315.233 730.003 315.029C729.692 314.825 729.311 314.723 728.859 314.723C728.529 314.723 728.24 314.776 727.993 314.883C727.748 314.99 727.556 315.137 727.417 315.324C727.282 315.511 727.214 315.723 727.214 315.961C727.214 316.16 727.261 316.331 727.356 316.475C727.453 316.615 727.576 316.733 727.727 316.828C727.878 316.92 728.035 316.996 728.2 317.057C728.365 317.115 728.517 317.163 728.656 317.199L729.413 317.403C729.607 317.454 729.823 317.524 730.061 317.614C730.301 317.704 730.531 317.827 730.749 317.982C730.97 318.135 731.152 318.332 731.296 318.572C731.439 318.812 731.51 319.107 731.51 319.457C731.51 319.86 731.405 320.224 731.194 320.549C730.985 320.874 730.679 321.133 730.276 321.325C729.875 321.517 729.389 321.612 728.816 321.612C728.282 321.612 727.819 321.526 727.428 321.354C727.04 321.182 726.734 320.941 726.511 320.633C726.29 320.325 726.165 319.967 726.136 319.559H727.068C727.092 319.84 727.187 320.073 727.352 320.258C727.519 320.44 727.731 320.576 727.986 320.666C728.243 320.753 728.52 320.797 728.816 320.797C729.16 320.797 729.47 320.741 729.744 320.629C730.019 320.515 730.236 320.357 730.396 320.156C730.556 319.952 730.636 319.714 730.636 319.442C730.636 319.195 730.567 318.993 730.429 318.838C730.29 318.682 730.108 318.556 729.883 318.459C729.657 318.362 729.413 318.277 729.151 318.204L728.233 317.942C727.651 317.774 727.189 317.535 726.849 317.225C726.51 316.914 726.34 316.507 726.34 316.005C726.34 315.587 726.453 315.223 726.678 314.912C726.906 314.599 727.212 314.357 727.596 314.184C727.982 314.009 728.413 313.922 728.889 313.922C729.369 313.922 729.796 314.008 730.17 314.181C730.544 314.35 730.84 314.583 731.059 314.88C731.28 315.176 731.396 315.512 731.408 315.888H730.534ZM735.224 321.598C734.685 321.598 734.22 321.479 733.829 321.241C733.441 321.001 733.141 320.666 732.93 320.236C732.721 319.804 732.616 319.301 732.616 318.729C732.616 318.156 732.721 317.651 732.93 317.214C733.141 316.774 733.434 316.432 733.811 316.187C734.189 315.939 734.631 315.815 735.136 315.815C735.427 315.815 735.715 315.864 735.999 315.961C736.283 316.058 736.542 316.216 736.775 316.434C737.008 316.651 737.194 316.937 737.332 317.294C737.47 317.651 737.539 318.09 737.539 318.612V318.976H733.228V318.233H736.666C736.666 317.918 736.602 317.636 736.476 317.389C736.352 317.141 736.175 316.945 735.945 316.802C735.716 316.659 735.447 316.587 735.136 316.587C734.794 316.587 734.498 316.672 734.248 316.842C734 317.01 733.81 317.228 733.676 317.498C733.543 317.767 733.476 318.056 733.476 318.364V318.86C733.476 319.282 733.549 319.64 733.694 319.934C733.842 320.225 734.047 320.447 734.31 320.6C734.572 320.751 734.876 320.826 735.224 320.826C735.449 320.826 735.653 320.794 735.835 320.731C736.02 320.666 736.179 320.569 736.312 320.44C736.446 320.309 736.549 320.146 736.622 319.952L737.452 320.185C737.365 320.467 737.218 320.714 737.011 320.928C736.805 321.139 736.55 321.304 736.247 321.423C735.943 321.54 735.602 321.598 735.224 321.598ZM738.847 323.579V315.888H739.677V316.777H739.779C739.842 316.68 739.929 316.556 740.041 316.405C740.155 316.252 740.318 316.116 740.529 315.998C740.743 315.876 741.031 315.815 741.396 315.815C741.867 315.815 742.282 315.933 742.641 316.169C743 316.404 743.281 316.738 743.482 317.17C743.684 317.602 743.784 318.112 743.784 318.699C743.784 319.292 743.684 319.805 743.482 320.24C743.281 320.672 743.001 321.007 742.645 321.245C742.288 321.48 741.876 321.598 741.41 321.598C741.051 321.598 740.763 321.538 740.547 321.419C740.331 321.298 740.165 321.161 740.048 321.008C739.932 320.853 739.842 320.724 739.779 320.622H739.706V323.579H738.847ZM739.691 318.685C739.691 319.107 739.753 319.48 739.877 319.803C740.001 320.123 740.182 320.374 740.42 320.556C740.658 320.736 740.949 320.826 741.294 320.826C741.653 320.826 741.953 320.731 742.193 320.542C742.436 320.35 742.618 320.093 742.739 319.77C742.863 319.445 742.925 319.083 742.925 318.685C742.925 318.292 742.864 317.937 742.743 317.622C742.624 317.304 742.443 317.052 742.2 316.868C741.96 316.681 741.658 316.587 741.294 316.587C740.944 316.587 740.65 316.676 740.412 316.853C740.175 317.028 739.995 317.273 739.874 317.589C739.752 317.902 739.691 318.267 739.691 318.685ZM750.586 314.024V321.481H749.683V314.971H749.64L747.819 316.18V315.262L749.683 314.024H750.586ZM752.731 321.481V320.826L755.193 318.131C755.481 317.816 755.719 317.541 755.906 317.308C756.093 317.073 756.232 316.852 756.321 316.646C756.414 316.437 756.46 316.218 756.46 315.99C756.46 315.728 756.397 315.501 756.27 315.309C756.147 315.118 755.977 314.969 755.761 314.865C755.545 314.761 755.302 314.708 755.032 314.708C754.746 314.708 754.496 314.768 754.282 314.887C754.071 315.003 753.907 315.167 753.791 315.379C753.677 315.59 753.62 315.837 753.62 316.121H752.76C752.76 315.684 752.861 315.301 753.062 314.971C753.264 314.641 753.538 314.383 753.885 314.199C754.235 314.014 754.627 313.922 755.062 313.922C755.498 313.922 755.886 314.014 756.223 314.199C756.561 314.383 756.825 314.632 757.017 314.945C757.209 315.258 757.305 315.607 757.305 315.99C757.305 316.265 757.255 316.533 757.155 316.795C757.058 317.055 756.888 317.345 756.645 317.665C756.405 317.983 756.071 318.372 755.644 318.83L753.969 320.622V320.68H757.436V321.481H752.731Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M777.851 315.888C777.808 315.519 777.631 315.233 777.32 315.029C777.009 314.825 776.628 314.723 776.176 314.723C775.846 314.723 775.557 314.776 775.31 314.883C775.065 314.99 774.873 315.137 774.735 315.324C774.599 315.511 774.531 315.723 774.531 315.961C774.531 316.16 774.578 316.331 774.673 316.475C774.77 316.615 774.894 316.733 775.044 316.828C775.195 316.92 775.352 316.996 775.517 317.057C775.682 317.115 775.834 317.163 775.973 317.199L776.73 317.403C776.924 317.454 777.14 317.524 777.378 317.614C777.618 317.704 777.848 317.827 778.066 317.982C778.287 318.135 778.469 318.332 778.613 318.572C778.756 318.812 778.827 319.107 778.827 319.457C778.827 319.86 778.722 320.224 778.511 320.549C778.302 320.874 777.996 321.133 777.593 321.325C777.192 321.517 776.706 321.612 776.133 321.612C775.599 321.612 775.136 321.526 774.745 321.354C774.357 321.182 774.051 320.941 773.828 320.633C773.607 320.325 773.482 319.967 773.453 319.559H774.385C774.409 319.84 774.504 320.073 774.669 320.258C774.836 320.44 775.048 320.576 775.303 320.666C775.56 320.753 775.837 320.797 776.133 320.797C776.477 320.797 776.787 320.741 777.061 320.629C777.336 320.515 777.553 320.357 777.713 320.156C777.873 319.952 777.953 319.714 777.953 319.442C777.953 319.195 777.884 318.993 777.746 318.838C777.608 318.682 777.425 318.556 777.2 318.459C776.974 318.362 776.73 318.277 776.468 318.204L775.55 317.942C774.968 317.775 774.506 317.535 774.166 317.225C773.827 316.914 773.657 316.507 773.657 316.005C773.657 315.587 773.77 315.223 773.995 314.912C774.224 314.599 774.529 314.357 774.913 314.184C775.299 314.009 775.73 313.922 776.206 313.922C776.686 313.922 777.114 314.008 777.487 314.181C777.861 314.35 778.157 314.583 778.376 314.88C778.597 315.176 778.713 315.512 778.725 315.888H777.851ZM782.541 321.598C782.002 321.598 781.537 321.479 781.146 321.241C780.758 321.001 780.458 320.666 780.247 320.236C780.038 319.804 779.933 319.301 779.933 318.729C779.933 318.156 780.038 317.651 780.247 317.214C780.458 316.774 780.751 316.432 781.128 316.187C781.506 315.939 781.948 315.815 782.453 315.815C782.745 315.815 783.032 315.864 783.316 315.961C783.6 316.058 783.859 316.216 784.092 316.434C784.325 316.651 784.511 316.937 784.649 317.294C784.787 317.651 784.856 318.09 784.856 318.612V318.976H780.545V318.233H783.983C783.983 317.918 783.919 317.636 783.793 317.389C783.669 317.141 783.492 316.945 783.262 316.802C783.033 316.659 782.764 316.587 782.453 316.587C782.111 316.587 781.815 316.672 781.565 316.842C781.317 317.01 781.127 317.228 780.993 317.498C780.86 317.767 780.793 318.056 780.793 318.364V318.86C780.793 319.282 780.866 319.64 781.011 319.934C781.159 320.225 781.364 320.447 781.627 320.6C781.889 320.751 782.193 320.826 782.541 320.826C782.766 320.826 782.97 320.794 783.152 320.731C783.337 320.666 783.496 320.569 783.629 320.44C783.763 320.309 783.866 320.146 783.939 319.952L784.769 320.185C784.682 320.467 784.535 320.714 784.328 320.928C784.122 321.139 783.867 321.304 783.564 321.423C783.26 321.54 782.919 321.598 782.541 321.598ZM786.164 323.579V315.888H786.994V316.777H787.096C787.159 316.68 787.246 316.556 787.358 316.405C787.472 316.252 787.635 316.116 787.846 315.998C788.06 315.876 788.349 315.815 788.713 315.815C789.184 315.815 789.599 315.933 789.958 316.169C790.317 316.404 790.598 316.738 790.799 317.17C791.001 317.602 791.101 318.112 791.101 318.699C791.101 319.292 791.001 319.805 790.799 320.24C790.598 320.672 790.318 321.007 789.962 321.245C789.605 321.48 789.193 321.598 788.727 321.598C788.368 321.598 788.08 321.538 787.864 321.419C787.648 321.298 787.482 321.161 787.365 321.008C787.249 320.853 787.159 320.724 787.096 320.622H787.023V323.579H786.164ZM787.008 318.685C787.008 319.107 787.07 319.48 787.194 319.803C787.318 320.123 787.499 320.374 787.737 320.556C787.975 320.736 788.266 320.826 788.611 320.826C788.97 320.826 789.27 320.731 789.51 320.542C789.753 320.35 789.935 320.093 790.056 319.77C790.18 319.445 790.242 319.083 790.242 318.685C790.242 318.292 790.181 317.937 790.06 317.622C789.941 317.304 789.76 317.052 789.517 316.868C789.277 316.681 788.975 316.587 788.611 316.587C788.261 316.587 787.967 316.676 787.729 316.853C787.492 317.028 787.312 317.273 787.191 317.589C787.069 317.902 787.008 318.267 787.008 318.685ZM797.903 314.024V321.481H797V314.971H796.957L795.136 316.18V315.262L797 314.024H797.903ZM802.379 321.583C801.951 321.583 801.567 321.498 801.224 321.328C800.882 321.159 800.608 320.925 800.401 320.629C800.195 320.333 800.082 319.996 800.063 319.617H800.937C800.971 319.954 801.123 320.234 801.395 320.455C801.67 320.673 801.997 320.782 802.379 320.782C802.684 320.782 802.956 320.711 803.194 320.567C803.435 320.424 803.623 320.228 803.759 319.978C803.897 319.725 803.966 319.44 803.966 319.122C803.966 318.796 803.895 318.506 803.751 318.252C803.611 317.994 803.416 317.791 803.169 317.643C802.921 317.495 802.638 317.42 802.32 317.418C802.092 317.415 801.858 317.45 801.617 317.523C801.377 317.594 801.179 317.685 801.024 317.796L800.179 317.694L800.631 314.024H804.505V314.825H801.388L801.126 317.024H801.17C801.323 316.903 801.514 316.802 801.745 316.722C801.976 316.642 802.216 316.602 802.466 316.602C802.922 316.602 803.329 316.711 803.686 316.93C804.045 317.146 804.327 317.442 804.531 317.818C804.737 318.194 804.84 318.624 804.84 319.107C804.84 319.583 804.733 320.008 804.52 320.382C804.308 320.753 804.017 321.047 803.646 321.263C803.274 321.477 802.852 321.583 802.379 321.583Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M825.145 315.888C825.102 315.519 824.925 315.233 824.614 315.029C824.303 314.825 823.922 314.723 823.47 314.723C823.14 314.723 822.851 314.776 822.604 314.883C822.359 314.99 822.167 315.137 822.028 315.324C821.892 315.511 821.825 315.723 821.825 315.961C821.825 316.16 821.872 316.331 821.967 316.475C822.064 316.615 822.187 316.733 822.338 316.828C822.488 316.92 822.646 316.996 822.811 317.057C822.976 317.115 823.128 317.163 823.266 317.199L824.024 317.403C824.218 317.454 824.434 317.524 824.672 317.614C824.912 317.704 825.142 317.827 825.36 317.982C825.581 318.135 825.763 318.332 825.906 318.572C826.05 318.812 826.121 319.107 826.121 319.457C826.121 319.86 826.016 320.224 825.804 320.549C825.596 320.874 825.29 321.133 824.887 321.325C824.486 321.517 824 321.612 823.427 321.612C822.893 321.612 822.43 321.526 822.039 321.354C821.651 321.182 821.345 320.941 821.122 320.633C820.901 320.325 820.776 319.967 820.747 319.559H821.679C821.703 319.84 821.798 320.073 821.963 320.258C822.13 320.44 822.342 320.576 822.596 320.666C822.854 320.753 823.131 320.797 823.427 320.797C823.771 320.797 824.081 320.741 824.355 320.629C824.63 320.515 824.847 320.357 825.007 320.156C825.167 319.952 825.247 319.714 825.247 319.442C825.247 319.195 825.178 318.993 825.04 318.838C824.901 318.682 824.719 318.556 824.494 318.459C824.268 318.362 824.024 318.277 823.762 318.204L822.844 317.942C822.261 317.775 821.8 317.535 821.46 317.225C821.121 316.914 820.951 316.507 820.951 316.005C820.951 315.587 821.063 315.223 821.289 314.912C821.517 314.599 821.823 314.357 822.207 314.184C822.593 314.009 823.024 313.922 823.5 313.922C823.98 313.922 824.407 314.008 824.781 314.181C825.155 314.35 825.451 314.583 825.67 314.88C825.891 315.176 826.007 315.512 826.019 315.888H825.145ZM829.835 321.598C829.296 321.598 828.831 321.479 828.44 321.241C828.051 321.001 827.752 320.666 827.54 320.236C827.332 319.804 827.227 319.301 827.227 318.729C827.227 318.156 827.332 317.651 827.54 317.214C827.752 316.774 828.045 316.432 828.422 316.187C828.8 315.939 829.242 315.815 829.747 315.815C830.038 315.815 830.326 315.864 830.61 315.961C830.894 316.058 831.153 316.216 831.386 316.434C831.619 316.651 831.804 316.937 831.943 317.294C832.081 317.651 832.15 318.09 832.15 318.612V318.976H827.839V318.233H831.276C831.276 317.918 831.213 317.636 831.087 317.389C830.963 317.141 830.786 316.945 830.556 316.802C830.327 316.659 830.058 316.587 829.747 316.587C829.405 316.587 829.109 316.672 828.859 316.842C828.611 317.01 828.42 317.228 828.287 317.498C828.153 317.767 828.087 318.056 828.087 318.364V318.86C828.087 319.282 828.16 319.64 828.305 319.934C828.453 320.225 828.658 320.447 828.921 320.6C829.183 320.751 829.487 320.826 829.835 320.826C830.06 320.826 830.264 320.794 830.446 320.731C830.631 320.666 830.79 320.569 830.923 320.44C831.057 320.309 831.16 320.146 831.233 319.952L832.063 320.185C831.976 320.467 831.829 320.714 831.622 320.928C831.416 321.139 831.161 321.304 830.858 321.423C830.554 321.54 830.213 321.598 829.835 321.598ZM833.458 323.579V315.888H834.288V316.777H834.39C834.453 316.68 834.54 316.556 834.652 316.405C834.766 316.252 834.929 316.116 835.14 315.998C835.354 315.876 835.642 315.815 836.007 315.815C836.478 315.815 836.893 315.933 837.252 316.169C837.611 316.404 837.892 316.738 838.093 317.17C838.295 317.602 838.395 318.112 838.395 318.699C838.395 319.292 838.295 319.805 838.093 320.24C837.892 320.672 837.612 321.007 837.256 321.245C836.899 321.48 836.487 321.598 836.021 321.598C835.662 321.598 835.374 321.538 835.158 321.419C834.942 321.298 834.776 321.161 834.659 321.008C834.543 320.853 834.453 320.724 834.39 320.622H834.317V323.579H833.458ZM834.302 318.685C834.302 319.107 834.364 319.48 834.488 319.803C834.612 320.123 834.793 320.374 835.031 320.556C835.269 320.736 835.56 320.826 835.905 320.826C836.264 320.826 836.564 320.731 836.804 320.542C837.047 320.35 837.229 320.093 837.35 319.77C837.474 319.445 837.536 319.083 837.536 318.685C837.536 318.292 837.475 317.937 837.354 317.622C837.235 317.304 837.054 317.052 836.811 316.868C836.571 316.681 836.269 316.587 835.905 316.587C835.555 316.587 835.261 316.676 835.023 316.853C834.786 317.028 834.606 317.273 834.484 317.589C834.363 317.902 834.302 318.267 834.302 318.685ZM845.197 314.024V321.481H844.294V314.971H844.251L842.43 316.18V315.262L844.294 314.024H845.197ZM849.731 321.583C849.231 321.583 848.789 321.495 848.405 321.318C848.024 321.138 847.727 320.891 847.513 320.578C847.3 320.263 847.194 319.903 847.196 319.5C847.194 319.185 847.256 318.894 847.382 318.627C847.508 318.357 847.681 318.133 847.899 317.953C848.12 317.771 848.366 317.656 848.638 317.607V317.563C848.281 317.471 847.997 317.271 847.786 316.962C847.575 316.652 847.471 316.299 847.473 315.903C847.471 315.524 847.567 315.186 847.761 314.887C847.955 314.588 848.222 314.353 848.562 314.181C848.904 314.008 849.294 313.922 849.731 313.922C850.163 313.922 850.549 314.008 850.889 314.181C851.229 314.353 851.496 314.588 851.69 314.887C851.886 315.186 851.986 315.524 851.988 315.903C851.986 316.299 851.878 316.652 851.664 316.962C851.453 317.271 851.173 317.471 850.823 317.563V317.607C851.093 317.656 851.335 317.771 851.551 317.953C851.767 318.133 851.94 318.357 852.068 318.627C852.197 318.894 852.263 319.185 852.265 319.5C852.263 319.903 852.153 320.263 851.937 320.578C851.724 320.891 851.426 321.138 851.045 321.318C850.667 321.495 850.228 321.583 849.731 321.583ZM849.731 320.782C850.068 320.782 850.359 320.728 850.605 320.618C850.85 320.509 851.039 320.355 851.173 320.156C851.306 319.957 851.374 319.724 851.377 319.457C851.374 319.175 851.301 318.926 851.158 318.71C851.015 318.494 850.819 318.324 850.572 318.201C850.327 318.077 850.046 318.015 849.731 318.015C849.413 318.015 849.129 318.077 848.879 318.201C848.631 318.324 848.436 318.494 848.292 318.71C848.152 318.926 848.082 319.175 848.085 319.457C848.082 319.724 848.147 319.957 848.278 320.156C848.411 320.355 848.602 320.509 848.85 320.618C849.097 320.728 849.391 320.782 849.731 320.782ZM849.731 317.243C849.998 317.243 850.234 317.189 850.441 317.083C850.65 316.976 850.813 316.827 850.932 316.635C851.051 316.443 851.112 316.218 851.114 315.961C851.112 315.709 851.053 315.489 850.936 315.302C850.819 315.113 850.658 314.967 850.452 314.865C850.245 314.761 850.005 314.709 849.731 314.709C849.452 314.709 849.208 314.761 848.999 314.865C848.79 314.967 848.629 315.113 848.515 315.302C848.4 315.489 848.345 315.709 848.347 315.961C848.345 316.218 848.402 316.443 848.518 316.635C848.637 316.827 848.801 316.976 849.01 317.083C849.219 317.189 849.459 317.243 849.731 317.243Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M872.533 315.888C872.489 315.519 872.312 315.233 872.001 315.029C871.69 314.825 871.309 314.723 870.858 314.723C870.527 314.723 870.238 314.776 869.991 314.883C869.746 314.99 869.554 315.137 869.416 315.324C869.28 315.511 869.212 315.723 869.212 315.961C869.212 316.16 869.259 316.331 869.354 316.475C869.451 316.615 869.575 316.733 869.725 316.828C869.876 316.92 870.033 316.996 870.198 317.057C870.363 317.115 870.515 317.163 870.654 317.199L871.411 317.403C871.605 317.454 871.821 317.524 872.059 317.614C872.299 317.704 872.529 317.827 872.747 317.982C872.968 318.135 873.15 318.332 873.294 318.572C873.437 318.812 873.508 319.107 873.508 319.457C873.508 319.86 873.403 320.224 873.192 320.549C872.983 320.874 872.677 321.133 872.274 321.325C871.873 321.517 871.387 321.612 870.814 321.612C870.28 321.612 869.817 321.526 869.426 321.354C869.038 321.182 868.732 320.941 868.509 320.633C868.288 320.325 868.163 319.967 868.134 319.559H869.066C869.09 319.84 869.185 320.073 869.35 320.258C869.517 320.44 869.729 320.576 869.984 320.666C870.241 320.753 870.518 320.797 870.814 320.797C871.159 320.797 871.468 320.741 871.742 320.629C872.017 320.515 872.234 320.357 872.394 320.156C872.554 319.952 872.634 319.714 872.634 319.442C872.634 319.195 872.565 318.993 872.427 318.838C872.289 318.682 872.106 318.556 871.881 318.459C871.655 318.362 871.411 318.277 871.149 318.204L870.231 317.942C869.649 317.774 869.187 317.535 868.847 317.225C868.508 316.914 868.338 316.507 868.338 316.005C868.338 315.587 868.451 315.223 868.676 314.912C868.905 314.599 869.21 314.357 869.594 314.184C869.98 314.009 870.411 313.922 870.887 313.922C871.367 313.922 871.795 314.008 872.168 314.181C872.542 314.35 872.838 314.583 873.057 314.88C873.278 315.176 873.394 315.512 873.406 315.888H872.533ZM877.222 321.598C876.683 321.598 876.218 321.479 875.827 321.241C875.439 321.001 875.139 320.666 874.928 320.236C874.719 319.804 874.614 319.301 874.614 318.729C874.614 318.156 874.719 317.651 874.928 317.214C875.139 316.774 875.433 316.432 875.809 316.187C876.187 315.939 876.629 315.815 877.134 315.815C877.426 315.815 877.713 315.864 877.997 315.961C878.281 316.058 878.54 316.216 878.773 316.434C879.006 316.651 879.192 316.937 879.33 317.294C879.468 317.651 879.538 318.09 879.538 318.612V318.976H875.226V318.233H878.664C878.664 317.918 878.6 317.636 878.474 317.389C878.35 317.141 878.173 316.945 877.943 316.802C877.714 316.659 877.445 316.587 877.134 316.587C876.792 316.587 876.496 316.672 876.246 316.842C875.998 317.01 875.808 317.228 875.674 317.498C875.541 317.767 875.474 318.056 875.474 318.364V318.86C875.474 319.282 875.547 319.64 875.692 319.934C875.84 320.225 876.045 320.447 876.308 320.6C876.57 320.751 876.874 320.826 877.222 320.826C877.447 320.826 877.651 320.794 877.833 320.731C878.018 320.666 878.177 320.569 878.31 320.44C878.444 320.309 878.547 320.146 878.62 319.952L879.45 320.185C879.363 320.467 879.216 320.714 879.01 320.928C878.803 321.139 878.548 321.304 878.245 321.423C877.941 321.54 877.6 321.598 877.222 321.598ZM880.845 323.579V315.888H881.675V316.777H881.777C881.84 316.68 881.927 316.556 882.039 316.405C882.153 316.252 882.316 316.116 882.527 315.998C882.741 315.876 883.03 315.815 883.394 315.815C883.865 315.815 884.28 315.933 884.639 316.169C884.998 316.404 885.279 316.738 885.48 317.17C885.682 317.602 885.782 318.112 885.782 318.699C885.782 319.292 885.682 319.805 885.48 320.24C885.279 320.672 884.999 321.007 884.643 321.245C884.286 321.48 883.874 321.598 883.408 321.598C883.049 321.598 882.761 321.538 882.545 321.419C882.329 321.298 882.163 321.161 882.046 321.008C881.93 320.853 881.84 320.724 881.777 320.622H881.704V323.579H880.845ZM881.69 318.685C881.69 319.107 881.751 319.48 881.875 319.803C881.999 320.123 882.18 320.374 882.418 320.556C882.656 320.736 882.947 320.826 883.292 320.826C883.651 320.826 883.951 320.731 884.191 320.542C884.434 320.35 884.616 320.093 884.737 319.77C884.861 319.445 884.923 319.083 884.923 318.685C884.923 318.292 884.862 317.937 884.741 317.622C884.622 317.304 884.441 317.052 884.198 316.868C883.958 316.681 883.656 316.587 883.292 316.587C882.942 316.587 882.648 316.676 882.411 316.853C882.173 317.028 881.993 317.273 881.872 317.589C881.75 317.902 881.69 318.267 881.69 318.685ZM889.963 321.481V320.826L892.424 318.131C892.713 317.816 892.951 317.541 893.138 317.308C893.325 317.073 893.463 316.852 893.553 316.646C893.645 316.437 893.691 316.218 893.691 315.99C893.691 315.728 893.628 315.501 893.502 315.309C893.378 315.118 893.208 314.969 892.992 314.865C892.776 314.761 892.533 314.708 892.264 314.708C891.977 314.708 891.727 314.768 891.514 314.887C891.303 315.003 891.139 315.167 891.022 315.379C890.908 315.59 890.851 315.837 890.851 316.121H889.992C889.992 315.684 890.092 315.301 890.294 314.971C890.495 314.641 890.77 314.383 891.117 314.199C891.466 314.014 891.859 313.922 892.293 313.922C892.73 313.922 893.117 314.014 893.455 314.199C893.792 314.383 894.057 314.632 894.248 314.945C894.44 315.258 894.536 315.607 894.536 315.99C894.536 316.265 894.486 316.533 894.387 316.795C894.29 317.055 894.12 317.345 893.877 317.665C893.637 317.983 893.303 318.372 892.876 318.83L891.201 320.622V320.68H894.667V321.481H889.963ZM898.793 314.024V321.481H897.89V314.971H897.846L896.025 316.18V315.262L897.89 314.024H898.793Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M919.186 315.888C919.142 315.519 918.965 315.233 918.654 315.029C918.344 314.825 917.962 314.723 917.511 314.723C917.181 314.723 916.892 314.776 916.644 314.883C916.399 314.99 916.207 315.137 916.069 315.324C915.933 315.511 915.865 315.723 915.865 315.961C915.865 316.16 915.912 316.331 916.007 316.475C916.104 316.615 916.228 316.733 916.378 316.828C916.529 316.92 916.687 316.996 916.852 317.057C917.017 317.115 917.169 317.163 917.307 317.199L918.064 317.403C918.259 317.454 918.475 317.524 918.713 317.614C918.953 317.704 919.182 317.827 919.401 317.982C919.622 318.135 919.804 318.332 919.947 318.572C920.09 318.812 920.162 319.107 920.162 319.457C920.162 319.86 920.056 320.224 919.845 320.549C919.636 320.874 919.33 321.133 918.927 321.325C918.527 321.517 918.04 321.612 917.467 321.612C916.933 321.612 916.471 321.526 916.08 321.354C915.691 321.182 915.386 320.941 915.162 320.633C914.941 320.325 914.816 319.967 914.787 319.559H915.719C915.744 319.84 915.838 320.073 916.003 320.258C916.171 320.44 916.382 320.576 916.637 320.666C916.894 320.753 917.171 320.797 917.467 320.797C917.812 320.797 918.121 320.741 918.396 320.629C918.67 320.515 918.887 320.357 919.048 320.156C919.208 319.952 919.288 319.714 919.288 319.442C919.288 319.195 919.219 318.993 919.08 318.838C918.942 318.682 918.76 318.556 918.534 318.459C918.308 318.362 918.064 318.277 917.802 318.204L916.885 317.942C916.302 317.774 915.841 317.535 915.501 317.225C915.161 316.914 914.991 316.507 914.991 316.005C914.991 315.587 915.104 315.223 915.33 314.912C915.558 314.599 915.864 314.357 916.247 314.184C916.633 314.009 917.064 313.922 917.54 313.922C918.021 313.922 918.448 314.008 918.822 314.181C919.196 314.35 919.492 314.583 919.71 314.88C919.931 315.176 920.048 315.512 920.06 315.888H919.186ZM923.875 321.598C923.336 321.598 922.871 321.479 922.48 321.241C922.092 321.001 921.792 320.666 921.581 320.236C921.372 319.804 921.268 319.301 921.268 318.729C921.268 318.156 921.372 317.651 921.581 317.214C921.792 316.774 922.086 316.432 922.462 316.187C922.841 315.939 923.283 315.815 923.788 315.815C924.079 315.815 924.367 315.864 924.651 315.961C924.935 316.058 925.193 316.216 925.426 316.434C925.659 316.651 925.845 316.937 925.983 317.294C926.122 317.651 926.191 318.09 926.191 318.612V318.976H921.88V318.233H925.317C925.317 317.918 925.254 317.636 925.128 317.389C925.004 317.141 924.827 316.945 924.596 316.802C924.368 316.659 924.098 316.587 923.788 316.587C923.445 316.587 923.149 316.672 922.899 316.842C922.652 317.01 922.461 317.228 922.327 317.498C922.194 317.767 922.127 318.056 922.127 318.364V318.86C922.127 319.282 922.2 319.64 922.346 319.934C922.494 320.225 922.699 320.447 922.961 320.6C923.223 320.751 923.528 320.826 923.875 320.826C924.101 320.826 924.305 320.794 924.487 320.731C924.671 320.666 924.83 320.569 924.964 320.44C925.097 320.309 925.2 320.146 925.273 319.952L926.103 320.185C926.016 320.467 925.869 320.714 925.663 320.928C925.457 321.139 925.202 321.304 924.898 321.423C924.595 321.54 924.254 321.598 923.875 321.598ZM927.498 323.579V315.888H928.328V316.777H928.43C928.493 316.68 928.581 316.556 928.692 316.405C928.807 316.252 928.969 316.116 929.18 315.998C929.394 315.876 929.683 315.815 930.047 315.815C930.518 315.815 930.933 315.933 931.292 316.169C931.652 316.404 931.932 316.738 932.134 317.17C932.335 317.602 932.436 318.112 932.436 318.699C932.436 319.292 932.335 319.805 932.134 320.24C931.932 320.672 931.653 321.007 931.296 321.245C930.939 321.48 930.528 321.598 930.062 321.598C929.702 321.598 929.415 321.538 929.199 321.419C928.983 321.298 928.816 321.161 928.7 321.008C928.583 320.853 928.493 320.724 928.43 320.622H928.357V323.579H927.498ZM928.343 318.685C928.343 319.107 928.405 319.48 928.529 319.803C928.652 320.123 928.833 320.374 929.071 320.556C929.309 320.736 929.6 320.826 929.945 320.826C930.304 320.826 930.604 320.731 930.844 320.542C931.087 320.35 931.269 320.093 931.391 319.77C931.514 319.445 931.576 319.083 931.576 318.685C931.576 318.292 931.516 317.937 931.394 317.622C931.275 317.304 931.095 317.052 930.852 316.868C930.611 316.681 930.309 316.587 929.945 316.587C929.596 316.587 929.302 316.676 929.064 316.853C928.826 317.028 928.646 317.273 928.525 317.589C928.404 317.902 928.343 318.267 928.343 318.685ZM936.616 321.481V320.826L939.078 318.131C939.366 317.816 939.604 317.541 939.791 317.308C939.978 317.073 940.117 316.852 940.206 316.646C940.299 316.437 940.345 316.218 940.345 315.99C940.345 315.728 940.282 315.501 940.155 315.309C940.032 315.118 939.862 314.969 939.646 314.865C939.43 314.761 939.187 314.708 938.917 314.708C938.631 314.708 938.381 314.768 938.167 314.887C937.956 315.003 937.792 315.167 937.676 315.379C937.562 315.59 937.504 315.837 937.504 316.121H936.645C936.645 315.684 936.746 315.301 936.947 314.971C937.149 314.641 937.423 314.383 937.77 314.199C938.12 314.014 938.512 313.922 938.946 313.922C939.383 313.922 939.771 314.014 940.108 314.199C940.445 314.383 940.71 314.632 940.902 314.945C941.094 315.258 941.189 315.607 941.189 315.99C941.189 316.265 941.14 316.533 941.04 316.795C940.943 317.055 940.773 317.345 940.53 317.665C940.29 317.983 939.956 318.372 939.529 318.83L937.854 320.622V320.68H941.321V321.481H936.616ZM942.489 319.952V319.209L945.767 314.024H946.306V315.175H945.941L943.465 319.093V319.151H947.879V319.952H942.489ZM946 321.481V319.726V319.38V314.024H946.859V321.481H946Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M36.3466 305.98C35.798 305.98 35.3307 305.831 34.9447 305.532C34.5588 305.231 34.2638 304.796 34.0599 304.225C33.856 303.652 33.754 302.96 33.754 302.15C33.754 301.344 33.856 300.655 34.0599 300.085C34.2662 299.512 34.5624 299.075 34.9484 298.774C35.3368 298.471 35.8029 298.319 36.3466 298.319C36.8904 298.319 37.3553 298.471 37.7413 298.774C38.1297 299.075 38.4258 299.512 38.6298 300.085C38.8361 300.655 38.9393 301.344 38.9393 302.15C38.9393 302.96 38.8373 303.652 38.6334 304.225C38.4295 304.796 38.1345 305.231 37.7486 305.532C37.3626 305.831 36.8953 305.98 36.3466 305.98ZM36.3466 305.179C36.8904 305.179 37.3128 304.917 37.6138 304.393C37.9148 303.868 38.0654 303.121 38.0654 302.15C38.0654 301.504 37.9962 300.954 37.8578 300.5C37.7219 300.046 37.5252 299.7 37.2679 299.462C37.013 299.224 36.7059 299.105 36.3466 299.105C35.8077 299.105 35.3866 299.371 35.0831 299.903C34.7797 300.432 34.6279 301.181 34.6279 302.15C34.6279 302.795 34.6959 303.344 34.8319 303.795C34.9678 304.247 35.1632 304.59 35.4181 304.826C35.6754 305.061 35.9849 305.179 36.3466 305.179ZM43.2215 305.878V300.285H44.0517V301.13H44.11C44.2119 300.853 44.3964 300.629 44.6634 300.456C44.9305 300.284 45.2315 300.198 45.5665 300.198C45.6296 300.198 45.7085 300.199 45.8032 300.201C45.8978 300.204 45.9695 300.207 46.018 300.212V301.086C45.9889 301.079 45.9221 301.068 45.8177 301.053C45.7158 301.036 45.6078 301.028 45.4937 301.028C45.2218 301.028 44.979 301.085 44.7654 301.199C44.5542 301.311 44.3867 301.466 44.2629 301.665C44.1415 301.862 44.0808 302.086 44.0808 302.339V305.878H43.2215ZM49.1386 305.995C48.6337 305.995 48.1907 305.875 47.8095 305.634C47.4308 305.394 47.1347 305.058 46.9211 304.626C46.7099 304.194 46.6043 303.689 46.6043 303.111C46.6043 302.528 46.7099 302.02 46.9211 301.585C47.1347 301.151 47.4308 300.813 47.8095 300.573C48.1907 300.332 48.6337 300.212 49.1386 300.212C49.6436 300.212 50.0854 300.332 50.4641 300.573C50.8452 300.813 51.1413 301.151 51.3525 301.585C51.5662 302.02 51.673 302.528 51.673 303.111C51.673 303.689 51.5662 304.194 51.3525 304.626C51.1413 305.058 50.8452 305.394 50.4641 305.634C50.0854 305.875 49.6436 305.995 49.1386 305.995ZM49.1386 305.223C49.5222 305.223 49.8378 305.124 50.0854 304.928C50.333 304.731 50.5163 304.473 50.6352 304.152C50.7542 303.832 50.8136 303.485 50.8136 303.111C50.8136 302.737 50.7542 302.389 50.6352 302.066C50.5163 301.743 50.333 301.482 50.0854 301.283C49.8378 301.084 49.5222 300.984 49.1386 300.984C48.7551 300.984 48.4395 301.084 48.1919 301.283C47.9443 301.482 47.761 301.743 47.642 302.066C47.5231 302.389 47.4636 302.737 47.4636 303.111C47.4636 303.485 47.5231 303.832 47.642 304.152C47.761 304.473 47.9443 304.731 48.1919 304.928C48.4395 305.124 48.7551 305.223 49.1386 305.223Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M12.7777 238.125V237.383L16.0549 232.197H16.5938V233.348H16.2297L13.7536 237.266V237.324H18.1669V238.125H12.7777ZM16.288 239.655V237.9V237.554V232.197H17.1473V239.655H16.288ZM20.4773 238.635L20.4191 239.028C20.3778 239.305 20.3147 239.601 20.2297 239.917C20.1472 240.232 20.061 240.53 19.9712 240.809C19.8814 241.088 19.8073 241.31 19.749 241.475H19.0936C19.1252 241.32 19.1664 241.115 19.2174 240.86C19.2684 240.605 19.3194 240.32 19.3704 240.004C19.4238 239.691 19.4675 239.371 19.5014 239.043L19.5451 238.635H20.4773ZM24.2352 239.757C23.8079 239.757 23.4231 239.672 23.0809 239.502C22.7386 239.332 22.4643 239.099 22.2579 238.803C22.0516 238.506 21.9387 238.169 21.9193 237.79H22.7932C22.8272 238.128 22.9801 238.407 23.252 238.628C23.5263 238.846 23.854 238.956 24.2352 238.956C24.541 238.956 24.8129 238.884 25.0508 238.741C25.2911 238.598 25.4793 238.401 25.6152 238.151C25.7536 237.898 25.8228 237.613 25.8228 237.295C25.8228 236.97 25.7512 236.68 25.6079 236.425C25.4671 236.168 25.2729 235.965 25.0253 235.817C24.7777 235.669 24.4949 235.593 24.1769 235.591C23.9487 235.589 23.7145 235.624 23.4741 235.697C23.2338 235.767 23.036 235.858 22.8806 235.97L22.0358 235.868L22.4873 232.197H26.3617V232.998H23.2447L22.9825 235.198H23.0262C23.1792 235.076 23.371 234.976 23.6016 234.896C23.8322 234.815 24.0725 234.775 24.3226 234.775C24.7789 234.775 25.1855 234.885 25.5424 235.103C25.9017 235.319 26.1833 235.615 26.3872 235.992C26.5935 236.368 26.6967 236.797 26.6967 237.281C26.6967 237.756 26.5899 238.181 26.3763 238.555C26.1651 238.926 25.8738 239.22 25.5023 239.436C25.1309 239.65 24.7085 239.757 24.2352 239.757ZM30.5756 239.757C30.027 239.757 29.5597 239.607 29.1737 239.309C28.7877 239.008 28.4928 238.572 28.2889 238.002C28.0849 237.429 27.983 236.737 27.983 235.926C27.983 235.12 28.0849 234.432 28.2889 233.861C28.4952 233.288 28.7914 232.852 29.1773 232.551C29.5658 232.247 30.0318 232.095 30.5756 232.095C31.1194 232.095 31.5843 232.247 31.9702 232.551C32.3587 232.852 32.6548 233.288 32.8587 233.861C33.0651 234.432 33.1682 235.12 33.1682 235.926C33.1682 236.737 33.0663 237.429 32.8624 238.002C32.6585 238.572 32.3635 239.008 31.9775 239.309C31.5915 239.607 31.1242 239.757 30.5756 239.757ZM30.5756 238.956C31.1194 238.956 31.5418 238.693 31.8428 238.169C32.1438 237.645 32.2943 236.897 32.2943 235.926C32.2943 235.28 32.2251 234.73 32.0868 234.276C31.9508 233.823 31.7542 233.477 31.4969 233.239C31.242 233.001 30.9349 232.882 30.5756 232.882C30.0367 232.882 29.6155 233.148 29.3121 233.679C29.0086 234.209 28.8569 234.957 28.8569 235.926C28.8569 236.572 28.9249 237.12 29.0608 237.572C29.1968 238.023 29.3922 238.367 29.6471 238.602C29.9044 238.838 30.2139 238.956 30.5756 238.956ZM36.9843 239.757C36.4357 239.757 35.9684 239.607 35.5824 239.309C35.1965 239.008 34.9015 238.572 34.6976 238.002C34.4937 237.429 34.3917 236.737 34.3917 235.926C34.3917 235.12 34.4937 234.432 34.6976 233.861C34.9039 233.288 35.2001 232.852 35.5861 232.551C35.9745 232.247 36.4406 232.095 36.9843 232.095C37.5281 232.095 37.993 232.247 38.379 232.551C38.7674 232.852 39.0635 233.288 39.2675 233.861C39.4738 234.432 39.577 235.12 39.577 235.926C39.577 236.737 39.475 237.429 39.2711 238.002C39.0672 238.572 38.7722 239.008 38.3863 239.309C38.0003 239.607 37.533 239.757 36.9843 239.757ZM36.9843 238.956C37.5281 238.956 37.9505 238.693 38.2515 238.169C38.5525 237.645 38.703 236.897 38.703 235.926C38.703 235.28 38.6339 234.73 38.4955 234.276C38.3596 233.823 38.1629 233.477 37.9056 233.239C37.6507 233.001 37.3436 232.882 36.9843 232.882C36.4454 232.882 36.0242 233.148 35.7208 233.679C35.4174 234.209 35.2656 234.957 35.2656 235.926C35.2656 236.572 35.3336 237.12 35.4696 237.572C35.6055 238.023 35.8009 238.367 36.0558 238.602C36.3131 238.838 36.6226 238.956 36.9843 238.956ZM43.8592 239.655V234.062H44.6894V234.906H44.7476C44.8496 234.63 45.0341 234.405 45.3011 234.233C45.5682 234.06 45.8692 233.974 46.2042 233.974C46.2673 233.974 46.3462 233.975 46.4409 233.978C46.5355 233.98 46.6072 233.984 46.6557 233.989V234.863C46.6266 234.855 46.5598 234.845 46.4554 234.83C46.3535 234.813 46.2454 234.804 46.1314 234.804C45.8595 234.804 45.6167 234.862 45.4031 234.976C45.1919 235.087 45.0244 235.243 44.9006 235.442C44.7792 235.638 44.7185 235.863 44.7185 236.115V239.655H43.8592ZM49.7763 239.771C49.2714 239.771 48.8284 239.651 48.4472 239.411C48.0685 239.17 47.7724 238.834 47.5588 238.402C47.3476 237.97 47.242 237.465 47.242 236.887C47.242 236.305 47.3476 235.796 47.5588 235.362C47.7724 234.927 48.0685 234.59 48.4472 234.349C48.8284 234.109 49.2714 233.989 49.7763 233.989C50.2812 233.989 50.7231 234.109 51.1018 234.349C51.4829 234.59 51.779 234.927 51.9902 235.362C52.2039 235.796 52.3107 236.305 52.3107 236.887C52.3107 237.465 52.2039 237.97 51.9902 238.402C51.779 238.834 51.4829 239.17 51.1018 239.411C50.7231 239.651 50.2812 239.771 49.7763 239.771ZM49.7763 238.999C50.1599 238.999 50.4755 238.901 50.7231 238.704C50.9707 238.508 51.154 238.249 51.2729 237.929C51.3919 237.608 51.4513 237.261 51.4513 236.887C51.4513 236.513 51.3919 236.165 51.2729 235.842C51.154 235.519 50.9707 235.258 50.7231 235.059C50.4755 234.86 50.1599 234.761 49.7763 234.761C49.3928 234.761 49.0772 234.86 48.8296 235.059C48.582 235.258 48.3987 235.519 48.2797 235.842C48.1608 236.165 48.1013 236.513 48.1013 236.887C48.1013 237.261 48.1608 237.608 48.2797 237.929C48.3987 238.249 48.582 238.508 48.8296 238.704C49.0772 238.901 49.3928 238.999 49.7763 238.999Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M15.3567 165.872C15.6626 165.874 15.9684 165.932 16.2743 166.047C16.5802 166.161 16.8594 166.35 17.1118 166.615C17.3643 166.877 17.567 167.235 17.7199 167.689C17.8729 168.143 17.9493 168.712 17.9493 169.397C17.9493 170.059 17.8862 170.648 17.76 171.163C17.6362 171.675 17.4565 172.107 17.2211 172.459C16.988 172.811 16.704 173.078 16.369 173.26C16.0364 173.442 15.6601 173.533 15.2402 173.533C14.8226 173.533 14.45 173.451 14.1223 173.285C13.797 173.118 13.53 172.886 13.3212 172.59C13.1149 172.291 12.9826 171.945 12.9243 171.552H13.8128C13.8929 171.895 14.0519 172.177 14.2898 172.401C14.5301 172.622 14.8469 172.732 15.2402 172.732C15.8155 172.732 16.2695 172.481 16.602 171.978C16.937 171.476 17.1045 170.766 17.1045 169.848H17.0463C16.9103 170.052 16.7489 170.228 16.562 170.376C16.3751 170.524 16.1675 170.638 15.9393 170.718C15.7111 170.798 15.4684 170.839 15.211 170.839C14.7838 170.839 14.3918 170.733 14.0349 170.522C13.6805 170.308 13.3965 170.016 13.1828 169.644C12.9716 169.27 12.866 168.843 12.866 168.362C12.866 167.906 12.968 167.489 13.1719 167.11C13.3782 166.729 13.6671 166.425 14.0385 166.199C14.4124 165.974 14.8518 165.864 15.3567 165.872ZM15.3567 166.673C15.0508 166.673 14.7753 166.749 14.5301 166.902C14.2874 167.053 14.0944 167.257 13.9512 167.514C13.8104 167.769 13.74 168.052 13.74 168.362C13.74 168.673 13.8079 168.956 13.9439 169.211C14.0822 169.463 14.2704 169.665 14.5083 169.815C14.7486 169.963 15.0217 170.037 15.3276 170.037C15.5582 170.037 15.773 169.993 15.9721 169.903C16.1711 169.81 16.3447 169.685 16.4928 169.528C16.6433 169.367 16.761 169.187 16.846 168.985C16.931 168.781 16.9734 168.569 16.9734 168.348C16.9734 168.057 16.9031 167.783 16.7623 167.529C16.6239 167.274 16.4321 167.067 16.1869 166.91C15.9442 166.752 15.6674 166.673 15.3567 166.673ZM20.4172 172.412L20.359 172.805C20.3177 173.082 20.2546 173.378 20.1696 173.693C20.0871 174.009 20.0009 174.306 19.9111 174.585C19.8213 174.865 19.7472 175.087 19.689 175.252H19.0335C19.0651 175.096 19.1064 174.891 19.1573 174.636C19.2083 174.382 19.2593 174.096 19.3103 173.781C19.3637 173.468 19.4074 173.147 19.4414 172.819L19.4851 172.412H20.4172ZM24.1669 173.533C23.6183 173.533 23.151 173.384 22.765 173.085C22.379 172.784 22.084 172.348 21.8801 171.778C21.6762 171.205 21.5743 170.513 21.5743 169.702C21.5743 168.896 21.6762 168.208 21.8801 167.638C22.0865 167.065 22.3826 166.628 22.7686 166.327C23.157 166.023 23.6231 165.872 24.1669 165.872C24.7107 165.872 25.1755 166.023 25.5615 166.327C25.9499 166.628 26.2461 167.065 26.45 167.638C26.6563 168.208 26.7595 168.896 26.7595 169.702C26.7595 170.513 26.6576 171.205 26.4536 171.778C26.2497 172.348 25.9548 172.784 25.5688 173.085C25.1828 173.384 24.7155 173.533 24.1669 173.533ZM24.1669 172.732C24.7107 172.732 25.1331 172.47 25.4341 171.945C25.7351 171.421 25.8856 170.673 25.8856 169.702C25.8856 169.057 25.8164 168.507 25.678 168.053C25.5421 167.599 25.3455 167.253 25.0881 167.015C24.8332 166.777 24.5262 166.658 24.1669 166.658C23.628 166.658 23.2068 166.924 22.9033 167.456C22.5999 167.985 22.4482 168.734 22.4482 169.702C22.4482 170.348 22.5162 170.897 22.6521 171.348C22.788 171.8 22.9835 172.143 23.2383 172.379C23.4957 172.614 23.8052 172.732 24.1669 172.732ZM30.5756 173.533C30.027 173.533 29.5597 173.384 29.1737 173.085C28.7877 172.784 28.4928 172.348 28.2889 171.778C28.0849 171.205 27.983 170.513 27.983 169.702C27.983 168.896 28.0849 168.208 28.2889 167.638C28.4952 167.065 28.7914 166.628 29.1773 166.327C29.5658 166.023 30.0318 165.872 30.5756 165.872C31.1194 165.872 31.5843 166.023 31.9702 166.327C32.3587 166.628 32.6548 167.065 32.8587 167.638C33.0651 168.208 33.1682 168.896 33.1682 169.702C33.1682 170.513 33.0663 171.205 32.8624 171.778C32.6585 172.348 32.3635 172.784 31.9775 173.085C31.5915 173.384 31.1242 173.533 30.5756 173.533ZM30.5756 172.732C31.1194 172.732 31.5418 172.47 31.8428 171.945C32.1438 171.421 32.2943 170.673 32.2943 169.702C32.2943 169.057 32.2251 168.507 32.0868 168.053C31.9508 167.599 31.7542 167.253 31.4969 167.015C31.242 166.777 30.9349 166.658 30.5756 166.658C30.0367 166.658 29.6155 166.924 29.3121 167.456C29.0086 167.985 28.8569 168.734 28.8569 169.702C28.8569 170.348 28.9249 170.897 29.0608 171.348C29.1968 171.8 29.3922 172.143 29.6471 172.379C29.9044 172.614 30.2139 172.732 30.5756 172.732ZM36.9843 173.533C36.4357 173.533 35.9684 173.384 35.5824 173.085C35.1965 172.784 34.9015 172.348 34.6976 171.778C34.4937 171.205 34.3917 170.513 34.3917 169.702C34.3917 168.896 34.4937 168.208 34.6976 167.638C34.9039 167.065 35.2001 166.628 35.5861 166.327C35.9745 166.023 36.4406 165.872 36.9843 165.872C37.5281 165.872 37.993 166.023 38.379 166.327C38.7674 166.628 39.0635 167.065 39.2675 167.638C39.4738 168.208 39.577 168.896 39.577 169.702C39.577 170.513 39.475 171.205 39.2711 171.778C39.0672 172.348 38.7722 172.784 38.3863 173.085C38.0003 173.384 37.533 173.533 36.9843 173.533ZM36.9843 172.732C37.5281 172.732 37.9505 172.47 38.2515 171.945C38.5525 171.421 38.703 170.673 38.703 169.702C38.703 169.057 38.6339 168.507 38.4955 168.053C38.3596 167.599 38.1629 167.253 37.9056 167.015C37.6507 166.777 37.3436 166.658 36.9843 166.658C36.4454 166.658 36.0242 166.924 35.7208 167.456C35.4174 167.985 35.2656 168.734 35.2656 169.702C35.2656 170.348 35.3336 170.897 35.4696 171.348C35.6055 171.8 35.8009 172.143 36.0558 172.379C36.3131 172.614 36.6226 172.732 36.9843 172.732ZM43.8592 173.431V167.838H44.6894V168.683H44.7476C44.8496 168.406 45.0341 168.182 45.3011 168.009C45.5682 167.837 45.8692 167.751 46.2042 167.751C46.2673 167.751 46.3462 167.752 46.4409 167.754C46.5355 167.757 46.6072 167.76 46.6557 167.765V168.639C46.6266 168.632 46.5598 168.621 46.4554 168.606C46.3535 168.589 46.2454 168.581 46.1314 168.581C45.8595 168.581 45.6167 168.638 45.4031 168.752C45.1919 168.864 45.0244 169.019 44.9006 169.218C44.7792 169.415 44.7185 169.639 44.7185 169.892V173.431H43.8592ZM49.7763 173.548C49.2714 173.548 48.8284 173.428 48.4472 173.187C48.0685 172.947 47.7724 172.611 47.5588 172.179C47.3476 171.746 47.242 171.242 47.242 170.664C47.242 170.081 47.3476 169.573 47.5588 169.138C47.7724 168.703 48.0685 168.366 48.4472 168.126C48.8284 167.885 49.2714 167.765 49.7763 167.765C50.2812 167.765 50.7231 167.885 51.1018 168.126C51.4829 168.366 51.779 168.703 51.9902 169.138C52.2039 169.573 52.3107 170.081 52.3107 170.664C52.3107 171.242 52.2039 171.746 51.9902 172.179C51.779 172.611 51.4829 172.947 51.1018 173.187C50.7231 173.428 50.2812 173.548 49.7763 173.548ZM49.7763 172.776C50.1599 172.776 50.4755 172.677 50.7231 172.481C50.9707 172.284 51.154 172.026 51.2729 171.705C51.3919 171.385 51.4513 171.038 51.4513 170.664C51.4513 170.29 51.3919 169.942 51.2729 169.619C51.154 169.296 50.9707 169.035 50.7231 168.836C50.4755 168.637 50.1599 168.537 49.7763 168.537C49.3928 168.537 49.0772 168.637 48.8296 168.836C48.582 169.035 48.3987 169.296 48.2797 169.619C48.1608 169.942 48.1013 170.29 48.1013 170.664C48.1013 171.038 48.1608 171.385 48.2797 171.705C48.3987 172.026 48.582 172.284 48.8296 172.481C49.0772 172.677 49.3928 172.776 49.7763 172.776Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M10.6107 99.7502V107.208H9.70768V100.697H9.66398L7.84332 101.906V100.988L9.70768 99.7502H10.6107ZM15.2753 107.31C14.7946 107.31 14.3661 107.227 13.9899 107.062C13.616 106.897 13.3187 106.667 13.0978 106.374C12.8793 106.078 12.7603 105.734 12.7409 105.343H13.6585C13.6779 105.584 13.7605 105.791 13.9061 105.966C14.0518 106.138 14.2423 106.272 14.4778 106.366C14.7133 106.461 14.9742 106.508 15.2607 106.508C15.5811 106.508 15.8652 106.453 16.1128 106.341C16.3604 106.229 16.5546 106.074 16.6954 105.875C16.8362 105.676 16.9066 105.445 16.9066 105.183C16.9066 104.909 16.8386 104.667 16.7027 104.458C16.5667 104.247 16.3677 104.082 16.1055 103.963C15.8433 103.844 15.5229 103.785 15.1442 103.785H14.547V102.984H15.1442C15.4403 102.984 15.7001 102.93 15.9234 102.823C16.1492 102.717 16.3252 102.566 16.4514 102.372C16.5801 102.178 16.6444 101.95 16.6444 101.687C16.6444 101.435 16.5886 101.215 16.4769 101.028C16.3652 100.841 16.2074 100.696 16.0035 100.591C15.802 100.487 15.5641 100.435 15.2898 100.435C15.0325 100.435 14.7898 100.482 14.5616 100.577C14.3358 100.669 14.1513 100.804 14.0081 100.981C13.8649 101.156 13.7872 101.367 13.775 101.615H12.9011C12.9157 101.224 13.0334 100.881 13.2543 100.588C13.4752 100.292 13.7641 100.061 14.121 99.8958C14.4802 99.7308 14.8747 99.6482 15.3044 99.6482C15.7656 99.6482 16.1613 99.7417 16.4915 99.9286C16.8216 100.113 17.0753 100.357 17.2525 100.661C17.4297 100.964 17.5183 101.292 17.5183 101.644C17.5183 102.064 17.4079 102.422 17.187 102.718C16.9685 103.014 16.6711 103.219 16.2948 103.333V103.392C16.7658 103.469 17.1336 103.669 17.3982 103.992C17.6628 104.313 17.7951 104.71 17.7951 105.183C17.7951 105.588 17.6846 105.953 17.4637 106.275C17.2452 106.596 16.9466 106.848 16.5679 107.033C16.1892 107.217 15.7583 107.31 15.2753 107.31ZM20.3504 106.188L20.2921 106.581C20.2508 106.858 20.1877 107.154 20.1027 107.47C20.0202 107.785 19.934 108.083 19.8442 108.362C19.7544 108.641 19.6804 108.863 19.6221 109.028H18.9667C18.9982 108.873 19.0395 108.668 19.0905 108.413C19.1414 108.158 19.1924 107.873 19.2434 107.557C19.2968 107.244 19.3405 106.924 19.3745 106.596L19.4182 106.188H20.3504ZM24.1082 107.31C23.681 107.31 23.2962 107.225 22.9539 107.055C22.6116 106.885 22.3373 106.652 22.131 106.356C21.9246 106.059 21.8117 105.722 21.7923 105.343H22.6662C22.7002 105.681 22.8532 105.96 23.125 106.181C23.3994 106.399 23.7271 106.508 24.1082 106.508C24.4141 106.508 24.686 106.437 24.9239 106.294C25.1642 106.15 25.3523 105.954 25.4883 105.704C25.6266 105.451 25.6958 105.166 25.6958 104.848C25.6958 104.523 25.6242 104.233 25.481 103.978C25.3402 103.72 25.146 103.518 24.8984 103.37C24.6508 103.222 24.368 103.146 24.0499 103.144C23.8218 103.141 23.5875 103.177 23.3472 103.249C23.1068 103.32 22.909 103.411 22.7536 103.523L21.9088 103.421L22.3604 99.7502H26.2347V100.551H23.1178L22.8556 102.751H22.8993C23.0522 102.629 23.244 102.529 23.4746 102.448C23.7052 102.368 23.9456 102.328 24.1956 102.328C24.652 102.328 25.0586 102.437 25.4154 102.656C25.7747 102.872 26.0563 103.168 26.2602 103.544C26.4666 103.921 26.5697 104.35 26.5697 104.833C26.5697 105.309 26.4629 105.734 26.2493 106.108C26.0381 106.479 25.7468 106.773 25.3754 106.989C25.004 107.203 24.5816 107.31 24.1082 107.31ZM30.4487 107.31C29.9 107.31 29.4327 107.16 29.0468 106.862C28.6608 106.561 28.3658 106.125 28.1619 105.554C27.958 104.982 27.856 104.29 27.856 103.479C27.856 102.673 27.958 101.985 28.1619 101.414C28.3683 100.841 28.6644 100.404 29.0504 100.103C29.4388 99.7999 29.9049 99.6482 30.4487 99.6482C30.9924 99.6482 31.4573 99.7999 31.8433 100.103C32.2317 100.404 32.5279 100.841 32.7318 101.414C32.9381 101.985 33.0413 102.673 33.0413 103.479C33.0413 104.29 32.9393 104.982 32.7354 105.554C32.5315 106.125 32.2366 106.561 31.8506 106.862C31.4646 107.16 30.9973 107.31 30.4487 107.31ZM30.4487 106.508C30.9924 106.508 31.4148 106.246 31.7158 105.722C32.0169 105.198 32.1674 104.45 32.1674 103.479C32.1674 102.833 32.0982 102.283 31.9598 101.829C31.8239 101.375 31.6272 101.029 31.3699 100.792C31.115 100.554 30.8079 100.435 30.4487 100.435C29.9097 100.435 29.4886 100.701 29.1851 101.232C28.8817 101.761 28.73 102.51 28.73 103.479C28.73 104.125 28.7979 104.673 28.9339 105.125C29.0698 105.576 29.2652 105.92 29.5201 106.155C29.7774 106.391 30.087 106.508 30.4487 106.508ZM36.8574 107.31C36.3088 107.31 35.8415 107.16 35.4555 106.862C35.0695 106.561 34.7746 106.125 34.5706 105.554C34.3667 104.982 34.2648 104.29 34.2648 103.479C34.2648 102.673 34.3667 101.985 34.5706 101.414C34.777 100.841 35.0731 100.404 35.4591 100.103C35.8475 99.7999 36.3136 99.6482 36.8574 99.6482C37.4012 99.6482 37.866 99.7999 38.252 100.103C38.6404 100.404 38.9366 100.841 39.1405 101.414C39.3468 101.985 39.45 102.673 39.45 103.479C39.45 104.29 39.3481 104.982 39.1441 105.554C38.9402 106.125 38.6453 106.561 38.2593 106.862C37.8733 107.16 37.406 107.31 36.8574 107.31ZM36.8574 106.508C37.4012 106.508 37.8236 106.246 38.1246 105.722C38.4256 105.198 38.5761 104.45 38.5761 103.479C38.5761 102.833 38.5069 102.283 38.3685 101.829C38.2326 101.375 38.036 101.029 37.7786 100.792C37.5238 100.554 37.2167 100.435 36.8574 100.435C36.3185 100.435 35.8973 100.701 35.5939 101.232C35.2904 101.761 35.1387 102.51 35.1387 103.479C35.1387 104.125 35.2067 104.673 35.3426 105.125C35.4785 105.576 35.674 105.92 35.9289 106.155C36.1862 106.391 36.4957 106.508 36.8574 106.508ZM43.7322 107.208V101.615H44.5624V102.459H44.6207C44.7226 102.183 44.9071 101.958 45.1742 101.786C45.4412 101.613 45.7422 101.527 46.0772 101.527C46.1403 101.527 46.2192 101.528 46.3139 101.531C46.4086 101.533 46.4802 101.537 46.5287 101.542V102.416C46.4996 102.408 46.4329 102.397 46.3285 102.383C46.2265 102.366 46.1185 102.357 46.0044 102.357C45.7325 102.357 45.4898 102.414 45.2761 102.529C45.0649 102.64 44.8974 102.796 44.7736 102.995C44.6522 103.191 44.5916 103.416 44.5916 103.668V107.208H43.7322ZM49.6494 107.324C49.1444 107.324 48.7014 107.204 48.3203 106.964C47.9416 106.723 47.6454 106.387 47.4318 105.955C47.2206 105.523 47.115 105.018 47.115 104.44C47.115 103.858 47.2206 103.349 47.4318 102.914C47.6454 102.48 47.9416 102.143 48.3203 101.902C48.7014 101.662 49.1444 101.542 49.6494 101.542C50.1543 101.542 50.5961 101.662 50.9748 101.902C51.3559 102.143 51.6521 102.48 51.8633 102.914C52.0769 103.349 52.1837 103.858 52.1837 104.44C52.1837 105.018 52.0769 105.523 51.8633 105.955C51.6521 106.387 51.3559 106.723 50.9748 106.964C50.5961 107.204 50.1543 107.324 49.6494 107.324ZM49.6494 106.552C50.0329 106.552 50.3485 106.454 50.5961 106.257C50.8437 106.061 51.027 105.802 51.1459 105.482C51.2649 105.161 51.3244 104.814 51.3244 104.44C51.3244 104.066 51.2649 103.718 51.1459 103.395C51.027 103.072 50.8437 102.811 50.5961 102.612C50.3485 102.413 50.0329 102.314 49.6494 102.314C49.2658 102.314 48.9502 102.413 48.7026 102.612C48.455 102.811 48.2717 103.072 48.1528 103.395C48.0338 103.718 47.9744 104.066 47.9744 104.44C47.9744 104.814 48.0338 105.161 48.1528 105.482C48.2717 105.802 48.455 106.061 48.7026 106.257C48.9502 106.454 49.2658 106.552 49.6494 106.552Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M11.6154 33.5266V40.9841H10.7124V34.4734H10.6687L8.84802 35.6823V34.7647L10.7124 33.5266H11.6154ZM16.1489 41.086C15.6488 41.086 15.207 40.9974 14.8234 40.8202C14.4423 40.6406 14.1449 40.3942 13.9313 40.081C13.7177 39.7654 13.6121 39.4062 13.6145 39.0032C13.6121 38.6876 13.674 38.3963 13.8002 38.1293C13.9265 37.8598 14.0988 37.6353 14.3173 37.4556C14.5382 37.2736 14.7846 37.1583 15.0565 37.1097V37.066C14.6996 36.9738 14.4156 36.7735 14.2044 36.4652C13.9932 36.1545 13.8888 35.8013 13.8913 35.4056C13.8888 35.0269 13.9847 34.6882 14.1789 34.3896C14.3731 34.091 14.6402 33.8556 14.98 33.6832C15.3223 33.5109 15.7119 33.4247 16.1489 33.4247C16.581 33.4247 16.967 33.5109 17.3068 33.6832C17.6467 33.8556 17.9137 34.091 18.1079 34.3896C18.3045 34.6882 18.4041 35.0269 18.4065 35.4056C18.4041 35.8013 18.296 36.1545 18.0824 36.4652C17.8712 36.7735 17.5908 36.9738 17.2413 37.066V37.1097C17.5107 37.1583 17.7535 37.2736 17.9695 37.4556C18.1856 37.6353 18.3579 37.8598 18.4866 38.1293C18.6153 38.3963 18.6808 38.6876 18.6832 39.0032C18.6808 39.4062 18.5716 39.7654 18.3555 40.081C18.1419 40.3942 17.8445 40.6406 17.4634 40.8202C17.0847 40.9974 16.6465 41.086 16.1489 41.086ZM16.1489 40.2849C16.4863 40.2849 16.7776 40.2303 17.0228 40.1211C17.268 40.0118 17.4573 39.8577 17.5908 39.6586C17.7244 39.4596 17.7923 39.2265 17.7948 38.9595C17.7923 38.6779 17.7195 38.4291 17.5763 38.213C17.433 37.997 17.2376 37.827 16.99 37.7032C16.7448 37.5794 16.4645 37.5175 16.1489 37.5175C15.8309 37.5175 15.5468 37.5794 15.2968 37.7032C15.0492 37.827 14.8538 37.997 14.7105 38.213C14.5698 38.4291 14.5006 38.6779 14.503 38.9595C14.5006 39.2265 14.5649 39.4596 14.696 39.6586C14.8295 39.8577 15.0201 40.0118 15.2677 40.1211C15.5153 40.2303 15.809 40.2849 16.1489 40.2849ZM16.1489 36.7456C16.4159 36.7456 16.6526 36.6922 16.8589 36.5854C17.0677 36.4785 17.2316 36.3292 17.3505 36.1375C17.4695 35.9457 17.5301 35.7211 17.5326 35.4638C17.5301 35.2114 17.4707 34.9917 17.3542 34.8047C17.2376 34.6154 17.0762 34.4697 16.8699 34.3678C16.6635 34.2634 16.4232 34.2112 16.1489 34.2112C15.8697 34.2112 15.6257 34.2634 15.417 34.3678C15.2082 34.4697 15.0468 34.6154 14.9327 34.8047C14.8186 34.9917 14.7627 35.2114 14.7652 35.4638C14.7627 35.7211 14.8198 35.9457 14.9363 36.1375C15.0553 36.3292 15.2191 36.4785 15.4279 36.5854C15.6367 36.6922 15.877 36.7456 16.1489 36.7456ZM21.1448 39.9645L21.0865 40.3578C21.0452 40.6345 20.9821 40.9307 20.8972 41.2462C20.8146 41.5618 20.7284 41.8592 20.6386 42.1384C20.5488 42.4175 20.4748 42.6397 20.4165 42.8047H19.7611C19.7926 42.6494 19.8339 42.4442 19.8849 42.1893C19.9358 41.9345 19.9868 41.6492 20.0378 41.3336C20.0912 41.0205 20.1349 40.7 20.1689 40.3723L20.2126 39.9645H21.1448ZM24.8944 41.086C24.3458 41.086 23.8785 40.9367 23.4925 40.6381C23.1065 40.3371 22.8116 39.9014 22.6077 39.3309C22.4038 38.758 22.3018 38.0662 22.3018 37.2554C22.3018 36.4494 22.4038 35.7612 22.6077 35.1907C22.814 34.6178 23.1102 34.1809 23.4962 33.8798C23.8846 33.5764 24.3507 33.4247 24.8944 33.4247C25.4382 33.4247 25.9031 33.5764 26.289 33.8798C26.6775 34.1809 26.9736 34.6178 27.1775 35.1907C27.3839 35.7612 27.487 36.4494 27.487 37.2554C27.487 38.0662 27.3851 38.758 27.1812 39.3309C26.9773 39.9014 26.6823 40.3371 26.2963 40.6381C25.9104 40.9367 25.443 41.086 24.8944 41.086ZM24.8944 40.2849C25.4382 40.2849 25.8606 40.0228 26.1616 39.4984C26.4626 38.9741 26.6131 38.2264 26.6131 37.2554C26.6131 36.6096 26.5439 36.0598 26.4056 35.6058C26.2696 35.1519 26.073 34.806 25.8157 34.5681C25.5608 34.3302 25.2537 34.2112 24.8944 34.2112C24.3555 34.2112 23.9343 34.477 23.6309 35.0087C23.3274 35.5379 23.1757 36.2868 23.1757 37.2554C23.1757 37.9011 23.2437 38.4497 23.3796 38.9012C23.5156 39.3528 23.711 39.6963 23.9659 39.9317C24.2232 40.1672 24.5327 40.2849 24.8944 40.2849ZM31.3032 41.086C30.7545 41.086 30.2872 40.9367 29.9012 40.6381C29.5153 40.3371 29.2203 39.9014 29.0164 39.3309C28.8125 38.758 28.7105 38.0662 28.7105 37.2554C28.7105 36.4494 28.8125 35.7612 29.0164 35.1907C29.2227 34.6178 29.5189 34.1809 29.9049 33.8798C30.2933 33.5764 30.7594 33.4247 31.3032 33.4247C31.8469 33.4247 32.3118 33.5764 32.6978 33.8798C33.0862 34.1809 33.3823 34.6178 33.5863 35.1907C33.7926 35.7612 33.8958 36.4494 33.8958 37.2554C33.8958 38.0662 33.7938 38.758 33.5899 39.3309C33.386 39.9014 33.091 40.3371 32.7051 40.6381C32.3191 40.9367 31.8518 41.086 31.3032 41.086ZM31.3032 40.2849C31.8469 40.2849 32.2693 40.0228 32.5703 39.4984C32.8713 38.9741 33.0219 38.2264 33.0219 37.2554C33.0219 36.6096 32.9527 36.0598 32.8143 35.6058C32.6784 35.1519 32.4817 34.806 32.2244 34.5681C31.9695 34.3302 31.6624 34.2112 31.3032 34.2112C30.7642 34.2112 30.3431 34.477 30.0396 35.0087C29.7362 35.5379 29.5844 36.2868 29.5844 37.2554C29.5844 37.9011 29.6524 38.4497 29.7884 38.9012C29.9243 39.3528 30.1197 39.6963 30.3746 39.9317C30.6319 40.1672 30.9414 40.2849 31.3032 40.2849ZM37.7119 41.086C37.1633 41.086 36.696 40.9367 36.31 40.6381C35.924 40.3371 35.629 39.9014 35.4251 39.3309C35.2212 38.758 35.1193 38.0662 35.1193 37.2554C35.1193 36.4494 35.2212 35.7612 35.4251 35.1907C35.6315 34.6178 35.9276 34.1809 36.3136 33.8798C36.702 33.5764 37.1681 33.4247 37.7119 33.4247C38.2557 33.4247 38.7205 33.5764 39.1065 33.8798C39.4949 34.1809 39.7911 34.6178 39.995 35.1907C40.2013 35.7612 40.3045 36.4494 40.3045 37.2554C40.3045 38.0662 40.2025 38.758 39.9986 39.3309C39.7947 39.9014 39.4998 40.3371 39.1138 40.6381C38.7278 40.9367 38.2605 41.086 37.7119 41.086ZM37.7119 40.2849C38.2557 40.2849 38.678 40.0228 38.9791 39.4984C39.2801 38.9741 39.4306 38.2264 39.4306 37.2554C39.4306 36.6096 39.3614 36.0598 39.223 35.6058C39.0871 35.1519 38.8905 34.806 38.6331 34.5681C38.3782 34.3302 38.0712 34.2112 37.7119 34.2112C37.173 34.2112 36.7518 34.477 36.4483 35.0087C36.1449 35.5379 35.9932 36.2868 35.9932 37.2554C35.9932 37.9011 36.0611 38.4497 36.1971 38.9012C36.333 39.3528 36.5285 39.6963 36.7833 39.9317C37.0407 40.1672 37.3502 40.2849 37.7119 40.2849ZM44.5867 40.9841V35.391H45.4169V36.2358H45.4752C45.5771 35.959 45.7616 35.7345 46.0287 35.5621C46.2957 35.3898 46.5967 35.3036 46.9317 35.3036C46.9948 35.3036 47.0737 35.3048 47.1684 35.3072C47.2631 35.3097 47.3347 35.3133 47.3832 35.3182V36.1921C47.3541 36.1848 47.2873 36.1739 47.183 36.1593C47.081 36.1423 46.973 36.1338 46.8589 36.1338C46.587 36.1338 46.3442 36.1909 46.1306 36.305C45.9194 36.4166 45.7519 36.572 45.6281 36.7711C45.5067 36.9677 45.4461 37.1922 45.4461 37.4447V40.9841H44.5867ZM50.5039 41.1006C49.9989 41.1006 49.5559 40.9804 49.1748 40.7401C48.7961 40.4998 48.4999 40.1636 48.2863 39.7315C48.0751 39.2994 47.9695 38.7944 47.9695 38.2167C47.9695 37.6341 48.0751 37.1255 48.2863 36.6909C48.4999 36.2564 48.7961 35.919 49.1748 35.6787C49.5559 35.4383 49.9989 35.3182 50.5039 35.3182C51.0088 35.3182 51.4506 35.4383 51.8293 35.6787C52.2104 35.919 52.5066 36.2564 52.7178 36.6909C52.9314 37.1255 53.0382 37.6341 53.0382 38.2167C53.0382 38.7944 52.9314 39.2994 52.7178 39.7315C52.5066 40.1636 52.2104 40.4998 51.8293 40.7401C51.4506 40.9804 51.0088 41.1006 50.5039 41.1006ZM50.5039 40.3286C50.8874 40.3286 51.203 40.2303 51.4506 40.0337C51.6982 39.8371 51.8815 39.5785 52.0004 39.2581C52.1194 38.9376 52.1789 38.5905 52.1789 38.2167C52.1789 37.8428 52.1194 37.4945 52.0004 37.1716C51.8815 36.8487 51.6982 36.5878 51.4506 36.3887C51.203 36.1897 50.8874 36.0901 50.5039 36.0901C50.1203 36.0901 49.8047 36.1897 49.5571 36.3887C49.3095 36.5878 49.1262 36.8487 49.0073 37.1716C48.8883 37.4945 48.8288 37.8428 48.8288 38.2167C48.8288 38.5905 48.8883 38.9376 49.0073 39.2581C49.1262 39.5785 49.3095 39.8371 49.5571 40.0337C49.8047 40.2303 50.1203 40.3286 50.5039 40.3286Z"
+      fill="#4B5563"
+    />
+    <path
+      d="M79.3604 271.585L95.1378 259.182L110.916 230.537L126.694 244.954L142.471 217.451L158.248 215.652L174.027 241.723L189.804 213.882L205.582 210.076L221.36 210.89L237.137 208.593L252.915 208.096L268.692 206.246L284.47 204.858L300.248 197.644L316.025 185.725L331.804 151.093L347.581 150.573L363.359 147.802L379.136 139.967L394.914 203.882L410.692 200.938L426.469 185.725L442.247 169.736L458.025 167.129L473.802 161.847L489.58 155.92L505.358 154.82L521.135 151.741L536.913 154.174L552.691 138.631L568.469 120.787L584.246 117.158L600.024 125.257L615.802 123.764L631.579 118.692L647.357 114.878L663.135 112.163L678.912 110.756L694.69 105.111L710.467 101.629L726.246 100.164L742.023 109L757.8 113.54L773.579 119.595L789.356 125.708L805.134 128.82L820.911 153.815L836.689 123.946L852.467 112.635L868.244 109.228L884.023 94.5177L899.8 92.8463L915.578 91.632L931.355 82.4846L947.133 67.5087L962.911 47.1742"
+      stroke="#06B6D4"
+      strokeWidth="1.70899"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M79.3604 237.238L95.1378 229.585L110.916 212.719L126.694 230.239L142.471 197.961L158.248 191.615L174.027 193.413L189.804 187.198L205.582 182.42L221.36 180.926L237.137 170.556L252.915 184.919L268.692 187.122L284.47 194.418L300.248 200.895L316.025 210.168L331.804 215.661L347.581 218.137L363.359 221.212L379.136 222.696L394.914 223.992L410.692 229.744L426.469 231.676L442.247 262.33L458.025 270.44L473.802 270.73L489.58 271.576L505.358 259.308L521.135 255.055L536.913 246.878L552.691 240.826L568.469 231.278L584.246 226.655L600.024 225.455L615.802 221.87L631.579 218.005L647.357 203.246L663.135 187.222L678.912 170.881L694.69 156.326L710.467 153.28L726.246 148.835L742.023 141.587L757.8 139.532L773.579 138.724L789.356 134.545L805.134 147.955L820.911 171.174L836.689 152.207L852.467 153.832L868.244 123.949L884.023 108.052L899.8 123.491L915.578 154.797L931.355 170.265L947.133 159.742L962.911 141.445"
+      stroke="#3B82F6"
+      strokeWidth="1.70899"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M79.3604 185.597L95.1378 170.721L110.916 168.225L126.694 192.437L142.471 162.624L158.248 156.162L174.027 153.677L189.804 151.058L205.582 150.184L221.36 149.216L237.137 145.964L252.915 142.076L268.692 140.018L284.47 134.865L300.248 134.386L316.025 123.918L331.804 125.39L347.581 140.44L363.359 128.327L379.136 120.2L394.914 140.138L410.692 153.354L426.469 156.488L442.247 147.238L458.025 141.078L473.802 139.743L489.58 127.315L505.358 123.787L521.135 112.208L536.913 104.991L552.691 89.941L568.469 88.6327L584.246 92.2908L600.024 95.3021L615.802 98.5278L631.579 103.245L647.357 101.714L663.135 87.204L678.912 102.185L694.69 118.314L710.467 138.496L726.246 171.087L742.023 170.881L757.8 185.669L773.579 191.628L789.356 198L805.134 206.364L820.911 238.729L836.689 187.007L852.467 196.192L868.244 200.946L884.023 215.191L899.8 220.418L915.578 222.447L931.355 236.812L947.133 241.813L962.911 244.582"
+      stroke="#EC4899"
+      strokeWidth="1.70899"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M879.491 10.6364C879.491 11.5568 879.325 12.3523 878.992 13.0227C878.66 13.6932 878.204 14.2102 877.624 14.5739C877.045 14.9375 876.383 15.1193 875.638 15.1193C874.894 15.1193 874.232 14.9375 873.653 14.5739C873.073 14.2102 872.617 13.6932 872.285 13.0227C871.952 12.3523 871.786 11.5568 871.786 10.6364C871.786 9.71591 871.952 8.92045 872.285 8.25C872.617 7.57955 873.073 7.0625 873.653 6.69886C874.232 6.33523 874.894 6.15341 875.638 6.15341C876.383 6.15341 877.045 6.33523 877.624 6.69886C878.204 7.0625 878.66 7.57955 878.992 8.25C879.325 8.92045 879.491 9.71591 879.491 10.6364ZM878.468 10.6364C878.468 9.88068 878.342 9.2429 878.089 8.72301C877.839 8.20312 877.499 7.80966 877.07 7.54261C876.644 7.27557 876.167 7.14205 875.638 7.14205C875.11 7.14205 874.631 7.27557 874.202 7.54261C873.776 7.80966 873.437 8.20312 873.184 8.72301C872.934 9.2429 872.809 9.88068 872.809 10.6364C872.809 11.392 872.934 12.0298 873.184 12.5497C873.437 13.0696 873.776 13.4631 874.202 13.7301C874.631 13.9972 875.11 14.1307 875.638 14.1307C876.167 14.1307 876.644 13.9972 877.07 13.7301C877.499 13.4631 877.839 13.0696 878.089 12.5497C878.342 12.0298 878.468 11.392 878.468 10.6364ZM881.131 15V8.45455H882.103V9.44318H882.171C882.29 9.11932 882.506 8.85653 882.819 8.65483C883.131 8.45312 883.484 8.35227 883.876 8.35227C883.95 8.35227 884.042 8.35369 884.153 8.35653C884.263 8.35937 884.347 8.36364 884.404 8.36932V9.39205C884.37 9.38352 884.292 9.37074 884.17 9.35369C884.05 9.33381 883.924 9.32386 883.79 9.32386C883.472 9.32386 883.188 9.39062 882.938 9.52415C882.691 9.65483 882.495 9.83665 882.35 10.0696C882.208 10.2997 882.137 10.5625 882.137 10.858V15H881.131ZM887.869 15.1364C887.323 15.1364 886.842 14.9986 886.424 14.723C886.006 14.4446 885.68 14.0526 885.444 13.5469C885.208 13.0384 885.09 12.4375 885.09 11.7443C885.09 11.0568 885.208 10.4602 885.444 9.95455C885.68 9.44886 886.008 9.05824 886.428 8.78267C886.849 8.5071 887.335 8.36932 887.886 8.36932C888.312 8.36932 888.648 8.44034 888.896 8.58239C889.146 8.72159 889.336 8.88068 889.467 9.05966C889.6 9.2358 889.704 9.38068 889.778 9.49432H889.863V6.27273H890.869V15H889.897V13.9943H889.778C889.704 14.1136 889.599 14.2642 889.462 14.446C889.326 14.625 889.131 14.7855 888.879 14.9276C888.626 15.0668 888.289 15.1364 887.869 15.1364ZM888.005 14.233C888.408 14.233 888.749 14.1278 889.028 13.9176C889.306 13.7045 889.518 13.4105 889.663 13.0355C889.808 12.6577 889.88 12.2216 889.88 11.7273C889.88 11.2386 889.809 10.8111 889.667 10.4446C889.525 10.0753 889.315 9.78835 889.036 9.58381C888.758 9.37642 888.414 9.27273 888.005 9.27273C887.579 9.27273 887.224 9.3821 886.94 9.60085C886.658 9.81676 886.447 10.1108 886.305 10.483C886.165 10.8523 886.096 11.267 886.096 11.7273C886.096 12.1932 886.167 12.6165 886.309 12.9972C886.454 13.375 886.667 13.6761 886.948 13.9006C887.232 14.1222 887.585 14.233 888.005 14.233ZM895.594 15.1364C894.964 15.1364 894.42 14.9972 893.962 14.7188C893.508 14.4375 893.157 14.0455 892.91 13.5426C892.665 13.0369 892.543 12.4489 892.543 11.7784C892.543 11.108 892.665 10.517 892.91 10.0057C893.157 9.49148 893.501 9.09091 893.941 8.80398C894.384 8.5142 894.901 8.36932 895.492 8.36932C895.833 8.36932 896.17 8.42614 896.502 8.53977C896.835 8.65341 897.137 8.83807 897.41 9.09375C897.683 9.34659 897.9 9.68182 898.062 10.0994C898.224 10.517 898.305 11.0312 898.305 11.642V12.0682H893.259V11.1989H897.282C897.282 10.8295 897.208 10.5 897.06 10.2102C896.915 9.92045 896.708 9.69176 896.438 9.52415C896.171 9.35653 895.856 9.27273 895.492 9.27273C895.092 9.27273 894.745 9.37216 894.452 9.57102C894.163 9.76705 893.94 10.0227 893.783 10.3381C893.627 10.6534 893.549 10.9915 893.549 11.3523V11.9318C893.549 12.4261 893.634 12.8452 893.805 13.1889C893.978 13.5298 894.218 13.7898 894.525 13.9688C894.832 14.1449 895.188 14.233 895.594 14.233C895.859 14.233 896.097 14.196 896.31 14.1222C896.526 14.0455 896.712 13.9318 896.869 13.7812C897.025 13.6278 897.146 13.4375 897.231 13.2102L898.202 13.483C898.1 13.8125 897.928 14.1023 897.687 14.3523C897.445 14.5994 897.147 14.7926 896.792 14.9318C896.437 15.0682 896.038 15.1364 895.594 15.1364ZM899.835 15V8.45455H900.806V9.44318H900.874C900.994 9.11932 901.21 8.85653 901.522 8.65483C901.835 8.45312 902.187 8.35227 902.579 8.35227C902.653 8.35227 902.745 8.35369 902.856 8.35653C902.967 8.35937 903.05 8.36364 903.107 8.36932V9.39205C903.073 9.38352 902.995 9.37074 902.873 9.35369C902.754 9.33381 902.627 9.32386 902.494 9.32386C902.175 9.32386 901.891 9.39062 901.641 9.52415C901.394 9.65483 901.198 9.83665 901.053 10.0696C900.911 10.2997 900.84 10.5625 900.84 10.858V15H899.835ZM908.936 9.92045L908.032 10.1761C907.975 10.0256 907.892 9.87926 907.781 9.73722C907.673 9.59233 907.525 9.47301 907.338 9.37926C907.15 9.28551 906.91 9.23864 906.618 9.23864C906.217 9.23864 905.883 9.33097 905.616 9.51562C905.352 9.69744 905.22 9.92898 905.22 10.2102C905.22 10.4602 905.311 10.6577 905.493 10.8026C905.674 10.9474 905.958 11.0682 906.345 11.1648L907.316 11.4034C907.902 11.5455 908.338 11.7628 908.625 12.0554C908.912 12.3452 909.055 12.7187 909.055 13.1761C909.055 13.5511 908.947 13.8864 908.731 14.1818C908.518 14.4773 908.22 14.7102 907.836 14.8807C907.453 15.0511 907.007 15.1364 906.498 15.1364C905.831 15.1364 905.278 14.9915 904.841 14.7017C904.403 14.4119 904.126 13.9886 904.01 13.4318L904.964 13.1932C905.055 13.5455 905.227 13.8097 905.48 13.9858C905.735 14.1619 906.069 14.25 906.481 14.25C906.95 14.25 907.322 14.1506 907.598 13.9517C907.876 13.75 908.015 13.5085 908.015 13.2273C908.015 13 907.936 12.8097 907.777 12.6562C907.618 12.5 907.373 12.3835 907.044 12.3068L905.953 12.0511C905.353 11.9091 904.913 11.6889 904.632 11.3906C904.353 11.0895 904.214 10.7131 904.214 10.2614C904.214 9.89205 904.318 9.56534 904.525 9.28125C904.735 8.99716 905.021 8.77415 905.382 8.61222C905.745 8.45028 906.157 8.36932 906.618 8.36932C907.265 8.36932 907.774 8.51136 908.143 8.79545C908.515 9.07955 908.779 9.45455 908.936 9.92045ZM916.773 15H914.08V6.27273H916.893C917.739 6.27273 918.464 6.44744 919.066 6.79688C919.668 7.14347 920.13 7.64205 920.451 8.29261C920.772 8.94034 920.933 9.71591 920.933 10.6193C920.933 11.5284 920.771 12.3111 920.447 12.9673C920.123 13.6207 919.651 14.1236 919.032 14.4759C918.413 14.8253 917.66 15 916.773 15ZM915.137 14.0625H916.705C917.427 14.0625 918.025 13.9233 918.499 13.6449C918.974 13.3665 919.327 12.9702 919.56 12.456C919.793 11.9418 919.91 11.3295 919.91 10.6193C919.91 9.91477 919.795 9.30824 919.565 8.79972C919.335 8.28835 918.991 7.89631 918.533 7.62358C918.076 7.34801 917.506 7.21023 916.825 7.21023H915.137V14.0625ZM924.495 15.1534C924.08 15.1534 923.704 15.0753 923.366 14.919C923.028 14.7599 922.759 14.5312 922.56 14.233C922.362 13.9318 922.262 13.5682 922.262 13.142C922.262 12.767 922.336 12.4631 922.484 12.2301C922.631 11.9943 922.829 11.8097 923.076 11.6761C923.323 11.5426 923.596 11.4432 923.894 11.3778C924.195 11.3097 924.498 11.2557 924.802 11.2159C925.2 11.1648 925.522 11.1264 925.769 11.1009C926.019 11.0724 926.201 11.0256 926.315 10.9602C926.431 10.8949 926.489 10.7812 926.489 10.6193V10.5852C926.489 10.1648 926.374 9.83807 926.144 9.60511C925.917 9.37216 925.572 9.25568 925.109 9.25568C924.629 9.25568 924.252 9.3608 923.979 9.57102C923.707 9.78125 923.515 10.0057 923.404 10.2443L922.45 9.90341C922.62 9.50568 922.847 9.19602 923.131 8.97443C923.418 8.75 923.731 8.59375 924.069 8.50568C924.41 8.41477 924.745 8.36932 925.075 8.36932C925.285 8.36932 925.526 8.39489 925.799 8.44602C926.075 8.49432 926.34 8.59517 926.596 8.74858C926.854 8.90199 927.069 9.13352 927.239 9.44318C927.41 9.75284 927.495 10.1676 927.495 10.6875V15H926.489V14.1136H926.438C926.37 14.2557 926.256 14.4077 926.097 14.5696C925.938 14.7315 925.727 14.8693 925.462 14.983C925.198 15.0966 924.876 15.1534 924.495 15.1534ZM924.648 14.25C925.046 14.25 925.381 14.1719 925.654 14.0156C925.93 13.8594 926.137 13.6577 926.276 13.4105C926.418 13.1634 926.489 12.9034 926.489 12.6307V11.7102C926.447 11.7614 926.353 11.8082 926.208 11.8509C926.066 11.8906 925.901 11.9261 925.714 11.9574C925.529 11.9858 925.349 12.0114 925.173 12.0341C924.999 12.054 924.859 12.071 924.751 12.0852C924.489 12.1193 924.245 12.1747 924.018 12.2514C923.793 12.3253 923.612 12.4375 923.472 12.5881C923.336 12.7358 923.268 12.9375 923.268 13.1932C923.268 13.5426 923.397 13.8068 923.656 13.9858C923.917 14.1619 924.248 14.25 924.648 14.25ZM932.177 8.45455V9.30682H928.785V8.45455H932.177ZM929.774 6.88636H930.779V13.125C930.779 13.4091 930.821 13.6222 930.903 13.7642C930.988 13.9034 931.096 13.9972 931.227 14.0455C931.36 14.0909 931.501 14.1136 931.649 14.1136C931.76 14.1136 931.85 14.108 931.922 14.0966C931.993 14.0824 932.049 14.071 932.092 14.0625L932.297 14.9659C932.228 14.9915 932.133 15.017 932.011 15.0426C931.889 15.071 931.734 15.0852 931.547 15.0852C931.262 15.0852 930.984 15.0241 930.711 14.902C930.441 14.7798 930.217 14.5938 930.038 14.3438C929.862 14.0938 929.774 13.7784 929.774 13.3977V6.88636ZM935.616 15.1534C935.201 15.1534 934.825 15.0753 934.487 14.919C934.149 14.7599 933.88 14.5312 933.681 14.233C933.483 13.9318 933.383 13.5682 933.383 13.142C933.383 12.767 933.457 12.4631 933.605 12.2301C933.752 11.9943 933.95 11.8097 934.197 11.6761C934.444 11.5426 934.717 11.4432 935.015 11.3778C935.316 11.3097 935.619 11.2557 935.923 11.2159C936.321 11.1648 936.643 11.1264 936.89 11.1009C937.14 11.0724 937.322 11.0256 937.436 10.9602C937.552 10.8949 937.61 10.7812 937.61 10.6193V10.5852C937.61 10.1648 937.495 9.83807 937.265 9.60511C937.038 9.37216 936.693 9.25568 936.23 9.25568C935.75 9.25568 935.373 9.3608 935.1 9.57102C934.828 9.78125 934.636 10.0057 934.525 10.2443L933.571 9.90341C933.741 9.50568 933.968 9.19602 934.252 8.97443C934.539 8.75 934.852 8.59375 935.19 8.50568C935.531 8.41477 935.866 8.36932 936.196 8.36932C936.406 8.36932 936.647 8.39489 936.92 8.44602C937.196 8.49432 937.461 8.59517 937.717 8.74858C937.975 8.90199 938.19 9.13352 938.36 9.44318C938.531 9.75284 938.616 10.1676 938.616 10.6875V15H937.61V14.1136H937.559C937.491 14.2557 937.377 14.4077 937.218 14.5696C937.059 14.7315 936.848 14.8693 936.583 14.983C936.319 15.0966 935.997 15.1534 935.616 15.1534ZM935.77 14.25C936.167 14.25 936.502 14.1719 936.775 14.0156C937.051 13.8594 937.258 13.6577 937.397 13.4105C937.539 13.1634 937.61 12.9034 937.61 12.6307V11.7102C937.568 11.7614 937.474 11.8082 937.329 11.8509C937.187 11.8906 937.022 11.9261 936.835 11.9574C936.65 11.9858 936.47 12.0114 936.294 12.0341C936.12 12.054 935.98 12.071 935.872 12.0852C935.61 12.1193 935.366 12.1747 935.139 12.2514C934.914 12.3253 934.733 12.4375 934.593 12.5881C934.457 12.7358 934.389 12.9375 934.389 13.1932C934.389 13.5426 934.518 13.8068 934.777 13.9858C935.038 14.1619 935.369 14.25 935.77 14.25ZM940.588 15V6.27273H941.594V9.49432H941.679C941.753 9.38068 941.855 9.2358 941.986 9.05966C942.119 8.88068 942.31 8.72159 942.557 8.58239C942.807 8.44034 943.145 8.36932 943.571 8.36932C944.122 8.36932 944.608 8.5071 945.028 8.78267C945.449 9.05824 945.777 9.44886 946.013 9.95455C946.249 10.4602 946.366 11.0568 946.366 11.7443C946.366 12.4375 946.249 13.0384 946.013 13.5469C945.777 14.0526 945.45 14.4446 945.033 14.723C944.615 14.9986 944.134 15.1364 943.588 15.1364C943.168 15.1364 942.831 15.0668 942.578 14.9276C942.325 14.7855 942.131 14.625 941.994 14.446C941.858 14.2642 941.753 14.1136 941.679 13.9943H941.56V15H940.588ZM941.577 11.7273C941.577 12.2216 941.649 12.6577 941.794 13.0355C941.939 13.4105 942.151 13.7045 942.429 13.9176C942.707 14.1278 943.048 14.233 943.452 14.233C943.872 14.233 944.223 14.1222 944.504 13.9006C944.788 13.6761 945.001 13.375 945.143 12.9972C945.288 12.6165 945.361 12.1932 945.361 11.7273C945.361 11.267 945.29 10.8523 945.148 10.483C945.009 10.1108 944.797 9.81676 944.513 9.60085C944.232 9.3821 943.878 9.27273 943.452 9.27273C943.043 9.27273 942.699 9.37642 942.42 9.58381C942.142 9.78835 941.932 10.0753 941.79 10.4446C941.648 10.8111 941.577 11.2386 941.577 11.7273ZM949.831 15.1534C949.416 15.1534 949.04 15.0753 948.702 14.919C948.364 14.7599 948.095 14.5312 947.896 14.233C947.697 13.9318 947.598 13.5682 947.598 13.142C947.598 12.767 947.672 12.4631 947.82 12.2301C947.967 11.9943 948.165 11.8097 948.412 11.6761C948.659 11.5426 948.932 11.4432 949.23 11.3778C949.531 11.3097 949.834 11.2557 950.138 11.2159C950.536 11.1648 950.858 11.1264 951.105 11.1009C951.355 11.0724 951.537 11.0256 951.651 10.9602C951.767 10.8949 951.825 10.7812 951.825 10.6193V10.5852C951.825 10.1648 951.71 9.83807 951.48 9.60511C951.253 9.37216 950.908 9.25568 950.445 9.25568C949.964 9.25568 949.588 9.3608 949.315 9.57102C949.043 9.78125 948.851 10.0057 948.74 10.2443L947.786 9.90341C947.956 9.50568 948.183 9.19602 948.467 8.97443C948.754 8.75 949.067 8.59375 949.405 8.50568C949.746 8.41477 950.081 8.36932 950.411 8.36932C950.621 8.36932 950.862 8.39489 951.135 8.44602C951.411 8.49432 951.676 8.59517 951.932 8.74858C952.19 8.90199 952.405 9.13352 952.575 9.44318C952.746 9.75284 952.831 10.1676 952.831 10.6875V15H951.825V14.1136H951.774C951.706 14.2557 951.592 14.4077 951.433 14.5696C951.274 14.7315 951.063 14.8693 950.798 14.983C950.534 15.0966 950.212 15.1534 949.831 15.1534ZM949.984 14.25C950.382 14.25 950.717 14.1719 950.99 14.0156C951.266 13.8594 951.473 13.6577 951.612 13.4105C951.754 13.1634 951.825 12.9034 951.825 12.6307V11.7102C951.783 11.7614 951.689 11.8082 951.544 11.8509C951.402 11.8906 951.237 11.9261 951.05 11.9574C950.865 11.9858 950.685 12.0114 950.509 12.0341C950.335 12.054 950.195 12.071 950.087 12.0852C949.825 12.1193 949.581 12.1747 949.354 12.2514C949.129 12.3253 948.947 12.4375 948.808 12.5881C948.672 12.7358 948.604 12.9375 948.604 13.1932C948.604 13.5426 948.733 13.8068 948.991 13.9858C949.253 14.1619 949.584 14.25 949.984 14.25ZM959.303 9.92045L958.4 10.1761C958.343 10.0256 958.259 9.87926 958.148 9.73722C958.04 9.59233 957.892 9.47301 957.705 9.37926C957.517 9.28551 957.277 9.23864 956.985 9.23864C956.584 9.23864 956.25 9.33097 955.983 9.51562C955.719 9.69744 955.587 9.92898 955.587 10.2102C955.587 10.4602 955.678 10.6577 955.86 10.8026C956.042 10.9474 956.326 11.0682 956.712 11.1648L957.684 11.4034C958.269 11.5455 958.705 11.7628 958.992 12.0554C959.279 12.3452 959.422 12.7187 959.422 13.1761C959.422 13.5511 959.314 13.8864 959.098 14.1818C958.885 14.4773 958.587 14.7102 958.203 14.8807C957.82 15.0511 957.374 15.1364 956.865 15.1364C956.198 15.1364 955.645 14.9915 955.208 14.7017C954.77 14.4119 954.493 13.9886 954.377 13.4318L955.331 13.1932C955.422 13.5455 955.594 13.8097 955.847 13.9858C956.103 14.1619 956.436 14.25 956.848 14.25C957.317 14.25 957.689 14.1506 957.965 13.9517C958.243 13.75 958.382 13.5085 958.382 13.2273C958.382 13 958.303 12.8097 958.144 12.6562C957.985 12.5 957.74 12.3835 957.411 12.3068L956.32 12.0511C955.721 11.9091 955.28 11.6889 954.999 11.3906C954.721 11.0895 954.581 10.7131 954.581 10.2614C954.581 9.89205 954.685 9.56534 954.892 9.28125C955.103 8.99716 955.388 8.77415 955.749 8.61222C956.113 8.45028 956.525 8.36932 956.985 8.36932C957.632 8.36932 958.141 8.51136 958.51 8.79545C958.882 9.07955 959.147 9.45455 959.303 9.92045ZM963.68 15.1364C963.05 15.1364 962.506 14.9972 962.048 14.7188C961.594 14.4375 961.243 14.0455 960.996 13.5426C960.751 13.0369 960.629 12.4489 960.629 11.7784C960.629 11.108 960.751 10.517 960.996 10.0057C961.243 9.49148 961.587 9.09091 962.027 8.80398C962.47 8.5142 962.987 8.36932 963.578 8.36932C963.919 8.36932 964.256 8.42614 964.588 8.53977C964.92 8.65341 965.223 8.83807 965.496 9.09375C965.768 9.34659 965.986 9.68182 966.148 10.0994C966.31 10.517 966.391 11.0312 966.391 11.642V12.0682H961.345V11.1989H965.368C965.368 10.8295 965.294 10.5 965.146 10.2102C965.001 9.92045 964.794 9.69176 964.524 9.52415C964.257 9.35653 963.942 9.27273 963.578 9.27273C963.178 9.27273 962.831 9.37216 962.538 9.57102C962.249 9.76705 962.026 10.0227 961.869 10.3381C961.713 10.6534 961.635 10.9915 961.635 11.3523V11.9318C961.635 12.4261 961.72 12.8452 961.891 13.1889C962.064 13.5298 962.304 13.7898 962.611 13.9688C962.918 14.1449 963.274 14.233 963.68 14.233C963.945 14.233 964.183 14.196 964.396 14.1222C964.612 14.0455 964.798 13.9318 964.955 13.7812C965.111 13.6278 965.232 13.4375 965.317 13.2102L966.288 13.483C966.186 13.8125 966.014 14.1023 965.773 14.3523C965.531 14.5994 965.233 14.7926 964.878 14.9318C964.523 15.0682 964.124 15.1364 963.68 15.1364Z"
+      fill="#374151"
+    />
+    <rect x="848" y="9" width="14" height="3" rx="1.5" fill="#EC4899" />
+    <path
+      d="M582.55 6.27273H583.607V12.0511C583.607 12.6477 583.466 13.1804 583.185 13.6491C582.906 14.1151 582.513 14.483 582.004 14.7528C581.496 15.0199 580.899 15.1534 580.214 15.1534C579.53 15.1534 578.933 15.0199 578.425 14.7528C577.916 14.483 577.521 14.1151 577.24 13.6491C576.962 13.1804 576.822 12.6477 576.822 12.0511V6.27273H577.879V11.9659C577.879 12.392 577.973 12.7713 578.161 13.1037C578.348 13.4332 578.615 13.6932 578.962 13.8835C579.311 14.071 579.729 14.1648 580.214 14.1648C580.7 14.1648 581.118 14.071 581.467 13.8835C581.817 13.6932 582.084 13.4332 582.268 13.1037C582.456 12.7713 582.55 12.392 582.55 11.9659V6.27273ZM590.217 9.92045L589.314 10.1761C589.257 10.0256 589.173 9.87926 589.062 9.73722C588.954 9.59233 588.806 9.47301 588.619 9.37926C588.431 9.28551 588.191 9.23864 587.899 9.23864C587.498 9.23864 587.164 9.33097 586.897 9.51562C586.633 9.69744 586.501 9.92898 586.501 10.2102C586.501 10.4602 586.592 10.6577 586.774 10.8026C586.956 10.9474 587.24 11.0682 587.626 11.1648L588.598 11.4034C589.183 11.5455 589.619 11.7628 589.906 12.0554C590.193 12.3452 590.336 12.7187 590.336 13.1761C590.336 13.5511 590.228 13.8864 590.012 14.1818C589.799 14.4773 589.501 14.7102 589.118 14.8807C588.734 15.0511 588.288 15.1364 587.779 15.1364C587.112 15.1364 586.559 14.9915 586.122 14.7017C585.684 14.4119 585.407 13.9886 585.291 13.4318L586.245 13.1932C586.336 13.5455 586.508 13.8097 586.761 13.9858C587.017 14.1619 587.35 14.25 587.762 14.25C588.231 14.25 588.603 14.1506 588.879 13.9517C589.157 13.75 589.297 13.5085 589.297 13.2273C589.297 13 589.217 12.8097 589.058 12.6562C588.899 12.5 588.654 12.3835 588.325 12.3068L587.234 12.0511C586.635 11.9091 586.194 11.6889 585.913 11.3906C585.635 11.0895 585.495 10.7131 585.495 10.2614C585.495 9.89205 585.599 9.56534 585.806 9.28125C586.017 8.99716 586.302 8.77415 586.663 8.61222C587.027 8.45028 587.439 8.36932 587.899 8.36932C588.547 8.36932 589.055 8.51136 589.424 8.79545C589.797 9.07955 590.061 9.45455 590.217 9.92045ZM594.594 15.1364C593.964 15.1364 593.42 14.9972 592.962 14.7188C592.508 14.4375 592.157 14.0455 591.91 13.5426C591.665 13.0369 591.543 12.4489 591.543 11.7784C591.543 11.108 591.665 10.517 591.91 10.0057C592.157 9.49148 592.501 9.09091 592.941 8.80398C593.384 8.5142 593.901 8.36932 594.492 8.36932C594.833 8.36932 595.17 8.42614 595.502 8.53977C595.835 8.65341 596.137 8.83807 596.41 9.09375C596.683 9.34659 596.9 9.68182 597.062 10.0994C597.224 10.517 597.305 11.0312 597.305 11.642V12.0682H592.259V11.1989H596.282C596.282 10.8295 596.208 10.5 596.06 10.2102C595.915 9.92045 595.708 9.69176 595.438 9.52415C595.171 9.35653 594.856 9.27273 594.492 9.27273C594.092 9.27273 593.745 9.37216 593.452 9.57102C593.163 9.76705 592.94 10.0227 592.783 10.3381C592.627 10.6534 592.549 10.9915 592.549 11.3523V11.9318C592.549 12.4261 592.634 12.8452 592.805 13.1889C592.978 13.5298 593.218 13.7898 593.525 13.9688C593.832 14.1449 594.188 14.233 594.594 14.233C594.859 14.233 595.097 14.196 595.31 14.1222C595.526 14.0455 595.712 13.9318 595.869 13.7812C596.025 13.6278 596.146 13.4375 596.231 13.2102L597.202 13.483C597.1 13.8125 596.928 14.1023 596.687 14.3523C596.445 14.5994 596.147 14.7926 595.792 14.9318C595.437 15.0682 595.038 15.1364 594.594 15.1364ZM598.835 15V8.45455H599.806V9.44318H599.874C599.994 9.11932 600.21 8.85653 600.522 8.65483C600.835 8.45312 601.187 8.35227 601.579 8.35227C601.653 8.35227 601.745 8.35369 601.856 8.35653C601.967 8.35937 602.05 8.36364 602.107 8.36932V9.39205C602.073 9.38352 601.995 9.37074 601.873 9.35369C601.754 9.33381 601.627 9.32386 601.494 9.32386C601.175 9.32386 600.891 9.39062 600.641 9.52415C600.394 9.65483 600.198 9.83665 600.053 10.0696C599.911 10.2997 599.84 10.5625 599.84 10.858V15H598.835ZM607.936 9.92045L607.032 10.1761C606.975 10.0256 606.892 9.87926 606.781 9.73722C606.673 9.59233 606.525 9.47301 606.338 9.37926C606.15 9.28551 605.91 9.23864 605.618 9.23864C605.217 9.23864 604.883 9.33097 604.616 9.51562C604.352 9.69744 604.22 9.92898 604.22 10.2102C604.22 10.4602 604.311 10.6577 604.493 10.8026C604.674 10.9474 604.958 11.0682 605.345 11.1648L606.316 11.4034C606.902 11.5455 607.338 11.7628 607.625 12.0554C607.912 12.3452 608.055 12.7187 608.055 13.1761C608.055 13.5511 607.947 13.8864 607.731 14.1818C607.518 14.4773 607.22 14.7102 606.836 14.8807C606.453 15.0511 606.007 15.1364 605.498 15.1364C604.831 15.1364 604.278 14.9915 603.841 14.7017C603.403 14.4119 603.126 13.9886 603.01 13.4318L603.964 13.1932C604.055 13.5455 604.227 13.8097 604.48 13.9858C604.735 14.1619 605.069 14.25 605.481 14.25C605.95 14.25 606.322 14.1506 606.598 13.9517C606.876 13.75 607.015 13.5085 607.015 13.2273C607.015 13 606.936 12.8097 606.777 12.6562C606.618 12.5 606.373 12.3835 606.044 12.3068L604.953 12.0511C604.353 11.9091 603.913 11.6889 603.632 11.3906C603.353 11.0895 603.214 10.7131 603.214 10.2614C603.214 9.89205 603.318 9.56534 603.525 9.28125C603.735 8.99716 604.021 8.77415 604.382 8.61222C604.745 8.45028 605.157 8.36932 605.618 8.36932C606.265 8.36932 606.774 8.51136 607.143 8.79545C607.515 9.07955 607.779 9.45455 607.936 9.92045ZM615.773 15H613.08V6.27273H615.893C616.739 6.27273 617.464 6.44744 618.066 6.79688C618.668 7.14347 619.13 7.64205 619.451 8.29261C619.772 8.94034 619.933 9.71591 619.933 10.6193C619.933 11.5284 619.771 12.3111 619.447 12.9673C619.123 13.6207 618.651 14.1236 618.032 14.4759C617.413 14.8253 616.66 15 615.773 15ZM614.137 14.0625H615.705C616.427 14.0625 617.025 13.9233 617.499 13.6449C617.974 13.3665 618.327 12.9702 618.56 12.456C618.793 11.9418 618.91 11.3295 618.91 10.6193C618.91 9.91477 618.795 9.30824 618.565 8.79972C618.335 8.28835 617.991 7.89631 617.533 7.62358C617.076 7.34801 616.506 7.21023 615.825 7.21023H614.137V14.0625ZM623.495 15.1534C623.08 15.1534 622.704 15.0753 622.366 14.919C622.028 14.7599 621.759 14.5312 621.56 14.233C621.362 13.9318 621.262 13.5682 621.262 13.142C621.262 12.767 621.336 12.4631 621.484 12.2301C621.631 11.9943 621.829 11.8097 622.076 11.6761C622.323 11.5426 622.596 11.4432 622.894 11.3778C623.195 11.3097 623.498 11.2557 623.802 11.2159C624.2 11.1648 624.522 11.1264 624.769 11.1009C625.019 11.0724 625.201 11.0256 625.315 10.9602C625.431 10.8949 625.489 10.7812 625.489 10.6193V10.5852C625.489 10.1648 625.374 9.83807 625.144 9.60511C624.917 9.37216 624.572 9.25568 624.109 9.25568C623.629 9.25568 623.252 9.3608 622.979 9.57102C622.707 9.78125 622.515 10.0057 622.404 10.2443L621.45 9.90341C621.62 9.50568 621.847 9.19602 622.131 8.97443C622.418 8.75 622.731 8.59375 623.069 8.50568C623.41 8.41477 623.745 8.36932 624.075 8.36932C624.285 8.36932 624.526 8.39489 624.799 8.44602C625.075 8.49432 625.34 8.59517 625.596 8.74858C625.854 8.90199 626.069 9.13352 626.239 9.44318C626.41 9.75284 626.495 10.1676 626.495 10.6875V15H625.489V14.1136H625.438C625.37 14.2557 625.256 14.4077 625.097 14.5696C624.938 14.7315 624.727 14.8693 624.462 14.983C624.198 15.0966 623.876 15.1534 623.495 15.1534ZM623.648 14.25C624.046 14.25 624.381 14.1719 624.654 14.0156C624.93 13.8594 625.137 13.6577 625.276 13.4105C625.418 13.1634 625.489 12.9034 625.489 12.6307V11.7102C625.447 11.7614 625.353 11.8082 625.208 11.8509C625.066 11.8906 624.901 11.9261 624.714 11.9574C624.529 11.9858 624.349 12.0114 624.173 12.0341C623.999 12.054 623.859 12.071 623.751 12.0852C623.489 12.1193 623.245 12.1747 623.018 12.2514C622.793 12.3253 622.612 12.4375 622.472 12.5881C622.336 12.7358 622.268 12.9375 622.268 13.1932C622.268 13.5426 622.397 13.8068 622.656 13.9858C622.917 14.1619 623.248 14.25 623.648 14.25ZM631.177 8.45455V9.30682H627.785V8.45455H631.177ZM628.774 6.88636H629.779V13.125C629.779 13.4091 629.821 13.6222 629.903 13.7642C629.988 13.9034 630.096 13.9972 630.227 14.0455C630.36 14.0909 630.501 14.1136 630.649 14.1136C630.76 14.1136 630.85 14.108 630.922 14.0966C630.993 14.0824 631.049 14.071 631.092 14.0625L631.297 14.9659C631.228 14.9915 631.133 15.017 631.011 15.0426C630.889 15.071 630.734 15.0852 630.547 15.0852C630.262 15.0852 629.984 15.0241 629.711 14.902C629.441 14.7798 629.217 14.5938 629.038 14.3438C628.862 14.0938 628.774 13.7784 628.774 13.3977V6.88636ZM634.616 15.1534C634.201 15.1534 633.825 15.0753 633.487 14.919C633.149 14.7599 632.88 14.5312 632.681 14.233C632.483 13.9318 632.383 13.5682 632.383 13.142C632.383 12.767 632.457 12.4631 632.605 12.2301C632.752 11.9943 632.95 11.8097 633.197 11.6761C633.444 11.5426 633.717 11.4432 634.015 11.3778C634.316 11.3097 634.619 11.2557 634.923 11.2159C635.321 11.1648 635.643 11.1264 635.89 11.1009C636.14 11.0724 636.322 11.0256 636.436 10.9602C636.552 10.8949 636.61 10.7812 636.61 10.6193V10.5852C636.61 10.1648 636.495 9.83807 636.265 9.60511C636.038 9.37216 635.693 9.25568 635.23 9.25568C634.75 9.25568 634.373 9.3608 634.1 9.57102C633.828 9.78125 633.636 10.0057 633.525 10.2443L632.571 9.90341C632.741 9.50568 632.968 9.19602 633.252 8.97443C633.539 8.75 633.852 8.59375 634.19 8.50568C634.531 8.41477 634.866 8.36932 635.196 8.36932C635.406 8.36932 635.647 8.39489 635.92 8.44602C636.196 8.49432 636.461 8.59517 636.717 8.74858C636.975 8.90199 637.19 9.13352 637.36 9.44318C637.531 9.75284 637.616 10.1676 637.616 10.6875V15H636.61V14.1136H636.559C636.491 14.2557 636.377 14.4077 636.218 14.5696C636.059 14.7315 635.848 14.8693 635.583 14.983C635.319 15.0966 634.997 15.1534 634.616 15.1534ZM634.77 14.25C635.167 14.25 635.502 14.1719 635.775 14.0156C636.051 13.8594 636.258 13.6577 636.397 13.4105C636.539 13.1634 636.61 12.9034 636.61 12.6307V11.7102C636.568 11.7614 636.474 11.8082 636.329 11.8509C636.187 11.8906 636.022 11.9261 635.835 11.9574C635.65 11.9858 635.47 12.0114 635.294 12.0341C635.12 12.054 634.98 12.071 634.872 12.0852C634.61 12.1193 634.366 12.1747 634.139 12.2514C633.914 12.3253 633.733 12.4375 633.593 12.5881C633.457 12.7358 633.389 12.9375 633.389 13.1932C633.389 13.5426 633.518 13.8068 633.777 13.9858C634.038 14.1619 634.369 14.25 634.77 14.25ZM639.588 15V6.27273H640.594V9.49432H640.679C640.753 9.38068 640.855 9.2358 640.986 9.05966C641.119 8.88068 641.31 8.72159 641.557 8.58239C641.807 8.44034 642.145 8.36932 642.571 8.36932C643.122 8.36932 643.608 8.5071 644.028 8.78267C644.449 9.05824 644.777 9.44886 645.013 9.95455C645.249 10.4602 645.366 11.0568 645.366 11.7443C645.366 12.4375 645.249 13.0384 645.013 13.5469C644.777 14.0526 644.45 14.4446 644.033 14.723C643.615 14.9986 643.134 15.1364 642.588 15.1364C642.168 15.1364 641.831 15.0668 641.578 14.9276C641.325 14.7855 641.131 14.625 640.994 14.446C640.858 14.2642 640.753 14.1136 640.679 13.9943H640.56V15H639.588ZM640.577 11.7273C640.577 12.2216 640.649 12.6577 640.794 13.0355C640.939 13.4105 641.151 13.7045 641.429 13.9176C641.707 14.1278 642.048 14.233 642.452 14.233C642.872 14.233 643.223 14.1222 643.504 13.9006C643.788 13.6761 644.001 13.375 644.143 12.9972C644.288 12.6165 644.361 12.1932 644.361 11.7273C644.361 11.267 644.29 10.8523 644.148 10.483C644.009 10.1108 643.797 9.81676 643.513 9.60085C643.232 9.3821 642.878 9.27273 642.452 9.27273C642.043 9.27273 641.699 9.37642 641.42 9.58381C641.142 9.78835 640.932 10.0753 640.79 10.4446C640.648 10.8111 640.577 11.2386 640.577 11.7273ZM648.831 15.1534C648.416 15.1534 648.04 15.0753 647.702 14.919C647.364 14.7599 647.095 14.5312 646.896 14.233C646.697 13.9318 646.598 13.5682 646.598 13.142C646.598 12.767 646.672 12.4631 646.82 12.2301C646.967 11.9943 647.165 11.8097 647.412 11.6761C647.659 11.5426 647.932 11.4432 648.23 11.3778C648.531 11.3097 648.834 11.2557 649.138 11.2159C649.536 11.1648 649.858 11.1264 650.105 11.1009C650.355 11.0724 650.537 11.0256 650.651 10.9602C650.767 10.8949 650.825 10.7812 650.825 10.6193V10.5852C650.825 10.1648 650.71 9.83807 650.48 9.60511C650.253 9.37216 649.908 9.25568 649.445 9.25568C648.964 9.25568 648.588 9.3608 648.315 9.57102C648.043 9.78125 647.851 10.0057 647.74 10.2443L646.786 9.90341C646.956 9.50568 647.183 9.19602 647.467 8.97443C647.754 8.75 648.067 8.59375 648.405 8.50568C648.746 8.41477 649.081 8.36932 649.411 8.36932C649.621 8.36932 649.862 8.39489 650.135 8.44602C650.411 8.49432 650.676 8.59517 650.932 8.74858C651.19 8.90199 651.405 9.13352 651.575 9.44318C651.746 9.75284 651.831 10.1676 651.831 10.6875V15H650.825V14.1136H650.774C650.706 14.2557 650.592 14.4077 650.433 14.5696C650.274 14.7315 650.063 14.8693 649.798 14.983C649.534 15.0966 649.212 15.1534 648.831 15.1534ZM648.984 14.25C649.382 14.25 649.717 14.1719 649.99 14.0156C650.266 13.8594 650.473 13.6577 650.612 13.4105C650.754 13.1634 650.825 12.9034 650.825 12.6307V11.7102C650.783 11.7614 650.689 11.8082 650.544 11.8509C650.402 11.8906 650.237 11.9261 650.05 11.9574C649.865 11.9858 649.685 12.0114 649.509 12.0341C649.335 12.054 649.195 12.071 649.087 12.0852C648.825 12.1193 648.581 12.1747 648.354 12.2514C648.129 12.3253 647.947 12.4375 647.808 12.5881C647.672 12.7358 647.604 12.9375 647.604 13.1932C647.604 13.5426 647.733 13.8068 647.991 13.9858C648.253 14.1619 648.584 14.25 648.984 14.25ZM658.303 9.92045L657.4 10.1761C657.343 10.0256 657.259 9.87926 657.148 9.73722C657.04 9.59233 656.892 9.47301 656.705 9.37926C656.517 9.28551 656.277 9.23864 655.985 9.23864C655.584 9.23864 655.25 9.33097 654.983 9.51562C654.719 9.69744 654.587 9.92898 654.587 10.2102C654.587 10.4602 654.678 10.6577 654.86 10.8026C655.042 10.9474 655.326 11.0682 655.712 11.1648L656.684 11.4034C657.269 11.5455 657.705 11.7628 657.992 12.0554C658.279 12.3452 658.422 12.7187 658.422 13.1761C658.422 13.5511 658.314 13.8864 658.098 14.1818C657.885 14.4773 657.587 14.7102 657.203 14.8807C656.82 15.0511 656.374 15.1364 655.865 15.1364C655.198 15.1364 654.645 14.9915 654.208 14.7017C653.77 14.4119 653.493 13.9886 653.377 13.4318L654.331 13.1932C654.422 13.5455 654.594 13.8097 654.847 13.9858C655.103 14.1619 655.436 14.25 655.848 14.25C656.317 14.25 656.689 14.1506 656.965 13.9517C657.243 13.75 657.382 13.5085 657.382 13.2273C657.382 13 657.303 12.8097 657.144 12.6562C656.985 12.5 656.74 12.3835 656.411 12.3068L655.32 12.0511C654.721 11.9091 654.28 11.6889 653.999 11.3906C653.721 11.0895 653.581 10.7131 653.581 10.2614C653.581 9.89205 653.685 9.56534 653.892 9.28125C654.103 8.99716 654.388 8.77415 654.749 8.61222C655.113 8.45028 655.525 8.36932 655.985 8.36932C656.632 8.36932 657.141 8.51136 657.51 8.79545C657.882 9.07955 658.147 9.45455 658.303 9.92045ZM662.68 15.1364C662.05 15.1364 661.506 14.9972 661.048 14.7188C660.594 14.4375 660.243 14.0455 659.996 13.5426C659.751 13.0369 659.629 12.4489 659.629 11.7784C659.629 11.108 659.751 10.517 659.996 10.0057C660.243 9.49148 660.587 9.09091 661.027 8.80398C661.47 8.5142 661.987 8.36932 662.578 8.36932C662.919 8.36932 663.256 8.42614 663.588 8.53977C663.92 8.65341 664.223 8.83807 664.496 9.09375C664.768 9.34659 664.986 9.68182 665.148 10.0994C665.31 10.517 665.391 11.0312 665.391 11.642V12.0682H660.345V11.1989H664.368C664.368 10.8295 664.294 10.5 664.146 10.2102C664.001 9.92045 663.794 9.69176 663.524 9.52415C663.257 9.35653 662.942 9.27273 662.578 9.27273C662.178 9.27273 661.831 9.37216 661.538 9.57102C661.249 9.76705 661.026 10.0227 660.869 10.3381C660.713 10.6534 660.635 10.9915 660.635 11.3523V11.9318C660.635 12.4261 660.72 12.8452 660.891 13.1889C661.064 13.5298 661.304 13.7898 661.611 13.9688C661.918 14.1449 662.274 14.233 662.68 14.233C662.945 14.233 663.183 14.196 663.396 14.1222C663.612 14.0455 663.798 13.9318 663.955 13.7812C664.111 13.6278 664.232 13.4375 664.317 13.2102L665.288 13.483C665.186 13.8125 665.014 14.1023 664.773 14.3523C664.531 14.5994 664.233 14.7926 663.878 14.9318C663.523 15.0682 663.124 15.1364 662.68 15.1364Z"
+      fill="#374151"
+    />
+    <rect x="552" y="9" width="14" height="3" rx="1.5" fill="#6366F1" />
+    <path
+      d="M720.022 15V6.27273H722.971C723.655 6.27273 724.215 6.39631 724.65 6.64347C725.087 6.88778 725.411 7.21875 725.621 7.63636C725.831 8.05398 725.936 8.51989 725.936 9.03409C725.936 9.5483 725.831 10.0156 725.621 10.4361C725.414 10.8565 725.093 11.1918 724.658 11.4418C724.223 11.6889 723.667 11.8125 722.988 11.8125H720.874V10.875H722.953C723.422 10.875 723.799 10.794 724.083 10.6321C724.367 10.4702 724.573 10.2514 724.701 9.97585C724.831 9.69744 724.897 9.38352 724.897 9.03409C724.897 8.68466 724.831 8.37216 724.701 8.09659C724.573 7.82102 724.365 7.60511 724.078 7.44886C723.792 7.28977 723.411 7.21023 722.936 7.21023H721.078V15H720.022ZM727.502 15V8.45455H728.474V9.44318H728.542C728.662 9.11932 728.877 8.85653 729.19 8.65483C729.502 8.45312 729.855 8.35227 730.247 8.35227C730.321 8.35227 730.413 8.35369 730.524 8.35653C730.635 8.35937 730.718 8.36364 730.775 8.36932V9.39205C730.741 9.38352 730.663 9.37074 730.541 9.35369C730.422 9.33381 730.295 9.32386 730.162 9.32386C729.843 9.32386 729.559 9.39062 729.309 9.52415C729.062 9.65483 728.866 9.83665 728.721 10.0696C728.579 10.2997 728.508 10.5625 728.508 10.858V15H727.502ZM734.427 15.1364C733.836 15.1364 733.318 14.9957 732.872 14.7145C732.429 14.4332 732.082 14.0398 731.832 13.5341C731.585 13.0284 731.461 12.4375 731.461 11.7614C731.461 11.0795 731.585 10.4844 731.832 9.97585C732.082 9.46733 732.429 9.07244 732.872 8.79119C733.318 8.50994 733.836 8.36932 734.427 8.36932C735.018 8.36932 735.535 8.50994 735.978 8.79119C736.424 9.07244 736.771 9.46733 737.018 9.97585C737.268 10.4844 737.393 11.0795 737.393 11.7614C737.393 12.4375 737.268 13.0284 737.018 13.5341C736.771 14.0398 736.424 14.4332 735.978 14.7145C735.535 14.9957 735.018 15.1364 734.427 15.1364ZM734.427 14.233C734.876 14.233 735.245 14.1179 735.535 13.8878C735.825 13.6577 736.039 13.3551 736.179 12.9801C736.318 12.6051 736.387 12.1989 736.387 11.7614C736.387 11.3239 736.318 10.9162 736.179 10.5384C736.039 10.1605 735.825 9.85511 735.535 9.62216C735.245 9.3892 734.876 9.27273 734.427 9.27273C733.978 9.27273 733.609 9.3892 733.319 9.62216C733.029 9.85511 732.815 10.1605 732.676 10.5384C732.537 10.9162 732.467 11.3239 732.467 11.7614C732.467 12.1989 732.537 12.6051 732.676 12.9801C732.815 13.3551 733.029 13.6577 733.319 13.8878C733.609 14.1179 733.978 14.233 734.427 14.233ZM741.4 15.1364C740.854 15.1364 740.373 14.9986 739.955 14.723C739.538 14.4446 739.211 14.0526 738.975 13.5469C738.739 13.0384 738.621 12.4375 738.621 11.7443C738.621 11.0568 738.739 10.4602 738.975 9.95455C739.211 9.44886 739.539 9.05824 739.96 8.78267C740.38 8.5071 740.866 8.36932 741.417 8.36932C741.843 8.36932 742.18 8.44034 742.427 8.58239C742.677 8.72159 742.867 8.88068 742.998 9.05966C743.131 9.2358 743.235 9.38068 743.309 9.49432H743.394V6.27273H744.4V15H743.428V13.9943H743.309C743.235 14.1136 743.13 14.2642 742.994 14.446C742.857 14.625 742.663 14.7855 742.41 14.9276C742.157 15.0668 741.82 15.1364 741.4 15.1364ZM741.536 14.233C741.94 14.233 742.281 14.1278 742.559 13.9176C742.837 13.7045 743.049 13.4105 743.194 13.0355C743.339 12.6577 743.411 12.2216 743.411 11.7273C743.411 11.2386 743.34 10.8111 743.198 10.4446C743.056 10.0753 742.846 9.78835 742.567 9.58381C742.289 9.37642 741.945 9.27273 741.536 9.27273C741.11 9.27273 740.755 9.3821 740.471 9.60085C740.19 9.81676 739.978 10.1108 739.836 10.483C739.697 10.8523 739.627 11.267 739.627 11.7273C739.627 12.1932 739.698 12.6165 739.84 12.9972C739.985 13.375 740.198 13.6761 740.479 13.9006C740.763 14.1222 741.116 14.233 741.536 14.233ZM750.506 12.3239V8.45455H751.512V15H750.506V13.892H750.438C750.285 14.2244 750.046 14.5071 749.722 14.7401C749.398 14.9702 748.989 15.0852 748.495 15.0852C748.086 15.0852 747.722 14.9957 747.404 14.8168C747.086 14.6349 746.836 14.3622 746.654 13.9986C746.472 13.6321 746.381 13.1705 746.381 12.6136V8.45455H747.387V12.5455C747.387 13.0227 747.521 13.4034 747.788 13.6875C748.058 13.9716 748.401 14.1136 748.819 14.1136C749.069 14.1136 749.323 14.0497 749.582 13.9219C749.843 13.794 750.062 13.598 750.238 13.3338C750.417 13.0696 750.506 12.733 750.506 12.3239ZM756.013 15.1364C755.4 15.1364 754.871 14.9915 754.428 14.7017C753.985 14.4119 753.644 14.0128 753.405 13.5043C753.167 12.9957 753.047 12.4148 753.047 11.7614C753.047 11.0966 753.169 10.5099 753.414 10.0014C753.661 9.49006 754.005 9.09091 754.445 8.80398C754.888 8.5142 755.405 8.36932 755.996 8.36932C756.456 8.36932 756.871 8.45455 757.24 8.625C757.61 8.79545 757.912 9.03409 758.148 9.34091C758.384 9.64773 758.53 10.0057 758.587 10.4148H757.581C757.505 10.1165 757.334 9.85227 757.07 9.62216C756.809 9.3892 756.456 9.27273 756.013 9.27273C755.621 9.27273 755.277 9.375 754.982 9.57955C754.689 9.78125 754.461 10.0668 754.296 10.4361C754.134 10.8026 754.053 11.233 754.053 11.7273C754.053 12.233 754.132 12.6733 754.292 13.0483C754.453 13.4233 754.681 13.7145 754.973 13.9219C755.269 14.1293 755.615 14.233 756.013 14.233C756.275 14.233 756.512 14.1875 756.725 14.0966C756.938 14.0057 757.118 13.875 757.266 13.7045C757.414 13.5341 757.519 13.3295 757.581 13.0909H758.587C758.53 13.4773 758.39 13.8253 758.165 14.1349C757.944 14.4418 757.65 14.6861 757.283 14.8679C756.919 15.0469 756.496 15.1364 756.013 15.1364ZM762.904 8.45455V9.30682H759.512V8.45455H762.904ZM760.5 6.88636H761.506V13.125C761.506 13.4091 761.547 13.6222 761.63 13.7642C761.715 13.9034 761.823 13.9972 761.953 14.0455C762.087 14.0909 762.228 14.1136 762.375 14.1136C762.486 14.1136 762.577 14.108 762.648 14.0966C762.719 14.0824 762.776 14.071 762.819 14.0625L763.023 14.9659C762.955 14.9915 762.86 15.017 762.738 15.0426C762.615 15.071 762.461 15.0852 762.273 15.0852C761.989 15.0852 761.711 15.0241 761.438 14.902C761.168 14.7798 760.944 14.5938 760.765 14.3438C760.588 14.0938 760.5 13.7784 760.5 13.3977V6.88636ZM768.936 9.92045L768.032 10.1761C767.975 10.0256 767.892 9.87926 767.781 9.73722C767.673 9.59233 767.525 9.47301 767.338 9.37926C767.15 9.28551 766.91 9.23864 766.618 9.23864C766.217 9.23864 765.883 9.33097 765.616 9.51562C765.352 9.69744 765.22 9.92898 765.22 10.2102C765.22 10.4602 765.311 10.6577 765.493 10.8026C765.674 10.9474 765.958 11.0682 766.345 11.1648L767.316 11.4034C767.902 11.5455 768.338 11.7628 768.625 12.0554C768.912 12.3452 769.055 12.7187 769.055 13.1761C769.055 13.5511 768.947 13.8864 768.731 14.1818C768.518 14.4773 768.22 14.7102 767.836 14.8807C767.453 15.0511 767.007 15.1364 766.498 15.1364C765.831 15.1364 765.278 14.9915 764.841 14.7017C764.403 14.4119 764.126 13.9886 764.01 13.4318L764.964 13.1932C765.055 13.5455 765.227 13.8097 765.48 13.9858C765.735 14.1619 766.069 14.25 766.481 14.25C766.95 14.25 767.322 14.1506 767.598 13.9517C767.876 13.75 768.015 13.5085 768.015 13.2273C768.015 13 767.936 12.8097 767.777 12.6562C767.618 12.5 767.373 12.3835 767.044 12.3068L765.953 12.0511C765.353 11.9091 764.913 11.6889 764.632 11.3906C764.353 11.0895 764.214 10.7131 764.214 10.2614C764.214 9.89205 764.318 9.56534 764.525 9.28125C764.735 8.99716 765.021 8.77415 765.382 8.61222C765.745 8.45028 766.157 8.36932 766.618 8.36932C767.265 8.36932 767.774 8.51136 768.143 8.79545C768.515 9.07955 768.779 9.45455 768.936 9.92045ZM776.773 15H774.08V6.27273H776.893C777.739 6.27273 778.464 6.44744 779.066 6.79688C779.668 7.14347 780.13 7.64205 780.451 8.29261C780.772 8.94034 780.933 9.71591 780.933 10.6193C780.933 11.5284 780.771 12.3111 780.447 12.9673C780.123 13.6207 779.651 14.1236 779.032 14.4759C778.413 14.8253 777.66 15 776.773 15ZM775.137 14.0625H776.705C777.427 14.0625 778.025 13.9233 778.499 13.6449C778.974 13.3665 779.327 12.9702 779.56 12.456C779.793 11.9418 779.91 11.3295 779.91 10.6193C779.91 9.91477 779.795 9.30824 779.565 8.79972C779.335 8.28835 778.991 7.89631 778.533 7.62358C778.076 7.34801 777.506 7.21023 776.825 7.21023H775.137V14.0625ZM784.495 15.1534C784.08 15.1534 783.704 15.0753 783.366 14.919C783.028 14.7599 782.759 14.5312 782.56 14.233C782.362 13.9318 782.262 13.5682 782.262 13.142C782.262 12.767 782.336 12.4631 782.484 12.2301C782.631 11.9943 782.829 11.8097 783.076 11.6761C783.323 11.5426 783.596 11.4432 783.894 11.3778C784.195 11.3097 784.498 11.2557 784.802 11.2159C785.2 11.1648 785.522 11.1264 785.769 11.1009C786.019 11.0724 786.201 11.0256 786.315 10.9602C786.431 10.8949 786.489 10.7812 786.489 10.6193V10.5852C786.489 10.1648 786.374 9.83807 786.144 9.60511C785.917 9.37216 785.572 9.25568 785.109 9.25568C784.629 9.25568 784.252 9.3608 783.979 9.57102C783.707 9.78125 783.515 10.0057 783.404 10.2443L782.45 9.90341C782.62 9.50568 782.847 9.19602 783.131 8.97443C783.418 8.75 783.731 8.59375 784.069 8.50568C784.41 8.41477 784.745 8.36932 785.075 8.36932C785.285 8.36932 785.526 8.39489 785.799 8.44602C786.075 8.49432 786.34 8.59517 786.596 8.74858C786.854 8.90199 787.069 9.13352 787.239 9.44318C787.41 9.75284 787.495 10.1676 787.495 10.6875V15H786.489V14.1136H786.438C786.37 14.2557 786.256 14.4077 786.097 14.5696C785.938 14.7315 785.727 14.8693 785.462 14.983C785.198 15.0966 784.876 15.1534 784.495 15.1534ZM784.648 14.25C785.046 14.25 785.381 14.1719 785.654 14.0156C785.93 13.8594 786.137 13.6577 786.276 13.4105C786.418 13.1634 786.489 12.9034 786.489 12.6307V11.7102C786.447 11.7614 786.353 11.8082 786.208 11.8509C786.066 11.8906 785.901 11.9261 785.714 11.9574C785.529 11.9858 785.349 12.0114 785.173 12.0341C784.999 12.054 784.859 12.071 784.751 12.0852C784.489 12.1193 784.245 12.1747 784.018 12.2514C783.793 12.3253 783.612 12.4375 783.472 12.5881C783.336 12.7358 783.268 12.9375 783.268 13.1932C783.268 13.5426 783.397 13.8068 783.656 13.9858C783.917 14.1619 784.248 14.25 784.648 14.25ZM792.177 8.45455V9.30682H788.785V8.45455H792.177ZM789.774 6.88636H790.779V13.125C790.779 13.4091 790.821 13.6222 790.903 13.7642C790.988 13.9034 791.096 13.9972 791.227 14.0455C791.36 14.0909 791.501 14.1136 791.649 14.1136C791.76 14.1136 791.85 14.108 791.922 14.0966C791.993 14.0824 792.049 14.071 792.092 14.0625L792.297 14.9659C792.228 14.9915 792.133 15.017 792.011 15.0426C791.889 15.071 791.734 15.0852 791.547 15.0852C791.262 15.0852 790.984 15.0241 790.711 14.902C790.441 14.7798 790.217 14.5938 790.038 14.3438C789.862 14.0938 789.774 13.7784 789.774 13.3977V6.88636ZM795.616 15.1534C795.201 15.1534 794.825 15.0753 794.487 14.919C794.149 14.7599 793.88 14.5312 793.681 14.233C793.483 13.9318 793.383 13.5682 793.383 13.142C793.383 12.767 793.457 12.4631 793.605 12.2301C793.752 11.9943 793.95 11.8097 794.197 11.6761C794.444 11.5426 794.717 11.4432 795.015 11.3778C795.316 11.3097 795.619 11.2557 795.923 11.2159C796.321 11.1648 796.643 11.1264 796.89 11.1009C797.14 11.0724 797.322 11.0256 797.436 10.9602C797.552 10.8949 797.61 10.7812 797.61 10.6193V10.5852C797.61 10.1648 797.495 9.83807 797.265 9.60511C797.038 9.37216 796.693 9.25568 796.23 9.25568C795.75 9.25568 795.373 9.3608 795.1 9.57102C794.828 9.78125 794.636 10.0057 794.525 10.2443L793.571 9.90341C793.741 9.50568 793.968 9.19602 794.252 8.97443C794.539 8.75 794.852 8.59375 795.19 8.50568C795.531 8.41477 795.866 8.36932 796.196 8.36932C796.406 8.36932 796.647 8.39489 796.92 8.44602C797.196 8.49432 797.461 8.59517 797.717 8.74858C797.975 8.90199 798.19 9.13352 798.36 9.44318C798.531 9.75284 798.616 10.1676 798.616 10.6875V15H797.61V14.1136H797.559C797.491 14.2557 797.377 14.4077 797.218 14.5696C797.059 14.7315 796.848 14.8693 796.583 14.983C796.319 15.0966 795.997 15.1534 795.616 15.1534ZM795.77 14.25C796.167 14.25 796.502 14.1719 796.775 14.0156C797.051 13.8594 797.258 13.6577 797.397 13.4105C797.539 13.1634 797.61 12.9034 797.61 12.6307V11.7102C797.568 11.7614 797.474 11.8082 797.329 11.8509C797.187 11.8906 797.022 11.9261 796.835 11.9574C796.65 11.9858 796.47 12.0114 796.294 12.0341C796.12 12.054 795.98 12.071 795.872 12.0852C795.61 12.1193 795.366 12.1747 795.139 12.2514C794.914 12.3253 794.733 12.4375 794.593 12.5881C794.457 12.7358 794.389 12.9375 794.389 13.1932C794.389 13.5426 794.518 13.8068 794.777 13.9858C795.038 14.1619 795.369 14.25 795.77 14.25ZM800.588 15V6.27273H801.594V9.49432H801.679C801.753 9.38068 801.855 9.2358 801.986 9.05966C802.119 8.88068 802.31 8.72159 802.557 8.58239C802.807 8.44034 803.145 8.36932 803.571 8.36932C804.122 8.36932 804.608 8.5071 805.028 8.78267C805.449 9.05824 805.777 9.44886 806.013 9.95455C806.249 10.4602 806.366 11.0568 806.366 11.7443C806.366 12.4375 806.249 13.0384 806.013 13.5469C805.777 14.0526 805.45 14.4446 805.033 14.723C804.615 14.9986 804.134 15.1364 803.588 15.1364C803.168 15.1364 802.831 15.0668 802.578 14.9276C802.325 14.7855 802.131 14.625 801.994 14.446C801.858 14.2642 801.753 14.1136 801.679 13.9943H801.56V15H800.588ZM801.577 11.7273C801.577 12.2216 801.649 12.6577 801.794 13.0355C801.939 13.4105 802.151 13.7045 802.429 13.9176C802.707 14.1278 803.048 14.233 803.452 14.233C803.872 14.233 804.223 14.1222 804.504 13.9006C804.788 13.6761 805.001 13.375 805.143 12.9972C805.288 12.6165 805.361 12.1932 805.361 11.7273C805.361 11.267 805.29 10.8523 805.148 10.483C805.009 10.1108 804.797 9.81676 804.513 9.60085C804.232 9.3821 803.878 9.27273 803.452 9.27273C803.043 9.27273 802.699 9.37642 802.42 9.58381C802.142 9.78835 801.932 10.0753 801.79 10.4446C801.648 10.8111 801.577 11.2386 801.577 11.7273ZM809.831 15.1534C809.416 15.1534 809.04 15.0753 808.702 14.919C808.364 14.7599 808.095 14.5312 807.896 14.233C807.697 13.9318 807.598 13.5682 807.598 13.142C807.598 12.767 807.672 12.4631 807.82 12.2301C807.967 11.9943 808.165 11.8097 808.412 11.6761C808.659 11.5426 808.932 11.4432 809.23 11.3778C809.531 11.3097 809.834 11.2557 810.138 11.2159C810.536 11.1648 810.858 11.1264 811.105 11.1009C811.355 11.0724 811.537 11.0256 811.651 10.9602C811.767 10.8949 811.825 10.7812 811.825 10.6193V10.5852C811.825 10.1648 811.71 9.83807 811.48 9.60511C811.253 9.37216 810.908 9.25568 810.445 9.25568C809.964 9.25568 809.588 9.3608 809.315 9.57102C809.043 9.78125 808.851 10.0057 808.74 10.2443L807.786 9.90341C807.956 9.50568 808.183 9.19602 808.467 8.97443C808.754 8.75 809.067 8.59375 809.405 8.50568C809.746 8.41477 810.081 8.36932 810.411 8.36932C810.621 8.36932 810.862 8.39489 811.135 8.44602C811.411 8.49432 811.676 8.59517 811.932 8.74858C812.19 8.90199 812.405 9.13352 812.575 9.44318C812.746 9.75284 812.831 10.1676 812.831 10.6875V15H811.825V14.1136H811.774C811.706 14.2557 811.592 14.4077 811.433 14.5696C811.274 14.7315 811.063 14.8693 810.798 14.983C810.534 15.0966 810.212 15.1534 809.831 15.1534ZM809.984 14.25C810.382 14.25 810.717 14.1719 810.99 14.0156C811.266 13.8594 811.473 13.6577 811.612 13.4105C811.754 13.1634 811.825 12.9034 811.825 12.6307V11.7102C811.783 11.7614 811.689 11.8082 811.544 11.8509C811.402 11.8906 811.237 11.9261 811.05 11.9574C810.865 11.9858 810.685 12.0114 810.509 12.0341C810.335 12.054 810.195 12.071 810.087 12.0852C809.825 12.1193 809.581 12.1747 809.354 12.2514C809.129 12.3253 808.947 12.4375 808.808 12.5881C808.672 12.7358 808.604 12.9375 808.604 13.1932C808.604 13.5426 808.733 13.8068 808.991 13.9858C809.253 14.1619 809.584 14.25 809.984 14.25ZM819.303 9.92045L818.4 10.1761C818.343 10.0256 818.259 9.87926 818.148 9.73722C818.04 9.59233 817.892 9.47301 817.705 9.37926C817.517 9.28551 817.277 9.23864 816.985 9.23864C816.584 9.23864 816.25 9.33097 815.983 9.51562C815.719 9.69744 815.587 9.92898 815.587 10.2102C815.587 10.4602 815.678 10.6577 815.86 10.8026C816.042 10.9474 816.326 11.0682 816.712 11.1648L817.684 11.4034C818.269 11.5455 818.705 11.7628 818.992 12.0554C819.279 12.3452 819.422 12.7187 819.422 13.1761C819.422 13.5511 819.314 13.8864 819.098 14.1818C818.885 14.4773 818.587 14.7102 818.203 14.8807C817.82 15.0511 817.374 15.1364 816.865 15.1364C816.198 15.1364 815.645 14.9915 815.208 14.7017C814.77 14.4119 814.493 13.9886 814.377 13.4318L815.331 13.1932C815.422 13.5455 815.594 13.8097 815.847 13.9858C816.103 14.1619 816.436 14.25 816.848 14.25C817.317 14.25 817.689 14.1506 817.965 13.9517C818.243 13.75 818.382 13.5085 818.382 13.2273C818.382 13 818.303 12.8097 818.144 12.6562C817.985 12.5 817.74 12.3835 817.411 12.3068L816.32 12.0511C815.721 11.9091 815.28 11.6889 814.999 11.3906C814.721 11.0895 814.581 10.7131 814.581 10.2614C814.581 9.89205 814.685 9.56534 814.892 9.28125C815.103 8.99716 815.388 8.77415 815.749 8.61222C816.113 8.45028 816.525 8.36932 816.985 8.36932C817.632 8.36932 818.141 8.51136 818.51 8.79545C818.882 9.07955 819.147 9.45455 819.303 9.92045ZM823.68 15.1364C823.05 15.1364 822.506 14.9972 822.048 14.7188C821.594 14.4375 821.243 14.0455 820.996 13.5426C820.751 13.0369 820.629 12.4489 820.629 11.7784C820.629 11.108 820.751 10.517 820.996 10.0057C821.243 9.49148 821.587 9.09091 822.027 8.80398C822.47 8.5142 822.987 8.36932 823.578 8.36932C823.919 8.36932 824.256 8.42614 824.588 8.53977C824.92 8.65341 825.223 8.83807 825.496 9.09375C825.768 9.34659 825.986 9.68182 826.148 10.0994C826.31 10.517 826.391 11.0312 826.391 11.642V12.0682H821.345V11.1989H825.368C825.368 10.8295 825.294 10.5 825.146 10.2102C825.001 9.92045 824.794 9.69176 824.524 9.52415C824.257 9.35653 823.942 9.27273 823.578 9.27273C823.178 9.27273 822.831 9.37216 822.538 9.57102C822.249 9.76705 822.026 10.0227 821.869 10.3381C821.713 10.6534 821.635 10.9915 821.635 11.3523V11.9318C821.635 12.4261 821.72 12.8452 821.891 13.1889C822.064 13.5298 822.304 13.7898 822.611 13.9688C822.918 14.1449 823.274 14.233 823.68 14.233C823.945 14.233 824.183 14.196 824.396 14.1222C824.612 14.0455 824.798 13.9318 824.955 13.7812C825.111 13.6278 825.232 13.4375 825.317 13.2102L826.288 13.483C826.186 13.8125 826.014 14.1023 825.773 14.3523C825.531 14.5994 825.233 14.7926 824.878 14.9318C824.523 15.0682 824.124 15.1364 823.68 15.1364Z"
+      fill="#374151"
+    />
+    <rect x="691" y="9" width="14" height="3" rx="1.5" fill="#06B6D4" />
+  </svg>
+
+  // array-end
+)
+
+const summary = [
+  {
+    name: "Users Database",
+    value: "21,349 rows",
+    capacity: "19,000 rows",
+    storage: "14,033 MB",
+    throughput: "+11.2%",
+    performance: "+7.8%",
+    availability: "+4.9%",
+    bgColor: "bg-amber-500",
+    changeType: "positive",
+  },
+  {
+    name: "Products Database",
+    value: "25,943 rows",
+    capacity: "23,600 rows",
+    storage: "11,033 MB",
+    throughput: "+3.1%",
+    performance: "+5.6%",
+    availability: "+2.9%",
+    bgColor: "bg-emerald-500",
+    changeType: "positive",
+  },
+  {
+    name: "Orders Database",
+    value: "9,443 rows",
+    capacity: "14,600 rows",
+    storage: "2,033 MB",
+    throughput: "-5.1%",
+    performance: "-6.3%",
+    availability: "-9.9%",
+    bgColor: "bg-yellow-400",
+    changeType: "negative",
+  },
+]
+
+function FieldPerformance() {
+  return (
+    <div
+      className="h-[600px] shrink-0 overflow-hidden [mask-image:radial-gradient(white_30%,transparent_90%)]"
+      style={{ perspective: 4000, perspectiveOrigin: "center" }}
+    >
+      <div
+        style={{
+          transform: `translate3d(0, -10px, -10px) rotateX(10deg) rotateY(20deg) rotateZ(-10deg)`,
+          transformStyle: "preserve-3d",
+        }}
+      >
+        <h3 className="text-sm text-gray-500 dark:text-gray-400">
+          Database Performance Metrics
+        </h3>
+        <p className="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-50">
+          32,227 rows
+        </p>
+        <p className="mt-1 text-sm font-medium">
+          <span className="text-emerald-700">+430 rows (4.1%)</span>{" "}
+          <span className="font-normal text-gray-500 dark:text-gray-400">
+            Past 30 days
+          </span>
+        </p>
+        <LineChartIllustration className="mt-8 w-full min-w-200 shrink-0" />
+
+        <TableRoot className="mt-6 min-w-200">
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableHeaderCell>Database</TableHeaderCell>
+                <TableHeaderCell className="text-right">Rows</TableHeaderCell>
+                <TableHeaderCell className="text-right">
+                  Capacity
+                </TableHeaderCell>
+                <TableHeaderCell className="text-right">
+                  Storage
+                </TableHeaderCell>
+                <TableHeaderCell className="text-right">
+                  Throughput
+                </TableHeaderCell>
+                <TableHeaderCell className="text-right">
+                  Performance
+                </TableHeaderCell>
+                <TableHeaderCell className="text-right">
+                  Availability
+                </TableHeaderCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {summary.map((item) => (
+                <TableRow key={item.name}>
+                  <TableCell className="font-medium text-gray-900 dark:text-gray-50">
+                    <div className="flex space-x-3">
+                      <span
+                        className={item.bgColor + " w-1 shrink-0 rounded"}
+                        aria-hidden="true"
+                      />
+                      <span>{item.name}</span>
+                    </div>
+                  </TableCell>
+                  <TableCell className="text-right">{item.value}</TableCell>
+                  <TableCell className="text-right">{item.capacity}</TableCell>
+                  <TableCell className="text-right">{item.storage}</TableCell>
+                  <TableCell className="text-right">
+                    <span
+                      className={
+                        item.changeType === "positive"
+                          ? "text-emerald-700"
+                          : "text-red-700"
+                      }
+                    >
+                      {item.throughput}
+                    </span>
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <span
+                      className={
+                        item.changeType === "positive"
+                          ? "text-emerald-700"
+                          : "text-red-700"
+                      }
+                    >
+                      {item.performance}
+                    </span>
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <span
+                      className={
+                        item.changeType === "positive"
+                          ? "text-emerald-700"
+                          : "text-red-700"
+                      }
+                    >
+                      {item.availability}
+                    </span>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableRoot>
+      </div>
+    </div>
+  )
+}
+
+const FeatureCard = ({
+  title,
+  description,
+  Icon,
+}: {
+  title: string
+  description: string
+  Icon: React.ElementType
+}) => (
+  <Card className="p-4">
+    <div className="relative flex items-center gap-2">
+      <div className="absolute -left-4 h-5 w-[3px] rounded-r-sm bg-blue-500" />
+      <Icon className="size-5 shrink-0 text-blue-500" />
+      <h3 className="font-medium text-gray-900 dark:text-gray-50">{title}</h3>
+    </div>
+    <p className="mt-2 text-gray-600 sm:text-sm">{description}</p>
+  </Card>
+)
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <section className="relative mx-auto w-full max-w-6xl overflow-hidden">
+        <div>
+          <h2
+            id="database-analytics"
+            className="relative scroll-my-24 text-lg font-semibold tracking-tight text-blue-500 dark:text-blue-400"
+          >
+            Database Analytics
+          </h2>
+          <p className="mt-2 max-w-lg text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl dark:text-gray-50">
+            Turn database metrics into optimized performance
+          </p>
+        </div>
+        <div className="*:pointer-events-none">
+          <FieldPerformance />
+        </div>
+        <Divider className="mt-0"></Divider>
+        <div className="grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-1">
+          <FeatureCard
+            Icon={RiServerFill}
+            title="Auto-Scaling"
+            description="Smart infrastructure that automatically scales based on demand."
+          />
+          <FeatureCard
+            Icon={RiDatabaseFill}
+            title="Automated Backup"
+            description="AI-powered system that optimizes backup frequency and retention."
+          />
+          <FeatureCard
+            Icon={RiHardDriveFill}
+            title="Smart Storage"
+            description="Automated storage management that optimizes data distribution."
+          />
+          <FeatureCard
+            Icon={RiLineChartFill}
+            title="Performance Analytics"
+            description="Advanced analytics platform that predicts database performance."
+          />
+        </div>
+      </section>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-11.tsx
+import type { SVGProps } from "react"
+import {
+  RiHome9Fill,
+  RiPlaneLine,
+  RiSignalTowerFill,
+  RiTruckFill,
+} from "@remixicon/react"
+
+const SVGMap = (props: SVGProps<SVGSVGElement>) => {
+  //array-start
+  const width = 481
+  const height = 201
+  return (
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M356.816 59.5522L369.836 89.5312L383.182 110.993L397.011 122.212"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M308.847 55.25L322.199 81.171L335.517 110.331L349.161 128.781L363.163 139.04"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M296.831 67.8198L310.258 92.7317L323.723 118.571L337.459 135.416L351.527 144.829"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M320.615 48.7886L333.922 72.9844L347.154 102.264L360.684 122.266L374.621 133.344"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M258.834 82.7388L272.277 106.533L285.851 123.633L299.598 137.234L313.519 148.854L327.694 156.677L339.705 150.704L351.527 144.829L363.163 139.04L374.621 133.344L385.9 127.734L397.01 122.212L407.953 116.77L418.732 111.41"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M347.409 18.9292L323.821 15.9834L312.851 21.2295L308.202 24.7286L301.676 29.6438L290.288 44.6875L277.529 44.7417L264.883 60.0187L252.546 70.0985L241.219 74.8509L229.728 79.6683L218.07 84.5563L206.249 89.5203L194.248 94.5493L182.096 89.8621L170.09 84.2037L158.036 69.5668L146.22 60.8053L134.567 53.1451L122.328 58.2772L110.046 67.1744L97.6983 78.5562L85.0959 87.1441L72.2547 94.1207L60.8458 88.3702L47.8528 95.7049L36.6717 91.2075L25.6317 86.6612L14.7707 82.6738L1.50635 87.6052"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M258.834 82.7388L246.378 100.951L233.813 118.984L221.113 134.754L208.261 148.344L195.203 157.941L181.906 164.842L168.626 159.156"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M360.38 25.3086L365.355 31.2436"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M271.089 77.6499L284.576 89.84L298.079 110.933L311.761 126.801L325.584 141.877L339.705 150.704"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M308.848 55.25L296.831 67.8199L284.576 89.8403L272.277 106.533L259.87 119.678L247.322 131.928L234.622 146.077L221.753 156.769L208.684 164.337L195.203 157.941L181.906 151.106L168.794 144.33L155.888 138.585L143.204 134.364L129.945 142.594"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M407.953 116.77L394.124 106.783L380.752 88.3103L367.688 63.2844L354.532 43.0814L347.93 39.2947L341.143 35.3995L327.808 32.5405L314.707 27.5874L301.676 29.6435L288.851 32.7358L288.276 33.3325L287.533 34.1138L277.86 44.237L277.23 44.7415L276.162 45.8428L263.749 58.174L251.624 61.1089L240.443 65.7311L229.099 70.4183L217.603 75.1761L205.63 70.2502L193.961 75.507L182.123 80.3354L170.091 84.2034L157.928 90.2036L145.564 95.2435L133.016 100.359L120.25 104.493L108.44 100.283L96.7111 94.1151L85.0961 87.1439L73.622 80.1727L62.4952 77.6445L49.6649 84.236L36.6719 91.2072L23.4238 96.9849"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M251.624 61.1091L262.686 48.3764L274.892 39.7451"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M256.555 74.0589L264.883 60.0188L276.161 45.8431L277.284 44.7417L277.859 44.2373L287.532 34.1141L288.851 32.7361L296.31 27.8318L299.988 25.4122L303.52 23.2042L310.985 18.5278"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M142.65 148.035L155.888 138.584L168.891 126.785L177.642 120.6L181.776 117.681L186.306 116.103L192.583 113.922L194.552 113.233L204.919 108.6L207.35 107.276L216.529 103.153L220.413 101.406"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M155.546 153.552L168.794 144.33L181.738 128.136"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M439.814 100.934L425.991 93.7949L415.526 98.1187L404.904 102.491L394.124 106.783L383.182 110.992L372.044 115.815L360.684 122.266L349.161 128.781L337.46 135.416L325.584 141.877L313.519 148.854L301.274 155.945L288.84 162.547L276.21 169.214L262.149 163.127L248.293 155.331L234.622 146.076L221.113 134.754L207.741 121.826L194.596 115.473L181.776 117.681L169.168 119.059L156.702 116.786L144.452 115.441L132.283 110.461L120.251 104.493L107.361 110.824L95.5339 105.915L83.8212 100.126L70.7305 105.849L57.4445 111.551"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M277.681 181.54L263.38 175.605L250.338 181.979L237.085 188.462L222.974 182.424"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M318.64 38.7197L332.132 45.7506L345.472 65.3894L358.628 94.1639L372.044 115.815L385.9 127.734"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M117.429 137.234L130.704 130.138L143.768 122.326L156.701 116.787L169.515 115.072L180.029 116.57"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M264.655 188.018L251.418 194.598L237.085 188.462"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M105.087 131.949L118.384 125.683L131.464 118.788L143.768 122.325L156.246 125.222L169.168 119.059L181.966 116.84L188.297 115.028"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M181.906 164.842L195.388 170.614L209.075 176.473L222.361 170.185L235.43 163.605L249.302 169.719L262.149 163.127L274.805 155.5L287.283 146.825L299.598 137.233L311.761 126.801L323.723 118.571L335.517 110.331L347.154 102.263L358.628 94.1638L369.836 89.5309L380.752 88.3102L391.482 87.2577L402.056 85.6248L412.477 83.4819L422.758 80.9375L436.294 89.5091L450.127 95.8076"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M34.61 101.775L47.8526 95.7045L59.2127 100.696L72.2546 94.1204L83.8208 100.126L96.7108 94.1149L109.319 85.5108L121.661 73.6136L133.992 66.0565L146.22 60.805L158.372 59.7091L170.264 55.3636L181.977 50.0742L193.581 49.1953L198.236 53.8609L205.332 60.9732L217.142 66.051L228.491 61.4234L239.683 56.8555L250.723 52.3527L262.685 48.3761L273.633 37.2982L283.078 34.5476L286.995 32.1226L287.332 31.8405L288.606 31.1462L295.643 27.6199L299.988 25.4118L305.147 23.7355L312.851 21.2291L325.833 22.0049L336.738 19.2056L349.801 23.7138L360.38 25.3088L365.908 31.1732L370.178 35.9093L370.471 36.2294L383.285 49.1031L383.583 49.3418L384.983 50.3129L391.059 54.6367L393.196 56.1557L400.01 60.4632L406.227 64.3909L416.128 65.4163L429.403 70.4291L439.282 67.5267L452.726 71.9155"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M480.166 80.8723L466.354 76.3641L456.496 80.4438L446.465 85.0334L436.293 89.5091L425.991 93.7949L412.477 83.4818L399.186 71.4002L388.829 70.1416L375.809 51.7885L372.581 46.7161L363.494 32.4481L362.935 31.5747L349.801 23.7138L338.908 27.0827L325.833 22.0049L314.707 27.5873L303.352 38.2747L291.905 45.9729L280.247 59.7146L268.458 75.4799L255.519 82.2828L251.743 85.7278"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M92.9188 126.742L106.243 121.235L119.361 115.805L131.464 118.788L144.452 115.441L157.179 110.097L169.515 115.072L182.047 109.739L194.395 104.482L204.372 108.389"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.3947 92.2651L25.6318 86.661L38.7008 81.4149L49.6649 84.236L60.8459 88.3699L73.622 80.1726L86.2462 72.2574L98.6749 63.6478L109.406 56.6332L110.974 55.6079L118.916 51.2949L120.739 50.3076L123.158 48.9947L128.106 46.7379L132.674 44.6546L135.213 43.4937L146.676 49.4775L158.372 59.7092L170.199 70.5431L182.123 80.3353L194.102 84.8924L205.934 79.999L217.603 75.1761L229.728 79.6681L242.016 84.2197L253.496 79.2232L261.216 71.9645"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M69.1025 116.543L82.4157 111.188L95.5335 105.915L108.44 100.284L121.037 91.0068"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M290.489 175.171L277.681 181.54L264.655 188.017L250.338 181.979L236.244 176.039L222.974 182.424L209.075 176.473"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M303.092 168.911L290.489 175.171L276.21 169.215L263.38 175.605L249.302 169.719L236.244 176.039L222.361 170.186L208.684 164.337L195.388 170.614"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M283.171 71.1888L296.831 67.8198"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M278.863 52.8139L290.288 44.6871L303.352 38.2746L316.578 36.696L328.28 35.7846L330.016 35.6489L343.514 41.0957L356.816 59.5518L367.688 63.2843L378.332 67.5375L388.829 70.1416L389.947 71.449L402.056 85.6247L415.526 98.1186L429.349 106.131"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.7708 82.6736L27.8452 77.8073L38.7007 81.4149L51.5853 76.2829L62.4951 77.6445L71.1047 72.8759L75.1355 70.6408L81.9331 66.9192L87.6132 63.8052L92.1268 61.6189L99.9552 57.8213L107.143 56.3782L110.974 55.6079L122.328 58.277L133.992 66.0566L145.971 80.6989L157.928 90.2036L169.917 94.8962L182.075 99.6595L194.395 104.482L206.563 99.3068L218.553 94.2019L230.368 89.1783L242.016 84.2197L250.805 84.3662"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M267.259 64.7599L267.465 64.5971L278.863 52.8139L291.905 45.9729L305.186 40.1463L318.64 38.7195L330.016 35.6489L341.143 35.3994L352.14 33.0449L362.936 31.5747L373.211 40.6292L383.285 49.1031L383.584 49.3418L385.949 51.5769L388.51 53.9531L389.117 54.5174L389.231 54.6258L395.226 60.1974L396.246 61.1468L409.418 71.3459L419.476 71.2374L429.404 70.4291L442.858 75.4744L452.726 71.9155L466.354 76.3641"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M315.493 162.742L303.091 168.91L288.84 162.547L274.805 155.5L260.971 146.223L247.322 131.928L233.813 118.983L220.413 101.406"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M27.845 77.8074L40.7349 73.0171L51.5851 76.283L64.2852 71.102L67.9037 69.5884L76.8062 65.8614L81.64 63.8921L89.1537 60.8269L99.955 57.8214L104.187 56.0474L107.29 54.7455L112.161 52.7002L116.805 51.1378L123.158 48.9948L134.567 53.145L146.676 49.4777L158.638 47.2046L170.264 55.3639L182.058 65.7366L193.961 75.5071L205.934 79.9991L218.07 84.5562L230.368 89.1784L236.857 91.6142"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M275.022 75.5451L283.171 71.1887L295.117 61.9878L308.848 55.2499L320.615 48.7886"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M327.694 156.677L315.493 162.742L301.274 155.945L287.283 146.825L273.498 134.163L259.87 119.678L246.378 100.951L233.021 93.6162L231.361 94.5168L231.312 94.5439L231.236 94.5819L230.368 95.0539L219.931 100.712L215.797 102.871L207.35 107.277L204.919 108.6L194.595 115.474L193.679 116.385L181.738 128.136L168.891 126.785L156.246 125.223L143.204 134.364L130.704 130.138L118.384 125.684L106.243 121.235L94.2479 116.174L82.4158 111.188L70.7302 105.85L59.2128 100.696L45.9485 106.631"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M40.7354 73.0169L53.4408 68.2917L65.9728 63.6316L78.3311 59.0365L90.5158 54.5011L102.538 50.0309L114.392 45.6257L126.088 41.2748L137.627 36.9836L149.009 32.7521L159.93 36.1807L170.991 39.9728L182.189 43.1357L193.473 42.0289L205.044 51.8429L216.269 48.5173L227.325 44.1284L238.23 39.7992L248.998 34.7322L259.615 31.0323L270.097 26.6326L280.437 22.835L290.641 18.9995L302.197 22.7699L302.81 22.9706"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M147.186 41.291L148.526 41.98L158.638 47.2044L170.438 45.9729L175.961 45.1645L182.048 44.2802L193.581 49.1953L205.044 51.8428L216.697 57.1648L228.492 61.4234L240.443 65.731L250.17 69.241"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M356.816 59.5522L345.472 65.3896L333.922 72.9847L322.198 81.1711L310.258 92.7319L298.079 110.933L285.85 123.633L273.498 134.163L260.971 146.223L248.293 155.332L235.43 163.605L221.753 156.77L208.261 148.344L194.921 138.417L181.738 128.136"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M205.63 70.2503L217.142 66.0513L229.099 70.4184L241.218 74.8507L250.631 78.2034"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M149.008 32.7523L160.244 28.5696L171.17 32.416L182.253 28.2875L193.315 32.1718L204.247 28.0054L215.433 31.8897L226.761 35.4648L238.229 39.7995L249.85 43.8303L261.627 44.2209L273.633 37.2985L275.961 36.2786L281.955 33.6529L284.402 32.5787L286.854 32.1447"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M152.101 41.9315L159.067 42.8374L170.747 44.4487L182.047 44.2805L184.505 43.7923L193.472 42.0291L204.751 41.671L215.845 40.0924L227.325 44.1286L238.951 48.2137L250.723 52.353L261.628 44.2209L272.396 37.1846L281.668 33.6257L284.402 32.5786"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M160.244 28.5694L171.333 24.4463L182.253 28.2873L193.19 24.1696L204.247 28.0052L215.032 23.8876L225.681 19.8242L236.851 23.6109L248.163 27.4355L259.615 31.0324L271.225 32.7576L281.668 33.6256"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M171.333 24.4463L182.275 20.3775L193.191 24.1696L203.986 20.1008L214.641 16.0917L225.681 19.8242L236.19 15.815L247.354 19.5475L257.716 15.5438L267.948 11.5889L279.227 15.2725L290.641 18.9995"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M182.275 20.3778L193.076 16.3633L203.986 20.1011L215.032 23.8879L226.213 27.7233L237.535 31.6023L248.998 34.7326L260.608 36.9188L272.396 37.1847"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M335.979 19.016L347.409 18.9292"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M193.077 16.3632L203.737 12.3974L214.641 16.0919L225.161 12.1262L236.19 15.8153L246.562 11.8604L257.716 15.544L269.006 19.2439L279.227 15.2727"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M203.737 12.3973L214.261 8.48589L225.16 12.1261L235.544 8.22007L245.792 4.35742L256.805 7.95425L267.948 11.589"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M137.627 36.9834L148.526 39.6308L159.555 41.828L165.626 43.2494"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M53.4409 68.2916L64.2857 71.1017L75.1358 70.6406L86.2464 72.2573L97.6987 78.5558L109.319 85.5108L121.037 91.0064L133.651 87.7187L145.971 80.6987L158.036 69.5665L170.199 70.543L182.059 65.7363L193.728 58.8574L205.332 60.9732L216.698 57.1648L227.9 52.6619L238.951 48.2134L249.85 43.83L260.608 36.9184L271.225 32.7574L281.685 29.8766L292.008 26.4751L295.025 27.3377"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M214.261 8.48624L224.65 4.61816L235.544 8.22042L246.562 11.8606L256.805 7.9546"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M480.166 80.8721L470.292 85.7764L460.283 90.7566L450.127 95.8074L439.814 100.934L429.349 106.131L418.732 111.41L404.904 102.491L391.482 87.2574L379.297 68.9858L378.332 67.5373L377.892 66.7832L365.344 45.2565L365.03 44.9636L352.14 33.0447L338.908 27.0825L327.808 32.5402L316.578 36.6958L305.186 40.1461L293.5 52.8191L281.646 69.626L275.022 75.5447L271.089 77.6497L264.264 80.4815L258.834 82.7384L252.541 86.0477L245.45 89.7747L238.056 92.064L233.021 93.6156L231.589 94.5053L231.513 94.5488L231.399 94.6193L229.267 95.9376L220.413 101.406L218.786 104.026L207.74 121.826L194.921 138.416L181.906 151.105L168.626 159.156L155.546 153.552L142.65 148.035L129.945 142.593L117.429 137.233L105.087 131.949L92.9188 126.741L80.9294 121.609L69.1027 116.542L57.4443 111.551L45.9486 106.63L34.6101 101.775L23.4237 96.9846L12.3945 92.2648L1.50635 87.6047"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M78.3311 59.0365L89.1541 60.8268L92.995 59.2156L101.333 55.7218L113.355 50.8664L120.788 48.1322L125.225 46.5046L134.67 43.2116L136.938 42.4195L145.418 40.3797L148.526 39.631L159.93 36.1807L171.17 32.4157L182.237 36.4032L193.435 40.3906L204.507 36.1102L215.846 40.0922L226.761 35.4646L237.535 31.602L248.163 27.4355L258.655 23.3287L269.006 19.2437L280.437 22.835L292.008 26.4752L302.197 22.7699"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M224.651 4.61755L234.909 0.803711L245.792 4.35716"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M126.088 41.2749L136.938 42.4196L142.162 42.2189"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M90.5157 54.5013L101.333 55.7219L112.162 52.7002"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M114.391 45.6255L125.225 46.5044L131.719 44.8877"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M102.538 50.0311L113.355 50.8666L120.305 49.4507"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M191.791 113.608L182.047 109.74L169.716 104.841L157.559 100.007L145.016 105.199L133.016 100.36L121.037 91.0068"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M215.661 102.817L206.563 99.307L194.249 94.5493L182.075 99.6597L169.716 104.841L157.179 110.098L145.016 105.199L132.283 110.461L119.361 115.805L107.361 110.825L94.2483 116.174L80.9297 121.61"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M394.151 56.3457L403.032 60.0999L416.128 65.4164L426.007 63.1921"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M394.895 56.8394L403.032 60.0998L412.906 58.9171"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M257.906 64.3912L263.749 58.1741L274.892 39.7451L283.079 34.5479"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M392.811 54.6475L399.972 54.6908"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M264.264 80.4819L268.458 75.48L281.646 69.6263L295.117 61.9879L307.008 46.5101L318.64 38.7197"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M175.705 43.879L182.188 43.1357L193.434 40.3906L204.751 41.6709L216.268 48.5174L227.9 52.6621L239.683 56.8557L251.624 61.109"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M253.317 85.0609L255.519 82.2832L264.509 68.867L267.259 64.7602L267.52 64.4998L277.285 44.7417L278.375 43.0708L285.807 33.7505L286.995 32.123L287.332 31.8409L288.607 31.1465L294.927 27.3978L295.025 27.3381L298.296 25.423L302.81 22.9709L310.985 18.5278L323.821 15.9834L335.978 19.016L336.738 19.2059L347.409 18.9292L354.304 22.3199L360.38 25.3091L365.583 31.217L368.339 34.8084L373.211 40.6295L375.842 43.8032L386.139 56.2591L388.054 58.4834L399.186 71.4005L409.418 71.3463L422.758 80.9378L432.914 77.6556L442.858 75.4748L456.496 80.4441L470.292 85.777"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M386.519 50.2969L387.208 50.5248L399.973 54.6912L412.906 58.9173L426.008 63.1923L439.283 67.5269"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M230.466 94.9775L231.014 94.5381L231.215 94.5815"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M231.329 94.5167L231.014 94.5385L218.553 94.2021L206.249 89.5203L194.102 84.8927L182.096 89.862L169.917 94.8965L157.559 100.007L145.564 95.2437L133.65 87.7191L121.661 73.6139L110.046 67.1744L98.6748 63.6481L87.6132 63.8054L76.8064 65.8615L65.9725 63.6318"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M267.417 64.7002L280.247 59.7145L293.5 52.8193L307.009 46.5099L320.615 48.7884L332.132 45.7504L343.514 41.0957L354.532 43.0813L365.344 45.2567L375.809 51.7885L386.139 56.2588L396.246 61.1467L406.228 64.3909L410.611 66.6532L419.476 71.2374L432.914 77.6553L446.466 85.0334L460.283 90.7568"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M366.011 31.1572L371.138 36.4847L373.167 38.595L386.518 50.2969"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M205.63 70.2503L198.371 63.3008L193.727 58.8577L181.977 50.0744L170.437 45.9731L159.067 42.8374"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M135.213 43.4936L139.547 42.6961L142.162 42.2187L147.186 41.291L152.101 41.9312L159.555 41.8281L170.991 39.9727L182.237 36.403L193.315 32.1714L204.507 36.1101L215.433 31.8894L226.213 27.7229L236.851 23.6107L247.354 19.5474L258.655 23.3286L270.096 26.6325L281.684 29.8767L288.536 31.1353"
+        className="stroke-gray-800"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M94 116L47.5 95.5L60.5 88.5L73.5 80.5L86 72.5L97.5 78.5L109.5 85.5L121 91L132.5 100.5L120 104.5L107 111L94 116Z"
+        fill="url(#dot-pattern)"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M84 3L47.5 95.5M84 3L132.5 100.5M84 3L94 116M84 3L86 72.5M47.5 95.5L94 116M47.5 95.5L60.5 88.5L73.5 80.5L86 72.5M94 116L107 111L120 104.5L132.5 100.5M132.5 100.5L121 91L109.5 85.5L97.5 78.5L86 72.5"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="stroke-gray-400/30"
+      />
+
+      <path
+        d="M290.5 175.5L262 163L275 155.5L287.5 146.5L299.5 137.5L313.5 148.5L327.5 156.5L290.5 175.5Z"
+        fill="url(#dot-pattern)"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M295 84L262 163M295 84L327.5 156.5M295 84L290.5 175.5M295 84L299.5 137.5M262 163L290.5 175.5M262 163L275 155.5L287.5 146.5L299.5 137.5M327.5 156.5L290.5 175.5M327.5 156.5L313.5 148.5L299.5 137.5"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="stroke-gray-400/30"
+      />
+
+      <path
+        d="M182.5 20.5L235 0.5L290.5 19L270 26.5L259 23L248 27.5L227 35.5L215.5 32L204.5 36L182 28.5L193 24L182.5 20.5Z"
+        className="fill-emerald-400/10 stroke-emerald-400/80"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M157 110L133 100.5L121 91L133.5 87.5L146 80.5L158 69.5L170 70.5L182 80.5L194 75.5L205.5 70.5L217.5 66L241 74.5L230 79.5L242 84L169.5 115L157 110Z"
+        className="fill-emerald-400/10 stroke-emerald-400/80"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Irrigating */}
+
+      <path
+        d="M133 87.5L145 95L157.5 100L182.5 90L170.5 84.5L157.5 69.5L145.5 80.5L133 87.5Z"
+        fill="url(#irrigating-pattern)"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M133 87.5L145 95L157.5 100M133 87.5L145.5 80.5L157.5 69.5M133 87.5L152 52.5M157.5 69.5L170.5 84.5L182.5 90M157.5 69.5L152 52.5M157.5 100L182.5 90M157.5 100L152 52.5M182.5 90L152 52.5"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="stroke-blue-400/80"
+      />
+
+      {/* Dashed Beams */}
+      <path
+        d="M342.5 28L85 -1"
+        className="stroke-gray-400/30"
+        strokeWidth="1"
+        strokeLinecap="square"
+        strokeDasharray="2 5"
+      />
+      <path
+        d="M341.5 27L296 83.5"
+        className="stroke-gray-400/30"
+        strokeWidth="1"
+        strokeLinecap="square"
+        strokeDasharray="2 5"
+      />
+
+      <defs>
+        <pattern
+          id="irrigating-pattern"
+          patternUnits="userSpaceOnUse"
+          width="64"
+          height="64"
+        >
+          {Array.from({ length: 34 }, (_, i) => {
+            const offset = i * 4
+            return (
+              <path
+                key={i}
+                d={`M${-106 + offset} 110L${22 + offset} -18`}
+                className="stroke-blue-400/60"
+                strokeWidth="0.5"
+              />
+            )
+          })}
+        </pattern>
+        <pattern
+          id="dot-pattern"
+          patternUnits="userSpaceOnUse"
+          width="64"
+          height="64"
+        >
+          {Array.from({ length: 16 }, (_, i) =>
+            Array.from({ length: 16 }, (_, j) => (
+              <circle
+                key={`${i}-${j}`}
+                cx={i * 4 + 2}
+                cy={j * 4 + 2}
+                r="0.5"
+                className="fill-gray-400/30"
+              />
+            )),
+          )}
+        </pattern>
+      </defs>
+    </svg>
+  )
+  //array-end
+}
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <section
+        id="farm-management"
+        aria-labelledby="management-title"
+        className="relative flex w-full max-w-6xl scroll-my-24 flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto"
+      >
+        <div className="absolute left-0 z-10 h-full backdrop-blur-[2px]">
+          <svg className="h-full w-8 border-r border-gray-900 stroke-gray-800 sm:w-20">
+            <defs>
+              <pattern
+                id="diagonal-border-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
+              >
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      stroke=""
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-border-pattern)"
+            />
+          </svg>
+        </div>
+        <div className="absolute right-0 z-10 h-full backdrop-blur-[2px]">
+          <svg className="h-full w-8 border-r border-gray-900 stroke-gray-800 sm:w-20">
+            <defs>
+              <pattern
+                id="diagonal-border-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
+              >
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      stroke=""
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-border-pattern)"
+            />
+          </svg>
+        </div>
+
+        <div className="pt-12 text-base font-semibold tracking-tight text-blue-400 sm:pt-20 sm:text-lg">
+          Farm Management
+        </div>
+        <h2
+          id="management-title"
+          className="mt-6 max-w-[700px] text-center text-2xl font-semibold tracking-tight text-balance text-white md:text-5xl"
+        >
+          Monitoring & Control for Precision Agriculture
+        </h2>
+        <p className="mt-4 max-w-2xl text-center text-base text-balance text-gray-400 sm:mt-8 sm:text-xl">
+          Complete oversight of your farming operations across fields,
+          irrigation systems, and aerial monitoring, delivering insights even in
+          remote rural locations.
+        </p>
+
+        <div className="relative mt-20 mb-10 ml-[17rem] scale-90 sm:mb-16 md:mt-24 md:ml-0 md:scale-100">
+          <SVGMap className="w-[50rem] shrink-0" />
+          <div className="absolute -top-3 left-[130px]">
+            <div className="relative flex items-center justify-center">
+              <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
+              <div className="absolute -top-4 -right-[3.7rem] flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
+                Scanning
+              </div>
+              <RiPlaneLine className="relative size-5 rotate-90 text-white" />
+              <div
+                style={{
+                  animationDelay: "3.5s",
+                }}
+                className="absolute size-10 animate-[ping_5s_ease_infinite] rounded-full ring-1 ring-gray-500/50"
+              ></div>
+            </div>
+          </div>
+          <div className="absolute top-[73px] left-[243px]">
+            <div className="relative flex items-center justify-center">
+              <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
+              <div className="absolute -top-4 -right-[3.7rem] flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
+                Irrigating
+              </div>
+              <RiPlaneLine className="relative size-5 rotate-90 text-white" />
+              <div
+                style={{
+                  animationDelay: "3.5s",
+                }}
+                className="absolute size-10 animate-[ping_5s_ease_infinite] rounded-full ring-1 ring-gray-500/50"
+              ></div>
+            </div>
+          </div>
+          <div className="absolute top-32 right-[300px]">
+            <div className="relative flex items-center justify-center">
+              <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
+              <div className="absolute -top-4 -right-[3.7rem] flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
+                Scanning
+              </div>
+              <RiPlaneLine className="relative size-5 rotate-90 text-white" />
+              <div
+                style={{
+                  animationDelay: "3.5s",
+                }}
+                className="absolute size-10 animate-[ping_5s_ease_infinite] rounded-full ring-1 ring-gray-500/50"
+              ></div>
+            </div>
+          </div>
+          <div className="absolute top-20 right-[390px]">
+            <div className="relative flex items-center justify-center">
+              <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
+              <RiHome9Fill className="relative size-5 text-white" />
+            </div>
+          </div>
+          <div className="absolute top-12 right-[430px]">
+            <div className="relative flex items-center justify-center">
+              <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
+              <div className="absolute -top-4 -right-7 flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
+                Idle
+              </div>
+              <RiTruckFill className="relative size-5 text-white" />
+            </div>
+          </div>
+          <div className="absolute top-9 right-56">
+            <div className="relative flex items-center justify-center">
+              <RiSignalTowerFill className="z-10 size-5 text-white" />
+              <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15 backdrop-blur-sm"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+```
+
+
+```example/feature-sections-feature-section-05.tsx
+"use client"
+
+import { AreaChart } from "@/atom/AreaChart"
+import { CategoryBar } from "@/atom/CategoryBar"
+import { ComboChart } from "@/atom/ComboChart"
+
+const chartdata = [
+  {
+    date: "Jan 23",
+    SolarPanels: 2890,
+    Inverters: 2338,
+  },
+  {
+    date: "Feb 23",
+    SolarPanels: 2756,
+    Inverters: 2103,
+  },
+  {
+    date: "Mar 23",
+    SolarPanels: 3322,
+    Inverters: 2194,
+  },
+  {
+    date: "Apr 23",
+    SolarPanels: 3470,
+    Inverters: 2108,
+  },
+  {
+    date: "May 23",
+    SolarPanels: 3475,
+    Inverters: 1812,
+  },
+  {
+    date: "Jun 23",
+    SolarPanels: 3129,
+    Inverters: 1726,
+  },
+  {
+    date: "Jul 23",
+    SolarPanels: 3490,
+    Inverters: 1982,
+  },
+  {
+    date: "Aug 23",
+    SolarPanels: 2903,
+    Inverters: 2012,
+  },
+  {
+    date: "Sep 23",
+    SolarPanels: 2643,
+    Inverters: 2342,
+  },
+  {
+    date: "Oct 23",
+    SolarPanels: 2837,
+    Inverters: 2473,
+  },
+  {
+    date: "Nov 23",
+    SolarPanels: 2954,
+    Inverters: 3848,
+  },
+  {
+    date: "Dec 23",
+    SolarPanels: 3239,
+    Inverters: 3736,
+  },
+]
+
+export default function Example() {
+  return (
+    <div className="obfuscate">
+      <div className="mx-auto w-full max-w-4xl !px-3 py-20 sm:text-center">
+        <span className="block bg-gradient-to-b from-gray-700 to-gray-400 bg-clip-text text-lg font-semibold text-transparent sm:text-xl dark:from-blue-200 dark:to-blue-400">
+          Analytics
+        </span>
+        <h2
+          id="features-title"
+          className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl dark:from-gray-50 dark:to-gray-300"
+        >
+          Insights made for everyone
+        </h2>
+        <div className="group relative mt-12 h-[30rem] transition">
+          <div className="absolute top-12 h-80 w-full scale-90 transform-gpu rounded-lg bg-white ring-1 shadow-md shadow-black/5 ring-black/5 transition-all delay-75 duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:top-52 group-hover:rotate-6">
+            <div className="relative flex size-full items-center">
+              <div className="absolute top-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute bottom-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute right-2.5 bottom-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <AreaChart
+                className="mx-auto !h-60 !px-3 sm:!px-10"
+                data={chartdata}
+                index="date"
+                categories={["SolarPanels", "Inverters"]}
+              />
+            </div>
+          </div>
+          <div className="absolute top-6 h-80 w-full scale-95 transform-gpu rounded-lg bg-white ring-1 shadow-md shadow-black/5 ring-black/5 transition-all delay-50 duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:top-16 group-hover:-rotate-3">
+            <div className="relative flex size-full items-end">
+              <div className="absolute top-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute bottom-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute right-2.5 bottom-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <CategoryBar
+                values={[10, 10, 20]}
+                marker={{ value: 17, tooltip: "68", showAnimation: false }}
+                colors={["pink", "amber", "emerald"]}
+                className="mb-12 w-full !px-3 sm:!px-10"
+              />
+            </div>
+          </div>
+          <div className="absolute top-0 flex h-80 w-full transform-gpu items-center rounded-lg bg-white ring-1 shadow-xl shadow-black/5 ring-black/5 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-top-6 group-hover:scale-95 group-hover:rotate-3">
+            <div className="relative flex size-full items-center">
+              <div className="absolute top-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute top-2.5 right-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute bottom-2.5 left-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <div className="absolute right-2.5 bottom-2.5 size-1.5 rounded-full bg-gray-200 shadow-inner dark:bg-gray-800" />
+              <ComboChart
+                className="mx-auto !h-60 !px-3 sm:!px-10"
+                data={chartdata}
+                showTooltip={false}
+                index="date"
+                enableBiaxial={true}
+                barSeries={{
+                  categories: ["SolarPanels"],
+                }}
+                lineSeries={{
+                  categories: ["Inverters"],
+                  showYAxis: true,
+                  colors: ["amber"],
+                  yAxisWidth: 60,
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+```
+
+
